@@ -1,0 +1,71 @@
+/****************** Default Fonts and Colours ******************/
+
+:root {
+    /* Fonts */ 
+    --title-font: 'Roboto', sans-serif;
+    --main-font: 'Nunito', sans-serif;
+
+    /* Colours */
+    --black: #000000;
+    --white: #ffffff;
+    --blue: rgba(14, 91, 235, 0.795);
+
+    /* Border */
+    --border: 2px solid #000000;
+    --boxshadow: 0 0 8px 0.1rem rgba(14, 91, 235, 0.795);
+    
+}
+
+/****************** Body ******************/
+
+html {
+    height: 100%;
+}
+
+body {
+    height: calc(100vh - 164px);
+    color: var(--black);
+    font-family: var(--main-font);
+}
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.text-black {
+    color: var(--black) !important;
+}
+
+/****************** Navbar ******************/
+
+.logo-box {
+    background-color: var(--black);
+    color: var(--white);
+    border: var(--border);
+    border-radius: 15px;
+    font-weight: bolder;
+    font-family: var(--title-font);
+}
+
+.logo-box:hover {
+    background-color: var(--white);
+    color: var(--black);
+    border: var(--border);
+}
+
+.form-control:focus {
+    box-shadow: var(--boxshadow);
+}
+
+.search-btn:focus {
+    border-radius: 50%;
+    box-shadow: none;
+}
+
+.icon:hover {
+    color: var(--blue);
+}

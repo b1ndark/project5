@@ -192,8 +192,8 @@ x
 
 From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
-- [**x**](x)
-- [**x**](x)
+- [**Roboto**](https://fonts.google.com/specimen/Roboto?query=roboto) - font-family: 'Nunito', sans-serif;
+- [**Nunito**](https://fonts.google.com/specimen/Nunito?query=nunito) - font-family: 'Roboto', sans-serif;
 
 #### **Colours used**
 
