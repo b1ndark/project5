@@ -37,10 +37,14 @@ body {
 }
 
 .text-black {
-    color: var(--black) !important;
+    color: var(--black);
 }
 
 /****************** Navbar ******************/
+
+.main-logo-link {
+    width: fit-content;
+}
 
 .logo-box {
     background-color: var(--black);
@@ -49,12 +53,6 @@ body {
     border-radius: 15px;
     font-weight: bolder;
     font-family: var(--title-font);
-}
-
-.logo-box:hover {
-    background-color: var(--white);
-    color: var(--black);
-    border: var(--border);
 }
 
 .form-control:focus {
@@ -69,3 +67,6 @@ body {
 .icon:hover {
     color: var(--blue);
 }
+
+/****************** Footer ******************/
+
