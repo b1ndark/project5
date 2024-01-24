@@ -49,13 +49,9 @@ body {
     font-size: 1.15em;
 }
 
-.navbar-icon:hover {
-    transform: scale(1.10);
-}
-
-.navbar-icon:focus-within {
+.navbar-icon:focus,
+.navbar-icon:active {
     color: var(--blue);
-    transform: scale(1.10);
 }
 
 .logo-box {
