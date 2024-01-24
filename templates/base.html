@@ -56,7 +56,7 @@
     <title>TopTech {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body>
+<body class="{% if request.resolver_match.url_name == 'home' %}main-cover{% endif %}">
     <!--          Header          -->
     <header class="container-fluid fixed-top">
         {% include 'includes/header.html' %}

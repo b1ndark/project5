@@ -27,11 +27,14 @@ html {
 }
 
 body {
-    background: url('/media/desktop-motherboard.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 200px);
     color: var(--black);
     font-family: var(--main-font);
+}
+
+.main-cover {
+    background: url('/media/desktop-motherboard.jpg') no-repeat center center fixed;
 }
 
 .text-black {
