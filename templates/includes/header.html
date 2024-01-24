@@ -16,7 +16,7 @@
             <div class="input-group border border-black rounded-pill p-1 w-100">
                 <input class="form-control rounded-pill border-0" type="text" name="q" placeholder="Search Tech">
                 <div class="input-group-append align-items-center">
-                    <button class="search-btn form-control btn btn-black border-0" type="submit">
+                    <button class="search-btn form-control btn btn-black text-grey border-0" type="submit">
                         <span class="p-1">
                             <i class="fas fa-search"></i>
                         </span>
@@ -26,29 +26,29 @@
         </form>
     </div>
     <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+        <ul class="list-inline list-unstyled text-center text-grey text-lg-right my-0">
             <li class="list-inline-item dropdown navbar-icon">
 
                 <!--          Account menu          -->
-                <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="text-center">
                         <!--          If User is authenticated          -->
                         {% if request.user.is_authenticated %}
 
                             <!--          If is Superuser          -->
                             {% if request.user.is_superuser %}
-                                <div><i class="fa-solid fa-user-secret"></i></div>
+                                <div><i class="fa-solid fa-user-secret font-weight-bold"></i></div>
                             {% else %}
 
                             <!--          User logged in          -->
-                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <div><i class="fas fa-user fa-lg font-weight-bold"></i></div>
                             {% endif %}
                         {% else %}
 
                             <!--          Not logged in          -->
                             <div><i class="fa-regular fa-user"></i></div>
                         {% endif %}
-                        <p class="my-0">Account</p>
+                        <p class="my-0 font-weight-bold">Account</p>
                     </div>
                 </a>
                 <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -76,8 +76,8 @@
                 <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                     href="">
                     <div class="text-center">
-                        <div><i class="fa-solid fa-basket-shopping"></i></div>
-                        <p class="my-0">
+                        <div><i class="fa-solid fa-basket-shopping font-weight-bold"></i></div>
+                        <p class="my-0 font-weight-bold">
                             {% if grand_total %}
                             ${{ grand_total|floatformat:2 }}
                             {% else %}

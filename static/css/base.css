@@ -9,6 +9,10 @@
     --black: #000000;
     --white: #ffffff;
     --blue: rgba(14, 91, 235, 0.795);
+    --background: #2c2b2ce3;
+    --background-hover: #1f1e1f;
+    --text-color: rgba(0, 0, 0, .5);
+    --text-color-hover: rgba(0, 0, 0, .7);
 
     /* Border */
     --border: 2px solid #000000;
@@ -25,7 +29,7 @@ html {
 body {
     background: url('/media/desktop-motherboard.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 200px);
     color: var(--black);
     font-family: var(--main-font);
 }
@@ -34,9 +38,21 @@ body {
     color: var(--black);
 }
 
+.text-grey {
+    color: var(--text-color);
+}
+
 .content-container {
     padding-top: 75px;
     padding-bottom: 75px;
+}
+
+.background-box {
+    background-color: var(--background);
+    width: fit-content;
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
 /****************** Navbar ******************/
@@ -45,13 +61,25 @@ body {
     width: fit-content;
 }
 
-.navbar-icon {
+.navbar-icon a {
     font-size: 1.15em;
+    color: var(--text-color);
 }
 
-.navbar-icon:focus,
-.navbar-icon:active {
-    color: var(--blue);
+.navbar-icon a:focus,
+.navbar-icon a:active,
+.navbar-icon a:hover {
+    font-size: 1.20em;
+}
+
+.nav-link:hover {
+    color: var(--text-color-hover);
+}
+
+.dropdown-item:active,
+.dropdown-item:hover {
+    color: var(--white);
+    background-color: var(--gray);
 }
 
 .logo-box {
@@ -73,27 +101,38 @@ body {
 }
 
 .search-btn:hover {
-    color: var(--blue);
+    color: var(--text-color-hover);
     transform: scale(1.10);
+}
+
+/****************** Banner ******************/
+
+.delivery-banner h4 {
+    font-size: 1.2rem;
+}
+
+.bg-yellow {
+    background: var(--yellow);
 }
 
 /****************** Home page ******************/
 
 .shop-now-button {
-    background-color: var(--white);
+    background-color: var(--background);
+    color: var(--white);
     padding-left: 20px;
     min-width: 200px;
 }
 
 .shop-now-button:hover {
+    background-color: var(--background-hover);
     color: var(--white);
-    background-color: var(--gray);
 }
 
 /****************** Footer ******************/
 
 .icon:hover {
-    color: var(--blue);
+    color: var(--text-color-hover);
 }
 
 .icon {
@@ -122,6 +161,48 @@ body {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 200px;
+    }
+}
+
+/* From medium screens sizes from 991px wide and down */
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 125px;
+    }
+
+    body {
+        height: calc(100vh - 125px);
+    }
+
+    .background-box {
+        font-size: 3rem;
+    }
+}
+
+/* From medium screens sizes from 576px wide and down */
+
+@media (max-width: 576px) {
+    .header-container {
+        padding-top: 168px;
+    }
+
+    body {
+        height: calc(100vh - 168px);
+    }
+
+    .delivery-banner h4 {
+        font-size: 0.8rem;
+    }
+
+    .background-box {
+        background-color: var(--background);
+        width: fit-content;
+        font-size: 2.5rem;
+    }
+
+    .shop-now-button {
+        min-width: auto;
     }
 }

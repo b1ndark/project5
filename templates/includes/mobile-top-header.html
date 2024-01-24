@@ -1,10 +1,10 @@
 <li class="list-inline-item">
 
     <!--          Search bar          -->
-    <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="text-grey nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-search fa-lg"></i></div>
-            <p class="my-0">Search</p>
+            <p class="my-0 font-weight-bold">Search</p>
         </div>
     </a>
     <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
@@ -14,7 +14,7 @@
             <div class="input-group w-100">
                 <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
                 <div class="input-group-append">
-                    <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
+                    <button class="form-control form-control btn btn-black text-grey border border-black rounded-0" type="submit">
                         <span class="icon">
                             <i class="fas fa-search"></i>
                         </span>
@@ -27,10 +27,25 @@
 <li class="list-inline-item dropdown">
 
     <!--          Account menu          -->
-    <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="text-grey nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
-            <div><i class="fas fa-user fa-lg"></i></div>
-            <p class="my-0">Account</p>
+            <!--          If User is authenticated          -->
+            {% if request.user.is_authenticated %}
+
+                <!--          If is Superuser          -->
+                {% if request.user.is_superuser %}
+                    <div><i class="fa-solid fa-user-secret font-weight-bold"></i></div>
+                {% else %}
+
+                <!--          User logged in          -->
+                    <div><i class="fas fa-user fa-lg font-weight-bold"></i></div>
+                {% endif %}
+            {% else %}
+
+                <!--          Not logged in          -->
+                <div><i class="fa-regular fa-user"></i></div>
+            {% endif %}
+            <p class="my-0 font-weight-bold">Account</p>
         </div>
     </a>
     <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -55,10 +70,10 @@
 <li class="list-inline-item">
 
     <!--          Shopping basket          -->
-    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="#">
+    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-grey{% endif %} nav-link d-block d-lg-none" href="#">
         <div class="text-center">
-            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-            <p class="my-0">
+            <div><i class="fa-solid fa-basket-shopping font-weight-bold"></i></div>
+            <p class="my-0 font-weight-bold">
                 {% if grand_total %}
                     ${{ grand_total|floatformat:2 }}
                 {% else %}
