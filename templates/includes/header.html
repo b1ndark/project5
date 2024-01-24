@@ -1,0 +1,90 @@
+<!--          Navbar menus          -->
+<div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <div class="col-4">
+
+            <!--          Company Logo          -->
+            <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                <h2 class="my-0 p-2 logo-box">TopTech</h2>
+            </a>
+        </div>
+    </div>
+    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+
+        <!--          Search bar form          -->
+        <form method="GET" action="">
+            <div class="input-group border border-black rounded-pill p-1 w-100">
+                <input class="form-control rounded-pill border-0" type="text" name="q" placeholder="Search Tech">
+                <div class="input-group-append align-items-center">
+                    <button class="search-btn form-control btn btn-black border-0" type="submit">
+                        <span class="p-1">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <li class="list-inline-item dropdown navbar-icon">
+                <a class="text-black nav-link" href="" id="user-options" data-toggle="dropdown" aria-haspopup="true">
+                    <div class="text-center">
+                        <!--          If User is authenticated          -->
+                        {% if request.user.is_authenticated %}
+
+                        <!--          If is Superuser          -->
+                        {% if request.user.is_superuser %}
+                        <div><i class="fa-solid fa-user-secret"></i></div>
+                        {% else %}
+
+                        <!--          User logged in          -->
+                        <div><i class="fas fa-user fa-lg"></i></div>
+                        {% endif %}
+                        {% else %}
+
+                        <!--          Not logged in          -->
+                        <div><i class="fa-regular fa-user"></i></div>
+                        {% endif %}
+                        <p class="my-0">Account</p>
+                    </div>
+                </a>
+                <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                    {% if request.user.is_authenticated %}
+
+                    <!--          If is Superuser          -->
+                    {% if request.user.is_superuser %}
+                    <a href="" class="dropdown-item">Product Management</a>
+                    {% endif %}
+
+                    <!--          User logged in          -->
+                    <a href="" class="dropdown-item">Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                    {% else %}
+
+                    <!--          User not logged in          -->
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                    {% endif %}
+                </div>
+            </li>
+            <li class="list-inline-item navbar-icon">
+
+                <!--          Shopping basket          -->
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                    href="">
+                    <div class="text-center">
+                        <div><i class="fa-solid fa-basket-shopping"></i></div>
+                        <p class="my-0">
+                            {% if grand_total %}
+                            ${{ grand_total|floatformat:2 }}
+                            {% else %}
+                            €0.00
+                            {% endif %}
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
