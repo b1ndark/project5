@@ -23,27 +23,39 @@ html {
 }
 
 body {
+    background: url('/media/desktop-motherboard.jpg') no-repeat center center fixed;
+    background-size: cover;
     height: calc(100vh - 164px);
     color: var(--black);
     font-family: var(--main-font);
-}
-
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
 }
 
 .text-black {
     color: var(--black);
 }
 
+.content-container {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
 /****************** Navbar ******************/
 
 .main-logo-link {
     width: fit-content;
+}
+
+.navbar-icon {
+    font-size: 1.15em;
+}
+
+.navbar-icon:hover {
+    transform: scale(1.10);
+}
+
+.navbar-icon:focus-within {
+    color: var(--blue);
+    transform: scale(1.10);
 }
 
 .logo-box {
@@ -64,9 +76,56 @@ body {
     box-shadow: none;
 }
 
-.icon:hover {
+.search-btn:hover {
     color: var(--blue);
+    transform: scale(1.10);
+}
+
+/****************** Home page ******************/
+
+.shop-now-button {
+    background-color: var(--white);
+    padding-left: 20px;
+    min-width: 200px;
+}
+
+.shop-now-button:hover {
+    color: var(--white);
+    background-color: var(--gray);
 }
 
 /****************** Footer ******************/
 
+.icon:hover {
+    color: var(--blue);
+}
+
+.icon {
+    font-size: 1.1em;
+}
+
+/****************** Media queries ******************/
+
+/* Slightly larger container on XL screens */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* Fixed top navbar only on medium and up */
+
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}

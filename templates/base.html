@@ -28,7 +28,10 @@
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
         <!--          Mailchimp          -->
-        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" type="text/css">
+
+        <!--          Favicon          -->
+        <link rel="icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
     {% endblock %}
 
     {% block corejs %}
@@ -70,7 +73,7 @@
                         <input class="form-control rounded-pill border-0" type="text" name="q" placeholder="Search Tech">
                         <div class="input-group-append align-items-center">
                             <button class="search-btn form-control btn btn-black border-0" type="submit">
-                                <span class="icon p-1">
+                                <span class="p-1">
                                     <i class="fas fa-search"></i>
                                 </span>
                             </button>
@@ -80,10 +83,18 @@
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
+                    <li class="list-inline-item dropdown navbar-icon">
                         <a class="text-black nav-link" href="" id="user-options" data-toggle="dropdown" aria-haspopup="true">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                    <div><i class="fa-solid fa-user-secret"></i></div>
+                                    {% else %}
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    {% endif %}
+                                {% else %}
+                                <div><i class="fa-regular fa-user"></i></div>
+                                {% endif %}
                                 <p class="my-0">Account</p>
                             </div>
                         </a>
@@ -100,7 +111,7 @@
                             {% endif %}
                         </div>
                     </li>
-                    <li class="list-inline-item">
+                    <li class="list-inline-item navbar-icon">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                             <div class="text-center">
                                 <div><i class="fa-solid fa-basket-shopping"></i></div>
@@ -134,7 +145,7 @@
     {% endblock %}
 
     <!--          Footer          -->
-    <footer class="container-wrapper">
+    <footer class="container-wrapper bg-white">
         {% include 'includes/footer.html' %}
     </footer>
 
