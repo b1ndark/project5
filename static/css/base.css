@@ -206,3 +206,11 @@ body {
         min-width: auto;
     }
 }
+
+/* From Small screens sizes from 368px wide and down */
+
+@media (max-width: 368px) {
+    .nav-link {
+        padding: 0.5rem 0;
+    }
+}
