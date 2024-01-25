@@ -13,9 +13,53 @@
     <div class="container-fluid h-100 w-100 top-0 start-0">
         <div class="row">
             <div class="col text-center mt-3">
-                <h1 class="logo-font">
-                    Products
-                </h1>
+                <h2 class="logo-font">Products</h2>
+                <hr class="w-75 mb-1">
+            </div>
+        </div>
+        <div class="row w-100 w-md-75">
+            <div class="product-container col-10 offset-1">
+                <div class="row mt-1 mb-2"></div>
+                <div class="row">
+                    {% for product in products %}
+                        <div class="col-12 pt-1 pb-2">
+                            <div class="card h-100 border-0 d-flex">
+                                <a href="">
+                                    <div class="product-image card-left">
+                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }} image">
+                                    </div>
+                                    <div class="short-description card-middle">
+                                        <p class="mt-0">{{ product.name }}</p>
+                                        <br class="p-2">
+                                        {% if product.brand %}
+                                            <p>Brand: {{ product.brand }}</p>
+                                        {% endif %}
+                                        {% if product.operating_system %}
+                                            <p>Operating System: {{ product.operating_system }}</p>
+                                        {% endif %}
+                                        {% if product.memory_ram %}
+                                            <p>Memory Ram: {{ product.memory_ram }}</p>
+                                        {% endif %}
+                                        {% if product.display %}
+                                            <p>Display: {{ product.display }}</p>
+                                        {% endif %}
+                                        {% if product.battery_life %}
+                                            <p>Battery: {{ product.battery_life }}</p>
+                                        {% endif %}
+                                    </div>
+                                </a>
+                                <div class="extra-description card-right">
+                                    <p class="lead font-weight-bold">Price: €{{ product.price }}</p>
+                                    {% if product.rating %}
+                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}/5</small>
+                                    {% else %}
+                                        <small class="text-muted">No rating</small>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>

@@ -18,7 +18,10 @@ BRANDS = (
     ('acer', 'Acer'),
     ('apple', 'Apple'),
     ('asus', 'Asus'),
+    ('dell', 'Dell'),
     ('google', 'Google'),
+    ('hp', 'HP'),
+    ('msi', 'MSI'),
     ('toshiba', 'Toshiba'),
     ('sony', 'Sony'),
 )
@@ -57,6 +60,9 @@ class Product(models.Model):
         max_digits=6, decimal_places=2, null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    memory_ram = models.CharField(max_length=100, null=True, blank=True)
+    display = models.CharField(max_length=100, null=True, blank=True)
+    battery_life = models.CharField(max_length=100, null=True, blank=True)
     
     def __str__(self):
         return self.name
