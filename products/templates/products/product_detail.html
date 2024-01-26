@@ -31,12 +31,12 @@
                     <ul class="features-list pt-5 pb-5">
                         <li>
                             {% if product.brand %}
-                                <strong>Brand: </strong>{{ product.brand }}
+                                <strong>Brand: </strong>{{ product.get_brand_display }}
                             {% endif %}
                         </li>
                         <li>
                             {% if product.operating_system %}
-                                <strong>Operating System: </strong>{{ product.operating_system }}
+                                <strong>Operating System: </strong>{{ product.get_operating_system_display }}
                             {% endif %}
                         </li>
                         <li>

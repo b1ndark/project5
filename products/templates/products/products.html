@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid top-0">
+    <div class="container-fluid-products top-0">
         <div class="row">
             <div class="col text-center mt-3 mb-3">
                 <h2 class="logo-font">Products</h2>
@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="product-container d-flex justify-content-center">
+            <div class="col d-flex justify-content-center">
                 <div class="col-md-10 col-lg-8">
                     <div class="row mt-1 mb-2"></div>
                     <div class="row d-lg-flex justify-content-center">
@@ -46,12 +46,12 @@
                                             <ul class="features-list pt-5">
                                                 <li>
                                                     {% if product.brand %}
-                                                        <strong>Brand: </strong>{{ product.brand }}
+                                                        <strong>Brand: </strong>{{ product.get_brand_display }}
                                                     {% endif %}
                                                 </li>
                                                 <li>
                                                     {% if product.operating_system %}
-                                                        <strong>Operating System: </strong>{{ product.operating_system }}
+                                                        <strong>Operating System: </strong>{{ product.get_operating_system_display }}
                                                     {% endif %}
                                                 </li>
                                                 <li>
