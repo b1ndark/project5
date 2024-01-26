@@ -20,10 +20,10 @@
                 Laptops
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="laptops-link">
-                <a href="" class="dropdown-item">Gaming</a>
-                <a href="" class="dropdown-item">Windows Laptops</a>
-                <a href="" class="dropdown-item">MacBook</a>
-                <a href="" class="dropdown-item">All Laptops</a>
+                <a href="{% url 'products' %}?category=gaming_laptops" class="dropdown-item">Gaming Laptops</a>
+                <a href="{% url 'products' %}?category=laptops" class="dropdown-item">Windows Laptops</a>
+                <a href="{% url 'products' %}?category=macbook" class="dropdown-item">MacBook</a>
+                <a href="{% url 'products' %}?category=gaming_laptops,windows_laptops,macbook" class="dropdown-item">All Laptops</a>
             </div>
         </li>
 
@@ -34,10 +34,10 @@
                 Desktop PCs
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="desktops-link">
-                <a href="" class="dropdown-item">Gaming</a>
-                <a href="" class="dropdown-item">Windows Desktops</a>
-                <a href="" class="dropdown-item">iMac</a>
-                <a href="" class="dropdown-item">All Desktops</a>
+                <a href="{% url 'products' %}?category=gaming_desktops" class="dropdown-item">Gaming Desktops</a>
+                <a href="{% url 'products' %}?category=desktops" class="dropdown-item">Windows Desktops</a>
+                <a href="{% url 'products' %}?category=imac" class="dropdown-item">iMac</a>
+                <a href="{% url 'products' %}?category=gaming_desktops,windows_desktops,imac" class="dropdown-item">All Desktops</a>
             </div>
         </li>
 
@@ -48,10 +48,10 @@
                 Latest Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">new Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Offers</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Offers</a>
             </div>
         </li>
     </ul>
