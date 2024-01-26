@@ -17,6 +17,7 @@
     /* Border */
     --border: 2px solid #000000;
     --boxshadow: 0 0 8px 0.1rem rgba(14, 91, 235, 0.795);
+    --product_boxshadow: 0 0 10px 0.1rem rgba(29, 30, 31, 0.795);
     
 }
 
@@ -132,6 +133,22 @@ body {
     color: var(--white);
 }
 
+/****************** Products ******************/
+
+.card {
+    border: var(--border);
+    box-shadow: var(--product_boxshadow);
+    border-radius: 20px;
+}
+
+.card-img-top {
+    border-radius: 20px;
+}
+
+.features-list {
+    padding: 0 0 0 24px;
+}
+
 /****************** Footer ******************/
 
 .icon:hover {
@@ -164,7 +181,7 @@ body {
     }
 
     .header-container {
-        padding-top: 200px;
+        padding-top: 168px;
     }
 }
 
@@ -172,11 +189,11 @@ body {
 
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 125px;
+        padding-top: 150px;
     }
 
     body {
-        height: calc(100vh - 125px);
+        height: calc(100vh - 150px);
     }
 
     .background-box {
@@ -187,14 +204,6 @@ body {
 /* From medium screens sizes from 576px wide and down */
 
 @media (max-width: 576px) {
-    .header-container {
-        padding-top: 168px;
-    }
-
-    body {
-        height: calc(100vh - 168px);
-    }
-
     .delivery-banner h4 {
         font-size: 0.8rem;
     }

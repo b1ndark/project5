@@ -10,55 +10,80 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid h-100 w-100 top-0 start-0">
+    <div class="container-fluid top-0">
         <div class="row">
-            <div class="col text-center mt-3">
+            <div class="col text-center mt-3 mb-3">
                 <h2 class="logo-font">Products</h2>
-                <hr class="w-75 mb-1">
+                <hr class="w-75">
             </div>
         </div>
-        <div class="row w-100 w-md-75">
-            <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
-                <div class="row">
-                    {% for product in products %}
-                        <div class="col-12 pt-1 pb-2">
-                            <div class="card h-100 border-0 d-flex">
-                                <a href="">
-                                    <div class="product-image card-left">
-                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }} image">
+        <div class="row">
+            <div class="product-container d-flex justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <div class="row mt-1 mb-2"></div>
+                    <div class="row d-lg-flex justify-content-center">
+                        {% for product in products %}
+                            <div class="col-xs-12 col-sm-9 col-lg-12 col-xl-10 pt-3 pb-5">
+                                <div class="card h-100 d-lg-flex justify-content-lg-between flex-lg-row">
+                                    <div class="p-3">
+                                        <a href="{% url 'product_detail' product.id %}" width="325" height="325">
+                                            <div class="product-image">
+                                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }} image">
+                                            </div>
+                                        </a>    
                                     </div>
-                                    <div class="short-description card-middle">
-                                        <p class="mt-0">{{ product.name }}</p>
-                                        <br class="p-2">
-                                        {% if product.brand %}
-                                            <p>Brand: {{ product.brand }}</p>
-                                        {% endif %}
-                                        {% if product.operating_system %}
-                                            <p>Operating System: {{ product.operating_system }}</p>
-                                        {% endif %}
-                                        {% if product.memory_ram %}
-                                            <p>Memory Ram: {{ product.memory_ram }}</p>
-                                        {% endif %}
-                                        {% if product.display %}
-                                            <p>Display: {{ product.display }}</p>
-                                        {% endif %}
-                                        {% if product.battery_life %}
-                                            <p>Battery: {{ product.battery_life }}</p>
-                                        {% endif %}
+                                    <div class="p-3">
+                                        <div class="short-description">
+                                            <a href="{% url 'product_detail' product.id %}">
+                                                <p class="mt-0 h4"><strong>{{ product.name }}</strong></p>
+                                            </a>
+                                            {% if product.rating %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1 text-warning"></i>{{ product.rating }}/5</small>
+                                            {% else %}
+                                                <small class="text-muted"></small>
+                                            {% endif %}
+                                            <br class="pt-5">
+                                            <ul class="features-list pt-5">
+                                                <li>
+                                                    {% if product.brand %}
+                                                        <strong>Brand: </strong>{{ product.brand }}
+                                                    {% endif %}
+                                                </li>
+                                                <li>
+                                                    {% if product.operating_system %}
+                                                        <strong>Operating System: </strong>{{ product.operating_system }}
+                                                    {% endif %}
+                                                </li>
+                                                <li>
+                                                    {% if product.memory_ram %}
+                                                        <strong>Memory Ram: </strong>{{ product.memory_ram }}
+                                                    {% endif %}
+                                                </li>
+                                                <li>
+                                                    {% if product.display %}
+                                                        <strong>Display: </strong>{{ product.display }}
+                                                    {% endif %}
+                                                </li>
+                                                <li>
+                                                    {% if product.battery_life %}
+                                                        <strong>Battery: </strong>{{ product.battery_life }}
+                                                    {% endif %}
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </a>
-                                <div class="extra-description card-right">
-                                    <p class="lead font-weight-bold">Price: €{{ product.price }}</p>
-                                    {% if product.rating %}
-                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}/5</small>
-                                    {% else %}
-                                        <small class="text-muted">No rating</small>
-                                    {% endif %}
+                                    <div class="p-3 d-flex justify-content-between">
+                                        <div class="">
+                                            <!-- button to add to basket -->
+                                        </div>
+                                        <div class="d-flex flex-column align-items-end">
+                                            <p class="lead font-weight-bold">Price: €{{ product.price }}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    {% endfor %}
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
