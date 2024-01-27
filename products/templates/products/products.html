@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <div class="row d-lg-flex justify-content-center">
-                        {% for product in products %}
+                        {% for product in products_page %}
                             <div class="col-xs-12 col-sm-9 col-lg-12 col-xl-10 pt-3 pb-5">
                                 <div class="card h-100 d-lg-flex justify-content-lg-between flex-lg-row">
                                     <div class="p-3">
@@ -116,31 +116,34 @@
                 </div>
             </div>
         </div>
+
+        <!--          Pagination          -->
+        <div class="row">
+            <div class="col">
+                {% if products_page.has_other_pages %}
+                    <ul class="pagination justify-content-center">
+                        {% if products_page.has_previous %}
+                            <li class="page-item">
+                                <a class="text-black border border-dark rounded dropdown-item font-weight-bold" href="?page=1"><i class="fa-solid fa-backward small"></i> First</a>
+                                <a class="text-black border border-dark rounded dropdown-item font-weight-bold" href="?page={{ products_page.previous_page_number }}"><i class="fa-solid fa-caret-left"></i> Prev</a>
+                            </li>
+                        {% endif %}
+                        {% if products_page.has_next %}
+                            <li class="page-item">
+                                <a class="text-black border border-dark rounded dropdown-item font-weight-bold" href="?page={{ products_page.next_page_number }}">Next <i class="fa-solid fa-caret-right"></i></a>
+                                <a class="text-black border border-dark rounded dropdown-item font-weight-bold" href="?page={{ products_page.paginator.num_pages }}">Last <i class="fa-solid fa-forward small"></i></a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
     </div>
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
-        $('#sort-selector').change(function() {
-            var selector = $(this)
-            var currentUrl = new URL(window.location);
 
-            var selectedVal = selector.val();
-            if(selectedVal != "reset"){
-                var sort =  selectedVal.split("_")[0]
-                var direction =  selectedVal.split("_")[1]
-
-                currentUrl.searchParams.set("sort", sort);
-                currentUrl.searchParams.set("direction", direction);
-
-                window.location.replace(currentUrl);
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
-
-                window.location.replace(currentUrl);
-            }
-        })
-    </script>
+    <!--          JS file          -->
+    <script src="{% static 'js/products.js' %}"></script>
 {% endblock %}
