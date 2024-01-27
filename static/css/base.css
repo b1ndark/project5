@@ -135,6 +135,10 @@ body {
 
 /****************** Products ******************/
 
+.select-option-box:hover {
+    box-shadow: var(--boxshadow);
+}
+
 .card {
     border: var(--border);
     box-shadow: var(--product_boxshadow);

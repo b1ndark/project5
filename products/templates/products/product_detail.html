@@ -12,17 +12,19 @@
 {% block content %}
     <div class="container-fluid top-0">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="col-12 col-md-6 col-lg-5 col-xl-4 offset-lg-1 offset-xl-2">
                 <div class="image-container my-5">
                     <a href="{{ product.image.url }}" target="_blank">
                         <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }} image">
                     </a>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-5 col-xl-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mt-0 h4"><strong>{{ product.name }}</strong></p>
-                    <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                    <div class="d-flex justify-content-between">
+                        <p class="mt-0 h4"><strong>{{ product.name }}</strong></p>
+                        <p class="lead mb-0 text-left font-weight-bold"><i class="fas fa-tag mr-1"></i> €{{ product.price }}</p>
+                    </div>
                     {% if product.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1 text-warning"></i>{{ product.rating }}/5</small>
                     {% else %}
