@@ -57,6 +57,7 @@
 </head>
 
 <body class="{% if request.resolver_match.url_name == 'home' %}main-cover{% endif %}">
+
     <!--          Header          -->
     <header class="container-fluid fixed-top">
         {% include 'includes/header.html' %}
@@ -69,12 +70,19 @@
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
-        <div id="delivery-banner" class="row text-center d-flex text-uppercase delivery-banner">
-            <div class="col-6 bg-yellow text-black">
-                <h4 class="logo-font my-1 font-weight-bold"><span>Free standard delivery</span> on orders over ${{ free_shipping_threshold }}</h4>
-            </div>
-            <div class="col-6 bg-yellow text-black">
-                <h4 class="logo-font my-1 font-weight-bold"><span>Get 10% off!</span> when you use save10</h4>
+
+        <!--          Banner/Carousel          -->
+        <div id="carouselExampleSlidesOnly" class="carousel slide row text-center d-flex text-uppercase delivery-banner">
+            <div class="carousel-inner">
+                <div class="carousel-item active bg-yellow text-black">
+                    <h4 class="d-block w-100 logo-font my-1 font-weight-bold px-2"><span>Free standard delivery</span> on orders over ${{ free_shipping_threshold }}</h4>
+                </div>
+                <div class="carousel-item bg-yellow text-black">
+                    <h4 class="d-block w-100 logo-font my-1 font-weight-bold px-2"><span>Subscribe</span> and get the latest!</h4>
+                </div>
+                <div class="carousel-item bg-yellow text-black">
+                    <h4 class="d-block w-100 logo-font my-1 font-weight-bold px-2"><span>Get 10% off!</span> when you use save10</h4>
+                </div>
             </div>
         </div>
     </header>
@@ -99,6 +107,10 @@
     </footer>
 
     <!--          Scripts          -->
+
+    <!--          JS file          -->
+    <script src="{% static 'js/base.js' %}"></script>
+
     <!--          Mailchimp Scripts          -->
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
     <script

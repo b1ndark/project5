@@ -20,27 +20,34 @@
         <div class="row">
             <div class="col d-flex justify-content-center">
                 <div class="col-md-10 col-lg-8">
-                    <div class="row mt-1 mb-2 d-flex flex-column justify-content-start">
-                        <div class="col-12 col-md-6">
-                            <div class="sort-select-wrapper">
-                                <select id="sort-selector" class="form-select-sm select-option-box text-muted rounded border border-dark border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by</option>
-                                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price - low to high</option>
-                                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price - high to low</option>
-                                    <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating - low to high</option>
-                                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating - high to low</option>
-                                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Rating - A to Z</option>
-                                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Rating - Z to A</option>
-                                </select>
+                    <div class="row mt-1 mb-2">
+                        <div class="col-6 d-flex flex-column">
+                            <div class="col-12 col-md-6 justify-content-start">
+                                <div class="sort-select-wrapper">
+                                    <select id="sort-selector" class="form-select-sm select-option-box text-muted rounded border border-dark border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by</option>
+                                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price - low to high</option>
+                                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price - high to low</option>
+                                        <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating - low to high</option>
+                                        <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating - high to low</option>
+                                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Rating - A to Z</option>
+                                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Rating - Z to A</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <p class="text-muted mt-3">
+                                    {% if search_term or current_categories or current_sorting != 'None_None' %}
+                                        <span class="small"><a class="text-muted font-weight-bold" href="{% url 'products' %}">All TopTech</a> | </span>
+                                    {% endif %}
+                                    {{ products|length }} Tech products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                                </p>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6">
-                            <p class="text-muted mt-3 text-center text-md-left">
-                                {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                    <span class="small"><a class="text-muted font-weight-bold" href="{% url 'products' %}">All TopTech</a> | </span>
-                                {% endif %}
-                                {{ products|length }} Tech products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-                            </p>
+                        <div class="col-6">
+                            <div class="d-flex justify-content-end">
+                                <p class="text-muted">Page {{ products_page.number }} of {{ products_page.paginator.num_pages }}</p>
+                            </div>
                         </div>
                     </div>
                     <div class="row d-lg-flex justify-content-center">
@@ -123,15 +130,15 @@
                 {% if products_page.has_other_pages %}
                     <ul class="pagination justify-content-center">
                         {% if products_page.has_previous %}
-                            <li class="page-item">
-                                <a class="text-black border border-dark rounded dropdown-item font-weight-bold" href="?page=1"><i class="fa-solid fa-backward small"></i> First</a>
-                                <a class="text-black border border-dark rounded dropdown-item font-weight-bold" href="?page={{ products_page.previous_page_number }}"><i class="fa-solid fa-caret-left"></i> Prev</a>
+                            <li class="page-item d-flex">
+                                <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?page=1"><i class="fa-solid fa-backward small"></i> First</a>
+                                <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?page={{ products_page.previous_page_number }}"><i class="fa-solid fa-caret-left"></i> Prev</a>
                             </li>
                         {% endif %}
                         {% if products_page.has_next %}
-                            <li class="page-item">
-                                <a class="text-black border border-dark rounded dropdown-item font-weight-bold" href="?page={{ products_page.next_page_number }}">Next <i class="fa-solid fa-caret-right"></i></a>
-                                <a class="text-black border border-dark rounded dropdown-item font-weight-bold" href="?page={{ products_page.paginator.num_pages }}">Last <i class="fa-solid fa-forward small"></i></a>
+                            <li class="page-item d-flex">
+                                <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?page={{ products_page.next_page_number }}">Next <i class="fa-solid fa-caret-right"></i></a>
+                                <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?page={{ products_page.paginator.num_pages }}">Last <i class="fa-solid fa-forward small"></i></a>
                             </li>
                         {% endif %}
                     </ul>

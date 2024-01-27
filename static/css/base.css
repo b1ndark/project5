@@ -13,6 +13,7 @@
     --background-hover: #1f1e1f;
     --text-color: rgba(0, 0, 0, .5);
     --text-color-hover: rgba(0, 0, 0, .7);
+    --background-2: rgb(221, 222, 226);
 
     /* Border */
     --border: 2px solid #000000;
@@ -78,6 +79,10 @@ body {
 
 .nav-link:hover {
     color: var(--text-color-hover);
+}
+
+.dropdown-item {
+    background-color: var(--white);
 }
 
 .dropdown-item:active,
@@ -154,6 +159,7 @@ body {
 }
 
 .container-fluid-products {
+    background-color: var(--background-2);
     width: 100%;
     margin-right: auto;
     margin-left: auto;
@@ -199,11 +205,11 @@ body {
 
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 150px;
+        padding-top: 116px;
     }
 
     body {
-        height: calc(100vh - 150px);
+        height: calc(100vh - 116px);
     }
 
     .background-box {
@@ -214,6 +220,13 @@ body {
 /* From medium screens sizes from 576px wide and down */
 
 @media (max-width: 576px) {
+    .header-container {
+        padding-top: 100px;
+    }
+
+    body {
+        height: calc(100vh - 100px);
+    }
     .delivery-banner h4 {
         font-size: 0.8rem;
     }
