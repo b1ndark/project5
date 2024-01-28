@@ -1,1 +1,35 @@
-<h1>Hello</h1>
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1">
+                <hr>
+                <h2 class="logo-font mb-4">Product managements</h2>
+                <h5 class="text-muted">Add a Product</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1">
+                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="text-center">
+                        <a href="{% url 'products' %}" class="btn btn-outline-black">Cancel</a>
+                        <button class="btn btn-black rounded">Add product</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

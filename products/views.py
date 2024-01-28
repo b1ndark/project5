@@ -1,9 +1,11 @@
 from django.shortcuts import render, reverse, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.core.paginator import Paginator
 from .models import Product, Category
+from .forms import ProductForm
 
 
 def products(request):
@@ -81,8 +83,34 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
+@login_required
 def add_product(request):
-    """ Add a product to the store inventory """
-    
-    return render(request, 'products/add_product.html')
+    """ Add a product to the store inventory 
+        Also check if User is Superuser
+    """
+
+    if not request.user.is_superuser:
+        # messages.error(
+        #     request, 'You are not authorised to access Admin areas!')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            # messages.success(
+            #     request, 'The new Item has been added to the store inventory')
+            return redirect(reverse('product_detail', args=[product.id]))
+        # else:
+        #     messages.error(
+        #         request, 'Failed to add the product, please check the form!')
+    else:
+        form = ProductForm()
+
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
 
