@@ -90,20 +90,20 @@ def add_product(request):
     """
 
     if not request.user.is_superuser:
-        # messages.error(
-        #     request, 'You are not authorised to access Admin areas!')
+        messages.error(
+            request, 'You are not authorised to access Admin areas!')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            # messages.success(
-            #     request, 'The new Item has been added to the store inventory')
+            messages.success(
+                request, 'The new Item has been added to the store inventory')
             return redirect(reverse('product_detail', args=[product.id]))
-        # else:
-        #     messages.error(
-        #         request, 'Failed to add the product, please check the form!')
+        else:
+            messages.error(
+                request, 'Failed to add the product, please check the form!')
     else:
         form = ProductForm()
 
@@ -114,3 +114,36 @@ def add_product(request):
 
     return render(request, template, context)
 
+
+@login_required
+def edit_product(request, product_id):
+    """ Edit a product from the store inventory 
+        Also check if User is Superuser
+    """
+
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'You are not authorised to access Admin areas!')
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'The product has been updated!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(
+                request, 'Failed to edit the product, please check the form!')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'You are currently editing {product.name}')
+
+    template = 'products/edit_product.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, template, context)
