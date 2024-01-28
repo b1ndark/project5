@@ -53,7 +53,7 @@
 
             <!--          If is Superuser          -->
             {% if request.user.is_superuser %}
-                <a href="" class="dropdown-item">Product Management</a>
+                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
             {% endif %}
 
             <!--          User logged in          -->
