@@ -10,9 +10,13 @@
 {% endblock %}
 
 {% block content %}
+
+    <!--          Selected product container          -->
     <div class="container-fluid top-0">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-5 col-xl-4 offset-lg-1 offset-xl-2">
+
+                <!--          Selected product image          -->
                 <div class="image-container my-5">
                     <a href="{{ product.image.url }}" target="_blank">
                         <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }} image">
@@ -20,6 +24,8 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+
+                <!--          Selected product details          -->
                 <div class="product-details-container mb-5 mt-md-5">
                     <div class="d-flex justify-content-between">
                         <p class="mt-0 h4"><strong>{{ product.name }}</strong></p>
@@ -31,6 +37,8 @@
                         <small class="text-muted"></small>
                     {% endif %}
                     <ul class="features-list pt-5 pb-5">
+
+                        <!--          Selected product main features          -->
                         {% if product.brand %}
                             <li>
                                 <strong>Brand: </strong>{{ product.get_brand_display }}
@@ -57,6 +65,8 @@
                             </li>
                         {% endif %}
                     </ul>
+
+                    <!--          Selected product description          -->
                     <p class="mt-3">{{ product.description }}</p>
                 </div>
             </div>

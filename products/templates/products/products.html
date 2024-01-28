@@ -10,6 +10,8 @@
 {% endblock %}
 
 {% block content %}
+
+    <!--          Main products page          -->
     <div class="container-fluid-products top-0">
         <div class="row">
             <div class="col text-center mt-3 mb-3">
@@ -23,6 +25,8 @@
                     <div class="row mt-1 mb-2">
                         <div class="col-6 d-flex flex-column">
                             <div class="col-12 col-md-6 justify-content-start">
+
+                                <!--          Sorting          -->
                                 <div class="sort-select-wrapper">
                                     <select id="sort-selector" class="form-select-sm select-option-box text-muted rounded border border-dark border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                         <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by</option>
@@ -37,6 +41,8 @@
                             </div>
                             <div class="col-12 col-md-6">
                                 <p class="text-muted mt-3">
+
+                                    <!--          Total products          -->
                                     {% if search_term or current_categories or current_sorting != 'None_None' %}
                                         <span class="small"><a class="text-muted font-weight-bold" href="{% url 'products' %}">All TopTech</a> | </span>
                                     {% endif %}
@@ -51,10 +57,14 @@
                         </div>
                     </div>
                     <div class="row d-lg-flex justify-content-center">
+
+                        <!--          Loop through the products          -->
                         {% for product in products_page %}
                             <div class="col-xs-12 col-sm-9 col-lg-12 col-xl-10 pt-3 pb-5">
                                 <div class="card h-100 d-lg-flex justify-content-lg-between flex-lg-row">
                                     <div class="p-3">
+
+                                        <!--          Product image          -->
                                         <a href="{% url 'product_detail' product.id %}" width="325" height="325">
                                             <div class="product-image">
                                                 <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }} image">
@@ -62,6 +72,8 @@
                                         </a>    
                                     </div>
                                     <div class="p-3">
+
+                                        <!--          Product brief description          -->
                                         <div class="short-description">
                                             <a class="text-decoration-none" href="{% url 'product_detail' product.id %}">
                                                 <p class="mt-0 h4 text-black"><strong>{{ product.name }}</strong></p>
@@ -80,6 +92,8 @@
                                             {% endif %}
                                             <br class="pt-5">
                                             <ul class="features-list pt-5">
+
+                                                <!--          Product main features          -->
                                                 <li>
                                                     {% if product.brand %}
                                                         <strong>Brand: </strong>{{ product.get_brand_display }}

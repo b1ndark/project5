@@ -10,9 +10,13 @@
 {% endblock %}
 
 {% block content %}
+
+    <!--          Add product container          -->
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
+
+                <!--          Title and sub title          -->
                 <h2 class="logo-font text-center mb-4">Product managements</h2>
                 <hr>
                 <h5 class="text-muted">Add a Product</h5>
@@ -21,6 +25,8 @@
         </div>
         <div class="row">
             <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1">
+
+                <!--          Add product form          -->
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
