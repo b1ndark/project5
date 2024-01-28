@@ -85,6 +85,11 @@ body {
     box-shadow: var(--btn-boxshadow);
 }
 
+.btn-outline-danger:focus,
+.btn-outline-danger:hover {
+    transform: scale(0.97);
+}
+
 /****************** Navbar ******************/
 
 .main-logo-link {
