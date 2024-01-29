@@ -8,7 +8,7 @@ class About(models.Model):
     """
 
     class Meta:
-        verbose_name_plural = 'About Us'
+        verbose_name_plural = 'Company'
 
     name = models.CharField(max_length=200)
     email_address = models.CharField(max_length=100, null=True, blank=True)
