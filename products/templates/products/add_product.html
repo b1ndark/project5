@@ -29,7 +29,13 @@
                 <!--          Add product form          -->
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {{ form | crispy }}
+                    {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
                     <div class="text-center">
                         <a href="{% url 'products' %}" class="btn cancel-button font-weight-bold">Cancel</a>
                         <button class="btn main-button font-weight-bold rounded">Add product</button>
@@ -39,4 +45,12 @@
         </div>
     </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+
+    <!--          JS file          -->
+    <!-- Displays which image was selected before adding/updating product -->
+    <script src="{% static 'js/products.js' %}"></script>
 {% endblock %}
