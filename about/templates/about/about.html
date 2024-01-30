@@ -14,13 +14,71 @@
     <!--          About Us container          -->
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
+            <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
     
                 <!--          Title and sub title          -->
                 <h2 class="logo-font text-center mb-4">About Us</h2>
                 <hr>
                 <h5 class="text-muted">{{ about.name }}</h5>
                 <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 mt-3 mb-4 d-flex">
+                <hr>
+                <div class="col-6">
+                    <!--          About image          -->
+                    <div class="image-container">
+                        <a href="{{ about.image.url }}" target="_blank">
+                            <img class="" src="{{ about.image.url }}" alt="{{ about.name }} image">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div>
+                        {{ about.description }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3 d-flex">
+                <hr>
+                <div class="col-6">
+                    <h5 class="text-muted text-monospace text-uppercase mb-0">Visit Us!</h5>
+                    <hr class="mt-0">
+                    {% if about.street_address_1 %}
+                        <p><strong>Street Address 1: </strong>{{ about.street_address_1 }}</p>
+                    {% endif %}
+                    {% if about.street_address_2 %}
+                        <p><strong>Street Address 2: </strong>{{ about.street_address_2 }}</p>
+                    {% endif %}
+                    {% if about.city_or_town %}
+                        <p><strong>City or Town: </strong>{{ about.city_or_town }}</p>
+                    {% endif %}
+                    {% if about.country %}
+                        <p><strong>Country: </strong>{{ about.country }}</p>
+                    {% endif %}
+                    {% if about.postcode %}
+                        <p><strong>Postcode: </strong>{{ about.postcode }}</p>
+                    {% endif %}
+                </div>
+                <div class="col-6">
+                    <h5 class="text-muted text-monospace text-uppercase mb-0">Opening Hours</h5>
+                    <hr class="mt-0">
+                    {% if about.opening_hours_mon_to_fri %}
+                        <p><strong>Mon - Fri: </strong>{{ about.opening_hours_mon_to_fri }}</p>
+                    {% endif %}
+                    {% if about.opening_hours_sat %}
+                        <p><strong>Saturday: </strong>{{ about.opening_hours_sat }}</p>
+                        {% endif %}
+                    {% if about.opening_hours_sunday %}
+                        <p><strong>Sunday: </strong>{{ about.opening_hours_sunday }}</p>
+                    {% endif %}
+                    {% if about.opening_hours_bank_holidays %}
+                        <p><strong>Bank Holidays: </strong>{{ about.opening_hours_bank_holidays }}</p>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>

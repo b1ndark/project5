@@ -22,6 +22,14 @@ class About(models.Model):
     city_or_town = models.CharField(max_length=100, null=True, blank=True)
     country = models.CharField(max_length=100, null=True, blank=True)
     postcode = models.CharField(max_length=100, null=True, blank=True)
+    opening_hours_mon_to_fri = models.CharField(
+        max_length=100, null=True, blank=True)
+    opening_hours_sat = models.CharField(
+        max_length=100, null=True, blank=True)
+    opening_hours_sunday = models.CharField(
+        max_length=100, null=True, blank=True)
+    opening_hours_bank_holidays = models.CharField(
+        max_length=100, null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
    

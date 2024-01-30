@@ -1,11 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from .models import About
 
 
-def about(request, about_id):
+def about(request):
     """ This will render the About page """
 
-    about = get_object_or_404(About, pk=about_id)
+    about = About.objects.first()
     
     context = {
         'about': about,
