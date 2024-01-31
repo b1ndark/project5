@@ -231,12 +231,33 @@ body {
 
 /****************** Footer ******************/
 
+.icon {
+    font-size: 1.1em;
+}
+
 .icon:hover {
     color: var(--text-color-hover);
 }
 
-.icon {
-    font-size: 1.1em;
+.icon-socials:focus,
+.icon-socials:hover {
+    transform: scale(0.97);
+}
+
+.mailchimp-button:focus,
+.mailchimp-button:hover {
+    transform: scale(0.97);
+    box-shadow: var(--btn-boxshadow);
+}
+
+.privacy-policy a:focus,
+.privacy-policy a:hover {
+    text-decoration: none;
+}
+
+.privacy-policy a small:focus,
+.privacy-policy a small:hover {
+    color: var(--text-color-hover);
 }
 
 /****************** Media queries ******************/
