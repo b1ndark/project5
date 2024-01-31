@@ -6,12 +6,14 @@ from django.db.models.functions import Lower
 from django.core.paginator import Paginator
 from .models import Product, Category
 from .forms import ProductForm
+from about.models import About
 
 
 def products(request):
     """ This will render the All Products,
     will also render all the search and sorting queries """
 
+    about = About.objects.first()
     products = Product.objects.all()
     categories = None
     query = None
@@ -66,6 +68,7 @@ def products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'about': about,
     }
 
     return render(request, 'products/products.html', context)

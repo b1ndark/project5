@@ -2,9 +2,9 @@ from django.shortcuts import render
 from about.models import About
 
 
-def index(request):
+def basket(request):
     """
-    This will render the home page
+    This will render the basket page
     """
 
     about = About.objects.first()
@@ -12,5 +12,4 @@ def index(request):
     context = {
         'about': about,
     }
-
-    return render(request, 'home/index.html', context)
+    return render(request, 'basket/basket.html', context)
