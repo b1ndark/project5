@@ -6,14 +6,14 @@ from django.db.models.functions import Lower
 from django.core.paginator import Paginator
 from .models import Product, Category
 from .forms import ProductForm
-from about.models import About
 
 
 def products(request):
-    """ This will render the All Products,
-    will also render all the search and sorting queries """
+    """
+    This will render the All Products,
+    will also render all the search and sorting queries
+    """
 
-    about = About.objects.first()
     products = Product.objects.all()
     categories = None
     query = None
@@ -68,15 +68,16 @@ def products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        'about': about,
     }
 
     return render(request, 'products/products.html', context)
 
 
 def product_detail(request, product_id):
-    """ This will render the selected Product and
-    display the information about it """
+    """
+    This will render the selected Product and
+    display the information about it
+    """
 
     product = get_object_or_404(Product, pk=product_id)
 
@@ -88,8 +89,9 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
-    """ Add a product to the store inventory 
-        Also check if User is Superuser
+    """ 
+    Add a product to the store inventory 
+    Also check if User is Superuser
     """
 
     if not request.user.is_superuser:
@@ -120,8 +122,9 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product from the store inventory 
-        Also check if User is Superuser
+    """
+    Edit a product from the store inventory 
+    Also check if User is Superuser
     """
 
     if not request.user.is_superuser:
@@ -154,10 +157,11 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the store inventory
-        Will render a delete template to check if
-        you want to delete the selected product
-        Also check if User is Superuser
+    """ 
+    Delete a product from the store inventory
+    Will render a delete template to check if
+    you want to delete the selected product
+    Also check if User is Superuser
     """
 
     if not request.user.is_superuser:

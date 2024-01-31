@@ -921,9 +921,32 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 ## **Bugs**
 
-- x
+- I found a bug when displaing the info in the footer, If I was in the about page, the info in footer would display with no issues but not in the other pages the info would be blank.
 
-  - x
+  - I had to create a contexts.py in about app, move the follow code from views.py to the contexts.py
+
+  ```ruby
+    from .models import About
+
+    def about_contents(request):
+        """
+        To render the about info in every page footer
+        """
+
+        about = About.objects.first()
+
+        context = {
+            'about': about,
+        }
+
+        return context
+  ```
+
+  - and also had to add the following to the list of context processors in the templates variable in settings.py in order to render the context in every page footer.
+
+  ```ruby
+    'about.contexts.about_contents',
+  ```
 
 - x
 
