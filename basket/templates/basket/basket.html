@@ -80,11 +80,11 @@
                             </div>
                         </div>
                     </div>
-                    {% else %}
-                        <p class="lead mb-5">Basket is empty</p>
-                        <a href="{% url 'products' %}" class="btn main-button rounded btn-lg">
-                            <span>Keep Shopping</span>
-                    </div>
+                {% else %}
+                    <p class="lead mb-5">Basket is empty</p>
+                    <a href="{% url 'products' %}" class="btn main-button rounded btn-lg">
+                        <span>Keep Shopping</span>
+                    </a>
                 {% endif %}
             </div>
         </div>

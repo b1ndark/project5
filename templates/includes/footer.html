@@ -14,8 +14,8 @@
                 <div class="col mb-2">
                     <h4 class="text-monospace text-uppercase">Contact Us!</h4>
                     <p class="mb-1"><strong>Phone Number: </strong>{{ about.phone_number }}</p>
-                    <p class="mb-1"><strong>Address: </strong>{{ about.street_address_1 }}{% if about.street_address_2 %}, {{ about.street_address_2 }}{% endif %}, {{ about.city_or_town }}, {{ about.country }}, {{ about.postcode }}</p>
-                    <p><strong>Email: {{ about.email_address }}</strong></p>
+                    <p class="mb-1"><strong>Address: </strong>{{ about.street_address_1 }}{% if about.street_address_2 %}, {{ about.street_address_2 }}{% endif %}, {{ about.city_or_town }}, {{ about.country }}, {{ about.postcode|upper }}</p>
+                    <p><strong>Email: </strong>{{ about.email_address }}</p>
                 </div>
 
                 <!--          Social links          -->
