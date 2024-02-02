@@ -260,6 +260,12 @@ body {
     color: var(--text-color-hover);
 }
 
+/****************** Basket ******************/
+
+.basket-image {
+    width: 25%;
+}
+
 /****************** Media queries ******************/
 
 /* Slightly larger container on XL screens */
@@ -300,6 +306,10 @@ body {
     .background-box {
         font-size: 3rem;
     }
+
+    .basket-image {
+        width: 50%;
+    }
 }
 
 /* From medium screens sizes from 576px wide and down */
@@ -325,6 +335,10 @@ body {
     .shop-now-button {
         min-width: auto;
     }
+
+    .basket-image {
+        width: 75%;
+    }
 }
 
 /* From Small screens sizes from 368px wide and down */
@@ -332,5 +346,9 @@ body {
 @media (max-width: 368px) {
     .nav-link {
         padding: 0.5rem 0;
+    }
+
+    .basket-image {
+        width: 100%;
     }
 }

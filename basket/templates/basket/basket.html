@@ -20,16 +20,71 @@
                 <h2 class="logo-font text-center mb-4">Shopping Basket</h2>
                 <hr>
             </div>
-            <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
+        </div>    
+        <div class="row">
+            <div class="col-12 offset-lg-1 col-lg-10 mt-3 mb-3">
                 {% if basket_items %}
-                    <div class="table-responsive rounded">
-                        {{ basket_items }}
+                    <div class="card">
+                        <div class="col">
+                            {% for item in basket_items %}
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="d-flex flex-column flex-md-row">
+                                            <div class="basket-image p-3">
+                                                <img src="{{ item.product.image.url }}" alt="" class="img-fluid rounded">
+                                            </div>
+                                            <div class="row p-3 container d-flex flex-column flex-md-row">
+                                                <div class="col">
+                                                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                                    <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                                </div>
+                                                <div class="col">
+                                                    <p class="my-0"><strong>Each:</strong> €{{ item.product.price }}</p>
+                                                </div>
+                                                <div class="col">
+                                                    <p class="my-0"><strong>Qty:</strong> {{ item.quantity }}</p>
+                                                </div>
+                                                <div class="col">
+                                                    <p class="my-0"><strong>Sub-total</strong> €{{ item.product.price }}</p>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            {% endfor %}
+                        </div>
+                        <div class="col">
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <h6><strong>Basket Total: €{{ total|floatformat:2 }}</strong></h6>
+                                    <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
+                                    <h4 class="mt-4"><strong>Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+                                    {% if free_delivery_delta > 0 %}
+                                        <p class="mb-1 text-danger">
+                                            Get free delivery by spending <strong>€{{ free_delivery_delta }}</strong> more!
+                                        </p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="row d-flex">
+                                <div class="col">
+                                    <a href="{% url 'products' %}" class="my-3 btn main-button rounded btn-lg">
+                                        <span>Keep Shopping</span>
+                                    </a>
+                                    <a href="" class="my-3 btn main-button rounded btn-lg">
+                                        <span>Checkout</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                {% else %}
-                    <p class="lead mb-5">Basket is empty</p>
-                    <a href="{% url 'products' %}" class="btn main-button rounded btn-lg">
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
+                    {% else %}
+                        <p class="lead mb-5">Basket is empty</p>
+                        <a href="{% url 'products' %}" class="btn main-button rounded btn-lg">
+                            <span>Keep Shopping</span>
+                    </div>
                 {% endif %}
             </div>
         </div>
