@@ -86,13 +86,3 @@ $('.update-link').click(function(e) {
     var form = $(this).prev('.update-form');
     form.submit();
 })
-
-$('.remove-item').click(function(e) {
-    var itemId = $(this).attr('id').split('remove_')[1];
-    var url = `/basket/remove/${itemId}`;
-
-    $.post(url)
-    .done(function() {
-        location.reload();
-    });
-})
