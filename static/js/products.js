@@ -77,3 +77,22 @@ $('.decrement-qty').click(function(e) {
     var itemId = $(this).data('item_id');
     handleEnableDisable(itemId);
 });
+
+/*
+* To update product quantities and remove products
+*/
+
+$('.update-link').click(function(e) {
+    var form = $(this).prev('.update-form');
+    form.submit();
+})
+
+$('.remove-item').click(function(e) {
+    var itemId = $(this).attr('id').split('remove_')[1];
+    var url = `/basket/remove/${itemId}`;
+
+    $.post(url)
+    .done(function() {
+        location.reload();
+    });
+})
