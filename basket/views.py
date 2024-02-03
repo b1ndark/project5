@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404)
 from django.contrib import messages
 from products.models import Product
 
@@ -16,7 +17,7 @@ def add_to_basket(request, item_id):
     Add a quantity of a selected product to the basket
     """
 
-    product = Product.objects.get(pk=item_id)
+    product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     basket = request.session.get('basket', {})
@@ -25,7 +26,7 @@ def add_to_basket(request, item_id):
         basket[item_id] += quantity
         messages.success(
             request, f'Updated {product.name}\
-             quantity to {basket[item.id]}')
+             quantity to {basket[item_id]}')
     else:
         basket[item_id] = quantity
         messages.success(
@@ -41,6 +42,7 @@ def adjust_basket(request, item_id):
     Adjust the quantity of a selected product to the basket
     """
 
+    product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     basket = request.session.get('basket', {})
 
@@ -48,7 +50,7 @@ def adjust_basket(request, item_id):
         basket[item_id] = quantity
         messages.success(
             request, f'The quantity of {product.name} has been\
-             updated in the {basket[item_id]}')
+             updated to {basket[item_id]}')
     else:
         basket.pop(item_id)
         messages.success(
@@ -65,6 +67,7 @@ def remove_from_basket(request, item_id):
     """
 
     try:
+        product = get_object_or_404(Product, pk=item_id)
         basket = request.session.get('basket', {})
 
         basket.pop(item_id)
