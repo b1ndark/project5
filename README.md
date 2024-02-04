@@ -1118,6 +1118,7 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
     - Bootstrap [alerts](https://getbootstrap.com/docs/5.0/components/alerts/)
     - To display labels in kanban view [Github community](https://github.com/orgs/community/discussions/10788)
     - To help improving the User experience by being able to close the message box when clicked anywhere in the screen I have found the following link that have helped me understand and implement the logic [How to close the box by clicking anywhere](https://stackoverflow.com/questions/12086663/how-to-close-the-box-if-click-anywhere)
+    - To create a link to the admin page from the website I found this topic on stackoverflow that have helped me setup the link [admin:index](https://stackoverflow.com/questions/1022236/linking-to-the-django-admin-site)
 
   - I have watched some tutorials on Youtube that have helped me understand and learn through out the project:
 

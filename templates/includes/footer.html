@@ -22,14 +22,22 @@
                 <div class="col">
                     <h4 class="text-monospace text-uppercase">Socials</h4>
                     <p class="mb-1">Follow to stay updated with our latest Tech offers!</p>
-                    <a href="#" target="_blank" title="Facebook" rel="noopener"><span class="icon p-1 text-black px-2"><i
-                                class="fa-brands fa-facebook-f icon-socials"></i></span></a>
-                    <a href="#" target="_blank" title="Instagram" rel="noopener"><span class="icon p-1 text-black px-2"><i
-                                class="fa-brands fa-instagram icon-socials"></i></span></a>
-                    <a href="#" target="_blank" title="Twitter" rel="noopener"><span class="icon p-1 text-black px-2"><i
-                                class="fa-brands fa-x-twitter icon-socials"></i></span></a>
-                    <a href="#" target="_blank" title="Youtube" rel="noopener"><span class="icon p-1 text-black px-2"><i
-                                class="fa-brands fa-youtube icon-socials"></i></span></a>
+                    {% if about.facebook_url %}
+                        <a href="{{ about.facebook.url }}" target="_blank" title="Facebook" rel="noopener"><span class="icon p-1 text-black px-2"><i
+                                    class="fa-brands fa-facebook-f icon-socials"></i></span></a>
+                    {% endif %}
+                    {% if about.instagram_url %}
+                        <a href="{{ about.instagram_url }}" target="_blank" title="Instagram" rel="noopener"><span class="icon p-1 text-black px-2"><i
+                                    class="fa-brands fa-instagram icon-socials"></i></span></a>
+                    {% endif %}
+                    {% if about.twitter_url %}
+                        <a href="{{ about.twitter_url }}" target="_blank" title="Twitter" rel="noopener"><span class="icon p-1 text-black px-2"><i
+                                    class="fa-brands fa-x-twitter icon-socials"></i></span></a>
+                    {% endif %}
+                    {% if about.youtube_url %}
+                        <a href="{{ about.youtube_url }}" target="_blank" title="Youtube" rel="noopener"><span class="icon p-1 text-black px-2"><i
+                                    class="fa-brands fa-youtube icon-socials"></i></span></a>
+                    {% endif %}
                 </div>
             </div>
             <div class="col-12 col-md-6 mt-4 mt-md-0">

@@ -4,7 +4,8 @@ from django.core.exceptions import ValidationError
 
 class About(models.Model):
     """
-        About model so Admin/Owner can update the about page from admin page
+    About model so Admin/Owner can update 
+    the about page and footer from admin page
     """
 
     class Meta:
@@ -17,8 +18,10 @@ class About(models.Model):
         null=True, blank=True, upload_to='about/',
         default='about/no_product_image.webp')
     phone_number = models.CharField(max_length=20, null=True, blank=True)
-    street_address_1 = models.CharField(max_length=200, null=True, blank=True)
-    street_address_2 = models.CharField(max_length=200, null=True, blank=True)
+    street_address_1 = models.CharField(
+        max_length=200, null=True, blank=True)
+    street_address_2 = models.CharField(
+        max_length=200, null=True, blank=True)
     city_or_town = models.CharField(max_length=100, null=True, blank=True)
     country = models.CharField(max_length=100, null=True, blank=True)
     postcode = models.CharField(max_length=100, null=True, blank=True)
@@ -32,6 +35,10 @@ class About(models.Model):
         max_length=100, null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    facebook_url = models.CharField(max_length=200, null=True, blank=True)
+    twitter_url = models.CharField(max_length=200, null=True, blank=True)
+    youtube_url = models.CharField(max_length=200, null=True, blank=True)
+    instagram_url = models.CharField(max_length=200, null=True, blank=True)
    
     def clean(self):
         if About.objects.exists() and not self.pk:

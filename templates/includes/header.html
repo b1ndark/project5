@@ -56,6 +56,7 @@
 
                         <!--          If is Superuser          -->
                         {% if request.user.is_superuser %}
+                            <a href="{% url 'admin:index' %}" class="dropdown-item">Admin page</a>
                             <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                         {% endif %}
 
