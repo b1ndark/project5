@@ -84,6 +84,7 @@ TEMPLATES = [
                 'django.template.context_processors.request', # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'basket.contexts.basket_contents', # To render the basket in every page
                 'about.contexts.about_contents', # To render the about info in every page
             ],
