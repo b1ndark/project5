@@ -29,7 +29,7 @@ class Order(models.Model):
     grand_total = models.DecimalField(
         max_digits=12, decimal_places=2, null=False, default=0)
 
-    def _gererate_order_number(self):
+    def _generate_order_number(self):
         """
         Generate a random, unique order number using UUID
         """
@@ -50,7 +50,7 @@ class Order(models.Model):
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
 
-    def save(save, *args, **kwargs):
+    def save(self, *args, **kwargs):
         """
         Override the original save method to set the order number
         if it hasn't been set already
@@ -75,7 +75,7 @@ class OrderLineItem(models.Model):
         max_digits=6, decimal_places=2,
         null=False, blank=False, editable=False)
 
-    def save(save, *args, **kwargs):
+    def save(self, *args, **kwargs):
         """
         Override the original save method to set the lineitem total
         and update the order total
