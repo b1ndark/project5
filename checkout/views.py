@@ -1,9 +1,11 @@
 from django.shortcuts import render, reverse, redirect
 from .forms import OrderForm
 from django.contrib import messages
+from django.conf import settings
 
 
 def checkout(request):
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
     basket = request.session.get('basket', {})
     if not basket:
         messages.error(request, 'There is nothing in your basket')
@@ -13,6 +15,8 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
+        'stripe_public_key': stripe_public_key,
+        'client_secret': 'test client secret',
     }
 
     return render(request, template, context)
