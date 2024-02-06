@@ -1,5 +1,6 @@
 /****************** Checkout ******************/
 
+/* Stripe */
 .StripeElement,
 .stripe-style-input {
     box-sizing: border-box;
@@ -34,5 +35,26 @@
 #payment-form .form-control,
 #card-element {
     color: #000;
-    border: 1px solid #000 !important;
+    border: 1px solid #000;
+}
+
+/* Loading overlay spinner */
+#loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999999;
+}
+
+.loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
 }
