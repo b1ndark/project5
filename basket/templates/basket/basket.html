@@ -118,7 +118,10 @@
                                         <span>Keep Shopping</span>
                                     </a>
                                     <a href="{% url 'checkout' %}" class="my-3 btn main-button rounded btn-lg">
-                                        <span>Checkout</span>
+                                        <span class="text-uppercase">Checkout </span>
+                                        <span class="icon">
+                                            <i class="fas fa-lock text-white fa-beat"></i>
+                                        </span>
                                     </a>
                                 </div>
                             </div>
@@ -127,7 +130,10 @@
                 {% else %}
                     <p class="lead mb-5">Basket is empty</p>
                     <a href="{% url 'products' %}" class="btn main-button rounded btn-lg">
-                        <span>Keep Shopping</span>
+                        <span class="icon">
+                            <i class="fas fa-chevron-left text-white fa-beat"></i>
+                        </span>
+                        <span> Keep Shopping</span>
                     </a>
                 {% endif %}
             </div>
