@@ -9,6 +9,7 @@
     --black: #000000;
     --white: #ffffff;
     --blue: rgba(14, 91, 235, 0.795);
+    --placeholder-color: #aab7c4;
     --background: #2c2b2ce3;
     --background-hover: #1f1e1f;
     --text-color: rgba(0, 0, 0, .5);
@@ -264,6 +265,30 @@ body {
 
 .basket-image {
     width: 25%;
+}
+
+/****************** Checkout ******************/
+
+.StripeElement, 
+.stripe-style-input {
+    height: 45px !important;
+    
+}
+
+select,
+select option {
+    color: var(--black);
+}
+
+select:invalid,
+select option[value=""] {
+    color: var(--placeholder-color) !important;
+}
+
+.form-control,
+#card-element {
+    border-color: var(--black);
+    border-radius: 15px !important;
 }
 
 /****************** Toasts ******************/
