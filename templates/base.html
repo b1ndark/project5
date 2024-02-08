@@ -59,7 +59,7 @@
         <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
-    <title>TopTech {% block extra_title %}{% endblock %}</title>
+    <title>TopTech {% block head_title %}{% endblock %}</title>
 </head>
 
 <body class="{% if request.resolver_match.url_name == 'home' %}main-cover{% endif %}">

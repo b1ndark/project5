@@ -285,10 +285,8 @@ select option[value=""] {
     color: var(--placeholder-color) !important;
 }
 
-.form-control,
-#card-element {
+.form-control, #card-element {
     border-color: var(--black);
-    border-radius: 15px !important;
 }
 
 /****************** Toasts ******************/
