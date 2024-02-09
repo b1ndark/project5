@@ -39,7 +39,7 @@ $('#new-image').change(function() {
 function handleEnableDisable(itemId) {
     var currentValue = parseInt($(`#id_qty_${itemId}`).val());
     var minusDisabled = currentValue < 2;
-    var plusDisabled = currentValue > 20;
+    var plusDisabled = currentValue > 19;
     $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
     $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
 }

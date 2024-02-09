@@ -10,6 +10,24 @@ $('.fa-trash-can').hover(function() {
     $(this).toggleClass('fa-shake');
 });
 
-$('.fa-minus, .fa-plus').hover(function() {
-    $(this).toggleClass('fa-beat');
+// Hover animation only when the currentValue is less then 20
+
+$('.increment-qty').hover(function() {
+    var currentValue = parseInt($(`#id_qty_${itemId}`).val());
+    if (currentValue < 20) {
+        $(this).addClass('fa-beat');  
+    }
+}, function() {
+    $(this).removeClass('fa-beat');
+});
+
+// Hover animation only when the currentValue is more then 1
+
+$('.decrement-qty').hover(function() {
+    var currentValue = parseInt($(`#id_qty_${itemId}`).val());
+    if (currentValue > 1) {
+        $(this).addClass('fa-beat');  
+    }
+}, function() {
+    $(this).removeClass('fa-beat');
 });
