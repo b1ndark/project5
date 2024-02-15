@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block content %}
-    <!--          Checkout container          -->
+    <!--          Profile container          -->
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
@@ -23,6 +23,14 @@
                 <hr>
                 <h2 class="logo-font text-center mb-4">Profile</h2>
                 <hr>
+            </div>
+        </div>
+        <div class="card">
+            <div class="row mx-0">
+                <div class="col-12 offset-lg-1 col-lg-10 mt-3 mb-3">
+                    {{ profile.get_fav_brand_display }}
+                    {{ profile.get_fav_operating_system_display }}
+                </div>
             </div>
         </div>
     </div>

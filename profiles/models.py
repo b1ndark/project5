@@ -15,15 +15,19 @@ class UserProfile(models.Model):
     profile_image = models.ImageField(
         null=True, blank=True, upload_to='profiles/',
         default='profiles/default_profile.png')
-    profile_bio = models.TextField()
-    fav_brand = models.CharField(
+    profile_bio = models.TextField(null=True, blank=True)
+    fav_brand = models.CharField(verbose_name='Favourite Brand',
         max_length=30, choices=BRANDS, null=True, blank=True, default='')
     fav_operating_system = models.CharField(
+        verbose_name='Favourite Operating System',
         max_length=30, choices=OS, null=True, blank=True, default='')
-    default_phone_number = models.CharField(max_length=20, null=True, blank=True)
-    default_country = CountryField(blank_label='Country *', null=True, blank=True)
+    default_phone_number = models.CharField(
+        max_length=20, null=True, blank=True)
+    default_country = CountryField(verbose_name='Country',
+        blank_label='Country *', null=True, blank=True)
     default_postcode = models.CharField(max_length=20, null=True, blank=True)
-    default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
+    default_town_or_city = models.CharField(
+        max_length=40, null=True, blank=True)
     default_street_address1 = models.CharField(
         max_length=80, null=True, blank=True)
     default_street_address2 = models.CharField(
