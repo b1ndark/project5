@@ -1,4 +1,6 @@
 from django.shortcuts import render, reverse, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from .models import UserProfile
 from .forms import UserProfileForm
 from django.contrib import messages
@@ -18,6 +20,7 @@ def profile(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_profile(request):
     """
     To render the edit profile form page
@@ -42,3 +45,21 @@ def edit_profile(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_account(request):
+    """ 
+    Delete account template
+    """
+
+    profile = User.objects.get(username=request.user)
+
+    if request.method == 'POST':
+        profile.delete()
+        messages.success(request, 'Your account has been deleted!')
+        return redirect(reverse('home'))
+
+    template = 'profiles/delete_account.html'
+
+    return render(request, template)
