@@ -1,3 +1,4 @@
+{% with request.resolver_match.url_name as url_name %}
 <div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
     <div class="arrow-up arrow-success"></div>
     <div class="w-100 toast-capper bg-success"></div>
@@ -14,6 +15,7 @@
                 <hr class="mt-1 mb-3">
             </div>
         </div>
+        {% if url_name != 'profile' and url_name != 'about' %}
         {% if grand_total %}
             <p class="logo-front bg-white text-black py-1 text-uppercase">Your basket ({{ product_count }})</p>
             <div class="basket-notification-wrapper">
@@ -49,5 +51,7 @@
                 </div>
             </div>
         {% endif %}
+        {% endif %}
     </div>
 </div>
+{% endwith %}
