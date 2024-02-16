@@ -1,4 +1,5 @@
 from django.db import models
+from django_countries.fields import CountryField
 from django.core.exceptions import ValidationError
 
 
@@ -23,7 +24,7 @@ class About(models.Model):
     street_address_2 = models.CharField(
         max_length=200, null=True, blank=True)
     city_or_town = models.CharField(max_length=100, null=True, blank=True)
-    country = models.CharField(max_length=100, null=True, blank=True)
+    country = CountryField(blank_label='Select Country', null=True, blank=True)
     postcode = models.CharField(max_length=100, null=True, blank=True)
     opening_hours_mon_to_fri = models.CharField(
         max_length=100, null=True, blank=True)

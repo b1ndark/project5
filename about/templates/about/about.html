@@ -57,7 +57,7 @@
                         <p><strong>City: </strong>{{ about.city_or_town }}</p>
                     {% endif %}
                     {% if about.country %}
-                        <p><strong>Country: </strong>{{ about.country }}</p>
+                        <p><strong>Country: </strong>{{ about.get_country_display }}</p>
                     {% endif %}
                     {% if about.postcode %}
                         <p><strong>Postcode: </strong>{{ about.postcode }}</p>
