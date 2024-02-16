@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="#">
-{% endblock %}
-
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -144,23 +140,6 @@
                             <a class="btn btn-outline-danger font-weight-bold rounded mx-5" href="{% url 'delete_account' %}">Delete</a>
                         </small>
                     {% endif %}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
-    
-                <!--          Title and sub title          -->
-                <hr>
-                <h2 class="logo-font text-center mb-4">Order History</h2>
-                <hr>
-            </div>
-        </div>
-        <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
-            <div class="row mx-0">
-                <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
-                    {{ profile.get_fav_brand_display }}
-                    {{ profile.get_fav_operating_system_display }}
                 </div>
             </div>
         </div>

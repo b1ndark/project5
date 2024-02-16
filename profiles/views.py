@@ -63,3 +63,21 @@ def delete_account(request):
     template = 'profiles/delete_account.html'
 
     return render(request, template)
+
+
+@login_required
+def purchases(request):
+    """
+    To render all orders template page
+    """
+
+    profile = get_object_or_404(UserProfile, user=request.user)
+    orders = profile.orders.all()
+
+    template = 'profiles/purchases.html'
+    context = {
+        'profile': profile,
+        'orders': orders,
+    }
+
+    return render(request, template, context)
