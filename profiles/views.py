@@ -36,8 +36,12 @@ def edit_profile(request):
             messages.success(
                 request, 'Your profile has been updated')
             return redirect(reverse('profile'))
-    
-    form = UserProfileForm(instance=profile)
+        else:
+            messages.error(
+                request, 'Update failed.\
+                 Please make sure that the form is valid.')
+    else:
+        form = UserProfileForm(instance=profile)
 
     template = 'profiles/edit_profile.html'
     context = {
