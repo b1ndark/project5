@@ -185,12 +185,21 @@
         </div>
         <div class="row mt-5">
             <div class="col-12 col-lg-7 text-right">
-                <a href="{% url 'products' %}" class="btn main-button rounded my-2">
-                    <span class="icon mr-2">
-                        <i class="fas fa-gifts fa-beat"></i>
-                    </span>
-                    <span class="text-uppercase">Check lastest!</span>
-                </a>
+                {% if from_profile %}
+                    <a href="{% url 'purchases' %}" class="btn main-button rounded my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-angle-left fa-beat"></i>
+                        </span>
+                        <span class="text-uppercase">Back to Purchases</span>
+                    </a>
+                {% else %}
+                    <a href="{% url 'products' %}" class="btn main-button rounded my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-gifts fa-beat"></i>
+                        </span>
+                        <span class="text-uppercase">Check lastest!</span>
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>
