@@ -27,7 +27,7 @@
                     {% if profile.profile_image.url %}
                         <div class="row justify-content-center mb-5">
                             <div class="product-image" width="325" height="325">
-                                <img class="card-img-top img-fluid" src="{{ profile.profile_image.url }}" alt="{{ profile.user }} image">
+                                <img class="card-img-top img-fluid" src="{{ profile.profile_image.url }}" alt="{{ profile.user.username }} image">
                             </div>
                         </div>
                     {% endif %}

@@ -56,9 +56,9 @@ def products(request):
                                 category__icontains=query)
             products = products.filter(queries)
 
+    page = request.GET.get('page', 1)
     products_p = Paginator(products, 1)
-    page_number = request.GET.get('page')
-    products_page = products_p.get_page(page_number)
+    products_page = products_p.get_page(page)
 
     current_sorting = f'{sort}_{direction}'
 
