@@ -38,7 +38,7 @@ body {
 }
 
 .main-cover {
-    background: url('/media/desktop-motherboard.jpg') no-repeat center center fixed;
+    background: url('/media/default_images/desktop-motherboard.jpg') no-repeat center center fixed;
 }
 
 .text-black {

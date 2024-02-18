@@ -47,7 +47,7 @@ class Product(models.Model):
     name = models.CharField(max_length=200)
     image = models.ImageField(
         null=True, blank=True, upload_to='products/',
-        default='products/no_product_image.webp')
+        default='default_images/no_product_image.webp')
     description = models.TextField()
     brand = models.CharField(
         max_length=30, choices=BRANDS, null=True, blank=True, default='')

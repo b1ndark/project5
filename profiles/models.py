@@ -14,7 +14,7 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_image = models.ImageField(
         null=True, blank=True, upload_to='profiles/',
-        default='profiles/default_profile.png')
+        default='default_images/default_profile.png')
     profile_bio = models.TextField(verbose_name='Biography',
         null=True, blank=True)
     fav_brand = models.CharField(verbose_name='Favourite Brand',
