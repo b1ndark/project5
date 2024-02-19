@@ -17,7 +17,7 @@ class About(models.Model):
     description = models.TextField()
     image = models.ImageField(
         null=True, blank=True, upload_to='about/',
-        default='about/no_product_image.webp')
+        default='default_images/no_image.webp')
     phone_number = models.CharField(max_length=20, null=True, blank=True)
     street_address_1 = models.CharField(
         max_length=200, null=True, blank=True)
