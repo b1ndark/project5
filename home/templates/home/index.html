@@ -2,36 +2,37 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 
-    <!--          Home page container          -->
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
+<!--          Home page container          -->
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-8 col-md-6 my-auto">
 
-                <!--          Title          -->
-                <h1 class="background-box logo-font text-white p-3 rounded">
-                    Check the latest Tech!
-                </h1>
+            <!--          Title          -->
+            <h1 class="background-box display-4 logo-font text-white p-3 rounded">
+                Check the latest Tech!
+            </h1>
 
-                <!--          Button linking to the shop          -->
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg text-uppercase py-3 font-weight-bold">Shop Now
-                            <span class="icon">
-                                <i class="fas fa-chevron-right text-white fa-beat fa-sm"></i>
-                            </span>
-                        </a>
-                    </h4>
-                </div>
+            <!--          Button linking to the shop          -->
+            <div class="my-5">
+                <h4>
+                    <a href="{% url 'products' %}"
+                        class="shop-now-button btn btn-lg text-uppercase py-3 font-weight-bold">Shop Now
+                        <span class="icon">
+                            <i class="fas fa-chevron-right text-white fa-beat fa-sm"></i>
+                        </span>
+                    </a>
+                </h4>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}

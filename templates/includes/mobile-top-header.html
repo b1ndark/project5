@@ -1,7 +1,8 @@
 <li class="list-inline-item">
 
     <!--          Search bar          -->
-    <a class="text-grey nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="text-grey nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-search fa-lg"></i></div>
             <p class="my-0 font-weight-bold">Search</p>
@@ -27,23 +28,24 @@
 <li class="list-inline-item dropdown">
 
     <!--          Account menu          -->
-    <a class="text-grey nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="text-grey nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <!--          If User is authenticated          -->
             {% if request.user.is_authenticated %}
 
-                <!--          If is Superuser          -->
-                {% if request.user.is_superuser %}
-                    <div><i class="fa-solid fa-user-secret font-weight-bold"></i></div>
-                {% else %}
-
-                <!--          User logged in          -->
-                    <div><i class="fas fa-user fa-lg font-weight-bold"></i></div>
-                {% endif %}
+            <!--          If is Superuser          -->
+            {% if request.user.is_superuser %}
+            <div><i class="fa-solid fa-user-secret font-weight-bold"></i></div>
             {% else %}
 
-                <!--          Not logged in          -->
-                <div><i class="fa-regular fa-user"></i></div>
+            <!--          User logged in          -->
+            <div><i class="fas fa-user fa-lg font-weight-bold"></i></div>
+            {% endif %}
+            {% else %}
+
+            <!--          Not logged in          -->
+            <div><i class="fa-regular fa-user"></i></div>
             {% endif %}
             <p class="my-0 font-weight-bold">Account</p>
         </div>
@@ -51,36 +53,37 @@
     <div class="dropdown-menu border-0" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
 
-            <!--          If is Superuser          -->
-            {% if request.user.is_superuser %}
-                <a href="{% url 'admin:index' %}" class="dropdown-item">Admin page</a>
-                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                <a href="{% url 'edit_about' %}" class="dropdown-item">About Management</a>
-            {% endif %}
+        <!--          If is Superuser          -->
+        {% if request.user.is_superuser %}
+        <a href="{% url 'admin:index' %}" class="dropdown-item">Admin page</a>
+        <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+        <a href="{% url 'edit_about' %}" class="dropdown-item">About Management</a>
+        {% endif %}
 
-            <!--          User logged in          -->
-            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-            <a href="{% url 'purchases' %}" class="dropdown-item">Purchases</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+        <!--          User logged in          -->
+        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+        <a href="{% url 'purchases' %}" class="dropdown-item">Purchases</a>
+        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
         {% else %}
 
-            <!--          Not logged in          -->
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+        <!--          Not logged in          -->
+        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
         {% endif %}
     </div>
 </li>
 <li class="list-inline-item">
 
     <!--          Shopping basket          -->
-    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-grey{% endif %} nav-link d-block d-lg-none" href="{% url 'basket' %}">
+    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-grey{% endif %} nav-link d-block d-lg-none"
+        href="{% url 'basket' %}">
         <div class="text-center">
             <div><i class="fa-solid fa-basket-shopping font-weight-bold"></i></div>
             <p class="my-0 font-weight-bold">
                 {% if grand_total %}
-                    €{{ grand_total|floatformat:2 }}
+                €{{ grand_total|floatformat:2 }}
                 {% else %}
-                    €0.00
+                €0.00
                 {% endif %}
             </p>
         </div>
