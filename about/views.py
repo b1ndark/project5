@@ -28,7 +28,7 @@ def edit_about(request):
     about = get_object_or_404(About)
 
     if request.method == 'POST':
-        form = EditAboutForm(request.POST, instance=about)
+        form = EditAboutForm(request.POST, request.FILES, instance=about)
         if form.is_valid():
             form.save()
             messages.success(request, 'About has been updated')

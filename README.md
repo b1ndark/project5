@@ -948,10 +948,10 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
     'about.contexts.about_contents',
   ```
 
-- x
+- After setting up send emails, when trying to signup I was getting a server timeout error ```SMTP.starttls() got an unexpected keyword argument 'keyfile'```, to fix this I did the following
 
-  - x
-
+  - I had to create a file named ```runtime.txt``` with ```python-3.9.16``` in it
+  - After doing that I was getting another error but this time was when trying to deploy to Heroku which was failing. To fix it I had to downgrade the urllib3 from ```==2.0.7``` to ```==1.26.15```
 - x
 
   - x

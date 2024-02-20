@@ -19,7 +19,9 @@
                 <!--          Title and sub title          -->
                 <h2 class="logo-font text-center mb-4">About Us</h2>
                 <hr>
-                <h5 class="text-muted">{{ about.name }}</h5>
+                {% if about.name %}
+                    <h5 class="text-muted">{{ about.name }}</h5>
+                {% endif %}
                 <hr>
             </div>
         </div>
@@ -27,17 +29,19 @@
             <div class="col-12 col-md-10 offset-md-1 mt-3 mb-4 d-lg-flex">
                 <hr>
                 <div class="col-12 col-lg-6">
-                    <!--          About image          -->
-                    <div class="image-container">
-                        <a href="{{ about.image.url }}" target="_blank">
+                    {% if about.image %}
+                        <!--          About image          -->
+                        <div class="image-container">
                             <img class="card-img-top img-fluid" src="{{ about.image.url }}" alt="{{ about.name }} image">
-                        </a>
-                    </div>
+                        </div>
+                    {% endif %}
                 </div>
                 <div class="col-12 col-lg-6 pt-3">
-                    <div>
-                        {{ about.description }}
-                    </div>
+                    {% if about.description %}
+                        <div>
+                            {{ about.description }}
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
