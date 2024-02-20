@@ -33,7 +33,13 @@
                         <!--          Edit Profile form          -->
                         <form method="POST" action="{% url 'edit_profile' %}" class="form mb-2" enctype="multipart/form-data">
                             {% csrf_token %}
-                            {{ form|crispy }}
+                            {% for field in form %}
+                                {% if field.name != 'profile_image' %}
+                                    {{ field | as_crispy_field }}
+                                {% else %}
+                                    {{ field }}
+                                {% endif %}
+                            {% endfor %}
                             <div class="text-center mt-5">
                                 <a href="{% url 'profile' %}" class="btn cancel-button font-weight-bold mx-3">Cancel</a>
                                 <button class="btn main-button font-weight-bold rounded mx-3">Update Profile</button>
