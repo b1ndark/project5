@@ -24,15 +24,6 @@ $('#sort-selector').change(function() {
 })
 
 /*
-* To display which image has been selected before adding/updating product
-*/
-
-$('#new-image').change(function() {
-    var file = $('#new-image')[0].files[0];
-    $('#filename').text(`Image will be set to: ${file.name}`);
-});
-
-/*
 * To Increment and Decrement quantities, range from 1 to 20
 */
 

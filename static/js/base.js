@@ -31,3 +31,12 @@ $('.decrement-qty').hover(function() {
 }, function() {
     $(this).removeClass('fa-beat');
 });
+
+/*
+* To display which image has been selected before adding/updating product
+*/
+
+$('#new-image').change(function() {
+    var file = $('#new-image')[0].files[0];
+    $('#filename').text(`Image will be set to: ${file.name}`);
+});
