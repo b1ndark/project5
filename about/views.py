@@ -39,7 +39,7 @@ def edit_about(request):
                  Please make sure that the form is valid.')
     else:
         form = EditAboutForm(instance=about)
-    
+
     template = 'about/edit_about.html'
     context = {
         'form': form,

@@ -64,6 +64,6 @@ class Product(models.Model):
     memory_ram = models.CharField(max_length=100, null=True, blank=True)
     display = models.CharField(max_length=100, null=True, blank=True)
     battery_life = models.CharField(max_length=100, null=True, blank=True)
-    
+
     def __str__(self):
         return self.name

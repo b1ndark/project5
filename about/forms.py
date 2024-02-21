@@ -9,12 +9,16 @@ class EditAboutForm(forms.ModelForm):
         fields = '__all__'
 
         widgets = {
-            'facebook_url': forms.TextInput(attrs={'placeholder': 'https://facebook.com'}),
-            'twitter_url': forms.TextInput(attrs={'placeholder': 'https://twitter.com'}),
-            'youtube_url': forms.TextInput(attrs={'placeholder': 'https://youtube.com'}),
-            'instagram_url': forms.TextInput(attrs={'placeholder': 'https://instagram.com'}),
+            'facebook_url': forms.TextInput(
+                attrs={'placeholder': 'https://facebook.com'}),
+            'twitter_url': forms.TextInput(
+                attrs={'placeholder': 'https://twitter.com'}),
+            'youtube_url': forms.TextInput(
+                attrs={'placeholder': 'https://youtube.com'}),
+            'instagram_url': forms.TextInput(
+                attrs={'placeholder': 'https://instagram.com'}),
         }
-    
+
     image = forms.ImageField(
         label='Image', required=False, widget=CustomClearableFileInput)
 

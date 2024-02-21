@@ -9,4 +9,5 @@ class AboutAdmin(admin.ModelAdmin):
         'updated',
     )
 
+
 admin.site.register(About, AboutAdmin)

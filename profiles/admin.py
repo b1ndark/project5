@@ -7,7 +7,8 @@ class UserProfileAdmin(admin.ModelAdmin):
         'user', 'default_country', 'fav_brand', 'fav_operating_system',
     )
 
-    ordering = ('user', 'default_country', 'fav_brand', 'fav_operating_system',)
+    ordering = (
+        'user', 'default_country', 'fav_brand', 'fav_operating_system',)
 
 
 admin.site.register(UserProfile, UserProfileAdmin)

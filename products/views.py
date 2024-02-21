@@ -87,10 +87,11 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
+
 @login_required
 def add_product(request):
-    """ 
-    Add a product to the store inventory 
+    """
+    Add a product to the store inventory
     Also check if User is Superuser
     """
 
@@ -123,7 +124,7 @@ def add_product(request):
 @login_required
 def edit_product(request, product_id):
     """
-    Edit a product from the store inventory 
+    Edit a product from the store inventory
     Also check if User is Superuser
     """
 
@@ -157,7 +158,7 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ 
+    """
     Delete a product from the store inventory
     Will render a delete template to check if
     you want to delete the selected product

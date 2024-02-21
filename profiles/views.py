@@ -54,7 +54,7 @@ def edit_profile(request):
 
 @login_required
 def delete_account(request):
-    """ 
+    """
     Delete account template
     """
 

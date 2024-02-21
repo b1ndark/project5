@@ -5,7 +5,7 @@ from django.core.exceptions import ValidationError
 
 class About(models.Model):
     """
-    About model so Admin/Owner can update 
+    About model so Admin/Owner can update
     the about page and footer from admin page
     """
 
@@ -40,7 +40,7 @@ class About(models.Model):
     twitter_url = models.CharField(max_length=200, null=True, blank=True)
     youtube_url = models.CharField(max_length=200, null=True, blank=True)
     instagram_url = models.CharField(max_length=200, null=True, blank=True)
-   
+
     def clean(self):
         if About.objects.exists() and not self.pk:
             raise ValidationError('You can only have one About!')
