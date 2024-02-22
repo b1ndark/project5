@@ -1,23 +1,31 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
 
-<!--          404 Error container          -->
+<!--          500 Server Error          -->
 <div class="container">
     <div class="row">
         <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
 
             <!--          Title          -->
             <hr>
-            <h2 class="logo-font text-center mb-4">404 Error</h2>
+            <h2 class="logo-font text-center mb-4">500 Server Error</h2>
             <hr>
         </div>
     </div>
     <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
         <div class="row mx-0">
             <div class="col-12 col-md-10 offset-md-1 mt-5 mb-3 text-center">
-                <h4>The page you are looking for isn't available!</h4>
+                <h4>The server is experiencing issues, we are sorry</h4>
                 <br>
                 <a href="{% url 'home' %}"
                     class="btn main-button font-weight-bold rounded mx-3">

@@ -31,7 +31,6 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['8000-b1ndark-project5-muacqj8xxyx.ws-eu108.gitpod.io', 'toptech-244e7b312287.herokuapp.com']
 
-
 # Application definition
 
 INSTALLED_APPS = [

@@ -33,3 +33,4 @@ urlpatterns = [
 
 
 handler404 = 'toptech.views.handler404'
+handler500 = 'toptech.views.handler500'
