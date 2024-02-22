@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_title %}- {% trans "404 Error" %}{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{% block content %}
+
+<!--          404 Error container          -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
+
+            <!--          Title          -->
+            <hr>
+            <h2 class="logo-font text-center mb-4">404 Error</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
+        <div class="row mx-0">
+            <div class="col-12 col-md-10 offset-md-1 mt-5 mb-3">
+                <h4>The page you are looking for isn't available!</h4>
+                <br>
+                <a href="{% url 'home' %}"
+                    class="btn main-button font-weight-bold rounded mx-3">Home Page
+                    <span class="icon">
+                        <i class="fas fa-chevron-right text-white fa-beat fa-sm"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
