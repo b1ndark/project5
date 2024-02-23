@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
 
 <!--          404 Error container          -->
@@ -19,8 +27,7 @@
             <div class="col-12 col-md-10 offset-md-1 mt-5 mb-3 text-center">
                 <h4>The page you are looking for isn't available!</h4>
                 <br>
-                <a href="{% url 'home' %}"
-                    class="btn main-button font-weight-bold rounded mx-3">
+                <a href="{% url 'home' %}" class="btn main-button font-weight-bold rounded mx-3">
                     <span class="icon">
                         <i class="fas fa-chevron-left text-white fa-beat fa-sm mr-1"></i>
                     </span>

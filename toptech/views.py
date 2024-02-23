@@ -11,7 +11,7 @@ def handler404(request, exception):
 
 def handler500(request):
     """
-    Error Handler 500 - Server Error
+    Error Handler 500 - Internal Server Error
     """
 
     return render(request, 'errors/500.html', status=500)
