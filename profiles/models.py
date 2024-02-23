@@ -12,20 +12,15 @@ class UserProfile(models.Model):
     delete account, delivery information and order history
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    profile_image = models.ImageField(null=True, blank=True,
-                                      upload_to='profiles/',
-                                      default='default_images/\
-                                      default_profile.png')
-    profile_bio = models.TextField(verbose_name='Biography',
-                                   null=True, blank=True)
+    image = models.ImageField(null=True, blank=True, upload_to='profiles/',
+                              default='default_images/default_profile.png')
+    bio = models.TextField(verbose_name='Biography', null=True, blank=True)
     fav_brand = models.CharField(verbose_name='Favourite Brand',
                                  max_length=30, choices=BRANDS,
                                  null=True, blank=True, default='')
-    fav_operating_system = models.CharField(verbose_name='Favourite\
-                                            Operating System',
-                                            max_length=30, choices=OS,
-                                            null=True, blank=True,
-                                            default='')
+    fav_os = models.CharField(verbose_name='Favourite Operating System',
+                              max_length=30, choices=OS, null=True,
+                              blank=True, default='')
     default_phone_number = models.CharField(verbose_name='Phone Number',
                                             max_length=20, null=True,
                                             blank=True)

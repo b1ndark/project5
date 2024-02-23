@@ -34,7 +34,7 @@
                         <form method="POST" action="{% url 'edit_profile' %}" class="form mb-2" enctype="multipart/form-data">
                             {% csrf_token %}
                             {% for field in form %}
-                                {% if field.name != 'profile_image' %}
+                                {% if field.name != 'image' %}
                                     {{ field | as_crispy_field }}
                                 {% else %}
                                     {{ field }}

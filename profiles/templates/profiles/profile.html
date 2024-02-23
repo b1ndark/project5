@@ -24,18 +24,18 @@
     <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
         <div class="row mx-0">
             <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
-                {% if profile.profile_image %}
+                {% if profile.image %}
                 <div class="row justify-content-center mb-5">
                     <div class="product-image" width="325" height="325">
-                        <img class="card-img-top img-fluid" src="{{ profile.profile_image.url }}"
+                        <img class="card-img-top img-fluid" src="{{ profile.image.url }}"
                             alt="{{ profile.user.username }} image">
                     </div>
                 </div>
                 {% endif %}
-                {% if profile.profile_bio %}
+                {% if profile.bio %}
                 <div class="row justify-content-center mb-5">
                     <div class="col-12 col-md-8">
-                        <p class="mb-0">{{ profile.profile_bio }}</p>
+                        <p class="mb-0">{{ profile.bio }}</p>
                     </div>
                 </div>
                 {% endif %}
@@ -49,13 +49,13 @@
                     </div>
                 </div>
                 {% endif %}
-                {% if profile.get_fav_brand_display %}
+                {% if profile.get_fav_os %}
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <p class="mb-0 text-black font-weight-bold">Favourite Operating System:</p>
                     </div>
                     <div class="col-12 col-md-6 text-md-right">
-                        <p class="mb-0">{{ profile.get_fav_operating_system_display }}</p>
+                        <p class="mb-0">{{ profile.get_fav_os_display }}</p>
                     </div>
                 </div>
                 {% endif %}
