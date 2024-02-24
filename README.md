@@ -952,9 +952,10 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
   - I had to create a file named ```runtime.txt``` with ```python-3.9.16``` in it
   - After doing that I was getting another error but this time was when trying to deploy to Heroku which was failing. To fix it I had to downgrade the urllib3 from ```==2.0.7``` to ```==1.26.15```
-- x
 
-  - x
+- The navbar had a bug, the issue was when clicking on one of the menus to dropdown the choices, it would only show the choices when clicked a second time.
+
+  - After researching about it I found that the issue was being caused by having a duplicate bootstrap.min.js file script as it was being called twice. So to fix it I deleted one of the scripts and now works fine.
 
     x
 
