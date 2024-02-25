@@ -34,8 +34,8 @@
                                         <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price - high to low</option>
                                         <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating - low to high</option>
                                         <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating - high to low</option>
-                                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Rating - A to Z</option>
-                                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Rating - Z to A</option>
+                                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name - A to Z</option>
+                                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name - Z to A</option>
                                     </select>
                                 </div>
                             </div>
@@ -140,24 +140,7 @@
 
         <!--          Pagination          -->
         <div class="row">
-            <div class="col">
-                {% if products_page.has_other_pages %}
-                    <ul class="pagination justify-content-center">
-                        {% if products_page.has_previous %}
-                            <li class="page-item d-flex">
-                                <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?page=1"><i class="fa-solid fa-backward small"></i> First</a>
-                                <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?page={{ products_page.previous_page_number }}"><i class="fa-solid fa-caret-left"></i> Prev</a>
-                            </li>
-                        {% endif %}
-                        {% if products_page.has_next %}
-                            <li class="page-item d-flex">
-                                <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?page={{ products_page.next_page_number }}">Next <i class="fa-solid fa-caret-right"></i></a>
-                                <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?page={{ products_page.paginator.num_pages }}">Last <i class="fa-solid fa-forward small"></i></a>
-                            </li>
-                        {% endif %}
-                    </ul>
-                {% endif %}
-            </div>
+            {% include 'products/includes/pagination.html' %}
         </div>
     </div>
 {% endblock %}

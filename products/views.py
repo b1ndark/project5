@@ -25,7 +25,6 @@ def products(request):
             sortkey = request.GET['sort']
             sort = sortkey
             if sortkey == 'name':
-                sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
@@ -35,6 +34,22 @@ def products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
+
+            products_p = Paginator(products, 3)
+            page = request.GET.get('page')
+            products_page = products_p.get_page(page)
+
+            current_sorting = f'{sort}_{direction}'
+
+            context = {
+                'products': products,
+                'products_page': products_page,
+                'current_categories': categories,
+                'current_sorting': current_sorting,
+                'sortkey': sortkey,
+            }
+
+            return render(request, 'products/products.html', context)
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -48,16 +63,31 @@ def products(request):
                     request, "Please enter any search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(
-                description__icontains=query) | Q(
-                    operating_system__icontains=query) | Q(
-                        brand__icontains=query) | Q(
-                            display__icontains=query) | Q(
-                                category__icontains=query)
+            queries = Q(name__icontains=query) | \
+                Q(description__icontains=query) | \
+                Q(operating_system__icontains=query) | \
+                Q(brand__icontains=query) | \
+                Q(display__icontains=query)
             products = products.filter(queries)
 
-    page = request.GET.get('page', 1)
-    products_p = Paginator(products, 1)
+            products_p = Paginator(products, 1)
+            page = request.GET.get('page')
+            products_page = products_p.get_page(page)
+
+            current_sorting = f'{sort}_{direction}'
+
+            context = {
+                'products': products,
+                'products_page': products_page,
+                'search_term': query,
+                'current_categories': categories,
+                'current_sorting': current_sorting,
+            }
+
+            return render(request, 'products/products.html', context)
+
+    products_p = Paginator(products, 3)
+    page = request.GET.get('page')
     products_page = products_p.get_page(page)
 
     current_sorting = f'{sort}_{direction}'

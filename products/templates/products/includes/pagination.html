@@ -1,0 +1,50 @@
+<div class="col">
+    {% if products_page.has_other_pages %}
+    {% if sortkey %}
+        <ul class="pagination justify-content-center">
+            {% if products_page.has_previous %}
+                <li class="page-item d-flex">
+                    <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?sort={{ sortkey }}&page=1"><i class="fa-solid fa-backward small"></i> First</a>
+                    <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?sort={{ sortkey }}&page={{ products_page.previous_page_number }}"><i class="fa-solid fa-caret-left"></i> Prev</a>
+                </li>
+            {% endif %}
+            {% if products_page.has_next %}
+                <li class="page-item d-flex">
+                    <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?sort={{ sortkey }}&page={{ products_page.next_page_number }}">Next <i class="fa-solid fa-caret-right"></i></a>
+                    <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?sort={{ sortkey }}&page={{ products_page.paginator.num_pages }}">Last <i class="fa-solid fa-forward small"></i></a>
+                </li>
+            {% endif %}
+        </ul>
+    {% elif search_term %}
+        <ul class="pagination justify-content-center">
+            {% if products_page.has_previous %}
+                <li class="page-item d-flex">
+                    <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?q={{ search_term }}&page=1"><i class="fa-solid fa-backward small"></i> First</a>
+                    <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?q={{ search_term }}&page={{ products_page.previous_page_number }}"><i class="fa-solid fa-caret-left"></i> Prev</a>
+                </li>
+            {% endif %}
+            {% if products_page.has_next %}
+                <li class="page-item d-flex">
+                    <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?q={{ search_term }}&page={{ products_page.next_page_number }}">Next <i class="fa-solid fa-caret-right"></i></a>
+                    <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?q={{ search_term }}&page={{ products_page.paginator.num_pages }}">Last <i class="fa-solid fa-forward small"></i></a>
+                </li>
+            {% endif %}
+        </ul>
+    {% else %}
+        <ul class="pagination justify-content-center">
+            {% if products_page.has_previous %}
+                <li class="page-item d-flex">
+                    <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?page=1"><i class="fa-solid fa-backward small"></i> First</a>
+                    <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?page={{ products_page.previous_page_number }}"><i class="fa-solid fa-caret-left"></i> Prev</a>
+                </li>
+            {% endif %}
+            {% if products_page.has_next %}
+                <li class="page-item d-flex">
+                    <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?page={{ products_page.next_page_number }}">Next <i class="fa-solid fa-caret-right"></i></a>
+                    <a class="text-black btn border border-dark rounded dropdown-item font-weight-bold" href="?page={{ products_page.paginator.num_pages }}">Last <i class="fa-solid fa-forward small"></i></a>
+                </li>
+            {% endif %}
+        </ul>
+    {% endif %}
+    {% endif %}
+</div>
