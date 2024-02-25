@@ -551,7 +551,7 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 - [Heroku](https://dashboard.heroku.com/apps) - Used to deploy the TopTech forum website.
 - [Code Institute Template](https://github.com/Code-Institute-Org/ci-full-template) - Used to create project template.
 - [ElephantSQL](https://www.elephantsql.com/) - PostgreSQL database used to store the data.
-- [Cloudinary](https://cloudinary.com/) - Used to store image.
+- [AWS](https://aws.amazon.com/) - Used to store image.
 - [Font Awesome](https://fontawesome.com/) - Used to display icons.
 - [Favicon](https://favicon.io/) - Used to create the website favicon.
 - [Am I Responsive?](https://ui.dev/amiresponsive) - Used to display the website on different devices.
@@ -957,21 +957,6 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
   - After researching about it I found that the issue was being caused by having a duplicate bootstrap.min.js file script as it was being called twice. So to fix it I deleted one of the scripts and now works fine.
 
-    x
-
-- x
-  - x
-
-- x
-  - x
-  - x
-  - x
-
-- x
-  - x
-
-    ![image](x)
-
 [**Back to the top**](#toptech "back_to_the_top")
 
 ---
@@ -981,15 +966,16 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 ### **Fork the repository**
 
 1. Open Github.
+
 2. Log in or sign up.
-3. Look for my repository [x](x).
+3. Look for my repository [TopTech](https://github.com/b1ndark/project5).
 4. Last on the right corner you will find the fork button(click on it).
 
 ### **Clone the repository**
 
-1. Open Github
+1. Open **[Github](https://github.com/)**
 2. Log in or Sign up
-3. Look for my repository [x](x)
+3. Look for my repository [TopTech](https://github.com/b1ndark/project5)
 4. Look for code button next to the Gitpod button at the top right(click on it).
 5. A window will pop up with options for you to select to clone it with such as HTTPS, SSH or GitHub CLI.
 6. Once selected copy the link that is shown.
@@ -1009,7 +995,7 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 ### **ElephantSQL**
 
-1. First go to [ElephantSQL website](https://www.elephantsql.com/)
+1. First go to **[ElephantSQL website](https://www.elephantsql.com/)**
 2. If you already have an account login if not create an account.
 3. Once logged in please click "+ Create New Instance" on the top right hand corner.
 4. Add a name and the plan select "Tiny Turtle(Free)". Press Select Region.
@@ -1055,13 +1041,141 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 14. Click "Table queries" and you will be able to see your database structure.
 15. Last make sure to commit so it's all saved.
 
+### **AWS S3 bucket setup**
+
+1. Go to **[AWS Amazon](https://aws.amazon.com/)**.
+
+2. Sign in or Sign up if you haven't got an account.
+3. You will see the dashboard once you logged in.
+4. At the top search for S3 buckets
+5. As you get to the S3 buckets dashboard on the right click on Create bucket
+6. **AWS Region** choose the closest to you
+7. **Bucket name** try to give the same as your app
+8. **Object Ownership** choose ACLs enable
+9. At the **Block Public Access settings for this bucket**, Uncheck block all public access, the rest of the options leave as they are and press **Create bucket**
+10. Now on the S3 buckets dashboard click on the bucket you just created
+11. On the **Properties** tab, scroll down to **Static website hosting** and click **Edit**
+12. Within the **Static website hosting** select **Enable** and the index document and Error document just use the default values "index.html" and "error.html", and then click **Save**
+13. Now **Permissions** scroll down to **Cross-origin resource sharing (CORS)** and click **Edit**
+14. Add the following code and click **Save Changes**
+    ```ruby
+    [
+        {
+            "AllowedHeaders": [
+                "Authorization"
+            ],
+            "AllowedMethods": [
+                "GET"
+            ],
+            "AllowedOrigins": [
+                "*"
+            ],
+            "ExposeHeaders": []
+        }
+    ]
+    ```
+15. Next go to **Bucket Policy** and on the right click on **Policy generator**
+16. In the **Select Policy Type** select **S3 Bucket Policy**
+17. In the **Pricipal** type "*"
+18. In the **Actions** select **GetObject**
+19. Now in the other tab within the **Bucket Policy** copy the ARN ```arn:aws:s3:::bucket-name```, go back to the **Policy generator** tab and past the ARN in to the **Amazon Resource Name (ARN)**
+20. Click **Add Statement** and then click in **Generate Policy** and copy the generated policy in to the **Bucket Policy Editor**, before you save it add a "/*" on to the end of the resource key, then save
+21. Now within the **Permissions** tab go to **Access Control List** and click **Edit**
+22. Within the **Everyone (public access)** enable **List**, accept the warning box and click **Save changes**
+23. Now at the top seacrh for IAM (Identify and Access Management) and click on it
+24. Once in the IAM dashboard, on the left click on **User groups** then on the right click on **Create group**
+25. At the **User group name** give it a name for example ```manage-app-name``` and at the bottom click **Create group**
+26. Now on the left click in **Policies** and on the right click **Create policy**
+27. On the right select the json tab, then click **Actions** and then **Import policy**
+28. Search for **AmazonS3FullAccess** and import it, after that get the ARN from **Bucket Policy Editor** and past it in the "resource" within the Policy editor, show look like the one below
+29. 
+    ```ruby
+    {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "Statement1",
+          "Effect": "Allow",
+          "Action": [
+            "s3:*",
+            "s3-object-lambda:*"
+          ],
+          "Resource": [
+              "arn:aws:s3:::bucket-name",
+              "arn:aws:s3:::bucket-name/*"
+          ]
+        }
+      ]
+    }
+    ```
+30. Click **Review Policy**, give it a **Name** "appName-policy" and a **Description** "Access to S3 bucket for appName static files", click **Create policy**
+31. Go back to **User groups** click on your app group "manage-appName", go to **Permissions** tab, on the right click **Add permissions** and click **Attach policies**, search for the policy that you just created, select it and click **Attach Policies**
+32. On the left click on **Users** link, once is openned on your right click **Create user**, on the **User name** type a user name "appName-staticfiles-user" and click **Next**
+33. Under **Set permissions** select **Add user to group**, select the group that your are adding to "manage-app-name" and click **Next** and **Create User**
+34. Go back to Users menu and select the User you just created and on the right click on **Create access key**, Select the Option **Application running outside AWS** and click **Next**, the **Description ta value** leave it blank and click **Create access key**
+35. Click **Download .csv file** as it contains the **Access key ID** and the **Secret access key** which you will need them to authenticate
+36. Now back in your app you need to install both Boto3 ```pip3 install boto3``` and Django-storages ```pip3 install django-storages``` and make sure to freeze afterwards ```pip3 freeze > requirements.txt```
+37. Now in setting add ```'django-storages',``` to the Installed apps, then still within the settings add the following
+    ```ruby
+    if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'your bucket name'
+    AWS_S3_REGION_NAME = 'your account region'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media Urls in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+    ```
+38. In your app create a new file called "custom_storages.py" to tell django to use S3 to store static files when someone runs collectstatic and also to store any uploaded images, the custom_storages.py code is bellow
+    ```ruby
+    from django.conf import settings
+    from storages.backends.s3boto3 import S3Boto3Storage
+
+
+    class StaticStorage(S3Boto3Storage):
+        location = settings.STATICFILES_LOCATION
+
+
+    class MediaStorage(S3Boto3Storage):
+        location = settings.MEDIAFILES_LOCATION
+
+    ```
+
+### **Stripe setup**
+
+1. Go to [Stripe](https://stripe.com/gb)
+
+2. Sign in or Sign up if you haven't got an account.
+3. Once in the dashboard click in **Developers** on the top right corner
+4. On the top click on **Webhooks**
+5. If you haven't created an endpoint yet then, click on **Add endpoint**
+6. At the Endpoint URL type ```https://appName.herokuapp.com/checkout/wh```
+7. Select all events and click **Add endpoint**
+8. Get the webhook secret key and add it to your **Heroku Config Vars**
+8. Now run your app and test the transactions to check if everything is working, if it is working it will display the transactions in the webhooks tab
+
 ### **Heroku deployment**
 
 1. Within your opened project in Codeanywhere or Gitpod you will have to freeze requirements.txt file
 
-    - Type the command ```pip3 freeze --local > requirements.txt```
+    - Type the command ```pip3 freeze > requirements.txt```
 
-    ![image](assets/readme/requirements.webp)
+    ![image](x)
 
 2. Go to your settings.py file and change DEBUG to "False".
 3. Add the following to your settings.py file
@@ -1080,9 +1194,14 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 11. Select Settings tab.
 12. Go down to Config Vars
     - add to Key "PORT" and to add value "8000"
-    - add to key "CLOUDINARY_URL" and to add value "add your cloudinary url"
-    - add to key "DATABASE_URL" and to add value "add your Postgres url"
-    - add to key "SECRET_KEY" and to add value "add your secret key"
+    - add to key "DATABASE_URL" and to add value "your Postgres url"
+    - add to key "SECRET_KEY" and to add value "your secret key"
+    - add to key "AWS_ACCESS_KEY_ID" and to add value "your aws access key id"
+    - add to key "AWS_SECRET_ACCESS_KEY" and to add value "your aws secret access key"
+    - add to key "USE_AWS" and to add value "True"
+    - add to key "STRIPE_PUBLIC_KEY" and to add value "Stripe public key"
+    - add to key "STRIPE_SECRET_KEY" and to add value "Stripe secret key"
+    - add to key "STRIPE_WH_SECRET" and to add value "Stripe webhook secret"
 13. Next go to Buildpacks and add "heroku/python" and "heroku/nodejs"
 
     - Make sure they are in this order first "heroku/python" and then in second "heroku/nodejs"
@@ -1094,7 +1213,7 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 18. Choose your preferred one by pressing deploy.
 19. Once the app is successfully deployed click "View"
 
-[Live project](x)
+[Live project](https://toptech-244e7b312287.herokuapp.com/)
 
 [**Back to the top**](#toptech "back_to_the_top")
 
@@ -1134,10 +1253,39 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
   - Websites Used
     - [Pexels](https://www.pexels.com/)
+    - [Unsplash](https://unsplash.com/)
 
   - Photos and Authors where to find them:
-    - xx
-    - x
+    - [HP computer](https://unsplash.com/photos/black-computer-keyboard-beside-black-flat-screen-computer-monitor-1Ksz0Q1NU3k) - photo is from Dhru J
+    - [MSI laptop](https://unsplash.com/photos/black-and-gray-laptop-computer-bBqMGSGaOXw) - photo is from Vadim Artyukhin
+    - [Windows laptop](https://unsplash.com/photos/macbook-pro-on-white-couch-6WvZo5FOxww) - photo is from Bram Van Oost
+    - [HP laptop](https://unsplash.com/photos/a-laptop-on-a-desk-OKKV_hqEtFU) - photo is from Mika Baumeister
+    - [HP white laptop](https://unsplash.com/photos/a-white-rectangular-device-on-a-wooden-surface-qmcTZZ7XhqY) - photo is from ANdrey Matveev
+    - [Strix GTX1080 Ti](https://unsplash.com/photos/lighted-black-and-gray-graphics-card-zPHftoPajis) - photo is from Daniel Hatcher
+    - [Alienware computer](https://unsplash.com/photos/black-flat-screen-computer-monitor-beside-white-computer-keyboard-Hpaq-kBcYHk) - photo is from Alienware
+    - [Alienware computer 2](https://unsplash.com/photos/black-flat-screen-computer-monitor-Bp3KmTZQlfw) - photo is from Alienware
+    - [Iphone 15](https://unsplash.com/photos/a-black-and-a-gold-oneplug-phone-on-a-black-surface-opAeFlgyQqs) - photo is from Mockup Free
+    - [Iphone X](https://unsplash.com/photos/silver-iphone-x-floating-over-open-palm-6wdRuK7bVTE) - photo is from Neil Soni
+    - [Samsung S21+](https://unsplash.com/photos/black-and-white-amazon-gift-card-yqcloMb3Abw) - photo is from Anh Nhat
+    - [Samsung Galaxy Fold](https://unsplash.com/photos/person-holding-black-phone-vI8_06RmSC0) - photo is from Mika Baumeister
+    - [Samsung Galaxy Z Flip](https://unsplash.com/photos/person-holding-white-android-smartphone-PdfqLVSk-kg) - photo is from Daniel Romero
+    - [Samsung S21 Ultra](https://unsplash.com/photos/black-sony-remote-control-beside-white-tissue-paper-uCqMa_s-JDg) - photo is from Anh Nhat
+    - [Sony Xperia](https://unsplash.com/photos/a-close-up-of-the-back-of-a-black-sony-phone-rSGjpajBLNU) - photo is from He Junhui
+    - [Sony Xperia Z5](https://unsplash.com/photos/black-sony-xperia-h4x-Z7704Bg) - photo is from Alex Amva
+    - [Dell laptop](https://unsplash.com/photos/silver-laptop-on-brown-wooden-table-e59Y6vqbL7Y) - photo is from Dell
+    - [Asus laptop](https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-wooden-desk-7uscPYY6fvQ) - photo is from Joachim Pressl
+    - [Asus Zenbook Pro Duo](https://unsplash.com/photos/black-laptop-computer-on-brown-wooden-table-60x59t9fA-o) - photo is from Onur Binay
+    - [Dell laptop 2](https://unsplash.com/photos/person-using-black-laptop-computer-on-brown-wooden-table-8pb7Hq539Zw) - photo is from Dell
+    - [Acer laptop white](https://unsplash.com/photos/white-acer-chromebook-laptop-rndjGfyInvs) - photo is from Andrew Neel
+    - [Samsung laptop](https://unsplash.com/photos/two-woman-using-laptop-Uduc5hJX2Ew) - photo is from Brooke Cagle
+    - [iMac](https://unsplash.com/photos/silver-imac-with-apple-magic-keyboard-on-white-sufrace-3xQ65cknLPk) - photo is from Quaritsch Photography
+    - [M2 Macbook Pro](https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-white-desk-KIfQO1AQ2Ew) - photo is from Bram Van Oost
+    - [M1 Macbook Pro](https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-wooden-table-difAvscQf7M) - phot is from Opollo Photography
+    - [Asus Z790 Maximus Hero](https://unsplash.com/photos/a-close-up-of-a-book-with-a-red-logo-on-it-aqk9DahMxUw) - photo is from Gamercomp
+    - [Asus laptop 2](https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-wooden-table-te2Bx91N16w) - photo is from Joachim Pressl
+    - [ROG laptop](https://www.pexels.com/photo/asus-republic-of-gamers-logo-in-black-and-white-12877878/) - photo is from Kasra Askari
+    - [Macbook Pro 2](https://www.pexels.com/photo/macbook-pro-turned-off-205421/) - photo is from Craig Dennis
+    - [iMac silver](https://www.pexels.com/photo/silver-imac-on-white-table-5082554/) - photo is from Cottonbro Studio
 
   - The Favicon was created using - [Favicon Generator](https://favicon.io/favicon-generator/)
   - Socials networks used in the footer:
@@ -1152,8 +1300,8 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 ## **Acknowledgments**
 
-- x
-- x
-- x
+- I would like to thank my mentor [Graeme Taylor](https://github.com/G-Taylor) for helping me along the way in completing my Fifth milestone project, and through the entire course.
+- I would like to thank Code Institute Tutors for helping me when I had issues along the project and the course.
+- Also, I would like to thank family and friends for helping with testing The TopTech project and support along the way through the course
 
 [**Back to the top**](#toptech "back_to_the_top")
