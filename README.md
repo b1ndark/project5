@@ -1293,6 +1293,8 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
     - [Linkedin](https://www.linkedin.com/in/vitor-de-oliveira-50076b268/)
     - [Twitter(X)](https://twitter.com/)
     - [Instagram](https://www.instagram.com/)
+    - [Facebook](https://www.facebook.com/)
+    - [Youtube](https://www.youtube.com/)
 
 [**Back to the top**](#toptech "back_to_the_top")
 
