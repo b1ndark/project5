@@ -1,12 +1,26 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from .forms import ContactForm
+from django.core.mail import send_mail
 
 
 def contact(request):
     """
     This will render the Contact page
     """
-    form = ContactForm()
+
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+        messages.success(request, 'Thank you for contacting Us.\
+         We will be in touch soon')
+        
+        return redirect('contact')
+
+    else:
+        form = ContactForm()
+
     context = {
         'form': form,
     }
