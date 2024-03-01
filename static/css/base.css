@@ -189,7 +189,6 @@ body {
 }
 
 .container-fluid-products {
-    background-color: var(--background-2);
     width: 100%;
     margin-right: auto;
     margin-left: auto;
@@ -267,6 +266,10 @@ body {
     width: 25%;
 }
 
+.update-link:hover {
+    color: var(--black);
+}
+
 /****************** Checkout ******************/
 
 .StripeElement, 
@@ -287,6 +290,17 @@ select option[value=""] {
 
 .form-control, #card-element {
     border-color: var(--black);
+    color: var(--black);
+}
+
+/****************** Allauth ******************/
+
+.account-links {
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.account-links:hover {
     color: var(--black);
 }
 

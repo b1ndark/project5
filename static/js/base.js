@@ -10,6 +10,10 @@ $('.fa-trash-can').hover(function() {
     $(this).toggleClass('fa-shake');
 });
 
+$('.fa-spinner').hover(function() {
+    $(this).toggleClass('fa-pulse');
+});
+
 // Hover animation only when the currentValue is less then 20
 
 $('.increment-qty').hover(function() {

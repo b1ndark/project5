@@ -15,7 +15,7 @@
     <div class="container-fluid-products top-0">
         <div class="row">
             <div class="col text-center mt-3 mb-3">
-                <h2 class="logo-font">Products</h2>
+                <h1 class="logo-font" style="size: 30px;">Products</h1>
                 <hr class="w-75">
             </div>
         </div>
@@ -28,7 +28,7 @@
 
                                 <!--          Sorting          -->
                                 <div class="sort-select-wrapper">
-                                    <select id="sort-selector" class="form-select-sm select-option-box text-muted rounded border border-dark border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                    <select id="sort-selector" class="form-select-sm select-option-box text-muted rounded border border-dark border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}" aria-label="Sort by">
                                         <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by</option>
                                         <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price - low to high</option>
                                         <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price - high to low</option>
@@ -65,9 +65,9 @@
                                     <div class="p-3">
 
                                         <!--          Product image          -->
-                                        <a href="{% url 'product_detail' product.id %}" width="325" height="325">
+                                        <a href="{% url 'product_detail' product.id %}">
                                             <div class="product-image">
-                                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }} image">
+                                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="product image of {{ product.name }}" width="325" height="325">
                                             </div>
                                         </a>
                                     </div>

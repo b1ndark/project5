@@ -2,17 +2,17 @@
 
 `To open the links in this document in a new browser tab please press CTRL + Mouse Click`
 
-x
+Welcome to TopTech, this is an e-commerce website where Customers will be able to purchase the latest tech available.
 
-x
+Customers will get opportunity to find any the latest Tech avaivlable in the market in just one place.
 
-x
+The TopTech website is for all types of audience from young to eldery and they can expect a website easy to navigate.
 
-x
+The main goal is to help the customer get the latest tech so that they are updated with latest technology available on the market at the best prices.
 
 ![image](x)
 
-[**Live website**](x)
+[**Live website**](https://toptech-244e7b312287.herokuapp.com/)
 
 ---
 
@@ -66,22 +66,22 @@ x
 
 ### **Visitors**
 
-- x
-- x
-- x
-- x
+- Users will experience a website easy to navigate and full of Tech.
+- Users will find a friendly support from our staff that are ready to guide and help with any enquire
+- The content of the website is carefully supervised to make sure the Users get all the details of wanted products.
+- 
 
 ### **Goals**
 
-- x
-- x
-- x
-- x
+- The main goal is to offer the customers the latest Tech at the best prices possible
+- To fully satisfy the customers with their needs.
+- To get the TopTech website known so it captivates more happy customers
+- Also to feel welcomed in our store 
 
 ### **TopTech**
 
-- x
-- x
+- The website is presented with a Home page that has a motherboard and its components and a button to take the customer to start shop the products
+- The navbar has the following options available 
   - **Home** - x
   - **Sign Up** - x
   - **Sign In** - x

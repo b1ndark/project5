@@ -14,9 +14,9 @@
         <!--          Search bar form          -->
         <form method="GET" action="{% url 'products' %}">
             <div class="input-group border border-black rounded-pill p-1 w-100">
-                <input class="form-control rounded-pill border-0" type="text" name="q" placeholder="Search Tech">
+                <input class="form-control rounded-pill border-0" type="Search" name="q" placeholder="Search Tech" aria-label="Search">
                 <div class="input-group-append align-items-center">
-                    <button class="search-btn form-control btn btn-black text-grey border-0" type="submit">
+                    <button class="search-btn form-control btn btn-black text-grey border-0" type="submit" aria-label="Search">
                         <span class="p-1">
                             <i class="fas fa-search"></i>
                         </span>
@@ -30,8 +30,8 @@
             <li class="list-inline-item dropdown navbar-icon">
 
                 <!--          Account menu          -->
-                <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <div class="text-center">
+                <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-hidden="true">
+                    <div class="text-center my-0 font-weight-bold">
                         <!--          If User is authenticated          -->
                         {% if request.user.is_authenticated %}
 
@@ -48,7 +48,7 @@
                             <!--          Not logged in          -->
                             <div><i class="fa-regular fa-user"></i></div>
                         {% endif %}
-                        <p class="my-0 font-weight-bold">Account</p>
+                        Account
                     </div>
                 </a>
                 <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -76,7 +76,7 @@
             <li class="list-inline-item navbar-icon">
 
                 <!--          Shopping basket          -->
-                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-black{% endif %} nav-link"
                     href="{% url 'basket' %}">
                     <div class="text-center">
                         <div><i class="fa-solid fa-basket-shopping font-weight-bold"></i></div>
