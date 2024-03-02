@@ -121,8 +121,33 @@
             </div>
         </div>
         {% for review in reviews %}
-        {{review.user}}
-        {{review.review}}
+        <div class="row">
+            <div class="col-12 offset-lg-1 offset-xl-2 col-lg-6 mt-5">
+                <div class="" style="padding: 20px">
+                    <div class="d-flex justify-content-between">
+                        <p class="font-weight-bold">
+                            <!--            Review User name            -->
+                            <strong>{{ review.user }}</strong>
+                            wrote:
+                        </p>
+                        <small class="mt-1">
+                            <a class="btn btn-sm main-button mr-2 font-weight-bold" href="{% url 'edit_review' review.id %}">Edit</a>
+                            <a class="btn btn-sm btn-outline-danger font-weight-bold" href="">Delete</a>
+                        </small>
+                    </div>
+                    
+        
+                  <!--            Review            -->
+                  {{ review.review | linebreaks }}
+        
+                  <span class="text-muted">
+                    <!--            Review date which was created on            -->
+                    {{ review.created }}
+                  </span>
+                </div>
+                <hr>
+            </div>
+        </div>
         {% endfor %}
         <div class="row">
             <div class="col-12 offset-lg-1 offset-xl-2 col-lg-10 mt-5">
