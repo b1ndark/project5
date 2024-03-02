@@ -10,7 +10,7 @@ The TopTech website is for all types of audience from young to eldery and they c
 
 The main goal is to help the customer get the latest tech so that they are updated with latest technology available on the market at the best prices.
 
-![image](x)
+![image](assets/readme/amiresponsive.webp)
 
 [**Live website**](https://toptech-244e7b312287.herokuapp.com/)
 

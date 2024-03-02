@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_js %}
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("JyAIyeiKNHAYylrVZ");
+        })();
+    </script>
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -25,16 +34,22 @@
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 card p-3">
 
                 <!--          Contact form          -->
-                <form method="POST" action="" class="form mb-2">
+                <form class="form mb-2" onsubmit="return sendMail(this);" method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <div class="text-center">
                         <a href="{% url 'home' %}" class="btn cancel-button font-weight-bold">Cancel</a>
-                        <button class="btn main-button font-weight-bold rounded">Submit</button>
+                        <button type="submit" class="btn main-button font-weight-bold rounded">Submit</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+        <!--          JS file          -->
+        <script src="{% static 'js/contact.js' %}"></script>
 {% endblock %}
