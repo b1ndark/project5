@@ -66,3 +66,27 @@ def edit_review(request, review_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """
+    To render Delete review template
+    """
+
+    review = get_object_or_404(Reviews, pk=review_id)
+    product = review.product
+
+    if request.method == 'POST':
+        review.delete()
+        messages.success(
+            request, 'The review has been deleted')
+        return redirect(reverse('product_detail', args=[product.id]))
+
+    template = 'reviews/delete_review.html'
+    context = {
+        'review': review,
+        'product': product,
+    }
+
+    return render(request, template, context)

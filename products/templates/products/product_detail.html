@@ -130,9 +130,9 @@
                             <strong>{{ review.user }}</strong>
                             wrote:
                         </p>
-                        <small class="mt-1">
+                        <small class="mb-3">
                             <a class="btn btn-sm main-button mr-2 font-weight-bold" href="{% url 'edit_review' review.id %}">Edit</a>
-                            <a class="btn btn-sm btn-outline-danger font-weight-bold" href="">Delete</a>
+                            <a class="btn btn-sm btn-outline-danger font-weight-bold" href="{% url 'delete_review' review.id %}">Delete</a>
                         </small>
                     </div>
                     
