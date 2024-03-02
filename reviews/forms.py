@@ -17,6 +17,7 @@ class ReviewsForm(forms.ModelForm):
             'review': forms.Textarea(
                 attrs={'rows': 6,
                        'style': 'resize:none',
-                       'placeholder': 'Write a review...'
+                       'placeholder': 'Write a review...',
+                       'aria-label': 'review',
                 }),
         }

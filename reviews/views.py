@@ -13,6 +13,11 @@ def edit_review(request, review_id):
     """
 
     review = get_object_or_404(Reviews, pk=review_id)
+    if request.user != review.user:
+        messages.error(
+            request, 'This is not your review!')
+        return redirect(reverse('home'))
+
     product = review.product
     form = ReviewsForm(instance=review)
 
@@ -44,8 +49,11 @@ def delete_review(request, review_id):
     """
     To render Delete review template
     """
-
     review = get_object_or_404(Reviews, pk=review_id)
+    if request.user != review.user:
+        messages.error(
+            request, 'This is not your review!')
+        return redirect(reverse('home'))
     product = review.product
 
     if request.method == 'POST':
