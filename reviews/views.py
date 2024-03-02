@@ -7,35 +7,6 @@ from .forms import ReviewsForm
 
 
 @login_required
-def add_review(request, product_id):
-    """
-    To render Add review form
-    """
-
-    product = get_object_or_404(Product, pk=product_id)
-
-    if request.method == 'POST':
-        form = ReviewsForm(request.POST)
-        if form.is_valid():
-            review = form.save()
-            messages.success(
-                request, 'The review has been added to the product')
-            return redirect(reverse('product_detail', args=[product.id]))
-        else:
-            messages.error(
-                request, 'Failed to add the review, please check the form!')
-    else:
-        form = ReviewsForm()
-
-    template = 'reviews/add_review.html'
-    context = {
-        'form': form,
-    }
-
-    return render(request, template, context)
-
-
-@login_required
 def edit_review(request, review_id):
     """
     To render Edit review form

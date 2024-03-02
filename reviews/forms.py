@@ -12,3 +12,11 @@ class ReviewsForm(forms.ModelForm):
         fields = (
             'review',
         )
+
+        widgets = {
+            'review': forms.Textarea(
+                attrs={'rows': 6,
+                       'style': 'resize:none',
+                       'placeholder': 'Write a review...'
+                }),
+        }

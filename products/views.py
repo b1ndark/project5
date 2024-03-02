@@ -7,6 +7,7 @@ from django.core.paginator import Paginator
 from .models import Product, Category
 from .forms import ProductForm
 from reviews.models import Reviews
+from reviews.forms import ReviewsForm
 
 
 def products(request):
@@ -111,11 +112,28 @@ def product_detail(request, product_id):
     """
 
     product = get_object_or_404(Product, pk=product_id)
-    reviews = Reviews.objects.all().filter(product=product.id).order_by('-created')
+    reviews = product.reviews.filter().order_by('-created')
+    form = ReviewsForm(data=request.POST)
+
+    if request.method == 'POST':
+        if form.is_valid():
+            form.instance.user = request.user
+            review = form.save(commit=False)
+            review.product = product
+            review.save()
+            messages.success(
+                request, 'The review has been added to the product')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(
+                request, 'Failed to add the review, please check the form!')
+    else:
+        form = ReviewsForm()
 
     context = {
         'product': product,
         'reviews': reviews,
+        'form': form,
     }
 
     return render(request, 'products/product_detail.html', context)

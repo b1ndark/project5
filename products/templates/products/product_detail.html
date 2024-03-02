@@ -120,20 +120,38 @@
                 </div>
             </div>
         </div>
+        <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8 mt-5">
+            <hr>
+            <h4 class="logo-font text-center">Reviews</h4>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6 mt-5 mb-5">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <div class="text-center">
+                        <button class="btn main-button font-weight-bold rounded">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
         {% for review in reviews %}
         <div class="row">
-            <div class="col-12 offset-lg-1 offset-xl-2 col-lg-6 mt-5">
-                <div class="" style="padding: 20px">
+            <div class="col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+                <div class="px-0 px-sm-3 px-lg-5">
                     <div class="d-flex justify-content-between">
                         <p class="font-weight-bold">
                             <!--            Review User name            -->
                             <strong>{{ review.user }}</strong>
                             wrote:
                         </p>
+                        {% if user.is_superuser or request.user == review.user %}
                         <small class="mb-3">
                             <a class="btn btn-sm main-button mr-2 font-weight-bold" href="{% url 'edit_review' review.id %}">Edit</a>
                             <a class="btn btn-sm btn-outline-danger font-weight-bold" href="{% url 'delete_review' review.id %}">Delete</a>
                         </small>
+                        {% endif %}
                     </div>
                     
         
