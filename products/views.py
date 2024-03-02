@@ -6,6 +6,7 @@ from django.db.models.functions import Lower
 from django.core.paginator import Paginator
 from .models import Product, Category
 from .forms import ProductForm
+from reviews.models import Reviews
 
 
 def products(request):
@@ -110,9 +111,11 @@ def product_detail(request, product_id):
     """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = Reviews.objects.all().filter(product=product.id).order_by('-created')
 
     context = {
         'product': product,
+        'reviews': reviews,
     }
 
     return render(request, 'products/product_detail.html', context)

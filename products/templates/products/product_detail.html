@@ -120,6 +120,10 @@
                 </div>
             </div>
         </div>
+        {% for review in reviews %}
+        {{review.user}}
+        {{review.review}}
+        {% endfor %}
         <div class="row">
             <div class="col-12 offset-lg-1 offset-xl-2 col-lg-10 mt-5">
                 <a href="{% url 'products' %}" class="btn my-1 main-button rounded">
