@@ -27,13 +27,14 @@ The main goal is to help the customer get the latest tech so that they are updat
   - [**Agile**](#agile)
     - [**MoSCoW prioritization method**](#moscow-prioritization-method)
     - [**User Stories(Epics)**](#user-storiesepics)
-      - [**Epic 1 - x**](#epic-1---x)
-      - [**Epic 2 - x**](#epic-2---x)
-      - [**Epic 3 - x**](#epic-3---x)
-      - [**Epic 4 - x**](#epic-4---x)
-      - [**Epic 5 - x**](#epic-5---x)
-      - [**Epic 6 - x**](#epic-6---x)
-      - [**Epic 7 - x**](#epic-7---x)
+      - [**Epic 1 - Basic Setup**](#epic-1---basic-setup)
+      - [**Epic 2 - Products**](#epic-2---products)
+      - [**Epic 3 - User authentication/management**](#epic-3---user-authenticationmanagement)
+      - [**Epic 4 - Basket/checkout**](#epic-4---basketcheckout)
+      - [**Epic 5 - Admin dashboard**](#epic-5---admin-dashboard)
+      - [**Epic 6 - Product reviews**](#epic-6---product-reviews)
+      - [**Epic 7 - Marketing and SEO (Search Engine Optimization)**](#epic-7---marketing-and-seo-search-engine-optimization)
+      - [**Epic 8 - Readme documentation**](#epic-8---readme-documentation)
   - [**Design**](#design)
     - [**Typography**](#typography)
       - [**Fonts used**](#fonts-used)
@@ -80,26 +81,37 @@ The main goal is to help the customer get the latest tech so that they are updat
 
 ### **TopTech**
 
-- The website is presented with a Home page that has a motherboard and its components and a button to take the customer to start shop the products
+- The website is presented with a Home page that has a motherboard and its components has a background image and a button to take the customer to start shop the products, at the top of the page is the navbar with its links and at the bottom is the footer.
 - The navbar has the following options available 
-  - **Home** - x
-  - **Sign Up** - x
-  - **Sign In** - x
-  - **Contact** - x
-  - **x** - x
-  - **Home** - x
-  - **Forum** - x
-  - **Logout** - x
-  - **Contact** - x
-- x
-  - x
-- x
-  - x
-  - x
-  - x
-- x
-  - x
-  - x
+  - **TopTech logo** - Available on large and extra large and when it pressed it takes you back to the home page
+  - **Search bar** - Available on every page and device the search bar can be used to search a especific product
+  - **Home** - Available on extra small, small and medium screens and when it pressed it takes you back to the home page
+  - **About Us** - When clicked it will take you to the about page where you will find a page presented with a photo, toptech information, contact details and openning times
+  - **Contact Us** - When clicked it will take you to the conatct page where you will be able to contact the TopTech team for any matter
+  - **Account (if logged out)** - When clicked it will dropdown a menu with the following
+    - **Sign Up** - When clicked it will take you to the sign up page where you can register
+    - **Sign In** - When clicked it will take you to the sign in page where you can login to your account
+  - **Account (if logged in)** - When clicked it will dropdown a menu with the following
+    - **Profile** - When clicked it will take you to the sign up page where you can register
+    - **Purchases** - When clicked it will take you to the purchases page where you will be able to see all your purchases if you made any
+    - **Logout** - When clicked it will take you to the logout page where you will be able to logout from your account
+  - **Account (if logged in and is the Admin)** - When clicked it will dropdown a menu with the following
+    - **Admin page** - When clicked it will take you to the Admin page where you will be able to manage the website
+    - **Product management** - When clicked it will take you to the Add product page so you can add more products
+    - **About management** - When clicked it will take you to the Edit about so admin/owner can update the company details
+    - **Profile** - When clicked it will take you to the sign up page where you can register
+    - **Purchases** - When clicked it will take you to the purchases page where you will be able to see all your purchases if you made any
+    - **Logout** - When clicked it will take you to the logout page where you will be able to logout from your account
+  - **Basket** - When clicked it will take you to the basket and see your basket if you have anything in it
+- Once in the Profile:
+  - The user will be able to update the account details.
+- Once in the products page you will be able to:
+  - Sort products by price
+  - Sort products by rating
+  - And sort products by name
+- If the User is checking a expecific product:
+  - You will be able to read the reviews about it
+  - You will be able to leave a review to the product
 
 [**Back to the top**](#toptech "back_to_the_top")
 
@@ -107,7 +119,7 @@ The main goal is to help the customer get the latest tech so that they are updat
 
 ## **Agile**
 
-x
+I have develop this project using Agile methodology
 
 ### **MoSCoW prioritization method**
 
@@ -118,67 +130,72 @@ x
   - Could-Have - If not implemented it will not affect the functionality, but could improve User/Customer experience.
   - Won't-Have - It is not a priority for this iteration.
   - For more info on MoSCoW method please click [here](https://monday.com/blog/project-management/moscow-prioritization-method/)
-- I have created a Kanban using Github projects, the User story template and labels were created following [Code Institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+AG101+2021_T1/courseware/a4e548ca70a3473aa890ba2ab9bf612c/db69a5829de8467eb071e63bde630a2e/?child=last) and where in each user story I have added acceptance criteria and tasks that needed to be completed in order to close them. The Kanban can be found [here](https://github.com/users/b1ndark/projects/5/views/1).
+- I have created a Kanban using Github projects, the User story template and labels were created following [Code Institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+AG101+2021_T1/courseware/a4e548ca70a3473aa890ba2ab9bf612c/db69a5829de8467eb071e63bde630a2e/?child=last) and where in each user story I have added acceptance criteria and tasks that needed to be completed in order to close them. The Kanban can be found [here](https://github.com/users/b1ndark/projects/6/views/1).
 
   ![image](x)
   [Kanban link image](x)
 
 ### **User Stories(Epics)**
 
-#### **Epic 1 - x**
+#### **Epic 1 - Basic Setup**
 
-- x
-- x
-- x
-- x
-- x
-- x
+- As a Developer I can create a new project so that I can start developing the project
+- As a Developer I can setup the new project so that so that the project has its main structure/tools
+- As a Developer I can setup all databases so that all the data is stored and protected
+- As a Developer I can deploy before starting the project so that I can make sure that is all running before getting too deep in the development and having problems with deploying later and also to test it while developing
 
-#### **Epic 2 - x**
+#### **Epic 2 - Products**
 
-- x
-- x
-- x
-- x
+- As an User I can filter the products so that only displays the selected product category
+- As an Admin I can add a new product so that Users are able to buy
+- As an User I can view a single product so that I can view more detailed information and specifications
+- As an User I can access all products section so that I can view every product from the store
+- As an Admin I can edit a product so that the product info is updated
+- As an Admin I can delete a product so that the customer does buy it if it doesn't exist
+- As an User I can search so that I can find a specific product
+- As an User I can go to the next or previous page so that I browse through an organized list of products
 
-#### **Epic 3 - x**
+#### **Epic 3 - User authentication/management**
 
-- x
-- x
-- x
-- x
-- x
+- As an User I can register an account so that access/view my profile/orders
+- As an User I can Login so that I can view profile, update details and view orders history
+- As an User I can logout so that my account is logged off
+- As an User I can view my profile so that I can update any info and view orders
+- As an User I can delete my account so that all my data is deleted
 
-#### **Epic 4 - x**
+#### **Epic 4 - Basket/Checkout**
 
-- x
-- x
-- x
-- x
-- x
-- x
+- As an User I can adjust the quantity of the product so that I purchase the right amount
+- As an User I can view the basket so that I can view the total and checkout
+- As an User I can remove a product form the basket that I don't need so that I don't purchase it
+- As a developer I can add stripe to the website so that the users can safely use their cards to purchase the products
+- As an User I can see a notification of my order so that I know that the payment was successful
+- As an User I can receive and email confirming of my order so that I have a confirmation of the order ---------
 
-#### **Epic 5 - x**
+#### **Epic 5 - Admin dashboard**
 
-- x
-- x
-- x
-- x
+- As an Admin I can access to the website dashboard so that I can manage the website
+- As an Admin I can add products from the website dashboard so that the users have more offers to buy
+- As an Admin I can update the product details so that the user sees it with correct details/info
+- As an Admin I can delete a product from the website so that the user doesn't buy it if no longer available
 
-#### **Epic 6 - x**
+#### **Epic 6 - Product Reviews**
 
-- x
-- x
-- x
-- x
+- As an User I can share my experience with the product so that other users know about it
+- As an User I can see other users reviews of the product that I am looking to buy so that I know about experiences that users had with the product
+- As an User I can edit my review so that the users can read the updated review
+- As an User I can delete the review that I left in the product so that the product no longer has my review
 
-#### **Epic 7 - x**
+#### **Epic 7 - Marketing and SEO (Search Engine Optimization)**
 
-- x
-  - x
-  - x
-  - x
-  - x
+- As an User I can contact the website so that I get the right support
+- As an User I can see the privacy policy so that I am aware of the website policy
+- As an Admin/Owner I can improve the website SEO so that the website gets ranked higher to attract customers
+
+#### **Epic 8 - Readme Documentation**
+
+- Document all tests
+- Readme Completion
 
 [**Back to the top**](#toptech "back_to_the_top")
 
@@ -197,16 +214,23 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 #### **Colours used**
 
-- x
-- x
-- x
-- x
-- x
-- x
-- x
-- x
-- x
-- x
+The colours choosen for this project were neutral colours, mainly white as it is focused in a friendly enviroment and to atract any customer to the website, the colours are the following:
+- Black colour: #000000
+- White colour: #ffffff
+- Red colour: #AA0000
+- Gray colour: #808080
+- Yellow colour: #FFFF00
+- --blue: rgba(14, 91, 235, 0.795);
+- --placeholder-color: #aab7c4; - Used for placeholder
+- --background: #2c2b2ce3; - Used for background
+- --background-hover: #1f1e1f; - Used for background when hover
+- --text-color: rgba(0, 0, 0, .5); - Used for text colour
+- --text-color-hover: rgba(0, 0, 0, .7); - Used for text when hover
+- --background-2: rgb(221, 222, 226); - Used as a box-shadow colour for the custom checkbox 
+- --border: 2px solid #000000; - Used for the borders
+- --boxshadow: 0 0 8px 0.1rem rgba(14, 91, 235, 0.795); - Box shadow
+- --product_boxshadow: 0 0 10px 0.1rem rgba(29, 30, 31, 0.795); - Used for the product box-shadow
+- --btn-boxshadow: 0 0 6px 0.1rem rgba(75, 77, 78, 0.795); - Used as button box-shadow
 
 ![image](assets/readme/colours/colorkit.webp "palette_colour")
 
