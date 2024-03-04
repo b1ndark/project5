@@ -21,13 +21,14 @@
     
                 <!--          Title and sub title          -->
                 <hr>
-                <h2 class="logo-font text-center mb-4">Purchases History</h2>
+                <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">Purchases</h1>
                 <hr>
             </div>
         </div>
         <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
             <div class="row mx-0">
                 <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
+                    <h2 class="mb-3 font-weight-bold" style="font-size: 20px;">Purchases history</h2>
                     {% if orders %}
                         <div class="purchases-history table-responsive">
                             <table class="table table-sm table-borderless">
@@ -43,7 +44,7 @@
                                     {% for order in orders %}
                                     <tr>
                                         <td>
-                                            <a href="{% url 'purchases_history' order.order_number %}" title="{{ order.order_number }}">
+                                            <a class="font-weight-bold text-muted" href="{% url 'purchases_history' order.order_number %}" title="{{ order.order_number }}">
                                                 {{ order.order_number|truncatechars:6 }}
                                             </a>
                                         </td>

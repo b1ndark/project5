@@ -23,15 +23,17 @@
 
                     <!--          Title          -->
                     <hr>
-                    <h2 class="logo-font text-center mb-4">Edit Profile</h2>
+                    <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">{{ profile.user.username }}'s profile</h1>
                     <hr>
                 </div>
             </div>
             <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
                 <div class="row mx-0">
-                    <div class="col-12 col-md-10 offset-md-1 mt-5 mb-3">
+                    <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
+                        <h2 class="mb-5 font-weight-bold" style="font-size: 24px;">Edit profile</h2>
+
                         <!--          Edit Profile form          -->
-                        <form method="POST" action="{% url 'edit_profile' %}" class="form mb-2" enctype="multipart/form-data">
+                        <form method="POST" action="{% url 'edit_profile' %}" class="form mb-3" enctype="multipart/form-data">
                             {% csrf_token %}
                             {% for field in form %}
                                 {% if field.name != 'image' %}
@@ -41,8 +43,8 @@
                                 {% endif %}
                             {% endfor %}
                             <div class="text-center mt-5">
-                                <a href="{% url 'profile' %}" class="btn cancel-button font-weight-bold mx-3">Cancel</a>
-                                <button class="btn main-button font-weight-bold rounded mx-3">Update Profile</button>
+                                <button class="btn main-button font-weight-bold rounded mx-3 mb-3">Update Profile</button>
+                                <a href="{% url 'profile' %}" class="btn cancel-button font-weight-bold mx-3 mb-3">Cancel</a>
                             </div>
                         </form>
                     </div>

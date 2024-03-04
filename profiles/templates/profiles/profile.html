@@ -17,7 +17,7 @@
 
             <!--          Title and sub title          -->
             <hr>
-            <h2 class="logo-font text-center mb-4">{{ profile.user.username }}'s Profile</h2>
+            <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">{{ profile.user.username }}'s profile</h1>
             <hr>
         </div>
     </div>
@@ -61,7 +61,7 @@
                 {% endif %}
                 {% if request.user == profile.user %}
                 <hr>
-                <h4 class="logo-font text-center">Personal Information</h4>
+                <h2 class="logo-font text-center" style="font-size: 20px;">Personal Information</h2>
                 <hr>
                 {% if profile.default_phone_number %}
                 <div class="row">
@@ -134,14 +134,14 @@
                 </div>
                 {% endif %}
                 <hr>
-                <h4 class="logo-font text-center">Danger</h4>
+                <h2 class="logo-font text-center" style="font-size: 20px;">Danger</h2>
                 <hr>
                 <div class="col">
                     <div class="d-flex justify-content-center">
-                        <small class="mt-1 ">
-                            <a class="btn main-button font-weight-bold rounded mx-3 mx-lg-5"
+                        <small class="text-center mt-1">
+                            <a class="btn main-button font-weight-bold rounded mx-3 mb-3 mx-lg-5"
                                 href="{% url 'edit_profile' %}">Edit</a>
-                            <a class="btn btn-outline-danger font-weight-bold rounded mx-3 mx-lg-5"
+                            <a class="btn btn-outline-danger font-weight-bold rounded mx-3 mb-3 mx-lg-5"
                                 href="{% url 'delete_account' %}">Delete</a>
                         </small>
                     </div>
