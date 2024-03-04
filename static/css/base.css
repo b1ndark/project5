@@ -155,7 +155,7 @@ body {
 
 /****************** Banner ******************/
 
-.delivery-banner h4 {
+.delivery-banner span {
     font-size: 1.2rem;
 }
 
@@ -466,8 +466,9 @@ select option[value=""] {
     body {
         height: calc(100vh - 100px);
     }
-    .delivery-banner h4 {
-        font-size: 0.8rem;
+
+    .delivery-banner span {
+        font-size: 0.9rem;
     }
 
     .background-box {
@@ -494,5 +495,9 @@ select option[value=""] {
 
     .basket-image {
         width: 100%;
+    }
+
+    .delivery-banner span {
+        font-size: 0.77rem;
     }
 }

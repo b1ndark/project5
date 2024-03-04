@@ -28,7 +28,7 @@
                     <h2 class="mb-3 font-weight-bold" style="font-size: 24px;">Add a Product</h2>
 
                     <!--          Add product form          -->
-                    <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                    <form method="POST" action="{% url 'add_product' %}" class="form mb-3" enctype="multipart/form-data">
                         {% csrf_token %}
                         {% for field in form %}
                             {% if field.name != 'image' %}
@@ -37,9 +37,9 @@
                                 {{ field }}
                             {% endif %}
                         {% endfor %}
-                        <div class="text-center">
-                            <a href="{% url 'products' %}" class="btn cancel-button font-weight-bold">Cancel</a>
-                            <button class="btn main-button font-weight-bold rounded">Add product</button>
+                        <div class="text-center mt-5">
+                            <button class="btn main-button font-weight-bold rounded mx-3 mb-3">Add product</button>
+                            <a href="{% url 'products' %}" class="btn cancel-button font-weight-bold mx-3 mb-3">Cancel</a>
                         </div>
                     </form>
                 </div>

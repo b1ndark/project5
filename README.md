@@ -908,22 +908,23 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 ## **Testing**
 
-- The x has been tested and it works on different types of computers with different browsers:
-  - x
-  - x
-  - x
-  - x
+- The TopTech website has been tested and it works on different types of computers with different browsers:
+  - Chrome
+  - Safari
+  - Microsoft Edge
+  - Firefox
+
 - It has been tested and work on different mobile phone brands:
+  - Poco F5
+  - Poco F5 Pro
+  - Realme x2
+  - Hauwei p30 lite
+  - Iphone 11 Pro
+  - Iphone 12 Pro
+  - Xiaomi note 8
 
-  - x
-  - x
-  - x
-  - x
-  - x
-  - x
-
-- x
-- x
+- Various tests that were carried out by myself, friends and family, using a variety of devices from desktops with different specs , lattops, tables to mobile phones.
+- Also tested in different operating systems such as macOS, IOS, Windows and Android.
 
 [**Back to the top**](#toptech "back_to_the_top")
 
