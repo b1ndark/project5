@@ -101,9 +101,20 @@ body {
     color: var(--text-color);
 }
 
+.navbar-icon-basket a {
+    font-size: 1.15em;
+}
+
+.text-gray-2 {
+    color: var(--text-color);
+}
+
 .navbar-icon a:focus,
 .navbar-icon a:active,
-.navbar-icon a:hover {
+.navbar-icon a:hover,
+.navbar-icon-basket a:focus,
+.navbar-icon-basket a:active,
+.navbar-icon-basket a:hover {
     font-size: 1.20em;
 }
 
