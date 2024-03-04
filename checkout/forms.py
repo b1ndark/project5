@@ -9,6 +9,25 @@ class OrderForm(forms.ModelForm):
                   'street_address1', 'street_address2',
                   'town_or_city', 'postcode', 'country',
                   'county',)
+    
+        widgets = {
+                'full_name': forms.TextInput(
+                    attrs={'aria-label': 'Full Name'}),
+                'email': forms.TextInput(
+                    attrs={'aria-label': 'Email Address'}),
+                'phone_number': forms.TextInput(
+                    attrs={'aria-label': 'Phone Number'}),
+                'street_address1': forms.TextInput(
+                    attrs={'aria-label': 'Street Address 1'}),
+                'street_address2': forms.TextInput(
+                    attrs={'aria-label': 'Street Address 2'}),
+                'town_or_city': forms.TextInput(
+                    attrs={'aria-label': 'Town or City'}),
+                'postcode': forms.TextInput(
+                    attrs={'aria-label': 'Postal Code'}),
+                'county': forms.TextInput(
+                    attrs={'aria-label': 'County'}),
+            }
 
     def __init__(self, *args, **kwargs):
         """
