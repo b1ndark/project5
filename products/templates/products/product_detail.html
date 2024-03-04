@@ -14,10 +14,19 @@
     <!--          Selected product container          -->
     <div class="container-fluid top-0">
         <div class="row">
+            <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-0 mb-md-3">
+
+                <!--          Title and sub title          -->
+                <hr>
+                <h1 class="logo-font text-center font-weight-bold" style="font-size: 24px;"><strong>{{ product.name }}</strong></h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-12 col-md-6 col-lg-5 col-xl-4 offset-lg-1 offset-xl-2">
 
                 <!--          Selected product image          -->
-                <div class="image-container my-5">
+                <div class="image-container mt-2 mb-5 mt-md-5">
                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="product image of {{ product.name }}">
                 </div>
             </div>
@@ -26,21 +35,22 @@
                 <!--          Selected product details          -->
                 <div class="product-details-container mb-5 mt-md-5">
                     <div class="d-flex justify-content-between">
-                        <p class="mt-0 h4"><strong>{{ product.name }}</strong></p>
-                        <p class="lead mb-0 text-left font-weight-bold"><i class="fas fa-tag mr-1"></i> €{{ product.price }}</p>
-                    </div>
-                    <div class="d-flex flex-column">
-                        {% if product.rating %}
-                            <small class="text-muted"><i class="fas fa-star mr-1 text-warning"></i>{{ product.rating }}/5</small>
-                        {% else %}
-                            <small class="text-muted"></small>
-                        {% endif %}
-                        {% if request.user.is_superuser %}
-                            <small class="mt-1">
-                                <a class="btn btn-sm main-button mr-2 font-weight-bold" href="{% url 'edit_product' product.id %}">Edit</a>
-                                <a class="btn btn-sm btn-outline-danger font-weight-bold" href="{% url 'delete_product' product.id %}">Delete</a>
-                            </small>
-                        {% endif %}
+                        <div>
+                            {% if request.user.is_superuser %}
+                                <small class="mt-1">
+                                    <a class="btn btn-sm main-button mr-2 font-weight-bold" href="{% url 'edit_product' product.id %}">Edit</a>
+                                    <a class="btn btn-sm btn-outline-danger font-weight-bold" href="{% url 'delete_product' product.id %}">Delete</a>
+                                </small>
+                            {% endif %}
+                        </div>
+                        <div class="text-right">
+                            <p class="lead mb-0 font-weight-bold"><i class="fas fa-tag mr-1"></i> €{{ product.price }}</p>
+                            {% if product.rating %}
+                                <small class="text-muted"><i class="fas fa-star mr-1 text-warning"></i>{{ product.rating }}/5</small>
+                            {% else %}
+                                <small class="text-muted"></small>
+                            {% endif %}
+                        </div>
                     </div>
                     <div class="d-md-flex justify-content-between">
                         <div>

@@ -17,30 +17,32 @@
             <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
 
                 <!--          Title and sub title          -->
-                <h2 class="logo-font text-center mb-4">Product managements</h2>
                 <hr>
-                <h5 class="text-muted">Add a Product</h5>
+                <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">Products management</h1>
                 <hr>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1">
+        <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
+            <div class="row mx-0">
+                <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
+                    <h2 class="mb-3 font-weight-bold" style="font-size: 24px;">Add a Product</h2>
 
-                <!--          Add product form          -->
-                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {% for field in form %}
-                        {% if field.name != 'image' %}
-                            {{ field | as_crispy_field }}
-                        {% else %}
-                            {{ field }}
-                        {% endif %}
-                    {% endfor %}
-                    <div class="text-center">
-                        <a href="{% url 'products' %}" class="btn cancel-button font-weight-bold">Cancel</a>
-                        <button class="btn main-button font-weight-bold rounded">Add product</button>
-                    </div>
-                </form>
+                    <!--          Add product form          -->
+                    <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            {% if field.name != 'image' %}
+                                {{ field | as_crispy_field }}
+                            {% else %}
+                                {{ field }}
+                            {% endif %}
+                        {% endfor %}
+                        <div class="text-center">
+                            <a href="{% url 'products' %}" class="btn cancel-button font-weight-bold">Cancel</a>
+                            <button class="btn main-button font-weight-bold rounded">Add product</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
