@@ -3,13 +3,13 @@
 */
 
 $('#sort-selector').change(function() {
-    var selector = $(this)
+    var selector = $(this);
     var currentUrl = new URL(window.location);
 
     var selectedVal = selector.val();
     if(selectedVal != "reset"){
-        var sort =  selectedVal.split("_")[0]
-        var direction =  selectedVal.split("_")[1]
+        var sort =  selectedVal.split("_")[0];
+        var direction =  selectedVal.split("_")[1];
 
         currentUrl.searchParams.set("sort", sort);
         currentUrl.searchParams.set("direction", direction);
@@ -21,7 +21,7 @@ $('#sort-selector').change(function() {
 
         window.location.replace(currentUrl);
     }
-})
+});
 
 /*
 * To Increment and Decrement quantities, range from 1 to 20
@@ -75,4 +75,4 @@ $('.decrement-qty').click(function(e) {
 $('.update-link').click(function(e) {
     var form = $(this).prev('.update-form');
     form.submit();
-})
+});

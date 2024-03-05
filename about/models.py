@@ -6,7 +6,8 @@ from django.core.exceptions import ValidationError
 class About(models.Model):
     """
     About model so Admin/Owner can update
-    the about page and footer from admin page
+    the about page and footer from admin page or
+    Account menu if Admin is logged in
     """
 
     class Meta:

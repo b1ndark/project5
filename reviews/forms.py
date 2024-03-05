@@ -18,6 +18,5 @@ class ReviewsForm(forms.ModelForm):
                 attrs={'rows': 6,
                        'style': 'resize:none',
                        'placeholder': 'Write a review...',
-                       'aria-label': 'review',
-                }),
+                       'aria-label': 'review'}),
         }

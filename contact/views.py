@@ -14,7 +14,7 @@ def contact(request):
             form.save()
         messages.success(request, 'Thank you for contacting Us.\
          We will be in touch soon')
-        
+
         return redirect('contact')
 
     else:

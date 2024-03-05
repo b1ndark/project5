@@ -17,7 +17,7 @@ def about(request):
 def edit_about(request):
     """
     Render a form to edit about page/footer
-    Also checks if User is SuperUser
+    Also checks if User is SuperUser/Admin
     """
 
     if not request.user.is_superuser:

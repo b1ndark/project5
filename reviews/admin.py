@@ -10,4 +10,5 @@ class ReviewsAdmin(admin.ModelAdmin):
         'created',
     )
 
+
 admin.site.register(Reviews, ReviewsAdmin)
