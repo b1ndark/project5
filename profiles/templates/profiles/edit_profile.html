@@ -2,58 +2,65 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
 {% endblock %}
 
 {% if request.user == profile.user %}
-    {% block page_header %}
-        <div class="container header-container">
-            <div class="row">
-                <div class="col"></div>
-            </div>
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<!--          Edit Profile form container          -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
+
+            <!--          Title          -->
+            <hr>
+            <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">{{ profile.user.username }}'s
+                profile</h1>
+            <hr>
         </div>
-    {% endblock %}
+    </div>
+    <div class="row">
+        <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
+            <div class="row mx-0">
+                <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
+                    <h2 class="mb-5 font-weight-bold" style="font-size: 24px;">Edit profile</h2>
 
-    {% block content %}
-
-        <!--          Edit Profile form container          -->
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
-
-                    <!--          Title          -->
-                    <hr>
-                    <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">{{ profile.user.username }}'s profile</h1>
-                    <hr>
+                    <!--          Edit Profile form          -->
+                    <form method="POST" action="{% url 'edit_profile' %}" class="form mb-3"
+                        enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% for field in form %}
+                        {% if field.name != 'image' %}
+                        {{ field | as_crispy_field }}
+                        {% else %}
+                        {{ field }}
+                        {% endif %}
+                        {% endfor %}
+                        <div class="text-center mt-5">
+                            <button class="btn main-button font-weight-bold rounded mx-3 mb-3">Update Profile</button>
+                            <a href="{% url 'profile' %}"
+                                class="btn cancel-button font-weight-bold mx-3 mb-3">Cancel</a>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
-                <div class="row mx-0">
-                    <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
-                        <h2 class="mb-5 font-weight-bold" style="font-size: 24px;">Edit profile</h2>
-
-                        <!--          Edit Profile form          -->
-                        <form method="POST" action="{% url 'edit_profile' %}" class="form mb-3" enctype="multipart/form-data">
-                            {% csrf_token %}
-                            {% for field in form %}
-                                {% if field.name != 'image' %}
-                                    {{ field | as_crispy_field }}
-                                {% else %}
-                                    {{ field }}
-                                {% endif %}
-                            {% endfor %}
-                            <div class="text-center mt-5">
-                                <button class="btn main-button font-weight-bold rounded mx-3 mb-3">Update Profile</button>
-                                <a href="{% url 'profile' %}" class="btn cancel-button font-weight-bold mx-3 mb-3">Cancel</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
         </div>
-    {% endblock %}
+    </div>
+</div>
+{% endblock %}
 {% endif %}
 
 {% block postloadjs %}
-    <script type="text/javascript" src="{% static 'js/profile_country_field.js' %}"></script>
+
+<!--          JS file          -->
+<script type="text/javascript" src="{% static 'js/profile_country_field.js' %}"></script>
 {% endblock %}

@@ -11,155 +11,168 @@
 {% endblock %}
 
 {% block content %}
-    <!--          Basket container          -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
-    
-                <!--          Title and sub title          -->
-                <hr>
-                <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">Shopping Basket</h1>
-                <hr>
-            </div>
-        </div>    
-        <div class="row">
-            <div class="col-12 offset-lg-1 col-lg-10 mt-3 mb-3">
+<!--          Basket container          -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
 
-                <!--          Check if there are items in the basket          -->
-                {% if basket_items %}
-                    <div class="card">
+            <!--          Title and sub title          -->
+            <hr>
+            <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">Shopping Basket</h1>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 offset-lg-1 col-lg-10 mt-3 mb-3">
+
+            <!--          Check if there are items in the basket          -->
+            {% if basket_items %}
+            <div class="card">
+                <div class="col">
+
+                    <!--          Display the list of items in the basket          -->
+                    {% for item in basket_items %}
+                    <div class="row">
                         <div class="col">
-
-                            <!--          Display the list of items in the basket          -->
-                            {% for item in basket_items %}
-                                <div class="row">
+                            <div class="d-flex flex-column flex-md-row">
+                                <div class="basket-image p-3">
+                                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }} image"
+                                        class="img-fluid rounded">
+                                </div>
+                                <div class="row p-3 container d-flex flex-column flex-md-row">
                                     <div class="col">
+                                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                        <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                    </div>
+                                    <div class="d-flex flex-column flex-md-row">
+                                        <div class="col">
+                                            <p class="my-2"><strong>Each:</strong> €{{ item.product.price }}</p>
+                                        </div>
                                         <div class="d-flex flex-column flex-md-row">
-                                            <div class="basket-image p-3">
-                                                <img src="{{ item.product.image.url }}" alt="{{ item.product.name }} image" class="img-fluid rounded">
+                                            <div class="col">
+
+                                                <!--          Form to increase/decrease the quantity of the product         -->
+                                                <form class="form update-form" method="POST"
+                                                    action="{% url 'adjust_basket' item.item_id %}">
+                                                    {% csrf_token %}
+                                                    <div class="form-group">
+                                                        <div class="input-group d-flex">
+                                                            <div class="input-group-prepend">
+                                                                <button
+                                                                    class="decrement-qty btn btn-sm main-button rounded"
+                                                                    aria-label="plus" data-item_id="{{ item.item_id }}"
+                                                                    id="decrement-qty_{{ item.item_id }}"
+                                                                    style="--fa-beat-scale: 1.1;">
+                                                                    <span class="text-white">
+                                                                        <i class="fas fa-minus fa-sm"></i>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                            <input class="form-control form-control-sm qty_input"
+                                                                type="number" name="quantity"
+                                                                value="{{ item.quantity }}" min="1" max="20"
+                                                                data-item_id="{{ item.item_id }}"
+                                                                id="id_qty_{{ item.item_id }}" aria-label="quantity">
+                                                            <div class="input-group-append">
+                                                                <button
+                                                                    class="increment-qty btn btn-sm main-button rounded"
+                                                                    aria-label="minus" data-item_id="{{ item.item_id }}"
+                                                                    id="increment-qty_{{ item.item_id }}"
+                                                                    style="--fa-beat-scale: 1.1;">
+                                                                    <span class="text-white">
+                                                                        <i class="fas fa-plus fa-sm"></i>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+                                                <!--          Update/Remove product buttons          -->
+                                                <a
+                                                    class="update-link text-grey pe-auto"><small><u>Update</u></small></a>
+                                                <a class="remove-item text-danger float-right pe-auto mb-2"
+                                                    id="remove_{{ item.item_id }}"><i
+                                                        class="fa-regular fa-trash-can"></i></a>
                                             </div>
-                                            <div class="row p-3 container d-flex flex-column flex-md-row">
-                                                <div class="col">
-                                                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                                    <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
-                                                </div>
-                                                <div class="d-flex flex-column flex-md-row">
-                                                    <div class="col">
-                                                        <p class="my-2"><strong>Each:</strong> €{{ item.product.price }}</p>
-                                                    </div>
-                                                    <div class="d-flex flex-column flex-md-row">
-                                                        <div class="col">
+                                            <div class="col">
 
-                                                            <!--          Form to increase/decrease the quantity of the product         -->
-                                                            <form class="form update-form" method="POST" action="{% url 'adjust_basket' item.item_id %}" >
-                                                                {% csrf_token %}
-                                                                <div class="form-group">
-                                                                    <div class="input-group d-flex">
-                                                                        <div class="input-group-prepend">
-                                                                            <button class="decrement-qty btn btn-sm main-button rounded" aria-label="plus"
-                                                                                data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}"
-                                                                                style="--fa-beat-scale: 1.1;">
-                                                                                <span class="text-white">
-                                                                                    <i class="fas fa-minus fa-sm"></i>
-                                                                                </span>
-                                                                            </button>
-                                                                        </div>
-                                                                        <input class="form-control form-control-sm qty_input" type="number" 
-                                                                            name="quantity" value="{{ item.quantity }}" min="1" max="20"
-                                                                            data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" aria-label="quantity">
-                                                                        <div class="input-group-append">
-                                                                            <button class="increment-qty btn btn-sm main-button rounded" aria-label="minus"
-                                                                                data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}"
-                                                                                style="--fa-beat-scale: 1.1;">
-                                                                                <span class="text-white">
-                                                                                    <i class="fas fa-plus fa-sm"></i>
-                                                                                </span>
-                                                                            </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-
-                                                            <!--          Update/Remove product buttons          -->
-                                                            <a class="update-link text-grey pe-auto"><small><u>Update</u></small></a>
-                                                            <a class="remove-item text-danger float-right pe-auto mb-2" id="remove_{{ item.item_id }}"><i class="fa-regular fa-trash-can"></i></a>
-                                                        </div>
-                                                        <div class="col">
-
-                                                            <!--          To display the sub total of each product          -->
-                                                            <p class="my-0"><strong>Sub-total</strong> €{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <!--          To display the sub total of each product          -->
+                                                <p class="my-0"><strong>Sub-total</strong>
+                                                    €{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <hr>
-                            {% endfor %}
-                        </div>
-                        <div class="col">
-                            <div class="row mt-3">
-                                <div class="col">
-                                    <h6><strong>Basket Total: €{{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Total: €{{ grand_total|floatformat:2 }}</strong></h4>
-                                    {% if free_delivery_delta > 0 %}
-                                        <p class="mb-1 text-danger">
-                                            Get free delivery by spending <strong>€{{ free_delivery_delta }}</strong> more!
-                                        </p>
-                                    {% endif %}
-                                </div>
-                            </div>
-                            <div class="row d-flex">
-                                <div class="col">
-                                    <a href="{% url 'products' %}" class="my-3 mr-3 btn main-button rounded btn-lg">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left text-white fa-beat fa-xs"></i>
-                                        </span>
-                                        <span>Keep Shopping</span>
-                                    </a>
-                                    <a href="{% url 'checkout' %}" class="my-3 btn main-button rounded btn-lg">
-                                        <span class="text-uppercase">Checkout </span>
-                                        <span class="icon">
-                                            <i class="fas fa-lock text-white fa-beat"></i>
-                                        </span>
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>
-                {% else %}
-                    <p class="lead mb-5">Basket is empty</p>
-                    <a href="{% url 'products' %}" class="btn main-button rounded btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left text-white fa-beat"></i>
-                        </span>
-                        <span> Keep Shopping</span>
-                    </a>
-                {% endif %}
+                    <hr>
+                    {% endfor %}
+                </div>
+                <div class="col">
+                    <div class="row mt-3">
+                        <div class="col">
+                            <h6><strong>Basket Total: €{{ total|floatformat:2 }}</strong></h6>
+                            <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
+                            <h4 class="mt-4"><strong>Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+                            {% if free_delivery_delta > 0 %}
+                            <p class="mb-1 text-danger">
+                                Get free delivery by spending <strong>€{{ free_delivery_delta }}</strong> more!
+                            </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row d-flex">
+                        <div class="col">
+                            <a href="{% url 'products' %}" class="my-3 mr-3 btn main-button rounded btn-lg">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left text-white fa-beat fa-xs"></i>
+                                </span>
+                                <span>Keep Shopping</span>
+                            </a>
+                            <a href="{% url 'checkout' %}" class="my-3 btn main-button rounded btn-lg">
+                                <span class="text-uppercase">Checkout </span>
+                                <span class="icon">
+                                    <i class="fas fa-lock text-white fa-beat"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            {% else %}
+            <p class="lead mb-5">Basket is empty</p>
+            <a href="{% url 'products' %}" class="btn main-button rounded btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left text-white fa-beat"></i>
+                </span>
+                <span> Keep Shopping</span>
+            </a>
+            {% endif %}
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <!--          JS file          -->
-    <script src="{% static 'js/products.js' %}"></script>
+{{ block.super }}
 
-    <!--          Script to remove a product from the basket          -->
-    <script type="text/javascript">
-        $('.remove-item').click(function(e) {
-            var csrfToken = "{{ csrf_token }}";
-            var itemId = $(this).attr('id').split('remove_')[1];
-            var url = `/basket/remove/${itemId}/`;
-            var data = { csrfmiddlewaretoken: csrfToken };
+<!--          JS file          -->
+<script src="{% static 'js/products.js' %}"></script>
 
-            $.post(url, data)
-            .done(function() {
+<!--          Script to remove a product from the basket          -->
+<script type="text/javascript">
+    $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/basket/remove/${itemId}/`;
+        var data = { csrfmiddlewaretoken: csrfToken };
+
+        $.post(url, data)
+            .done(function () {
                 location.reload();
             });
-        })
-    </script>
+    })
+</script>
 {% endblock %}

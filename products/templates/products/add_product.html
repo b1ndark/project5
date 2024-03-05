@@ -2,57 +2,57 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 
-    <!--          Add product container          -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
+<!--          Add product container          -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
 
-                <!--          Title and sub title          -->
-                <hr>
-                <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">Products management</h1>
-                <hr>
-            </div>
+            <!--          Title and sub title          -->
+            <hr>
+            <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">Products management</h1>
+            <hr>
         </div>
-        <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
-            <div class="row mx-0">
-                <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
-                    <h2 class="mb-3 font-weight-bold" style="font-size: 24px;">Add a Product</h2>
+    </div>
+    <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
+        <div class="row mx-0">
+            <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
+                <h2 class="mb-3 font-weight-bold" style="font-size: 24px;">Add a Product</h2>
 
-                    <!--          Add product form          -->
-                    <form method="POST" action="{% url 'add_product' %}" class="form mb-3" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        {% for field in form %}
-                            {% if field.name != 'image' %}
-                                {{ field | as_crispy_field }}
-                            {% else %}
-                                {{ field }}
-                            {% endif %}
-                        {% endfor %}
-                        <div class="text-center mt-5">
-                            <button class="btn main-button font-weight-bold rounded mx-3 mb-3">Add product</button>
-                            <a href="{% url 'products' %}" class="btn cancel-button font-weight-bold mx-3 mb-3">Cancel</a>
-                        </div>
-                    </form>
-                </div>
+                <!--          Add product form          -->
+                <form method="POST" action="{% url 'add_product' %}" class="form mb-3" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form %}
+                    {% if field.name != 'image' %}
+                    {{ field | as_crispy_field }}
+                    {% else %}
+                    {{ field }}
+                    {% endif %}
+                    {% endfor %}
+                    <div class="text-center mt-5">
+                        <button class="btn main-button font-weight-bold rounded mx-3 mb-3">Add product</button>
+                        <a href="{% url 'products' %}" class="btn cancel-button font-weight-bold mx-3 mb-3">Cancel</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
+{{ block.super }}
 
-    <!--          JS file          -->
-    <!-- Displays which image was selected before adding/updating product -->
-    <script src="{% static 'js/products.js' %}"></script>
+<!--          JS file          -->
+<!-- Displays which image was selected before adding/updating product -->
+<script src="{% static 'js/products.js' %}"></script>
 {% endblock %}

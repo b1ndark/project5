@@ -2,26 +2,27 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 
-    <!--          Delete product container          -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
+<!--          Delete product container          -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
 
-                <!--          Title and sub title          -->
-                <hr>
-                <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">Products management</h1>
-                <hr>
-            </div>
+            <!--          Title and sub title          -->
+            <hr>
+            <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">Products management</h1>
+            <hr>
         </div>
+    </div>
+    <div class="row">
         <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
             <div class="row mx-0">
                 <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
@@ -30,15 +31,19 @@
                     <!--          Delete product form          -->
                     <form method="POST" class="form mb-3">
                         {% csrf_token %}
-                        <h3 class="text-center mb-5" style="font-size: 18px;">Are you sure that you want to delete this product from the store inventory?</h3>
+                        <h3 class="text-center mb-5" style="font-size: 18px;">Are you sure that you want to delete this
+                            product from the store inventory?</h3>
                         <div class="text-center">
-                            <button class="btn btn-outline-danger font-weight-bold rounded mx-3 mb-3">Delete product</button>
-                            <a href="{% url 'product_detail' product.id %}" class="btn cancel-button font-weight-bold mx-3 mb-3">Cancel</a>
+                            <button class="btn btn-outline-danger font-weight-bold rounded mx-3 mb-3">Delete
+                                product</button>
+                            <a href="{% url 'product_detail' product.id %}"
+                                class="btn cancel-button font-weight-bold mx-3 mb-3">Cancel</a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 {% endblock %}

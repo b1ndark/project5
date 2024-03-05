@@ -2,42 +2,47 @@
 {% load static %}
 
 {% if request.user == profile.user %}
-    {% block page_header %}
-        <div class="container header-container">
-            <div class="row">
-                <div class="col"></div>
-            </div>
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!--          Delete account container          -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
+
+            <!--          Title and sub title          -->
+            <hr>
+            <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">Delete Account</h1>
+            <hr>
         </div>
-    {% endblock %}
+    </div>
+    <div class="row">
+        <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
+            <div class="row mx-0">
+                <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
 
-    {% block content %}
-        <!--          Delete account container          -->
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
-
-                    <!--          Title and sub title          -->
-                    <hr>
-                    <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">Delete Account</h1>
-                    <hr>
+                    <!--          Delete account form          -->
+                    <form method="POST" class="form mb-3">
+                        {% csrf_token %}
+                        <h2 class="text-center my-5" style="font-size: 18px;">Are you sure that you want to delete your
+                            account?</h2>
+                        <div class="text-center">
+                            <button class="btn btn-outline-danger font-weight-bold rounded mx-3 mb-3">Delete
+                                account</button>
+                            <a href="{% url 'profile' %}"
+                                class="btn cancel-button font-weight-bold mx-3 mb-3">Cancel</a>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
-                <div class="row mx-0">
-                    <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
-
-                        <!--          Delete account form          -->
-                        <form method="POST" class="form mb-3">
-                            {% csrf_token %}
-                            <h2 class="text-center my-5" style="font-size: 18px;">Are you sure that you want to delete your account?</h2>
-                            <div class="text-center">
-                                <button class="btn btn-outline-danger font-weight-bold rounded mx-3 mb-3">Delete account</button>
-                                <a href="{% url 'profile' %}" class="btn cancel-button font-weight-bold mx-3 mb-3">Cancel</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
         </div>
-    {% endblock %}
+    </div>
+</div>
+{% endblock %}
 {% endif %}

@@ -25,82 +25,85 @@
             <hr>
         </div>
     </div>
-    <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
-        <div class="row mx-0">
-            <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3 p-0">
-                <h2 class="mb-3 font-weight-bold" style="font-size: 20px;">Purchases history</h2>
+    <div class="row">
+        <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
+            <div class="row mx-0">
+                <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3 p-0">
+                    <h2 class="mb-3 font-weight-bold" style="font-size: 20px;">Purchases history</h2>
 
-                <!--          Loop through the orders          -->
-                {% if orders %}
+                    <!--          Loop through the orders          -->
+                    {% if orders %}
 
-                <!--          Medium screens and up          -->
-                <div class="purchases-history table-responsive d-none d-md-block">
-                    <table class="table table-sm table-borderless">
-                        <thead>
-                            <tr>
-                                <th>Order Number</th>
-                                <th>Date</th>
-                                <th>Items</th>
-                                <th>Order Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for order in orders %}
-                            <tr>
-                                <td>
-                                    <a class="font-weight-bold text-muted"
-                                        href="{% url 'purchases_history' order.order_number %}"
-                                        title="{{ order.order_number }}">
-                                        {{ order.order_number|truncatechars:8 }}
-                                    </a>
-                                </td>
-                                <td>{{ order.date }}</td>
-                                <td>
-                                    <ul class="list-unstyled">
-                                        {% for item in order.lineitems.all %}
-                                        <li class="small">
-                                            {{ item.product.name }} x{{ item.quantity }}
-                                        </li>
-                                        {% endfor %}
-                                    </ul>
-                                </td>
-                                <td>€{{ order.grand_total }}</td>
-                            </tr>
+                    <!--          Medium screens and up          -->
+                    <div class="purchases-history table-responsive d-none d-md-block">
+                        <table class="table table-sm table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>Order Number</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Order Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for order in orders %}
+                                <tr>
+                                    <td>
+                                        <a class="font-weight-bold text-muted"
+                                            href="{% url 'purchases_history' order.order_number %}"
+                                            title="{{ order.order_number }}">
+                                            {{ order.order_number|truncatechars:8 }}
+                                        </a>
+                                    </td>
+                                    <td>{{ order.date }}</td>
+                                    <td>
+                                        <ul class="list-unstyled">
+                                            {% for item in order.lineitems.all %}
+                                            <li class="small">
+                                                {{ item.product.name }} x{{ item.quantity }}
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    <td>€{{ order.grand_total }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!--          Small screens          -->
+                    <div class="d-block d-md-none pt-2">
+                        {% for order in orders %}
+                        <p><strong>Order Number: </strong><a class="font-weight-bold text-muted"
+                                href="{% url 'purchases_history' order.order_number %}"
+                                title="{{ order.order_number }}">
+                                {{ order.order_number|truncatechars:8 }}
+                            </a></p>
+                        <p><strong>Date: </strong>{{ order.date }}</p>
+                        <p><strong>Items: </strong>
+                        <ul class="list-unstyled">
+                            {% for item in order.lineitems.all %}
+                            <li class="small">
+                                {{ item.product.name }} x{{ item.quantity }}
+                            </li>
                             {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-
-                <!--          Small screens          -->
-                <div class="d-block d-md-none pt-2">
-                    {% for order in orders %}
-                    <p><strong>Order Number: </strong><a class="font-weight-bold text-muted"
-                            href="{% url 'purchases_history' order.order_number %}" title="{{ order.order_number }}">
-                            {{ order.order_number|truncatechars:8 }}
-                        </a></p>
-                    <p><strong>Date: </strong>{{ order.date }}</p>
-                    <p><strong>Items: </strong>
-                    <ul class="list-unstyled">
-                        {% for item in order.lineitems.all %}
-                        <li class="small">
-                            {{ item.product.name }} x{{ item.quantity }}
-                        </li>
+                        </ul>
+                        </p>
+                        <p><Strong>Order Total: </Strong>€{{ order.grand_total }}</p>
+                        <hr>
                         {% endfor %}
-                    </ul>
-                    </p>
-                    <p><Strong>Order Total: </Strong>€{{ order.grand_total }}</p>
-                    <hr>
-                    {% endfor %}
+                    </div>
+                    {% else %}
+                    <p class="lead mb-5 text-center">You haven't done any purchase yet</p>
+                    <a href="{% url 'products' %}" class="btn main-button rounded btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left text-white fa-beat"></i>
+                        </span>
+                        <span> Keep Shopping</span>
+                    </a>
+                    {% endif %}
                 </div>
-                {% else %}
-                <p class="lead mb-5 text-center">You haven't done any purchase yet</p>
-                <a href="{% url 'products' %}" class="btn main-button rounded btn-lg">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left text-white fa-beat"></i>
-                    </span>
-                    <span> Keep Shopping</span>
-                </a>
-                {% endif %}
             </div>
         </div>
     </div>

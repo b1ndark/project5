@@ -2,89 +2,89 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 
-    <!--          About Us container          -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
-    
-                <!--          Title and sub title          -->
-                <hr>
-                <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">About Us</h1>
-                <hr>
-                {% if about.name %}
-                    <h2 class="text-muted font-weight-bold" style="font-size: 22px;">{{ about.name }}</h2>
+<!--          About Us container          -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
+
+            <!--          Title and sub title          -->
+            <hr>
+            <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">About Us</h1>
+            <hr>
+            {% if about.name %}
+            <h2 class="text-muted font-weight-bold" style="font-size: 22px;">{{ about.name }}</h2>
+            {% endif %}
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1 mt-3 mb-4 d-lg-flex">
+            <hr>
+            <div class="col-12 col-lg-6">
+                {% if about.image %}
+                <!--          About image          -->
+                <div class="image-container">
+                    <img class="card-img-top img-fluid" src="{{ about.image.url }}" alt="{{ about.name }}">
+                </div>
                 {% endif %}
-                <hr>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 mt-3 mb-4 d-lg-flex">
-                <hr>
-                <div class="col-12 col-lg-6">
-                    {% if about.image %}
-                        <!--          About image          -->
-                        <div class="image-container">
-                            <img class="card-img-top img-fluid" src="{{ about.image.url }}" alt="{{ about.name }}">
-                        </div>
-                    {% endif %}
+            <div class="col-12 col-lg-6 pt-3">
+                {% if about.description %}
+                <div>
+                    {{ about.description }}
                 </div>
-                <div class="col-12 col-lg-6 pt-3">
-                    {% if about.description %}
-                        <div>
-                            {{ about.description }}
-                        </div>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3 d-lg-flex">
-                <hr>
-                <div class="col-12 col-lg-6">
-                    <h5 class="text-muted text-monospace text-uppercase mb-0">Visit Us!</h5>
-                    <hr class="mt-0">
-                    {% if about.street_address_1 %}
-                        <p><strong>Street Address: </strong>{{ about.street_address_1 }}</p>
-                    {% endif %}
-                    {% if about.street_address_2 %}
-                        <p><strong>Street Address 2: </strong>{{ about.street_address_2 }}</p>
-                    {% endif %}
-                    {% if about.city_or_town %}
-                        <p><strong>City: </strong>{{ about.city_or_town }}</p>
-                    {% endif %}
-                    {% if about.country %}
-                        <p><strong>Country: </strong>{{ about.get_country_display }}</p>
-                    {% endif %}
-                    {% if about.postcode %}
-                        <p><strong>Postcode: </strong>{{ about.postcode }}</p>
-                    {% endif %}
-                </div>
-                <div class="col-12 col-lg-6">
-                    <h5 class="text-muted text-monospace text-uppercase mb-0">Opening Hours</h5>
-                    <hr class="mt-0">
-                    {% if about.opening_hours_mon_to_fri %}
-                        <p><strong>Mon - Fri: </strong>{{ about.opening_hours_mon_to_fri }}</p>
-                    {% endif %}
-                    {% if about.opening_hours_sat %}
-                        <p><strong>Saturday: </strong>{{ about.opening_hours_sat }}</p>
-                        {% endif %}
-                    {% if about.opening_hours_sunday %}
-                        <p><strong>Sunday: </strong>{{ about.opening_hours_sunday }}</p>
-                    {% endif %}
-                    {% if about.opening_hours_bank_holidays %}
-                        <p><strong>Bank Holidays: </strong>{{ about.opening_hours_bank_holidays }}</p>
-                    {% endif %}
-                </div>
+                {% endif %}
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3 d-lg-flex">
+            <hr>
+            <div class="col-12 col-lg-6">
+                <h5 class="text-muted text-monospace text-uppercase mb-0">Visit Us!</h5>
+                <hr class="mt-0">
+                {% if about.street_address_1 %}
+                <p><strong>Street Address: </strong>{{ about.street_address_1 }}</p>
+                {% endif %}
+                {% if about.street_address_2 %}
+                <p><strong>Street Address 2: </strong>{{ about.street_address_2 }}</p>
+                {% endif %}
+                {% if about.city_or_town %}
+                <p><strong>City: </strong>{{ about.city_or_town }}</p>
+                {% endif %}
+                {% if about.country %}
+                <p><strong>Country: </strong>{{ about.get_country_display }}</p>
+                {% endif %}
+                {% if about.postcode %}
+                <p><strong>Postcode: </strong>{{ about.postcode }}</p>
+                {% endif %}
+            </div>
+            <div class="col-12 col-lg-6">
+                <h5 class="text-muted text-monospace text-uppercase mb-0">Opening Hours</h5>
+                <hr class="mt-0">
+                {% if about.opening_hours_mon_to_fri %}
+                <p><strong>Mon - Fri: </strong>{{ about.opening_hours_mon_to_fri }}</p>
+                {% endif %}
+                {% if about.opening_hours_sat %}
+                <p><strong>Saturday: </strong>{{ about.opening_hours_sat }}</p>
+                {% endif %}
+                {% if about.opening_hours_sunday %}
+                <p><strong>Sunday: </strong>{{ about.opening_hours_sunday }}</p>
+                {% endif %}
+                {% if about.opening_hours_bank_holidays %}
+                <p><strong>Bank Holidays: </strong>{{ about.opening_hours_bank_holidays }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

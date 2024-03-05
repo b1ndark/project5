@@ -2,58 +2,62 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 
-    <!--          Edit product container          -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
+<!--          Edit product container          -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
 
-                <!--          Title and sub title          -->
-                <hr>
-                <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">Products management</h1>
-                <hr>
-            </div>
+            <!--          Title and sub title          -->
+            <hr>
+            <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">Products management</h1>
+            <hr>
         </div>
+    </div>
+    <div class="row">
         <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
             <div class="row mx-0">
                 <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
                     <h2 class="mb-5 font-weight-bold" style="font-size: 24px;">Edit product {{ product.name }}</h2>
-                    
+
                     <!--          Edit product form          -->
-                    <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-3" enctype="multipart/form-data">
+                    <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-3"
+                        enctype="multipart/form-data">
                         {% csrf_token %}
                         {% for field in form %}
-                            {% if field.name != 'image' %}
-                                {{ field | as_crispy_field }}
-                            {% else %}
-                                {{ field }}
-                            {% endif %}
+                        {% if field.name != 'image' %}
+                        {{ field | as_crispy_field }}
+                        {% else %}
+                        {{ field }}
+                        {% endif %}
                         {% endfor %}
                         <div class="text-center mt-5">
                             <button class="btn main-button font-weight-bold rounded mx-3 mb-3">Edit product</button>
-                            <a href="{% url 'product_detail' product.id %}" class="btn cancel-button font-weight-bold mx-3 mb-3">Cancel</a>
+                            <a href="{% url 'product_detail' product.id %}"
+                                class="btn cancel-button font-weight-bold mx-3 mb-3">Cancel</a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 {% endblock %}
 
 
 {% block postloadjs %}
-    {{ block.super }}
+{{ block.super }}
 
-    <!--          JS file          -->
-    <!-- Displays which image was selected before adding/updating product -->
-    <script src="{% static 'js/products.js' %}"></script>
+<!--          JS file          -->
+<!-- Displays which image was selected before adding/updating product -->
+<script src="{% static 'js/products.js' %}"></script>
 {% endblock %}
