@@ -24,49 +24,50 @@
         </li>
         <li class="nav-item dropdown">
 
-            <!--          Laptops tab          -->
+            <!--          Computing tab          -->
             <a href="#" class="logo-font font-weight-bold nav-link text-black mr-3 text-uppercase" id="laptops-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Laptops
+                Computing
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="laptops-link">
-                <a href="{% url 'products' %}?category=gaming_laptops" class="dropdown-item">Gaming Laptops</a>
-                <a href="{% url 'products' %}?category=laptops" class="dropdown-item">Windows Laptops</a>
-                <a href="{% url 'products' %}?category=macbook" class="dropdown-item">MacBook</a>
-                <a href="{% url 'products' %}?category=gaming_laptops,windows_laptops,macbook" class="dropdown-item">All
-                    Laptops</a>
+                <a href="{% url 'products' %}?category=laptops" class="dropdown-item">Laptops</a>
+                <a href="{% url 'products' %}?category=desktops" class="dropdown-item">Desktops</a>
+                <a href="{% url 'products' %}?category=gaming_computers" class="dropdown-item">Gaming Computers</a>
+                <a href="{% url 'products' %}?category=laptops,desktops,gaming_computers" class="dropdown-item">All
+                    Computers</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
 
-            <!--          Desktops tab          -->
+            <!--          TVs & Audio tab          -->
             <a href="#" class="logo-font font-weight-bold nav-link text-black mr-3 text-uppercase" id="desktops-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Desktop PCs
+                TVs & Audio
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="desktops-link">
-                <a href="{% url 'products' %}?category=gaming_desktops" class="dropdown-item">Gaming Desktops</a>
-                <a href="{% url 'products' %}?category=desktops" class="dropdown-item">Windows Desktops</a>
-                <a href="{% url 'products' %}?category=imac" class="dropdown-item">iMac</a>
-                <a href="{% url 'products' %}?category=gaming_desktops,windows_desktops,imac" class="dropdown-item">All
-                    Desktops</a>
+                <a href="{% url 'products' %}?category=tvs" class="dropdown-item">TVs</a>
+                <a href="{% url 'products' %}?category=home_cinema" class="dropdown-item">Home cinema</a>
+                <a href="{% url 'products' %}?category=headphones" class="dropdown-item">Headphones</a>
+                <a href="{% url 'products' %}?category=radios" class="dropdown-item">Radios</a>
+                <a href="{% url 'products' %}?category=tvs,home_cinema,headphones,radios" class="dropdown-item">All
+                    TVs & Audio</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
 
-            <!--          Latest Offers tab          -->
+            <!--          Mobile Tech tab          -->
             <a href="#" class="logo-font font-weight-bold nav-link text-black mr-3 text-uppercase" id="specials-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Latest Offers
+                Mobile Tech
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
-                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
-                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
-                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All
-                    Offers</a>
+                <a href="{% url 'products' %}?category=mobile_phones" class="dropdown-item">Mobile phones</a>
+                <a href="{% url 'products' %}?category=tablets" class="dropdown-item">Tablets</a>
+                <a href="{% url 'products' %}?category=apple" class="dropdown-item">Apple</a>
+                <a href="{% url 'products' %}?category=mobile_phones,tablets,apple" class="dropdown-item">All
+                    Mobile Tech</a>
             </div>
         </li>
         <li>

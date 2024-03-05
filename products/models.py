@@ -24,6 +24,8 @@ BRANDS = (
     ('msi', 'MSI'),
     ('toshiba', 'Toshiba'),
     ('sony', 'Sony'),
+    ('samsung', 'Samsung'),
+    ('hisense', 'Hisense'),
 )
 
 
