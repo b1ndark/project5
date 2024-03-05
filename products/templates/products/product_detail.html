@@ -85,6 +85,7 @@
                             </ul>
                         </div>
                         <div>
+                            <!--          Product quantity          -->
                             <form class="form" action="{% url 'add_to_basket' product.id %}" method="POST">
                                 {% csrf_token %}
                                 <div class="row">
@@ -116,7 +117,7 @@
                                         </div>
                                     </div>
                         
-                                    <div class="offset-md-4 col-8 pb-2">
+                                    <div class="offset-md-4 col-8 pb-2 text-md-right">
                                         <input type="submit" class="btn btn-add main-button rounded mt-3" value="Add to basket">
                                     </div>
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
@@ -135,6 +136,7 @@
             <h4 class="logo-font text-center">Reviews</h4>
             <hr>
         </div>
+        {% if request.user.is_authenticated %}
         <div class="row">
             <div class="col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6 mt-5 mb-5">
                 <form method="POST">
@@ -146,6 +148,7 @@
                 </form>
             </div>
         </div>
+        {% endif %}
         {% for review in reviews %}
         <div class="row">
             <div class="col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6">
