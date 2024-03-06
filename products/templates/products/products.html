@@ -127,7 +127,7 @@
                         {% endif %}
                         {% if product.memory_ram %}
                         <li>
-                            <strong>Memory Ram: </strong>{{ product.memory_ram }}
+                            <strong>Memory Ram: </strong>{{ product.memory_ram|upper }}
                         </li>
                         {% endif %}
                         {% if product.display %}
@@ -138,6 +138,11 @@
                         {% if product.battery_life %}
                         <li>
                             <strong>Battery: </strong>{{ product.battery_life }}
+                        </li>
+                        {% endif %}
+                        {% if product.weight %}
+                        <li>
+                            <strong>Battery: </strong>{{ product.weight|upper }}
                         </li>
                         {% endif %}
                     </ul>

@@ -17,6 +17,7 @@ class ProductForm(forms.ModelForm):
             'memory_ram',
             'display',
             'battery_life',
+            'weight',
             'description',
             'rating',
             'price',
