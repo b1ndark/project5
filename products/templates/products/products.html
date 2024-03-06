@@ -115,31 +115,31 @@
                     <ul class="features-list pt-3 pt-lg-5">
 
                         <!--          Product main features          -->
+                        {% if product.brand %}
                         <li>
-                            {% if product.brand %}
                             <strong>Brand: </strong>{{ product.get_brand_display }}
-                            {% endif %}
                         </li>
+                        {% endif %}
+                        {% if product.operating_system %}
                         <li>
-                            {% if product.operating_system %}
                             <strong>Operating System: </strong>{{ product.get_operating_system_display }}
-                            {% endif %}
                         </li>
+                        {% endif %}
+                        {% if product.memory_ram %}
                         <li>
-                            {% if product.memory_ram %}
                             <strong>Memory Ram: </strong>{{ product.memory_ram }}
-                            {% endif %}
                         </li>
+                        {% endif %}
+                        {% if product.display %}
                         <li>
-                            {% if product.display %}
                             <strong>Display: </strong>{{ product.display }}
-                            {% endif %}
                         </li>
+                        {% endif %}
+                        {% if product.battery_life %}
                         <li>
-                            {% if product.battery_life %}
                             <strong>Battery: </strong>{{ product.battery_life }}
-                            {% endif %}
                         </li>
+                        {% endif %}
                     </ul>
                 </div>
                 <!--          Last section          -->
@@ -196,7 +196,7 @@
     </div>
 
     <!--          Pagination          -->
-    <div class="row">
+    <div class="row mt-5">
         {% include 'products/includes/pagination.html' %}
     </div>
 </div>
