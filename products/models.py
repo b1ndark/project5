@@ -9,6 +9,7 @@ OS = (
     ('linux', 'Linux'),
     ('windows', 'Windows'),
     ('macos', 'macOS'),
+    ('chromeos', 'ChromeOS'),
 )
 
 """
@@ -26,6 +27,7 @@ BRANDS = (
     ('sony', 'Sony'),
     ('samsung', 'Samsung'),
     ('hisense', 'Hisense'),
+    ('windows', 'Windows'),
 )
 
 

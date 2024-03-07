@@ -21,6 +21,7 @@ def products(request):
     query = None
     sort = None
     direction = None
+    sortkey = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -36,22 +37,6 @@ def products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-
-            products_p = Paginator(products, 3)
-            page = request.GET.get('page')
-            products_page = products_p.get_page(page)
-
-            current_sorting = f'{sort}_{direction}'
-
-            context = {
-                'products': products,
-                'products_page': products_page,
-                'current_categories': categories,
-                'current_sorting': current_sorting,
-                'sortkey': sortkey,
-            }
-
-            return render(request, 'products/products.html', context)
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -72,23 +57,7 @@ def products(request):
                 Q(display__icontains=query)
             products = products.filter(queries)
 
-            products_p = Paginator(products, 1)
-            page = request.GET.get('page')
-            products_page = products_p.get_page(page)
-
-            current_sorting = f'{sort}_{direction}'
-
-            context = {
-                'products': products,
-                'products_page': products_page,
-                'search_term': query,
-                'current_categories': categories,
-                'current_sorting': current_sorting,
-            }
-
-            return render(request, 'products/products.html', context)
-
-    products_p = Paginator(products, 3)
+    products_p = Paginator(products, 25)
     page = request.GET.get('page')
     products_page = products_p.get_page(page)
 
@@ -100,6 +69,7 @@ def products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'sortkey': sortkey,
     }
 
     return render(request, 'products/products.html', context)
