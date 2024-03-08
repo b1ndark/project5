@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block head_title %}- Delete account{% endblock %}
+
 {% if request.user == profile.user %}
 {% block page_header %}
 <div class="container header-container">

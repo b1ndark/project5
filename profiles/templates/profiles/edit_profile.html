@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block head_title %}- Edit {{ profile.user.username }}'s profile{% endblock %}
+
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/profile.css' %}">
 {% endblock %}
