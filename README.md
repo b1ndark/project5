@@ -1264,6 +1264,8 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
     - To display labels in kanban view [Github community](https://github.com/orgs/community/discussions/10788)
     - To help improving the User experience by being able to close the message box when clicked anywhere in the screen I have found the following link that have helped me understand and implement the logic [How to close the box by clicking anywhere](https://stackoverflow.com/questions/12086663/how-to-close-the-box-if-click-anywhere)
     - To create a link to the admin page from the website I found this topic on stackoverflow that have helped me setup the link [admin:index](https://stackoverflow.com/questions/1022236/linking-to-the-django-admin-site)
+  
+  - All products details/info I have found within their respective brand websites
 
   - I have watched some tutorials on Youtube that have helped me understand and learn through out the project:
 
@@ -1311,6 +1313,21 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
     - [ROG laptop](https://www.pexels.com/photo/asus-republic-of-gamers-logo-in-black-and-white-12877878/) - photo is from Kasra Askari
     - [Macbook Pro 2](https://www.pexels.com/photo/macbook-pro-turned-off-205421/) - photo is from Craig Dennis
     - [iMac silver](https://www.pexels.com/photo/silver-imac-on-white-table-5082554/) - photo is from Cottonbro Studio
+    - [Samsung TV](https://unsplash.com/photos/turned-off-flat-screen-tv-KzGhmrQmB6I) - photo is from Dario
+    - [Television 3](https://unsplash.com/photos/black-flat-screen-tv-turned-on-displaying-man-in-black-suit-ZG-eiD3Ep_Q) - photo is from David Švihovec
+    - [TV & Home Entertainment](https://unsplash.com/photos/zootopia-movie-still-3A0bs74T8zc) - photo is from Chauhan Moniz
+    - [Sony TV](https://unsplash.com/photos/black-flat-screen-tv-on-white-wall-L9-sfN04jdk) - photo is from Kam Idris
+    - [Television](https://unsplash.com/photos/gray-flat-screen-tv-on-white-tv-stand-jfxY9uoMRwM) - photo is from Andres Jasso
+    - [Sony headphones](https://unsplash.com/photos/black-wireless-headphones-between-apple-keyboard-and-apple-magic-mouse-on-white-surface-YDZPdqv3FcA) - photo is from Tomasz Gawlowski
+    - [Beats headphones](https://unsplash.com/photos/white-beats-by-dr-dre-headphones-on-mid-air-vISNAATFXlE) - photo is from Adam Birkett
+    - [Sony Headphones 2](https://unsplash.com/photos/black-wireless-headphones-on-white-table-lUMj2Zv5HUE) - photo is from Luke Peterson
+    - [Headphones](https://unsplash.com/photos/apple-earpods-on-white-surface-lIgFLLDdqMk) - photo is from Jocelyn Morales
+    - [JBL headphones](https://unsplash.com/photos/black-earbuds-on-white-background-cJ8YB0InG6k) - photo is from Kiran CK
+    - [Marshall radio](https://unsplash.com/photos/a-radio-sitting-on-top-of-a-wooden-table-HeNbiTyjMFI) - photo is from Lucas Hoang
+    - [Projector](https://unsplash.com/photos/black-and-white-projector-on-white-table-WU4ek4KCyjw) - photo is from Dylan Calluy
+    - [Ipad](https://unsplash.com/photos/space-gray-ipad-with-apple-pencil-with-white-and-black-pinstriped-background-4xHgz_ZllQs) - photo from Kelly Sikkema
+    - [Samsung tablet](https://unsplash.com/photos/white-ipad-on-green-table--nzWv7exgVI) - photo is from Mana Akbarzadegan
+
 
   - The Favicon was created using - [Favicon Generator](https://favicon.io/favicon-generator/)
   - Socials networks used in the footer:
