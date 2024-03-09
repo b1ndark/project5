@@ -83,7 +83,7 @@
                                 {{ order.order_number|truncatechars:8 }}
                             </a></p>
                         <p><strong>Date: </strong>{{ order.date }}</p>
-                        <p><strong>Items: </strong>
+                        <p><strong>Items: </strong></p>
                         <ul class="list-unstyled">
                             {% for item in order.lineitems.all %}
                             <li class="small">
@@ -91,7 +91,6 @@
                             </li>
                             {% endfor %}
                         </ul>
-                        </p>
                         <p><Strong>Order Total: </Strong>€{{ order.grand_total }}</p>
                         <hr>
                         {% endfor %}

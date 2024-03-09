@@ -125,15 +125,15 @@
                             {% endif %}
                         </div>
                     </div>
-                    <div class="row d-flex">
-                        <div class="col">
-                            <a href="{% url 'products' %}" class="my-3 mr-3 btn main-button rounded btn-lg">
+                    <div class="row">
+                        <div class="col text-center mt-3 mb-4 mb-md-3">
+                            <a href="{% url 'products' %}" class="m-2 btn main-button rounded btn-lg">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left text-white fa-beat fa-xs"></i>
                                 </span>
                                 <span>Keep Shopping</span>
                             </a>
-                            <a href="{% url 'checkout' %}" class="my-3 btn main-button rounded btn-lg">
+                            <a href="{% url 'checkout' %}" class="m-2 btn main-button rounded btn-lg">
                                 <span class="text-uppercase">Checkout </span>
                                 <span class="icon">
                                     <i class="fas fa-lock text-white fa-beat"></i>
@@ -164,7 +164,7 @@
 <script src="{% static 'js/products.js' %}"></script>
 
 <!--          Script to remove a product from the basket          -->
-<script type="text/javascript">
+<script>
     $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];

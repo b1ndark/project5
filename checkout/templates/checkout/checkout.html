@@ -125,20 +125,20 @@
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
-                    <div class="submit-button text-right mt-5 mb-2">
-                        <a href="{% url 'basket' %}" class="btn my-1 main-button rounded">
+                    <div class="submit-button text-center text-md-right mt-3 mt-md-5 mb-2">
+                        <a href="{% url 'basket' %}" class="btn mx-2 mb-3 main-button rounded">
                             <span class="icon">
                                 <i class="fas fa-chevron-left text-white fa-beat"></i>
                             </span>
                             <span class="font-weight-bold">Adjust basket</span>
                         </a>
-                        <button class="btn my-1 main-button rounded" id="submit-button">
+                        <button class="btn main-button rounded mx-2 mb-3" id="submit-button">
                             <span class="font-weight-bold">Complete Order</span>
                             <span class="icon">
                                 <i class="fas fa-lock text-white fa-shake" style="--fa-animation-duration: 1.5s;"></i>
                             </span>
                         </button>
-                        <p class="small text-danger my-0">
+                        <p class="small text-danger">
                             <span class="icon">
                                 <i class="fas fa-exclamation-circle"></i>
                             </span>
@@ -151,11 +151,11 @@
     </div>
 </div>
 <div id="loading-overlay">
-    <h1 class="logo-font loading-spinner" aria-label="Spinner">
+    <p class="logo-font loading-spinner font-weight-bold" style="font-size: 34px;">
         <span class="icon">
             <i class="fas fa-sync-alt fa-spin text-black"></i>
-        </span>
-    </h1>
+        </span> 
+    </p>
 </div>
 {% endblock %}
 
