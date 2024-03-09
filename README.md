@@ -596,75 +596,97 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 ### **HTML**
 
-- **HTML code x with no errors when checked on W3C Markup Validation Service**
+- **HTML code passes with no errors when checked on W3C Markup Validation Service**
 
-  - Home page results - x
+The edit pages have the same error duplicate attribute ID due to ```id="new-image"``` being added to where the ```id="id_image"``` already exists
 
-  ![image](x)
+  - Home page results - PASS
 
-  - Contact page results - x
+  ![image](assets/readme/validator/html/home_page_html.webp)
 
-  ![image](x)
+  - Contact page results - PASS
 
-  - Signin page results - x
+  ![image](assets/readme/validator/html/contact_html.webp)
 
-  ![image](x)
+  - About page results - PASS
 
-  - Signup page results - x
+  ![image](assets/readme/validator/html/about_html.webp)
 
-  ![image](x)
+  - Edit about page results - Has an error
 
-  - Logout page results - x
+  ![image](assets/readme/validator/html/edit_about_html.webp)
 
-  ![image](x)
+  - Signin page results - PASS
 
-  - Profile page results - x
+  ![image](assets/readme/validator/html/login_html.webp)
 
-  ![image](x)
+  - Signup page results - PASS
 
-  - Edit profile page results - x
+  ![image](assets/readme/validator/html/signup_html.webp)
 
-  ![image](x)
+  - Logout page results - PASS
 
-  - Delete profile page results - x
+  ![image](assets/readme/validator/html/logout_html.webp)
 
-  ![image](x)
+  - Profile page results - PASS
 
-  - Forum page results - x
+  ![image](assets/readme/validator/html/profile_html.webp)
 
-  ![image](x)
+  - Edit profile page results - Has an error
 
-  - Forum detail page results - x
+  ![image](assets/readme/validator/html/edit_profile_html.webp)
 
-  ![image](x)
+  - Delete account page results - PASS
 
-  - Add post page results - x
+  ![image](assets/readme/validator/html/delete_account_html.webp)
 
-  ![image](x)
+  - Products page results - PASS
 
-  - Edit post page results - x
+  ![image](assets/readme/validator/html/products_html.webp)
 
-  ![image](x)
+  - Product detail page results - PASS
 
-  - Delete post page results - x
+  ![image](assets/readme/validator/html/product_view_html.webp)
 
-  ![image](x)
+  - Add product page results - Has an error
 
-  - Edit comment page results - x
+  ![image](assets/readme/validator/html/edit_product_html.webp)
 
-  ![image](x)
+  - Edit product page results - Has an error
 
-  - Delete comment page results - x
+  ![image](assets/readme/validator/html/edit_review_html.webp)
 
-  ![image](x)
+  - Delete product page results - PASS
 
-  - 403 Error page results - x
+  ![image](assets/readme/validator/html/product_delete_html.webp)
 
-  ![image](x)
+  - Edit review page results - PASS
 
-  - 404 Error page results - x
+  ![image](assets/readme/validator/html/edit_review_html.webp)
 
-  ![image](x)
+  - Delete review page results - PASS
+
+  ![image](assets/readme/validator/html/delete_review_html.webp)
+
+  - Checkout page results - PASS
+
+  ![image](assets/readme/validator/html/checkout_html.webp)
+
+  - Checkout success page results - PASS
+
+  ![image](assets/readme/validator/html/checkout_success_html.webp)
+
+  - Purchases page results - PASS
+
+  ![image](assets/readme/validator/html/purchases_html.webp)
+
+  - Basket page results - PASS
+
+  ![image](assets/readme/validator/html/basket_html.webp)
+
+  - 404 Error page results - PASS
+
+  ![image](assets/readme/validator/html/404_page_html.webp)
 
   - 500 Error page results - x
 
@@ -942,74 +964,101 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 ### **Wave**
 
-- I have focused on making sure that the website forum is accessible:
+- I have focused on making sure that the [TopTech](https://toptech-244e7b312287.herokuapp.com/) website is accessible:
 
-  - x
-  - x
-  - x
-  - x
-  - x
-  - x
+  - Starting with the colours that were choosen, the goal was to try to create a website with neutral/clean collours to make sure that would suit everybody's taste and that wouldn't cause problems with contrast.
+  - Made sure that the website had a semantic html
+  - The navbar is clean and it adapts perfectly to smaller screen devices with no issues
+  - Kept the same layout through the every page within the website
+  - In general the website is simple to use and navigate
 
     - Home page results
 
-    ![image](x)
+    ![image](assets/readme/wave/home_wave.webp)
 
     - Contact page results
 
-    ![image](x)
+    ![image](assets/readme/wave/contact_wave.webp)
+
+    - About page results
+
+    ![image](assets/readme/wave/about_wave.webp)
+
+    - Edit about page results
+
+    ![image](assets/readme/wave/edit_about_wave.webp)
 
     - Signin page results
 
-    ![image](x)
+    ![image](assets/readme/wave/login_wave.webp)
 
     - Signup page results
 
-    ![image](x)
+    ![image](assets/readme/wave/signup_wave.webp)
 
     - Logout page results
 
-    ![image](x)
+    ![image](assets/readme/wave/logout_wave.webp)
 
     - Profile page results
 
-    ![image](x)
+    ![image](assets/readme/wave/profile_wave.webp)
 
     - Edit profile page results
 
-    ![image](x)
+    ![image](assets/readme/wave/edit_profile_wave.webp)
 
-    - Delete profile page results
+    - Delete account page results
 
-    ![image](x)
+    ![image](assets/readme/wave/delete_account_wave.webp)
 
-    - Forum page results
+    - Products page results
 
-    ![image](x)
+    ![image](assets/readme/wave/products_wave.webp)
 
-    - Forum detail page results
+    - Product detail page results
 
-    ![image](x)
+    ![image](assets/readme/wave/product_detail_wave.webp)
 
-    - Add post page results
+    - Add product page results
 
-    ![image](x)
+    ![image](assets/readme/wave/add_product_wave.webp)
 
-    - Edit post page results
+    - Edit product page results
 
-    ![image](x)
+    ![image](assets/readme/wave/edit_product_wave.webp)
 
-    - Delete post page results
+    - Delete product page results
 
-    ![image](x)
+    ![image](assets/readme/wave/delete_product_wave.webp)
 
-    - Edit comment page results
+    - Edit review page results
 
-    ![image](x)
+    ![image](assets/readme/wave/edit_review_wave.webp)
 
-    - Delete comment page results
+    - Delete review page results
 
-    ![image](x)
+    ![image](assets/readme/wave/delete_review_wave.webp)
+
+    - Checkout page results
+
+    ![image](assets/readme/wave/checkout_wave.webp)
+
+    - Checkout success page results
+
+    ![image](assets/readme/wave/checkout_success_wave.webp)
+
+    - Purchases page results
+
+    ![image](assets/readme/wave/purchases_wave.webp)
+
+    - Basket page results
+
+    ![image](assets/readme/wave/basket_wave.webp)
+
+    - 404 page results
+
+    ![image](assets/readme/wave/404_page_wave.webp)
 
 [**Back to the top**](#toptech "back_to_the_top")
 
