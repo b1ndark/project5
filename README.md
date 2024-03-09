@@ -189,6 +189,9 @@ I have develop this project using Agile methodology
 #### **Epic 7 - Marketing and SEO (Search Engine Optimization)**
 
 - As an User I can contact the website so that I get the right support
+- As an User I can visit the About page so that I get to know more about the company such as history or opening times
+- As an Admin I can Edit/update the about page so that the company information is always updated for the Users
+- As an User I can subscribe so that I can get the latest offers
 - As an User I can see the privacy policy so that I am aware of the website policy
 - As an Admin/Owner I can improve the website SEO so that the website gets ranked higher to attract customers
 
@@ -669,93 +672,267 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 ### **CSS**
 
-- **CSS code x with no errors when checked on W3C CSS Validation Service**
+- **CSS code passes with no errors when checked on W3C CSS Validation Service**
 
-  - style.css file - x
+  - about.css file - PASS
 
-  ![image](x)
+  ![image](assets/readme/validator/css/about.css.webp)
+
+  - base.css file - PASS
+
+  ![image](assets/readme/validator/css/base.css.webp)
+
+  - checkout.css file - PASS
+
+  ![image](assets/readme/validator/css/checkout.css.webp)
+
+  - profile.css file - PASS
+
+  ![image](assets/readme/validator/css/profile.css.webp)
 
 ### **JavaScript**
 
-- **JavaScript code x with no errors when checked on JSHint**
+- **JavaScript code passes with no errors when checked on JSHint**
 
-  - Script.js file - x
+  - about_country_fields.js file - PASS
 
-  ![image](x)
+  ![image](assets/readme/validator/js/about_country_field.js.webp)
+
+  - base.js file - PASS
+
+  ![image](assets/readme/validator/js/base.js.webp)
+
+  - contact.js file - PASS
+
+  ![image](assets/readme/validator/js/contact.js.webp)
+
+  - products.js file - PASS
+
+  ![image](assets/readme/validator/js/products.js.webp)
+
+  - profile_country_fields.js file - PASS
+
+  ![image](assets/readme/validator/js/profile_country_fields.js.webp)
+
+  - stripe_elements.js file - PASS
+
+  ![image](assets/readme/validator/js/stripe_elements.js.webp)
 
 ### **Python**
 
-- **Python code x with no errors when checked on CI Python Linter(forum)**
+- **Python code passes with no errors when checked on CI Python Linter(toptech)**
 
-  - page - x
+  - toptech_urls.py - PASS
 
-  ![image](x)
+  ![image](assets/readme/validator/python/toptech_urls.py.webp)
 
-- **Python code x with no errors when checked on CI Python Linter(x)**
+  - toptech_views.py - PASS
 
-  - typerforum_views.py - x
+  ![image](assets/readme/validator/python/toptech_views.py.webp)
 
-  ![image](x)
+  - contexts.py - PASS
 
-  - typerforum_urls.py - x
+  ![image](assets/readme/validator/python/contexts.py.webp)
 
-  ![image](x)
+  - custom_storages.py - PASS
 
-  - typerforum_models.py - x
+  ![image](assets/readme/validator/python/custom_storages.py.webp)
 
-  ![image](x)
+  - manage.py - PASS
 
-  - typerforum_forms.py - x
+  ![image](assets/readme/validator/python/manage.py.webp)
 
-  ![image](x)
+- **Python code passes with no errors when checked on CI Python Linter(About)**
 
-  - typerforum_admin.py - x
+  - about_views.py - PASS
 
-  ![image](x)
+  ![image](assets/readme/validator/python/about/about_views.py.webp)
 
-- **Python code x with no errors when checked on CI Python Linter(x)**
+  - about_urls.py - PASS
 
-  - profile_views.py - x
+  ![image](assets/readme/validator/python/about/about_urls.py.webp)
 
-  ![image](x)
+  - about_models.py - PASS
 
-  - profile_urls.py - x
+  ![image](assets/readme/validator/python/about/about_models.py.webp)
 
-  ![image](x)
+  - about_forms.py - PASS
 
-  - profile_models.py - x
+  ![image](assets/readme/validator/python/about/about_forms.py.webp)
 
-  ![image](x)
+  - about_admin.py - PASS
 
-  - profile_forms.py - x
+  ![image](assets/readme/validator/python/about/about_admin.py.webp)
 
-  ![image](x)
+  - about_contexts.py - PASS
 
-  - profile_admin.py - x
+  ![image](assets/readme/validator/python/about/about_contexts.py.webp)
 
-  ![image](x)
+  - about_widgets.py - PASS
 
-- **Python code x with no errors when checked on CI Python Linter(x)**
+  ![image](assets/readme/validator/python/about/about_widgets.py.webp)
 
-  - contact_views - x
+- **Python code passes with no errors when checked on CI Python Linter(Basket)**
 
-  ![image](x)
+  - basket_views.py - PASS
 
-  - contact_urls.py - x
+  ![image](assets/readme/validator/python/basket/basket_views.py.webp)
 
-  ![image](x)
+  - basket_urls.py - PASS
 
-  - contact_models.py - x
+  ![image](assets/readme/validator/python/basket/basket_urls.py.webp)
 
-  ![image](x)
+  - basket_contexts.py - PASS
 
-  - contact_forms.py - x
+  ![image](assets/readme/validator/python/basket/basket_contexts.py.webp)
 
-  ![image](x)
+  - basket_basket_tools.py - PASS
 
-  - contact_admin.py - x
+  ![image](assets/readme/validator/python/basket/basket_basket_tools.py.webp)
 
-  ![image](x)
+- **Python code passes with no errors when checked on CI Python Linter(Checkout)**
+
+  - checkout_views.py - PASS
+
+  ![image](assets/readme/validator/python/checkout/checkout_views.py.webp)
+
+  - checkout_urls.py - PASS
+
+  ![image](assets/readme/validator/python/checkout/checkout_urls.py.webp)
+
+  - checkout_models.py - PASS
+
+  ![image](assets/readme/validator/python/checkout/checkout_models.py.webp)
+
+  - checkout_forms.py - PASS
+
+  ![image](assets/readme/validator/python/checkout/checkout_forms.py.webp)
+
+  - checkout_admin.py - PASS
+
+  ![image](assets/readme/validator/python/checkout/checkout_admin.py.webp)
+
+  - checkout_apps.py - PASS
+
+  ![image](assets/readme/validator/python/checkout/checkout_apps.py.webp)
+
+  - checkout_signals.py - PASS
+
+  ![image](assets/readme/validator/python/checkout/checkout_signals.py.webp)
+
+  - checkout_webhook_handler.py - PASS
+
+  ![image](assets/readme/validator/python/checkout/checkout_webhook_handler.py.webp)
+
+  - checkout_webhooks.py - PASS
+
+  ![image](assets/readme/validator/python/checkout/checkout_webhooks.py.webp)
+
+- **Python code passes with no errors when checked on CI Python Linter(Contact)**
+
+  - contact_urls.py - PASS
+
+  ![image](assets/readme/validator/python/contact/contact_urls.py.webp)
+
+  - contact_views.py - PASS
+
+  ![image](assets/readme/validator/python/contact/contact_views.py.webp)
+
+  - contact_models.py - PASS
+
+  ![image](assets/readme/validator/python/contact/contact_models.py.webp)
+
+  - contact_forms.py - PASS
+
+  ![image](assets/readme/validator/python/contact/contact_forms.py.webp)
+
+  - contact_admins.py - PASS
+
+  ![image](assets/readme/validator/python/contact/contact_admin.py.webp)
+
+- **Python code passes with no errors when checked on CI Python Linter(Home)**
+
+  - home_urls.py - PASS
+
+  ![image](assets/readme/validator/python/home/home_urls.py.webp)
+
+  - home_views.py - PASS
+
+  ![image](assets/readme/validator/python/home/home_views.py.webp)
+
+- **Python code passes with no errors when checked on CI Python Linter(Products)**
+
+  - products_urls.py - PASS
+
+  ![image](assets/readme/validator/python/products/products_urls.py.webp)
+
+  - products_views.py - PASS
+
+  ![image](assets/readme/validator/python/products/products_views.py.webp)
+
+  - products_models.py - PASS
+
+  ![image](assets/readme/validator/python/products/products_models.py.webpp)
+
+  - products_forms.py - PASS
+
+  ![image](assets/readme/validator/python/products/products_forms.py.webp)
+
+  - products_admin.py - PASS
+
+  ![image](assets/readme/validator/python/products/products_admin.py.webp)
+
+  - products_widgets.py - PASS
+
+  ![image](assets/readme/validator/python/products/products_widgets.py.webp)
+
+- **Python code passes with no errors when checked on CI Python Linter(Profiles)**
+
+  - profiles_urls.py - PASS
+
+  ![image](assets/readme/validator/python/profiles/profiles_urls.py.webp)
+
+  - profiles_views.py - PASS
+
+  ![image](assets/readme/validator/python/profiles/profiles_views.py.webp)
+
+  - profiles_models.py - PASS
+
+  ![image](assets/readme/validator/python/profiles/profiles_models.py.webp)
+
+  - profiles_forms.py - PASS
+
+  ![image](assets/readme/validator/python/profiles/profiles_forms.py.webp)
+
+  - profiles_admin.py - PASS
+
+  ![image](assets/readme/validator/python/profiles/profiles_admin.py.webp)
+
+  - profiles_widgets.py - PASS
+
+  ![image](assets/readme/validator/python/profiles/profiles_widgets.py.webp)
+
+- **Python code passes with no errors when checked on CI Python Linter(Reviews)**
+
+  - reviews_urls.py - PASS
+
+  ![image](assets/readme/validator/python/reviews/reviews_urls.py.webp)
+
+  - reviews_views.py - PASS
+
+  ![image](assets/readme/validator/python/reviews/reviews._views.py.webp)
+
+  - reviews_models.py - PASS
+
+  ![image](assets/readme/validator/python/reviews/reviews_models.py.webp)
+
+  - reviews_forms.py - PASS
+
+  ![image](assets/readme/validator/python/reviews/reviews_forms.py.webp)
+
+  - reviews_admin.py - PASS
+
+  ![image](assets/readme/validator/python/reviews/reviews_admin.py.webp)
 
 [**Back to the top**](#toptech "back_to_the_top")
 
@@ -1327,6 +1504,7 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
     - [Projector](https://unsplash.com/photos/black-and-white-projector-on-white-table-WU4ek4KCyjw) - photo is from Dylan Calluy
     - [Ipad](https://unsplash.com/photos/space-gray-ipad-with-apple-pencil-with-white-and-black-pinstriped-background-4xHgz_ZllQs) - photo from Kelly Sikkema
     - [Samsung tablet](https://unsplash.com/photos/white-ipad-on-green-table--nzWv7exgVI) - photo is from Mana Akbarzadegan
+    - [Used as toptech about](https://unsplash.com/photos/space-black-case-apple-watch-silver-macbook-pro-jet-black-iphone-7-plus-and-silver-imac-with-corresponding-boxes-Bs-zngH79Ds) - photo from Julian O'hayon
 
 
   - The Favicon was created using - [Favicon Generator](https://favicon.io/favicon-generator/)

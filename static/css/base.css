@@ -230,7 +230,6 @@ input::-webkit-inner-spin-button {
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: var(--red);
     border-color: var(--red);
-    box-shadow: var(--background-2);
 }
 
 .custom-control-input:focus:not(:checked)~.custom-control-label::before {
