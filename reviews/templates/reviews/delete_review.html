@@ -4,41 +4,43 @@
 {% block head_title %}- Delete Review{% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 
-    <!--          Delete Review form container          -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
+<!--          Delete Review form container          -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1 mt-3 mb-3">
 
-                <!--          Title          -->
-                <hr>
-                <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">Delete review</h1>
-                <hr>
-            </div>
+            <!--          Title          -->
+            <hr>
+            <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">Delete review</h1>
+            <hr>
         </div>
-        <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
-            <div class="row mx-0">
-                <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
-                    <form method="POST">
-                        {% csrf_token %}
-                        <h2 class="text-center my-5" style="font-size: 18px;">Are you sure that you want to delete this review?</h2>
-                        <P class="text-center mb-5">{{ review.review }}</P>
-                        <div class="text-center">
-                            <button class="btn btn-outline-danger font-weight-bold rounded mx-3 mb-3">Delete</button>
-                            <a href="{% url 'product_detail' product.id %}" class="btn cancel-button font-weight-bold mx-3 mb-3">Cancel</a>
-                        </div>
-                    </form>
-                </div>
+    </div>
+    <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
+        <div class="row mx-0">
+            <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
+                <form method="POST">
+                    {% csrf_token %}
+                    <h2 class="text-center my-5" style="font-size: 18px;">Are you sure that you want to delete this
+                        review?</h2>
+                    <P class="text-center mb-5">{{ review.review }}</P>
+                    <div class="text-center">
+                        <button class="btn btn-outline-danger font-weight-bold rounded mx-3 mb-3">Delete</button>
+                        <a href="{% url 'product_detail' product.id %}"
+                            class="btn cancel-button font-weight-bold mx-3 mb-3">Cancel</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
 {% endblock %}

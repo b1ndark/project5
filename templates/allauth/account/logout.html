@@ -10,7 +10,7 @@
 
     <!--          Title          -->
     <hr>
-    <h2 class="logo-font text-center mb-4">{% trans "Sign Out" %}</h2>
+    <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">{% trans "Sign Out" %}</h1>
     <hr>
   </div>
 </div>
@@ -19,7 +19,7 @@
 <div class="card">
   <div class="row mx-0">
     <div class="col-12 mt-3 mb-3 text-center">
-      <p>{% trans 'Are you sure you want to sign out?' %}</p>
+      <h2 class="text-center my-3" style="font-size: 18px;">{% trans 'Are you sure you want to sign out?' %}</h2>
 
       <form method="post" action="{% url 'account_logout' %}">
         {% csrf_token %}

@@ -11,7 +11,7 @@
 
     <!--          Title          -->
     <hr>
-    <h2 class="logo-font text-center mb-4">{% trans "Sign Up" %}</h2>
+    <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">{% trans "Sign Up" %}</h1>
     <hr>
   </div>
 </div>
@@ -20,8 +20,9 @@
 <div class="card">
   <div class="row mx-0">
     <div class="col-12 mt-3 mb-3">
-      <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}" class="account-links">sign in</a>.{% endblocktrans %}
-      </p>
+      <h2 class="text-center my-3" style="font-size: 18px;">{% blocktrans %}Already have an account? Then please <a
+          href="{{ login_url }}" class="account-links">sign in</a>.{% endblocktrans %}
+      </h2>
 
       <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}

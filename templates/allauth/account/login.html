@@ -12,7 +12,7 @@
 
     <!--          Title          -->
     <hr>
-    <h2 class="logo-font text-center mb-4">{% trans "Sign In" %}</h2>
+    <h1 class="logo-font text-center font-weight-bold" style="font-size: 30px;">{% trans "Sign In" %}</h1>
     <hr>
   </div>
 </div>
@@ -41,9 +41,10 @@
       {% include "socialaccount/snippets/login_extra.html" %}
 
       {% else %}
-      <p>{% blocktrans %}If you have not created an account yet, then please
+      <h2 class="text-center my-3" style="font-size: 18px;">{% blocktrans %}If you have not created an account yet, then
+        please
         <a href="{{ signup_url }}" class="account-links">sign up</a> first.{% endblocktrans %}
-      </p>
+      </h2>
       {% endif %}
 
       <form class="login" method="POST" action="{% url 'account_login' %}">
@@ -54,7 +55,9 @@
         {% endif %}
         <button class="btn main-button rounded" type="submit">{% trans "Sign In" %}</button>
         <p class="mt-3">
-          <a class="button secondaryAction account-links" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+          <a class="button secondaryAction account-links" href="{% url 'account_reset_password' %}">
+            {% trans "Forgot Password?" %}
+          </a>
         </p>
       </form>
     </div>
