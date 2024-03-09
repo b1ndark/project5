@@ -28,7 +28,7 @@
 <li class="list-inline-item dropdown">
 
     <!--          Account menu          -->
-    <a class="text-grey nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
+    <a class="text-grey nav-link d-block d-lg-none" href="#" id="user-options-mobile" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <!--          If User is authenticated          -->
@@ -50,7 +50,7 @@
             <p class="my-0 font-weight-bold">Account</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options-mobile">
         {% if request.user.is_authenticated %}
 
         <!--          If is Superuser          -->
@@ -72,7 +72,7 @@
         {% endif %}
     </div>
 </li>
-<li class="list-inline-item navbar-icon-basket">
+<li class="list-inline-item">
 
     <!--          Shopping basket          -->
     <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-gray-2{% endif %} nav-link d-block d-lg-none"
