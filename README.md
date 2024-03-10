@@ -344,39 +344,95 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 - #### Nav Bar
 
-  - x
-  - x
+  - The website navbar is presented at the top of the page and it is fixed so, it will follow the User as it scrolls down the pages, the reson for this is so the User doesn't have to scroll back up to access other menus 
+  - Within the navbar the User will find the following buttons/links
 
-    - x
-    - x
-    - x
-    - x
-      - x
-      - x
-    - x
-      - x
-      - x
-    - x
-      - x
+    - **Logo**, the website **logo** which is presented on the left of the page and once pressed it will take you back to home page
+    - **Search bar**, in the middle of the navabar you find the **search bar** which you can use to look for any particular product
+    - **Account**, on the right of the navbar is the **Account** menu which contains the following
+      - If the User isn't logged in
+        - **Register** button which when pressed it will take you to the **Signup** page
+        - **Login** button which when pressed it will take you to the **Login** page
 
-    - **Desktop navbar**
-    - The navbar displays all the menus for the user to navigate.
-    - Within the forum also has search bar.
+          ![image](assets/readme/features/navbar_footer/nav_user_loggedoff.webp)
+      - If the User is logged in
+        - **Profile** button which when pressed it will take you to the profile page where you will be able to edit and delete account
+        - **Purchases** button when pressed it will take you to the purchases history page
+        - **Logout** button when pressed it will take you to the logout page
 
-    ![image](x)
+          ![image](assets/readme/features/navbar_footer/navabar_user.webp)
+      - If logged in as Admin
+        - **Admin page** button which when pressed it will take you to the admin page where you will be able to manage the website
+        - **Product Management** button which when pressed it will take you to the add product page
+        - **About Management** button which when pressed it will take you to the Edit About page
+        - **Profile** button which when pressed it will take you to the profile page where you will be able to edit and delete account
+        - **Purchases** button when pressed it will take you to the purchases history page
+        - **Logout** button when pressed it will take you to the logout page
 
-    - **Small Screens navbar**
-    - When using devices with small screens the navbar adapts, by putting all the navbar menus into to the dropdown button.
-    - x
+          ![image](assets/readme/features/navbar_footer/navbar_admin.webp)
 
-    ![image](x)
+    - **Basket** is next to the **Account** menu, the basket it will display the total of your basket if you added products to it and when pressed it will take you to the basket page
+
+      ![image](assets/readme/features/notifications_confirmations/basket_total.webp)
+
+    - **All products** which when clicked it will drop the following menu
+      - **By Price** When clicked it will display all products by the price
+      - **By Rating** When clicked it will display all products by the rating
+      - **By Category** When clicked it will display alll products by the Category 
+      - **All Prodcuts** When clicked it will display all products
+
+        ![image](assets/readme/features/navbar_footer/all_products_menu.webp)
+
+    - **Computing** Which when clicked it will drop the following menu
+      - **Laptops** When pressed it displays all Laptops available in stock
+      - **Desktops** When pressed it displays all Desktops available in stock
+      - **Gaming Computers** When pressed it displays all Gaming Computers available in stock
+      - **All Computers** When pressed it will display all types of computers available in stock
+
+        ![image](assets/readme/features/navbar_footer/computing_menu.webp)
+      
+    - **TVs & Audio** Which when clicked it will drop the following menu
+      - **TVs** When pressed it will display all TVs available in stock
+      - **Home cinema** When pressed it will display all Home cinemas available in stock
+      - **Headphones** When pressed it will display all Headphones available in stock
+      - **Radios** When pressed it will display all Radios available in stock
+      - **All TVs & Audio** When pressed it will display all TVs & Audio available in stock
+
+        ![image](assets/readme/features/navbar_footer/tv&audio_menu.webp)
+      
+    - **Mobile Tech** Which when pressed it will display the following
+      - **Mobile phones** When pressed it will display all Mobile phones available in stock
+      - **Tablets** When pressed it will display all Tablets available in stock
+      - **All Mobile Tech** When pressed it will display all Mobile Tech available in stock
+
+        ![image](assets/readme/features/navbar_footer/mobile_tech_menu.webp)
+
+    - **Large screens navbar**
+      - The navbar displays all the menus for the user to navigate.
+
+        ![image](assets/readme/features/navbar_footer/navbar_loggedoff.webp)
+
+    - **Small screens navbar**
+      - When using devices with small screens the navbar adapts, by putting all the navbar product menus into to the dropdown button.
+
+        ![image](assets/readme/features/navbar_footer/navbar_mobile.webp)
+
+      - Dropdown menu button when clicked
+
+        ![image](assets/readme/features/navbar_footer/navbar_mobile_dropdown.webp)
+
+      - Search button when clicked drops a search bar
+
+        ![image](assets/readme/features/navbar_footer/navbar_mobile_searchbar.webp)
 
 - #### Footer
 
-  - x
-  - x
+  - The footer has three sections which are the following
+    - **Contact Us** it displays the company contact details like phone number, address and email
+    - **Socials** is displays the social networks where the company is represented
+    - **Subscribe** the users will be able to subscribe to the TopTech newsletter to access the offers available
 
-    ![image](x)
+      ![image](assets/readme/features/navbar_footer/footer.webp)
 
 - #### Home Page
 
