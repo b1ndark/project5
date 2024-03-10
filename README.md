@@ -342,68 +342,70 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 ### **Features**
 
-- #### Nav Bar
+- #### **Nav Bar**
 
-  - The website navbar is presented at the top of the page and it is fixed so, it will follow the User as it scrolls down the pages, the reson for this is so the User doesn't have to scroll back up to access other menus 
-  - Within the navbar the User will find the following buttons/links
+  - The website navbar is presented at the top of the page and it is fixed so, it will follow the User as it scrolls down the pages, the reson for this is so the User doesn't have to scroll back up to access other menus.
+  - Within the navbar the User will find the following buttons/links.
 
-    - **Logo**, the website **logo** which is presented on the left of the page and once pressed it will take you back to home page
-    - **Search bar**, in the middle of the navabar you find the **search bar** which you can use to look for any particular product
-    - **Account**, on the right of the navbar is the **Account** menu which contains the following
+    - **Logo**, the website **logo** which is presented on the left of the page and once pressed it will take you back to home page.
+    - **Search bar**, in the middle of the navabar you find the **search bar** which you can use to look for any particular product.
+    - **Account**, on the right of the navbar is the **Account** menu which contains the following.
       - If the User isn't logged in
-        - **Register** button which when pressed it will take you to the **Signup** page
-        - **Login** button which when pressed it will take you to the **Login** page
+        - **Register** button which when pressed it will take you to the **Signup** page.
+        - **Login** button which when pressed it will take you to the **Login** page.
 
           ![image](assets/readme/features/navbar_footer/nav_user_loggedoff.webp)
-      - If the User is logged in
-        - **Profile** button which when pressed it will take you to the profile page where you will be able to edit and delete account
-        - **Purchases** button when pressed it will take you to the purchases history page
-        - **Logout** button when pressed it will take you to the logout page
 
-          ![image](assets/readme/features/navbar_footer/navabar_user.webp)
+      - If the User is logged in
+        - **Profile** button which when pressed it will take you to the profile page where you will be able to edit and delete account.
+        - **Purchases** button when pressed it will take you to the purchases history page.
+        - **Logout** button when pressed it will take you to the logout page.
+
+          ![image](assets/readme/features/navbar_footer/navbar_user.webp)
+
       - If logged in as Admin
-        - **Admin page** button which when pressed it will take you to the admin page where you will be able to manage the website
-        - **Product Management** button which when pressed it will take you to the add product page
-        - **About Management** button which when pressed it will take you to the Edit About page
-        - **Profile** button which when pressed it will take you to the profile page where you will be able to edit and delete account
-        - **Purchases** button when pressed it will take you to the purchases history page
-        - **Logout** button when pressed it will take you to the logout page
+        - **Admin page** button which when pressed it will take you to the admin page where you will be able to manage the website.
+        - **Product Management** button which when pressed it will take you to the add product page.
+        - **About Management** button which when pressed it will take you to the Edit About page.
+        - **Profile** button which when pressed it will take you to the profile page where you will be able to edit and delete account.
+        - **Purchases** button when pressed it will take you to the purchases history page.
+        - **Logout** button when pressed it will take you to the logout page.
 
           ![image](assets/readme/features/navbar_footer/navbar_admin.webp)
 
-    - **Basket** is next to the **Account** menu, the basket it will display the total of your basket if you added products to it and when pressed it will take you to the basket page
+    - **Basket** is next to the **Account** menu, the basket it will display the total of your basket if you added products to it and when pressed it will take you to the basket page.
 
       ![image](assets/readme/features/notifications_confirmations/basket_total.webp)
 
-    - **All products** which when clicked it will drop the following menu
-      - **By Price** When clicked it will display all products by the price
-      - **By Rating** When clicked it will display all products by the rating
-      - **By Category** When clicked it will display alll products by the Category 
-      - **All Prodcuts** When clicked it will display all products
+    - **All products** which when clicked it will drop the following menu.
+      - **By Price** When clicked it will display all products by the price.
+      - **By Rating** When clicked it will display all products by the rating.
+      - **By Category** When clicked it will display alll products by the Category. 
+      - **All Prodcuts** When clicked it will display all products.
 
         ![image](assets/readme/features/navbar_footer/all_products_menu.webp)
 
-    - **Computing** Which when clicked it will drop the following menu
-      - **Laptops** When pressed it displays all Laptops available in stock
-      - **Desktops** When pressed it displays all Desktops available in stock
-      - **Gaming Computers** When pressed it displays all Gaming Computers available in stock
-      - **All Computers** When pressed it will display all types of computers available in stock
+    - **Computing** Which when clicked it will drop the following menu.
+      - **Laptops** When pressed it displays all Laptops available in stock.
+      - **Desktops** When pressed it displays all Desktops available in stock.
+      - **Gaming Computers** When pressed it displays all Gaming Computers available in stock.
+      - **All Computers** When pressed it will display all types of computers available in stock.
 
         ![image](assets/readme/features/navbar_footer/computing_menu.webp)
       
-    - **TVs & Audio** Which when clicked it will drop the following menu
-      - **TVs** When pressed it will display all TVs available in stock
-      - **Home cinema** When pressed it will display all Home cinemas available in stock
-      - **Headphones** When pressed it will display all Headphones available in stock
-      - **Radios** When pressed it will display all Radios available in stock
-      - **All TVs & Audio** When pressed it will display all TVs & Audio available in stock
+    - **TVs & Audio** Which when clicked it will drop the following menu.
+      - **TVs** When pressed it will display all TVs available in stock.
+      - **Home cinema** When pressed it will display all Home cinemas available in stock.
+      - **Headphones** When pressed it will display all Headphones available in stock.
+      - **Radios** When pressed it will display all Radios available in stock.
+      - **All TVs & Audio** When pressed it will display all TVs & Audio available in stock.
 
         ![image](assets/readme/features/navbar_footer/tv&audio_menu.webp)
       
-    - **Mobile Tech** Which when pressed it will display the following
-      - **Mobile phones** When pressed it will display all Mobile phones available in stock
-      - **Tablets** When pressed it will display all Tablets available in stock
-      - **All Mobile Tech** When pressed it will display all Mobile Tech available in stock
+    - **Mobile Tech** Which when pressed it will display the following.
+      - **Mobile phones** When pressed it will display all Mobile phones available in stock.
+      - **Tablets** When pressed it will display all Tablets available in stock.
+      - **All Mobile Tech** When pressed it will display all Mobile Tech available in stock.
 
         ![image](assets/readme/features/navbar_footer/mobile_tech_menu.webp)
 
@@ -425,85 +427,120 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
         ![image](assets/readme/features/navbar_footer/navbar_mobile_searchbar.webp)
 
-- #### Footer
+- #### **Footer**
 
-  - The footer has three sections which are the following
-    - **Contact Us** it displays the company contact details like phone number, address and email
-    - **Socials** is displays the social networks where the company is represented
-    - **Subscribe** the users will be able to subscribe to the TopTech newsletter to access the offers available
+  - The footer has three sections which are the following.
+    - **Contact Us** it displays the company contact details like phone number, address and email.
+    - **Socials** is displays the social networks where the company is represented.
+    - **Subscribe** the users will be able to subscribe to the TopTech newsletter to access the offers available.
 
       ![image](assets/readme/features/navbar_footer/footer.webp)
 
-- #### Home Page
+- #### **Home Page**
 
-  - x
-  - x
-  - x
+  - The Users will be presented with a website that has a banner under the navbar and it displays messages running in carousel slide changing every four seconds
+  - The background image is of a ROG (Republic Of Gamers) motherboard with its components.
+  - Within the Background image there is a message and a button to take the User to the products page so it can start shopping.
 
-    ![image](x)
+    ![image](assets/readme/features/pages/home_page.webp)
 
-- #### Contact Page
+- #### **Contact Page**
 
-  - x
-  - x
+  - The User will be presented with a contact form incase it wants to contact the support regarding any matter.
+  - If submited the User will be presented with a notification stating that the form has been submited.
 
-    ![image](x)
-    ![image](x)
+    ![image](assets/readme/features/pages/contact.webp)
+    ![image](assets/readme/features/notifications_confirmations/contact_notification.webp)
 
-  - x
+  - The User will also get an email confirming that the request had been received by the support Team, within that email there will be a copy of the matter sent by the User.
 
-    ![image](x)
+    ![image](assets/readme/features/notifications_confirmations/contact_email_confirmation.webp)
 
-- #### Sign Up Page
+- #### **About Page**
 
-  - x
-  - x
+  - The User is presented with a photo of the TopTech company and also info regarding the company history.
+  - Location and openning times also displayed.
 
-    ![image](x)
-    ![image](x)
+    ![image](assets/readme/features/pages/about.webp)
+
+- #### **Edit About Page**
+
+  - The Admin is presented with a form to Edit the Company details.
+  - Also a nofication is displayed when About page is succefuly edited.
+    
+    ![image](assets/readme/features/pages/edit_about.webp)
+    ![image](assets/readme/features/notifications_confirmations/edit_about_notification.webp)
+
+- #### **Sign Up Page**
+
+  - In the Sign up page the User is presented with a signup form where User is asked for a username, email and password.
+
+    ![image](assets/readme/features/pages/signup.webp)
+
+  - If form is submited the User will be presented with a page that asks the User to verify the registration by going to the email.
+
+    ![image](assets/readme/features/pages/signup_verify.webp)
+
+  - Also the User will get a notification.
+
+    ![image](assets/readme/features/notifications_confirmations/signup_notification.webp)
+
+- #### Sign Up Confirmation Page
+
+  - Within the email the User will be presented with the following email.
+    
+    ![image](assets/readme/features/notifications_confirmations/signup_email_confirmation.webp)
+  
+  - In order to confirm the registration the User will have to click the email provided, if clicked the User is redirected to the website to confirm. 
+
+    ![image](assets/readme/features/pages/signup_confirm.webp)
+
+  - Once confirmed a notification is displayed confirming it and you will be able to login.
+
+    ![image](assets/readme/features/notifications_confirmations/signup_confirmed.webp)
 
 - #### Sign In Page
 
-  - x
-  - x
-  - x
+  - User is presented with a login form so User can login and add product reviews, update profile.
+  - When logged in the User is redirected to the Home page with a notification displayed letting the User know that succefuly logged in.
+  - If the User does not have an account there is a link that when clicked User is redirected to the Sign up page.
 
-    ![image](x)
-    ![image](x)
+    ![image](assets/readme/features/pages/login.webp)
+    ![image](assets/readme/features/notifications_confirmations/login_notification.webp)
 
 - #### Log Out Page
 
-  - x
-  - x
+  - Logout page the User is presented with a question whether wants to logout or not.
+  - If the User confirms logging out, will be redirected to the Home page and a notification will be displayed to confirm it.
 
-    ![image](x)
-    ![image](x)
+    ![image](assets/readme/features/pages/logout.webp)
+    ![image](assets/readme/features/notifications_confirmations/logout_notification.webp)
 
 - #### Profile Page
 
-  - x
-  - x
-  - x
-  - x
-  - x
+  - Profile is accessed by clicking in the **Account** dropdown menu, once clicked click in Profile.
+  - The Profile will present the Users profile that will display personal information.
+  - Within the Danger section of the Profile the User has the following
+    - **Edit** which will take the User to the Edit profile page.
+    - **Delete** which will take the User to the Delete account page.
 
-    ![image](x)
+    ![image](assets/readme/features/pages/profile.webp)
 
-- #### Edit profile Page
+- #### Edit Profile Page
 
-  - x
-  - x
+  - Edit profile presents the User a form which User can use to update the profile if desired
+  - If the User does update the profile, will be redirected to the Profile page and a notification is displayed to confirm that the Profile was succefully updated
 
-    ![image](x)
-    ![image](x)
+    ![image](assets/readme/features/pages/edit_profile.webp)
+    ![image](assets/readme/features/notifications_confirmations/edit_profile_notification.webp)
 
-- #### Delete profile Page
+- #### Delete Account Page
 
-  - x
-  - x
+  - **Delete account** page the User is presented with a question whether wants or not to delete the account
+  - If the User does decide to delete the account and confirms, will be automatically redirected to the Home page and a notification will be displayed to confirm that the account was succefully deleted.
 
-    ![image](x)
-    ![image](x)
+    ![image](assets/readme/features/pages/delete_account.webp)
+    ![image](assets/readme/features/notifications_confirmations/delete_account_notification.webp)
 
 - #### Forum Page
 
@@ -601,13 +638,17 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 - #### Admin Page
 
-  - x
-    - x
-    - x
-    - x
-    - x
+  - As an Admin, you will have access to the Admin page where you will be able to manage the TopTech website
+    - You will be able to update the Company details in About section
+    - You will be able to check who contacted the company
+    - You will be able to check the orders made by the Users
+    - You will be able to add, update and delete Product Categories
+    - You will be able to register, update and delete Users
+    - You will be able to Update User profiles
+    - You will be able add, update and delete products
+    - You will be able to add, update and delete product reviews
 
-    ![image](x)
+      ![image](assets/readme/features/pages/admin_panel.webp)
 
 [**Back to the top**](#toptech "back_to_the_top")
 
