@@ -1,7 +1,7 @@
 * Hello {{ order.full_name }},
 *
 *
-****** Thanks for shopping we us. Your Order is confirmed. *****
+****** Thank you for shopping with us. Your Order is confirmed. *****
 *
 * Your Order will be dispatched to:
 * {{ order.full_name }}
@@ -19,7 +19,7 @@
 * Delivery: €{{ order.delivery_cost }}
 * Grand Total: €{{ order.grand_total }}
 *
-* We've got your phone number on file as {{ order.phone_number }}
+* We've got your phone number on the file as {{ order.phone_number }}
 *
 * If you have any questions, feel free to contact us at {{ contact_email }}
 *

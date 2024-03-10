@@ -1070,63 +1070,91 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
   - Home page results
 
-  ![image](x)
+  ![image](assets/readme/lighthouse/home_lighthouse.webp)
 
   - Contact page results
 
-  ![image](x)
+  ![image](assets/readme/lighthouse/contact_lighthouse.webp)
+
+  - About page results
+
+  ![image](assets/readme/lighthouse/about_lighthouse.webp)
+
+  - Edit about page results
+
+  ![image](assets/readme/lighthouse/edit_about_lighthouse.webp)
 
   - Signin page results
 
-  ![image](x)
+  ![image](assets/readme/lighthouse/login_lighthouse.webp)
 
   - Signup page results
 
-  ![image](x)
+  ![image](assets/readme/lighthouse/signup_lighthouse.webp)
 
   - Logout page results
 
-  ![image](x)
+  ![image](assets/readme/lighthouse/logout_lighthouse.webp)
 
   - Profile page results
 
-  ![image](x)
+  ![image](assets/readme/lighthouse/profile_lighthouse.webp)
 
   - Edit profile page results
 
-  ![image](x)
+  ![image](assets/readme/lighthouse/edit_profile_lighthouse.webp)
 
-  - Delete profile page results
+  - Delete account page results
 
-  ![image](x)
+  ![image](assets/readme/lighthouse/delete_account_lighthouse.webp)
 
-  - Forum page results
+  - Products page results
 
-  ![image](x)
+  ![image](assets/readme/lighthouse/products_lighthouse.webp)
 
-  - Forum detail page results
+  - Product detail page results
 
-  ![image](x)
+  ![image](assets/readme/lighthouse/product_detail_lighthouse.webp)
 
-  - Add post page results
+  - Add product page results
 
-  ![image](x)
+  ![image](assets/readme/lighthouse/add_product_lighthouse.webp)
 
-  - Edit post page results
+  - Edit product page results
 
-  ![image](x)
+  ![image](assets/readme/lighthouse/edit_product_lighthouse.webp)
 
-  - Delete post page results
+  - Delete product page results
 
-  ![image](x)
+  ![image](assets/readme/lighthouse/delete_product_lighthouse.webp)
 
-  - Edit comment page results
+  - Edit review page results
 
-  ![image](x)
+  ![image](assets/readme/lighthouse/edit_review_lighthouse.webp)
 
-  - Delete comment page results
+  - Delete review page results
 
-  ![image](x)
+  ![image](assets/readme/lighthouse/delete_review_lighthouse.webp)
+
+  - Basket page results
+
+  ![image](assets/readme/lighthouse/basket_lighthouse.webp)
+
+  - Checkout page results
+
+  ![image](assets/readme/lighthouse/checkout_lighthouse.webp)
+
+  - Checkout success page results
+
+  ![image](assets/readme/lighthouse/checkout_success_lighthouse.webp)
+
+  - Purchases page results
+
+  ![image](assets/readme/lighthouse/purchases_lighthouse.webp)
+
+  - 404 error page results
+
+  ![image](assets/readme/lighthouse/404_lighthouse.webp)
 
 [**Back to the top**](#toptech "back_to_the_top")
 
