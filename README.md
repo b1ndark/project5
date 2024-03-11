@@ -542,99 +542,171 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
     ![image](assets/readme/features/pages/delete_account.webp)
     ![image](assets/readme/features/notifications_confirmations/delete_account_notification.webp)
 
-- #### Forum Page
+- #### Products Page
 
-  - x
-  - x
-  - x
-  - x
-  - x
-  - x
+  - The Users once in the products page will be able to start shopping for the latest Tech.
+  - The products are presented with the brand, model, image of the product, main features, rating and price
+  - The User will be able to click on the product to see the detailed product or add it to the basket
+  - The Users will be able to sort the products by price, rating and name.
+  - The products page is paginated by 25
 
-    ![image](x)
-    ![image](x)
+    ![image](assets/readme/features/pages/products.webp)
 
-- #### Post Detail Page
+  - The Products has also four main dropdown menus
+    - **All Products** has the following menus
+      - By Price
+      - By Rating
+      - By Category
+      - All Products
 
-  - x
-  - x
-  - x
-  - x
+        ![image](assets/readme/features/navbar_footer/all_products_menu.webp)
 
-    ![image](x)
+    - **Computing** has the following menus
+      - Laptops
+      - Desktops
+      - Gaming Computer
+      - All Computers
 
-- #### Add post page
+        ![image](assets/readme/features/navbar_footer/computing_menu.webp)
 
-  - x
-  - x
-  - x
-  - x
+    - **TVs & Audio** have the following menus
+      - TVs
+      - Home Cinema
+      - Headphones
+      - Radios
+      - All TVs & Audio
 
-    ![image](x)
-    ![image](x)
+        ![image](assets/readme/features/navbar_footer/tv&audio_menu.webp)
 
-- #### Edit Post Page
+    - **Mobile Tech** has the following menus
+      - Mobile phones
+      - Tablets
+      - All Mobile Tech
 
-  - x
-  - x
-  - x
+        ![image](assets/readme/features/navbar_footer/mobile_tech_menu.webp)
 
-    ![image](x)
-    ![image](x)
+- #### Product Detail Page
 
-- #### Delete Post Page
+  - Once the product is selected, the User is presented with the detailed product.
+  - **Edit** and **Delete** buttons are only available if User is logged in as an Admin.
+  - The product is presented with the brand, model, image of the product, main features, rating, price and a detailed information about it.
+  - Also reviews are available on each product, everybody can read the reviews but **only** logged in Users can write a review.
 
-  - x
-  - x
+    ![image](assets/readme/features/pages/product_detail.webp)
 
-    ![image](x)
-    ![image](x)
+- #### Add product page
 
-- #### Add Comment
+  - Only Admin can add new products.
+  - Once in the Product Management which can be accessed through the **Account** menu, a add product form is displayed for the Admin to fill.
+    
+    ![image](assets/readme/features/pages/add_product.webp)
 
-  - x
-  - x
-  - x
+  - If submited and no product image is selected, the form will add a default one automatically.
+  - And you will also get a successfull notification.
 
-    ![image](x)
-    ![image](x)
+    ![image](assets/readme/features/notifications_confirmations/add_product_notification.webp)
 
-- #### Edit Comment Page
+- #### Edit Product Page
 
-  - x
-  - x
+  - Available only as an **Admin**, once in the product detail if logged in as Admin you will have access to **Edit** button.
+  - If clicked the Admin is taken to Edit product page where will be able to update the product such as price
 
-    ![image](x)
-    ![image](x)
+    ![image](assets/readme/features/pages/edit_product.webp)
 
-- #### Delete Comment Page
+  - If updated and submited the Admin will have a notificaion.
 
-  - x
-  - x
+    ![image](assets/readme/features/notifications_confirmations/edit_product_notification.webp)
 
-    ![image](x)
-    ![image](x)
+- #### Delete product Page
 
-- #### 403 Error Page
+  - Available only as an **Admin**, once in the product detail if logged in as Admin you will have access to **Delete** button
+  - If clicked the Admin is taken to Delete product page where will be asked whether wants or not to delete the product.
 
-  - x
-  - x
+    ![image](assets/readme/features/pages/delete_product.webp)
 
-    ![image](x)
+  - If updated and submited the Admin will have a notificaion.
+
+    ![image](assets/readme/features/notifications_confirmations/delete_product_notification.webp)
+
+- #### Add Review
+
+  - The reviews are available at the bottom of each product.
+  - Everybody can read the reviews but **only** logged in Users can write a review.
+  - To write a review all you have to do is scroll down in the product detail page till you see the box thats says "Write a review...", type your review and click add.
+
+    ![image](assets/readme/features/pages/add_review.webp)
+
+  - If the review is submited, it will automatically be displayed in the product reviews and you will also get a notification confirming it.
+
+    ![image](assets/readme/features/notifications_confirmations)
+
+- #### Edit Review Page
+
+  - **Edit** review button is only displayed to the owner of the review and at the the right side of the review.
+  - If pressed the User is taken to the edit review page, where will be able to update the review.
+
+    ![image](assets/readme/features/pages/edit_review.webp)
+
+  - If the review is updated the User is redirected back to the product where will be able to visualize the review and also a notification is displayed to confirm the that the review was updated.
+
+    ![image](assets/readme/features/notifications_confirmations/edit_review_notification.webp)
+
+- #### Delete review Page
+
+  - **Delete** review button is only displayed to the owner of the review and at the the right side of the review.
+  - If pressed the User is taken to the delete review page, where will be asked whether wants or not to delete the review.
+
+    ![image](assets/readme/features/pages/delete_review.webp)
+
+  - If the review is deleted the User is redirected to the product page and a notification will be displayed to confirm the deletion of the review.
+
+    ![image](assets/readme/features/notifications_confirmations/delete_review_notification.webp)
+
+- #### Basket Page
+
+  - If the User has products added to the basket and clicks on the basket is taken to the **Basket** page.
+  - Within the basket you can visualize the product, you can update product quantities and delete the product from the basket.
+  - The User has also two button options, "Keep Shopping" and "Checkout".
+
+    ![image](assets/readme/features/pages/basket.webp)
+
+  - If Basket is empty you will have only the "Keep Shopping" button.
+
+    ![image](assets/readme/features/pages/basket_empty.webp)
+
+- #### Checkout Page
+
+  - If the User does want to checkout, the Order Summary is displayed and also a form to fill with personal details, delivery information and payment details.
+
+    ![image](assets/readme/features/pages/checkout.webp)
+
+- #### Checkout success Page
+
+  - After the payment successfuly gone through the User is taken to the checkout success page where will be able to check the Order detail
+
+    ![image](assets/readme/features/pages/checkout_success.webp)
+
+  - The User will get a notification confirming it
+
+    ![image](assets/readme/features/notifications_confirmations/order_confimation_notification.webp)
+
+  - And also an email with the order number confirming it
+
+    ![image](assets/readme/features/notifications_confirmations/order_email_confirmation.webp)
+
+- #### Purchases Page
+
+  - **Purchases** the User can access it through the **Account** menu.
+  - When Purchases page is oppened a list of the orders made is displayed.
+
+    ![image](assets/readme/features/pages/purchases.webp)
 
 - #### 404 Error Page
 
-  - x
-  - x
+  - If User tried to access something that does not exists a **404 error** page is displayed, to show the User that shouldn't be there 
+  - The **Home Page** button will take you back to the Home page
 
-    ![image](x)
-
-- #### 500 Error Page
-
-  - x
-  - x
-
-    ![image](x)
+    ![image](assets/readme/features/pages/404_error.webp)
 
 - #### Admin Page
 
