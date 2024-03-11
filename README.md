@@ -447,9 +447,11 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 - #### **Contact Page**
 
   - The User will be presented with a contact form incase it wants to contact the support regarding any matter.
-  - If submited the User will be presented with a notification stating that the form has been submited.
 
     ![image](assets/readme/features/pages/contact.webp)
+
+  - If submited the User will be presented with a notification stating that the form has been submited.
+
     ![image](assets/readme/features/notifications_confirmations/contact_notification.webp)
 
   - The User will also get an email confirming that the request had been received by the support Team, within that email there will be a copy of the matter sent by the User.
@@ -466,9 +468,11 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 - #### **Edit About Page**
 
   - The Admin is presented with a form to Edit the Company details.
+
+    ![image](assets/readme/features/pages/edit_about.webp)
+
   - Also a nofication is displayed when About page is succefuly edited.
     
-    ![image](assets/readme/features/pages/edit_about.webp)
     ![image](assets/readme/features/notifications_confirmations/edit_about_notification.webp)
 
 - #### **Sign Up Page**
@@ -502,25 +506,29 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 - #### Sign In Page
 
   - User is presented with a login form so User can login and add product reviews, update profile.
-  - When logged in the User is redirected to the Home page with a notification displayed letting the User know that succefuly logged in.
   - If the User does not have an account there is a link that when clicked User is redirected to the Sign up page.
-
+  
     ![image](assets/readme/features/pages/login.webp)
+  
+  - When logged in the User is redirected to the Home page with a notification displayed letting the User know that succefuly logged in.
+
     ![image](assets/readme/features/notifications_confirmations/login_notification.webp)
 
 - #### Log Out Page
 
   - Logout page the User is presented with a question whether wants to logout or not.
-  - If the User confirms logging out, will be redirected to the Home page and a notification will be displayed to confirm it.
 
     ![image](assets/readme/features/pages/logout.webp)
+
+  - If the User confirms logging out, will be redirected to the Home page and a notification will be displayed to confirm it.
+
     ![image](assets/readme/features/notifications_confirmations/logout_notification.webp)
 
 - #### Profile Page
 
   - Profile is accessed by clicking in the **Account** dropdown menu, once clicked click in Profile.
   - The Profile will present the Users profile that will display personal information.
-  - Within the Danger section of the Profile the User has the following
+  - Within the Danger section of the Profile the User has the following.
     - **Edit** which will take the User to the Edit profile page.
     - **Delete** which will take the User to the Delete account page.
 
@@ -528,18 +536,22 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 - #### Edit Profile Page
 
-  - Edit profile presents the User a form which User can use to update the profile if desired
-  - If the User does update the profile, will be redirected to the Profile page and a notification is displayed to confirm that the Profile was succefully updated
+  - Edit profile presents the User a form which User can use to update the profile if desired.
 
     ![image](assets/readme/features/pages/edit_profile.webp)
+
+  - If the User does update the profile, will be redirected to the Profile page and a notification is displayed to confirm that the Profile was succefully updated.
+
     ![image](assets/readme/features/notifications_confirmations/edit_profile_notification.webp)
 
 - #### Delete Account Page
 
   - **Delete account** page the User is presented with a question whether wants or not to delete the account
-  - If the User does decide to delete the account and confirms, will be automatically redirected to the Home page and a notification will be displayed to confirm that the account was succefully deleted.
 
     ![image](assets/readme/features/pages/delete_account.webp)
+
+  - If the User does decide to delete the account and confirms, will be automatically redirected to the Home page and a notification will be displayed to confirm that the account was succefully deleted.
+
     ![image](assets/readme/features/notifications_confirmations/delete_account_notification.webp)
 
 - #### Products Page
