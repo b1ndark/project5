@@ -247,75 +247,91 @@ The colours choosen for this project were neutral colours, mainly white as it is
   
   - **Home page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/home_wireframe.webp)
 
   - **Contact page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/contact_wireframe.webp)
+
+  - **About page**
+
+    ![image](assets/readme/wireframes/about_wireframe.webp)
+
+  - **Edit about page**
+
+    ![image](assets/readme/wireframes/edit_about_wireframe.webp)
 
   - **Signup page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/signup_wireframe.webp)
 
   - **Signin page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/login_wireframes.webp)
 
   - **Logout page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/logout_wireframe.webp)
 
   - **Profile page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/profile_wireframe.webp)
 
   - **Edit profile page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/edit_profile_wireframe.webp)
 
   - **Delete account page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/delete_account_wireframe.webp)
 
-  - **Forum page**
+  - **Products page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/products_wireframe.webp)
 
-  - **Forum detail page**
+  - **Product detail page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/product_detail_wireframe.webp)
 
-  - **Add post page**
+  - **Add product page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/add_product_wireframe.webp)
 
-  - **Edit post page**
+  - **Edit product page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/edit_product_wireframe.webp)
 
-  - **Delete post page**
+  - **Delete product page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/delete_product_wireframe.webp)
 
-  - **Edit comment page**
+  - **Edit review page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/edit_review_wireframe.webp)
 
-  - **Delete comment page**
+  - **Delete review page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/delete_review.webp)
 
-  - **403 Error page**
+  - **Basket page**
 
-    ![image](x)
+    ![image](assets/readme/wireframes/basket_wireframe.webp)
+
+  - **Checkout page**
+
+    ![image](assets/readme/wireframes/checkout.webp)
+  
+  - **Checkout success page**
+
+    ![image](assets/readme/wireframes/checkout_success_wireframe.webp)
+
+  - **Purchases page**
+
+    ![image](assets/readme/wireframes/purchases_wireframe.webp)
 
   - **404 Error page**
 
-    ![image](x)
-
-  - **500 Error page**
-
-    ![image](x)
+    ![image](assets/readme/wireframes/404_error_wireframe.webp)
 
 [**Back to the top**](#toptech "back_to_the_top")
 
