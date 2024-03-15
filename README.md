@@ -132,8 +132,8 @@ I have develop this project using Agile methodology
   - For more info on MoSCoW method please click [here](https://monday.com/blog/project-management/moscow-prioritization-method/)
 - I have created a Kanban using Github projects, the User story template and labels were created following [Code Institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+AG101+2021_T1/courseware/a4e548ca70a3473aa890ba2ab9bf612c/db69a5829de8467eb071e63bde630a2e/?child=last) and where in each user story I have added acceptance criteria and tasks that needed to be completed in order to close them. The Kanban can be found [here](https://github.com/users/b1ndark/projects/6/views/1).
 
-  ![image](x)
-  [Kanban link image](x)
+  ![image](assets/readme/moscow_prioritization.webp)
+  [Kanban link image](https://i.gyazo.com/ad00744508e5dec7faf37c4019607266.png)
 
 ### **User Stories(Epics)**
 

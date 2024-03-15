@@ -14,7 +14,7 @@ class About(models.Model):
         verbose_name_plural = 'Company'
 
     name = models.CharField(max_length=200)
-    email_address = models.CharField(max_length=100, null=True, blank=True)
+    email_address = models.EmailField(null=True, blank=True)
     description = models.TextField()
     image = models.ImageField(
         null=True, blank=True, upload_to='about/',
