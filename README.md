@@ -53,6 +53,7 @@ The main goal is to help the customer get the latest tech so that they are updat
     - [**Lighthouse**](#lighthouse)
   - [**Testing**](#testing)
   - [**Bugs**](#bugs)
+  - [**Marketing**](#marketing)
   - [**Deployment**](#deployment)
     - [**Fork the repository**](#fork-the-repository)
     - [**Clone the repository**](#clone-the-repository)
@@ -70,7 +71,6 @@ The main goal is to help the customer get the latest tech so that they are updat
 - Users will experience a website easy to navigate and full of Tech.
 - Users will find a friendly support from our staff that are ready to guide and help with any enquire
 - The content of the website is carefully supervised to make sure the Users get all the details of wanted products.
-- 
 
 ### **Goals**
 
@@ -132,7 +132,7 @@ I have develop this project using Agile methodology
   - For more info on MoSCoW method please click [here](https://monday.com/blog/project-management/moscow-prioritization-method/)
 - I have created a Kanban using Github projects, the User story template and labels were created following [Code Institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+AG101+2021_T1/courseware/a4e548ca70a3473aa890ba2ab9bf612c/db69a5829de8467eb071e63bde630a2e/?child=last) and where in each user story I have added acceptance criteria and tasks that needed to be completed in order to close them. The Kanban can be found [here](https://github.com/users/b1ndark/projects/6/views/1).
 
-  ![image](assets/readme/moscow_prioritization.webp)
+  ![image](assets/readme/moscow_prioritization.webp "TopTech Kanban")
   [Kanban link image](https://i.gyazo.com/ad00744508e5dec7faf37c4019607266.png)
 
 ### **User Stories(Epics)**
@@ -491,6 +491,12 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
     
     ![image](assets/readme/features/notifications_confirmations/edit_about_notification.webp "Edit about notification")
 
+- #### **Create About Page**
+
+  - Only one About page is allowed, when you try to create another about page while there is already one in the database, you will get a notification error as the website is limited to have only one about, you will get the following notification
+
+    ![image](assets/readme/features/notifications_confirmations/about_only1.webp "Only one about")
+
 - #### **Sign Up Page**
 
   - In the Sign up page the User is presented with a signup form where User is asked for a username, email and password.
@@ -799,95 +805,91 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
   - Home page results - PASS
 
-  ![image](assets/readme/validator/html/home_page_html.webp)
+  ![image](assets/readme/validator/html/home_page_html.webp "Home page")
 
   - Contact page results - PASS
 
-  ![image](assets/readme/validator/html/contact_html.webp)
+  ![image](assets/readme/validator/html/contact_html.webp "Contact page")
 
   - About page results - PASS
 
-  ![image](assets/readme/validator/html/about_html.webp)
+  ![image](assets/readme/validator/html/about_html.webp "About page")
 
   - Edit about page results - Has an error
 
-  ![image](assets/readme/validator/html/edit_about_html.webp)
+  ![image](assets/readme/validator/html/edit_about_html.webp "edit About page")
 
   - Signin page results - PASS
 
-  ![image](assets/readme/validator/html/login_html.webp)
+  ![image](assets/readme/validator/html/login_html.webp "Signin page")
 
   - Signup page results - PASS
 
-  ![image](assets/readme/validator/html/signup_html.webp)
+  ![image](assets/readme/validator/html/signup_html.webp "Signup page")
 
   - Logout page results - PASS
 
-  ![image](assets/readme/validator/html/logout_html.webp)
+  ![image](assets/readme/validator/html/logout_html.webp "Logout page")
 
   - Profile page results - PASS
 
-  ![image](assets/readme/validator/html/profile_html.webp)
+  ![image](assets/readme/validator/html/profile_html.webp "Profile page")
 
   - Edit profile page results - Has an error
 
-  ![image](assets/readme/validator/html/edit_profile_html.webp)
+  ![image](assets/readme/validator/html/edit_profile_html.webp "Edit profile page")
 
   - Delete account page results - PASS
 
-  ![image](assets/readme/validator/html/delete_account_html.webp)
+  ![image](assets/readme/validator/html/delete_account_html.webp "Delete account page")
 
   - Products page results - PASS
 
-  ![image](assets/readme/validator/html/products_html.webp)
+  ![image](assets/readme/validator/html/products_html.webp "Product page")
 
   - Product detail page results - PASS
 
-  ![image](assets/readme/validator/html/product_view_html.webp)
+  ![image](assets/readme/validator/html/product_view_html.webp "Product detail page")
 
   - Add product page results - Has an error
 
-  ![image](assets/readme/validator/html/edit_product_html.webp)
+  ![image](assets/readme/validator/html/edit_product_html.webp "Add product page")
 
   - Edit product page results - Has an error
 
-  ![image](assets/readme/validator/html/edit_review_html.webp)
+  ![image](assets/readme/validator/html/edit_review_html.webp "Edit product page")
 
   - Delete product page results - PASS
 
-  ![image](assets/readme/validator/html/product_delete_html.webp)
+  ![image](assets/readme/validator/html/product_delete_html.webp "Delete product page")
 
   - Edit review page results - PASS
 
-  ![image](assets/readme/validator/html/edit_review_html.webp)
+  ![image](assets/readme/validator/html/edit_review_html.webp "Edit review page")
 
   - Delete review page results - PASS
 
-  ![image](assets/readme/validator/html/delete_review_html.webp)
+  ![image](assets/readme/validator/html/delete_review_html.webp "Delete page")
 
   - Checkout page results - PASS
 
-  ![image](assets/readme/validator/html/checkout_html.webp)
+  ![image](assets/readme/validator/html/checkout_html.webp "Checkout page")
 
   - Checkout success page results - PASS
 
-  ![image](assets/readme/validator/html/checkout_success_html.webp)
+  ![image](assets/readme/validator/html/checkout_success_html.webp "Checkout success page")
 
   - Purchases page results - PASS
 
-  ![image](assets/readme/validator/html/purchases_html.webp)
+  ![image](assets/readme/validator/html/purchases_html.webp "Purchases page")
 
   - Basket page results - PASS
 
-  ![image](assets/readme/validator/html/basket_html.webp)
+  ![image](assets/readme/validator/html/basket_html.webp "Basket page")
 
   - 404 Error page results - PASS
 
-  ![image](assets/readme/validator/html/404_page_html.webp)
-
-  - 500 Error page results - x
-
-  ![image](x)
+  ![image](assets/readme/validator/html/404_page_html.webp "404 Error page")
 
 ### **CSS**
 
@@ -895,19 +897,19 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
   - about.css file - PASS
 
-  ![image](assets/readme/validator/css/about.css.webp)
+  ![image](assets/readme/validator/css/about.css.webp "About css")
 
   - base.css file - PASS
 
-  ![image](assets/readme/validator/css/base.css.webp)
+  ![image](assets/readme/validator/css/base.css.webp "Base css")
 
   - checkout.css file - PASS
 
-  ![image](assets/readme/validator/css/checkout.css.webp)
+  ![image](assets/readme/validator/css/checkout.css.webp "Checkout css")
 
   - profile.css file - PASS
 
-  ![image](assets/readme/validator/css/profile.css.webp)
+  ![image](assets/readme/validator/css/profile.css.webp "Profile css")
 
 ### **JavaScript**
 
@@ -915,27 +917,27 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
   - about_country_fields.js file - PASS
 
-  ![image](assets/readme/validator/js/about_country_field.js.webp)
+  ![image](assets/readme/validator/js/about_country_field.js.webp "About field js")
 
   - base.js file - PASS
 
-  ![image](assets/readme/validator/js/base.js.webp)
+  ![image](assets/readme/validator/js/base.js.webp "Base js")
 
   - contact.js file - PASS
 
-  ![image](assets/readme/validator/js/contact.js.webp)
+  ![image](assets/readme/validator/js/contact.js.webp "Contact js")
 
   - products.js file - PASS
 
-  ![image](assets/readme/validator/js/products.js.webp)
+  ![image](assets/readme/validator/js/products.js.webp "Products js")
 
   - profile_country_fields.js file - PASS
 
-  ![image](assets/readme/validator/js/profile_country_fields.js.webp)
+  ![image](assets/readme/validator/js/profile_country_fields.js.webp "Profile country fields js")
 
   - stripe_elements.js file - PASS
 
-  ![image](assets/readme/validator/js/stripe_elements.js.webp)
+  ![image](assets/readme/validator/js/stripe_elements.js.webp "Stripe elements js")
 
 ### **Python**
 
@@ -943,215 +945,215 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
   - toptech_urls.py - PASS
 
-  ![image](assets/readme/validator/python/toptech_urls.py.webp)
+  ![image](assets/readme/validator/python/toptech_urls.py.webp "toptech urls py")
 
   - toptech_views.py - PASS
 
-  ![image](assets/readme/validator/python/toptech_views.py.webp)
+  ![image](assets/readme/validator/python/toptech_views.py.webp "toptech views py")
 
   - contexts.py - PASS
 
-  ![image](assets/readme/validator/python/contexts.py.webp)
+  ![image](assets/readme/validator/python/contexts.py.webp "contexts py")
 
   - custom_storages.py - PASS
 
-  ![image](assets/readme/validator/python/custom_storages.py.webp)
+  ![image](assets/readme/validator/python/custom_storages.py.webp "custom storages py")
 
   - manage.py - PASS
 
-  ![image](assets/readme/validator/python/manage.py.webp)
+  ![image](assets/readme/validator/python/manage.py.webp "manage py")
 
 - **Python code passes with no errors when checked on CI Python Linter(About)**
 
   - about_views.py - PASS
 
-  ![image](assets/readme/validator/python/about/about_views.py.webp)
+  ![image](assets/readme/validator/python/about/about_views.py.webp "about views py")
 
   - about_urls.py - PASS
 
-  ![image](assets/readme/validator/python/about/about_urls.py.webp)
+  ![image](assets/readme/validator/python/about/about_urls.py.webp "about urls py")
 
   - about_models.py - PASS
 
-  ![image](assets/readme/validator/python/about/about_models.py.webp)
+  ![image](assets/readme/validator/python/about/about_models.py.webp "about models py")
 
   - about_forms.py - PASS
 
-  ![image](assets/readme/validator/python/about/about_forms.py.webp)
+  ![image](assets/readme/validator/python/about/about_forms.py.webp "about forms py")
 
   - about_admin.py - PASS
 
-  ![image](assets/readme/validator/python/about/about_admin.py.webp)
+  ![image](assets/readme/validator/python/about/about_admin.py.webp "about admin py")
 
   - about_contexts.py - PASS
 
-  ![image](assets/readme/validator/python/about/about_contexts.py.webp)
+  ![image](assets/readme/validator/python/about/about_contexts.py.webp "about contexts py")
 
   - about_widgets.py - PASS
 
-  ![image](assets/readme/validator/python/about/about_widgets.py.webp)
+  ![image](assets/readme/validator/python/about/about_widgets.py.webp "about widgets py")
 
 - **Python code passes with no errors when checked on CI Python Linter(Basket)**
 
   - basket_views.py - PASS
 
-  ![image](assets/readme/validator/python/basket/basket_views.py.webp)
+  ![image](assets/readme/validator/python/basket/basket_views.py.webp "basket views py")
 
   - basket_urls.py - PASS
 
-  ![image](assets/readme/validator/python/basket/basket_urls.py.webp)
+  ![image](assets/readme/validator/python/basket/basket_urls.py.webp "basket urls py")
 
   - basket_contexts.py - PASS
 
-  ![image](assets/readme/validator/python/basket/basket_contexts.py.webp)
+  ![image](assets/readme/validator/python/basket/basket_contexts.py.webp "basket contexts py")
 
   - basket_basket_tools.py - PASS
 
-  ![image](assets/readme/validator/python/basket/basket_basket_tools.py.webp)
+  ![image](assets/readme/validator/python/basket/basket_basket_tools.py.webp "basket basket tools py")
 
 - **Python code passes with no errors when checked on CI Python Linter(Checkout)**
 
   - checkout_views.py - PASS
 
-  ![image](assets/readme/validator/python/checkout/checkout_views.py.webp)
+  ![image](assets/readme/validator/python/checkout/checkout_views.py.webp "checkout views py")
 
   - checkout_urls.py - PASS
 
-  ![image](assets/readme/validator/python/checkout/checkout_urls.py.webp)
+  ![image](assets/readme/validator/python/checkout/checkout_urls.py.webp "checkout urls py")
 
   - checkout_models.py - PASS
 
-  ![image](assets/readme/validator/python/checkout/checkout_models.py.webp)
+  ![image](assets/readme/validator/python/checkout/checkout_models.py.webp "checkout models py")
 
   - checkout_forms.py - PASS
 
-  ![image](assets/readme/validator/python/checkout/checkout_forms.py.webp)
+  ![image](assets/readme/validator/python/checkout/checkout_forms.py.webp "checkout forms py")
 
   - checkout_admin.py - PASS
 
-  ![image](assets/readme/validator/python/checkout/checkout_admin.py.webp)
+  ![image](assets/readme/validator/python/checkout/checkout_admin.py.webp "checkout admin py")
 
   - checkout_apps.py - PASS
 
-  ![image](assets/readme/validator/python/checkout/checkout_apps.py.webp)
+  ![image](assets/readme/validator/python/checkout/checkout_apps.py.webp "checkout apps py")
 
   - checkout_signals.py - PASS
 
-  ![image](assets/readme/validator/python/checkout/checkout_signals.py.webp)
+  ![image](assets/readme/validator/python/checkout/checkout_signals.py.webp "checkout signals py")
 
   - checkout_webhook_handler.py - PASS
 
-  ![image](assets/readme/validator/python/checkout/checkout_webhook_handler.py.webp)
+  ![image](assets/readme/validator/python/checkout/checkout_webhook_handler.py.webp "checkout webhook handler py")
 
   - checkout_webhooks.py - PASS
 
-  ![image](assets/readme/validator/python/checkout/checkout_webhooks.py.webp)
+  ![image](assets/readme/validator/python/checkout/checkout_webhooks.py.webp "checkout webhooks py")
 
 - **Python code passes with no errors when checked on CI Python Linter(Contact)**
 
   - contact_urls.py - PASS
 
-  ![image](assets/readme/validator/python/contact/contact_urls.py.webp)
+  ![image](assets/readme/validator/python/contact/contact_urls.py.webp "contact urls py")
 
   - contact_views.py - PASS
 
-  ![image](assets/readme/validator/python/contact/contact_views.py.webp)
+  ![image](assets/readme/validator/python/contact/contact_views.py.webp "contact views py")
 
   - contact_models.py - PASS
 
-  ![image](assets/readme/validator/python/contact/contact_models.py.webp)
+  ![image](assets/readme/validator/python/contact/contact_models.py.webp "contact models py")
 
   - contact_forms.py - PASS
 
-  ![image](assets/readme/validator/python/contact/contact_forms.py.webp)
+  ![image](assets/readme/validator/python/contact/contact_forms.py.webp "contact forms py")
 
   - contact_admins.py - PASS
 
-  ![image](assets/readme/validator/python/contact/contact_admin.py.webp)
+  ![image](assets/readme/validator/python/contact/contact_admin.py.webp "contact admin py")
 
 - **Python code passes with no errors when checked on CI Python Linter(Home)**
 
   - home_urls.py - PASS
 
-  ![image](assets/readme/validator/python/home/home_urls.py.webp)
+  ![image](assets/readme/validator/python/home/home_urls.py.webp "home urls py")
 
   - home_views.py - PASS
 
-  ![image](assets/readme/validator/python/home/home_views.py.webp)
+  ![image](assets/readme/validator/python/home/home_views.py.webp "home views py")
 
 - **Python code passes with no errors when checked on CI Python Linter(Products)**
 
   - products_urls.py - PASS
 
-  ![image](assets/readme/validator/python/products/products_urls.py.webp)
+  ![image](assets/readme/validator/python/products/products_urls.py.webp "products urls py")
 
   - products_views.py - PASS
 
-  ![image](assets/readme/validator/python/products/products_views.py.webp)
+  ![image](assets/readme/validator/python/products/products_views.py.webp "products views py")
 
   - products_models.py - PASS
 
-  ![image](assets/readme/validator/python/products/products_models.py.webpp)
+  ![image](assets/readme/validator/python/products/products_models.py.webpp "products models py")
 
   - products_forms.py - PASS
 
-  ![image](assets/readme/validator/python/products/products_forms.py.webp)
+  ![image](assets/readme/validator/python/products/products_forms.py.webp "products forms py")
 
   - products_admin.py - PASS
 
-  ![image](assets/readme/validator/python/products/products_admin.py.webp)
+  ![image](assets/readme/validator/python/products/products_admin.py.webp "products admin py")
 
   - products_widgets.py - PASS
 
-  ![image](assets/readme/validator/python/products/products_widgets.py.webp)
+  ![image](assets/readme/validator/python/products/products_widgets.py.webp "products widgets py")
 
 - **Python code passes with no errors when checked on CI Python Linter(Profiles)**
 
   - profiles_urls.py - PASS
 
-  ![image](assets/readme/validator/python/profiles/profiles_urls.py.webp)
+  ![image](assets/readme/validator/python/profiles/profiles_urls.py.webp "profile urls py")
 
   - profiles_views.py - PASS
 
-  ![image](assets/readme/validator/python/profiles/profiles_views.py.webp)
+  ![image](assets/readme/validator/python/profiles/profiles_views.py.webp "profile views py")
 
   - profiles_models.py - PASS
 
-  ![image](assets/readme/validator/python/profiles/profiles_models.py.webp)
+  ![image](assets/readme/validator/python/profiles/profiles_models.py.webp "profile models py")
 
   - profiles_forms.py - PASS
 
-  ![image](assets/readme/validator/python/profiles/profiles_forms.py.webp)
+  ![image](assets/readme/validator/python/profiles/profiles_forms.py.webp "profile forms py")
 
   - profiles_admin.py - PASS
 
-  ![image](assets/readme/validator/python/profiles/profiles_admin.py.webp)
+  ![image](assets/readme/validator/python/profiles/profiles_admin.py.webp "profile admin py")
 
   - profiles_widgets.py - PASS
 
-  ![image](assets/readme/validator/python/profiles/profiles_widgets.py.webp)
+  ![image](assets/readme/validator/python/profiles/profiles_widgets.py.webp "profile widgets py")
 
 - **Python code passes with no errors when checked on CI Python Linter(Reviews)**
 
   - reviews_urls.py - PASS
 
-  ![image](assets/readme/validator/python/reviews/reviews_urls.py.webp)
+  ![image](assets/readme/validator/python/reviews/reviews_urls.py.webp "reviews urls py")
 
   - reviews_views.py - PASS
 
-  ![image](assets/readme/validator/python/reviews/reviews._views.py.webp)
+  ![image](assets/readme/validator/python/reviews/reviews._views.py.webp "reviews views py")
 
   - reviews_models.py - PASS
 
-  ![image](assets/readme/validator/python/reviews/reviews_models.py.webp)
+  ![image](assets/readme/validator/python/reviews/reviews_models.py.webp "reviews models py")
 
   - reviews_forms.py - PASS
 
-  ![image](assets/readme/validator/python/reviews/reviews_forms.py.webp)
+  ![image](assets/readme/validator/python/reviews/reviews_forms.py.webp "reviews forms py")
 
   - reviews_admin.py - PASS
 
-  ![image](assets/readme/validator/python/reviews/reviews_admin.py.webp)
+  ![image](assets/readme/validator/python/reviews/reviews_admin.py.webp "reviews admin py")
 
 [**Back to the top**](#toptech "back_to_the_top")
 
@@ -1171,91 +1173,91 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
     - Home page results
 
-    ![image](assets/readme/wave/home_wave.webp)
+    ![image](assets/readme/wave/home_wave.webp "home wave")
 
     - Contact page results
 
-    ![image](assets/readme/wave/contact_wave.webp)
+    ![image](assets/readme/wave/contact_wave.webp "contact wave")
 
     - About page results
 
-    ![image](assets/readme/wave/about_wave.webp)
+    ![image](assets/readme/wave/about_wave.webp "about wave")
 
     - Edit about page results
 
-    ![image](assets/readme/wave/edit_about_wave.webp)
+    ![image](assets/readme/wave/edit_about_wave.webp "edit about wave")
 
     - Signin page results
 
-    ![image](assets/readme/wave/login_wave.webp)
+    ![image](assets/readme/wave/login_wave.webp "signin wave")
 
     - Signup page results
 
-    ![image](assets/readme/wave/signup_wave.webp)
+    ![image](assets/readme/wave/signup_wave.webp "signup wave")
 
     - Logout page results
 
-    ![image](assets/readme/wave/logout_wave.webp)
+    ![image](assets/readme/wave/logout_wave.webp "logout wave")
 
     - Profile page results
 
-    ![image](assets/readme/wave/profile_wave.webp)
+    ![image](assets/readme/wave/profile_wave.webp "profile wave")
 
     - Edit profile page results
 
-    ![image](assets/readme/wave/edit_profile_wave.webp)
+    ![image](assets/readme/wave/edit_profile_wave.webp "edit profile wave")
 
     - Delete account page results
 
-    ![image](assets/readme/wave/delete_account_wave.webp)
+    ![image](assets/readme/wave/delete_account_wave.webp "delete account wave")
 
     - Products page results
 
-    ![image](assets/readme/wave/products_wave.webp)
+    ![image](assets/readme/wave/products_wave.webp "products wave")
 
     - Product detail page results
 
-    ![image](assets/readme/wave/product_detail_wave.webp)
+    ![image](assets/readme/wave/product_detail_wave.webp "product detail wave")
 
     - Add product page results
 
-    ![image](assets/readme/wave/add_product_wave.webp)
+    ![image](assets/readme/wave/add_product_wave.webp "add product wave")
 
     - Edit product page results
 
-    ![image](assets/readme/wave/edit_product_wave.webp)
+    ![image](assets/readme/wave/edit_product_wave.webp "edit product wave")
 
     - Delete product page results
 
-    ![image](assets/readme/wave/delete_product_wave.webp)
+    ![image](assets/readme/wave/delete_product_wave.webp "delete product wave")
 
     - Edit review page results
 
-    ![image](assets/readme/wave/edit_review_wave.webp)
+    ![image](assets/readme/wave/edit_review_wave.webp "edit review wave")
 
     - Delete review page results
 
-    ![image](assets/readme/wave/delete_review_wave.webp)
+    ![image](assets/readme/wave/delete_review_wave.webp "delete review wave")
 
     - Checkout page results
 
-    ![image](assets/readme/wave/checkout_wave.webp)
+    ![image](assets/readme/wave/checkout_wave.webp "checkout wave")
 
     - Checkout success page results
 
-    ![image](assets/readme/wave/checkout_success_wave.webp)
+    ![image](assets/readme/wave/checkout_success_wave.webp "checkout success wave")
 
     - Purchases page results
 
-    ![image](assets/readme/wave/purchases_wave.webp)
+    ![image](assets/readme/wave/purchases_wave.webp "purchases wave")
 
     - Basket page results
 
-    ![image](assets/readme/wave/basket_wave.webp)
+    ![image](assets/readme/wave/basket_wave.webp "basket wave")
 
     - 404 page results
 
-    ![image](assets/readme/wave/404_page_wave.webp)
+    ![image](assets/readme/wave/404_page_wave.webp "404 error wave")
 
 [**Back to the top**](#toptech "back_to_the_top")
 
@@ -1267,91 +1269,91 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
   - Home page results
 
-  ![image](assets/readme/lighthouse/home_lighthouse.webp)
+  ![image](assets/readme/lighthouse/home_lighthouse.webp "home lighthouse")
 
   - Contact page results
 
-  ![image](assets/readme/lighthouse/contact_lighthouse.webp)
+  ![image](assets/readme/lighthouse/contact_lighthouse.webp "contact lighthouse")
 
   - About page results
 
-  ![image](assets/readme/lighthouse/about_lighthouse.webp)
+  ![image](assets/readme/lighthouse/about_lighthouse.webp "about lighthouse")
 
   - Edit about page results
 
-  ![image](assets/readme/lighthouse/edit_about_lighthouse.webp)
+  ![image](assets/readme/lighthouse/edit_about_lighthouse.webp "edit about lighthouse")
 
   - Signin page results
 
-  ![image](assets/readme/lighthouse/login_lighthouse.webp)
+  ![image](assets/readme/lighthouse/login_lighthouse.webp "signin lighthouse")
 
   - Signup page results
 
-  ![image](assets/readme/lighthouse/signup_lighthouse.webp)
+  ![image](assets/readme/lighthouse/signup_lighthouse.webp "signup lighthouse")
 
   - Logout page results
 
-  ![image](assets/readme/lighthouse/logout_lighthouse.webp)
+  ![image](assets/readme/lighthouse/logout_lighthouse.webp "logout lighthouse")
 
   - Profile page results
 
-  ![image](assets/readme/lighthouse/profile_lighthouse.webp)
+  ![image](assets/readme/lighthouse/profile_lighthouse.webp "profile lighthouse")
 
   - Edit profile page results
 
-  ![image](assets/readme/lighthouse/edit_profile_lighthouse.webp)
+  ![image](assets/readme/lighthouse/edit_profile_lighthouse.webp "edit profile lighthouse")
 
   - Delete account page results
 
-  ![image](assets/readme/lighthouse/delete_account_lighthouse.webp)
+  ![image](assets/readme/lighthouse/delete_account_lighthouse.webp "delete account lighthouse")
 
   - Products page results
 
-  ![image](assets/readme/lighthouse/products_lighthouse.webp)
+  ![image](assets/readme/lighthouse/products_lighthouse.webp "products lighthouse")
 
   - Product detail page results
 
-  ![image](assets/readme/lighthouse/product_detail_lighthouse.webp)
+  ![image](assets/readme/lighthouse/product_detail_lighthouse.webp "product detail lighthouse")
 
   - Add product page results
 
-  ![image](assets/readme/lighthouse/add_product_lighthouse.webp)
+  ![image](assets/readme/lighthouse/add_product_lighthouse.webp "add product lighthouse")
 
   - Edit product page results
 
-  ![image](assets/readme/lighthouse/edit_product_lighthouse.webp)
+  ![image](assets/readme/lighthouse/edit_product_lighthouse.webp "edit product lighthouse")
 
   - Delete product page results
 
-  ![image](assets/readme/lighthouse/delete_product_lighthouse.webp)
+  ![image](assets/readme/lighthouse/delete_product_lighthouse.webp "delete product lighthouse")
 
   - Edit review page results
 
-  ![image](assets/readme/lighthouse/edit_review_lighthouse.webp)
+  ![image](assets/readme/lighthouse/edit_review_lighthouse.webp "edit review lighthouse")
 
   - Delete review page results
 
-  ![image](assets/readme/lighthouse/delete_review_lighthouse.webp)
+  ![image](assets/readme/lighthouse/delete_review_lighthouse.webp "delete review lighthouse")
 
   - Basket page results
 
-  ![image](assets/readme/lighthouse/basket_lighthouse.webp)
+  ![image](assets/readme/lighthouse/basket_lighthouse.webp "basket lighthouse")
 
   - Checkout page results
 
-  ![image](assets/readme/lighthouse/checkout_lighthouse.webp)
+  ![image](assets/readme/lighthouse/checkout_lighthouse.webp "checkout lighthouse")
 
   - Checkout success page results
 
-  ![image](assets/readme/lighthouse/checkout_success_lighthouse.webp)
+  ![image](assets/readme/lighthouse/checkout_success_lighthouse.webp "checkout success lighthouse")
 
   - Purchases page results
 
-  ![image](assets/readme/lighthouse/purchases_lighthouse.webp)
+  ![image](assets/readme/lighthouse/purchases_lighthouse.webp "purchases lighthouse")
 
   - 404 error page results
 
-  ![image](assets/readme/lighthouse/404_lighthouse.webp)
+  ![image](assets/readme/lighthouse/404_lighthouse.webp "404 error lighthouse")
 
 [**Back to the top**](#toptech "back_to_the_top")
 
@@ -1685,6 +1687,53 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
   - After researching about it I found that the issue was being caused by having a duplicate bootstrap.min.js file script as it was being called twice. So to fix it I deleted one of the scripts and now works fine.
 
+- The facebook link in the footer wasn't displaying the url that was stored in the database.
+
+  - The issue was in the footer template, the facebook url wasn't being called properly instead of having ```{{ facebook_url }}``` in the footer template, I had ```{{ facebook.url }}``` as seen on the following photos.
+
+    ![image](assets/readme/bugs/footer_bug.webp "footer bug")
+
+  - This what was happening when trying to access the facebook link, It was displaying the edit about directory.
+
+    ![image](assets/readme/bugs/footer_bug_1.webp "footer bug")
+
+  - Once I changed it to ```{{ facebook_url }}``` the issue was gone.
+
+[**Back to the top**](#toptech "back_to_the_top")
+
+---
+
+## **Marketing**
+
+### **Facebook**
+
+Facebook was one of the tools used to the web marketing as it is a social media platform and it is used by millions of people, that makes it a good tool to promote the website.
+
+- The website can be found in the following
+[TopTech Facebook](https://www.facebook.com/profile.php?id=61557573443117)
+
+- And also I have taken screenshots of it which can be seen below
+
+  ![image](assets/readme/marketing/facebook_4.webp "TopTech Facebook page")
+
+  ![image](assets/readme/marketing/facebook_1.webp "TopTech Facebook page")
+
+  ![image](assets/readme/marketing/facebook_3.webp "TopTech Facebook page")
+
+  ![image](assets/readme/marketing/facebook_2.webp "TopTech Facebook page")
+
+### **Mailchimp***
+
+Mailchimp is a marketing automation and email marketing platform and is used in TopTech, allows Users to subscribe to the Toptech newsletter to stay update with the latest Tech.
+
+- Users can find it in the footer, once they enter the email and click subscribe, a notification will be displayed as seen on the photo
+
+  ![image](assets/readme/marketing/mailchimp_2.png "Footer Mailchimp")
+
+- Mailchimp tool allows you to overview and manage contacts
+
+  ![image](assets/readme/marketing/mailchimp.webp "Mailchimp manage")
+
 [**Back to the top**](#toptech "back_to_the_top")
 
 ---
@@ -1903,7 +1952,7 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
     - Type the command ```pip3 freeze > requirements.txt```
 
-    ![image](x)
+    ![image](assets/readme/requirements.webp)
 
 2. Go to your settings.py file and change DEBUG to "False".
 3. Add the following to your settings.py file
@@ -2039,7 +2088,7 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
     - [Linkedin](https://www.linkedin.com/in/vitor-de-oliveira-50076b268/)
     - [Twitter(X)](https://twitter.com/)
     - [Instagram](https://www.instagram.com/)
-    - [Facebook](https://www.facebook.com/)
+    - [Facebook](https://www.facebook.com/profile.php?id=61557573443117)
     - [Youtube](https://www.youtube.com/)
 
 [**Back to the top**](#toptech "back_to_the_top")
