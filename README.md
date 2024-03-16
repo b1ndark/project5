@@ -1255,9 +1255,13 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
       ![image](assets/readme/wave/basket_wave.webp "basket wave")
 
-    - 404 page results
+    - 404 error page results
 
       ![image](assets/readme/wave/404_page_wave.webp "404 error wave")
+
+    - Privacy policy page results
+
+      ![image](assets/readme/wave/privacy_policy_wave.webp "Privacy policy wave")
 
 [**Back to the top**](#toptech "back_to_the_top")
 
@@ -1354,6 +1358,10 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
   - 404 error page results
 
     ![image](assets/readme/lighthouse/404_lighthouse.webp "404 error lighthouse")
+
+  - Privacy policy page results
+
+    ![image](assets/readme/lighthouse/privacy_policy_lighthouse.webp "privacy policy lighthouse")
 
 [**Back to the top**](#toptech "back_to_the_top")
 
