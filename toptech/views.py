@@ -15,3 +15,11 @@ def handler500(request):
     """
 
     return render(request, 'errors/500.html', status=500)
+
+
+def privacy_policy(request):
+    """
+    This will render the privacy policy page
+    """
+
+    return render(request, 'privacy_policy/privacy_policy.html')

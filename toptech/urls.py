@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import handler404, handler500
+from . import views
+from .views import handler404, handler500, privacy_policy
 
 
 urlpatterns = [
@@ -31,6 +32,7 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('contact/', include('contact.urls')),
     path('reviews/', include('reviews.urls')),
+    path('privacy_policy/', views.privacy_policy, name='privacy_policy'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

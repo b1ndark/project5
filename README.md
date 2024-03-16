@@ -891,6 +891,10 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
     ![image](assets/readme/validator/html/404_page_html.webp "404 Error page")
 
+  - Privacy policy page results - PASS
+
+  ![image](assets/readme/validator/html/privacy_policy_html.webp "Privacy policy page")
+
 ### **CSS**
 
 - **CSS code passes with no errors when checked on W3C CSS Validation Service**
@@ -950,10 +954,6 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
   - toptech_views.py - PASS
 
     ![image](assets/readme/validator/python/toptech_views.py.webp "toptech views py")
-
-  - contexts.py - PASS
-
-    ![image](assets/readme/validator/python/contexts.py.webp "contexts py")
 
   - custom_storages.py - PASS
 
@@ -1093,7 +1093,7 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
   - products_models.py - PASS
 
-    ![image](assets/readme/validator/python/products/products_models.py.webpp "products models py")
+    ![image](assets/readme/validator/python/products/products_models.py.webp "products models py")
 
   - products_forms.py - PASS
 

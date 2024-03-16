@@ -14,9 +14,11 @@
         <!--          Search bar form          -->
         <form method="GET" action="{% url 'products' %}">
             <div class="input-group border border-black rounded-pill p-1 w-100">
-                <input class="form-control rounded-pill border-0" type="Search" name="q" placeholder="Search Tech" aria-label="Search">
+                <input class="form-control rounded-pill border-0" type="Search" name="q" placeholder="Search Tech"
+                    aria-label="Search">
                 <div class="input-group-append align-items-center">
-                    <button class="search-btn form-control btn btn-black text-grey border-0" type="submit" aria-label="Search">
+                    <button class="search-btn form-control btn btn-black text-grey border-0" type="submit"
+                        aria-label="Search">
                         <span class="p-1">
                             <i class="fas fa-search"></i>
                         </span>
@@ -30,23 +32,24 @@
             <li class="list-inline-item dropdown navbar-icon">
 
                 <!--          Account menu          -->
-                <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-hidden="true">
+                <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false" aria-hidden="true">
                     <div class="text-center my-0 font-weight-bold">
                         <!--          If User is authenticated          -->
                         {% if request.user.is_authenticated %}
 
-                            <!--          If is Superuser          -->
-                            {% if request.user.is_superuser %}
-                                <div><i class="fa-solid fa-user-secret font-weight-bold"></i></div>
-                            {% else %}
-
-                            <!--          User logged in          -->
-                                <div><i class="fas fa-user fa-lg font-weight-bold"></i></div>
-                            {% endif %}
+                        <!--          If is Superuser          -->
+                        {% if request.user.is_superuser %}
+                        <div><i class="fa-solid fa-user-secret font-weight-bold"></i></div>
                         {% else %}
 
-                            <!--          Not logged in          -->
-                            <div><i class="fa-regular fa-user"></i></div>
+                        <!--          User logged in          -->
+                        <div><i class="fas fa-user fa-lg font-weight-bold"></i></div>
+                        {% endif %}
+                        {% else %}
+
+                        <!--          Not logged in          -->
+                        <div><i class="fa-regular fa-user"></i></div>
                         {% endif %}
                         Account
                     </div>
@@ -54,22 +57,22 @@
                 <div class="dropdown-menu border-0" aria-labelledby="user-options">
                     {% if request.user.is_authenticated %}
 
-                        <!--          If is Superuser          -->
-                        {% if request.user.is_superuser %}
-                            <a href="{% url 'admin:index' %}" class="dropdown-item">Admin page</a>
-                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                            <a href="{% url 'edit_about' %}" class="dropdown-item">About Management</a>
-                        {% endif %}
+                    <!--          If is Superuser          -->
+                    {% if request.user.is_superuser %}
+                    <a href="{% url 'admin:index' %}" class="dropdown-item">Admin page</a>
+                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                    <a href="{% url 'edit_about' %}" class="dropdown-item">About Management</a>
+                    {% endif %}
 
-                        <!--          User logged in          -->
-                        <a href="{% url 'profile' %}" class="dropdown-item">Profile</a>
-                        <a href="{% url 'purchases' %}" class="dropdown-item">Purchases</a>
-                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                    <!--          User logged in          -->
+                    <a href="{% url 'profile' %}" class="dropdown-item">Profile</a>
+                    <a href="{% url 'purchases' %}" class="dropdown-item">Purchases</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                     {% else %}
 
-                        <!--          User not logged in          -->
-                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                    <!--          User not logged in          -->
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                     {% endif %}
                 </div>
             </li>

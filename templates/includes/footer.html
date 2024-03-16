@@ -12,10 +12,13 @@
                 <!--          Contact          -->
                 <div class="col mb-2">
                     <h3 class="text-monospace text-uppercase font-weight-bold" style="font-size: 20px;">Contact Us!</h3>
-                    <p class="mb-1"><strong>Phone Number: </strong>{% if about.phone_number %}{{ about.phone_number }}{% endif %}</p>
-                    <p class="mb-1"><strong>Address: </strong>{% if about.street_address_1 %}{{ about.street_address_1 }}
+                    <p class="mb-1"><strong>Phone Number: </strong>{% if about.phone_number %}{{ about.phone_number }}
+                        {% endif %}</p>
+                    <p class="mb-1"><strong>Address: </strong>{% if about.street_address_1 %}
+                        {{ about.street_address_1 }}
                         {% endif %}{% if about.street_address_2 %}, {{ about.street_address_2 }}{% endif %}
-                        {% if about.city_or_town %}, {{ about.city_or_town }}{% endif %}{% if about.get_country_display %}, 
+                        {% if about.city_or_town %}, {{ about.city_or_town }}{% endif %}
+                        {% if about.get_country_display %},
                         {{ about.get_country_display }}{% endif %}{% if about.postcode %}, {{ about.postcode|upper }}
                         {% endif %}</p>
                     <p><strong>Email: </strong>{{ about.email_address }}</p>
@@ -26,23 +29,24 @@
                     <h3 class="text-monospace text-uppercase font-weight-bold" style="font-size: 20px;">Socials</h3>
                     <p class="mb-1">Follow to stay updated with our latest Tech offers!</p>
                     {% if about.facebook_url %}
-                    <a href="{{ about.facebook_url }}" target="_blank" title="Facebook" rel="noopener" aria-label="Visit TopTech facebook page (opens in a new tab)"><span
+                    <a href="{{ about.facebook_url }}" target="_blank" title="Facebook" rel="noopener"
+                        aria-label="Visit TopTech facebook page (opens in a new tab)"><span
                             class="icon p-1 text-black px-2"><i
                                 class="fa-brands fa-facebook-f icon-socials"></i></span></a>
                     {% endif %}
                     {% if about.instagram_url %}
-                    <a href="{{ about.instagram_url }}" target="_blank" title="Instagram" rel="noopener" aria-label="Visit instagram page (opens in a new tab)"><span
-                            class="icon p-1 text-black px-2"><i
+                    <a href="{{ about.instagram_url }}" target="_blank" title="Instagram" rel="noopener"
+                        aria-label="Visit instagram page (opens in a new tab)"><span class="icon p-1 text-black px-2"><i
                                 class="fa-brands fa-instagram icon-socials"></i></span></a>
                     {% endif %}
                     {% if about.twitter_url %}
-                    <a href="{{ about.twitter_url }}" target="_blank" title="Twitter" rel="noopener" aria-label="Visit twitter page (opens in a new tab)"><span
-                            class="icon p-1 text-black px-2"><i
+                    <a href="{{ about.twitter_url }}" target="_blank" title="Twitter" rel="noopener"
+                        aria-label="Visit twitter page (opens in a new tab)"><span class="icon p-1 text-black px-2"><i
                                 class="fa-brands fa-x-twitter icon-socials"></i></span></a>
                     {% endif %}
                     {% if about.youtube_url %}
-                    <a href="{{ about.youtube_url }}" target="_blank" title="Youtube" rel="noopener" aria-label="Visit youtube page (opens in a new tab)"><span
-                            class="icon p-1 text-black px-2"><i
+                    <a href="{{ about.youtube_url }}" target="_blank" title="Youtube" rel="noopener"
+                        aria-label="Visit youtube page (opens in a new tab)"><span class="icon p-1 text-black px-2"><i
                                 class="fa-brands fa-youtube icon-socials"></i></span></a>
                     {% endif %}
                 </div>
@@ -58,7 +62,8 @@
                                 method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
                                 class="validate m-0" target="_blank">
                                 <div id="mc_embed_signup_scroll">
-                                    <h3 class="text-monospace text-uppercase font-weight-bold" style="font-size: 20px;">Subscribe</h3>
+                                    <h3 class="text-monospace text-uppercase font-weight-bold" style="font-size: 20px;">
+                                        Subscribe</h3>
                                     <p class="mb-1">Get the latest Tech offers when you subscribe to the newsletter!</p>
                                     <!--<div class="indicates-required"><span class="asterisk">*</span> indicates required
                                     </div>-->
@@ -100,7 +105,7 @@
                 </div>
                 <!--          Privacy policy          -->
                 <div>
-                    <p class="text-right privacy-policy"><a href="#" target="_blank" rel="noopener"><small
+                    <p class="text-right privacy-policy"><a href="{% url 'privacy_policy' %}"><small
                                 class="font-weight-bold text-black text-monospace">Privacy Policy</small></a></p>
                 </div>
             </div>
@@ -109,10 +114,12 @@
         <div class="text-center">
             <p class="mb-0">This website is for educational use only!
                 <a href="https://www.linkedin.com/in/vitor-de-oliveira-50076b268/" target="_blank" title="Linkedin"
-                    rel="noopener" aria-label="Visit my Linkedin page (opens in a new tab)"><span class="icon p-1 text-black px-2"><i
+                    rel="noopener" aria-label="Visit my Linkedin page (opens in a new tab)"><span
+                        class="icon p-1 text-black px-2"><i
                             class="fa-brands fa-linkedin-in icon-socials"></i></span></a>
-                <a href="https://github.com/b1ndark" target="_blank" title="Github" rel="noopener" aria-label="Visit my Github page (opens in a new tab)"><span
-                        class="icon p-1 text-black px-2"><i class="fa-brands fa-github icon-socials"></i></span></a>
+                <a href="https://github.com/b1ndark" target="_blank" title="Github" rel="noopener"
+                    aria-label="Visit my Github page (opens in a new tab)"><span class="icon p-1 text-black px-2"><i
+                            class="fa-brands fa-github icon-socials"></i></span></a>
             </p>
         </div>
     </section>
