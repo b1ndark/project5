@@ -14,13 +14,13 @@
                     <h3 class="text-monospace text-uppercase font-weight-bold" style="font-size: 20px;">Contact Us!</h3>
                     <p class="mb-1"><strong>Phone Number: </strong>{% if about.phone_number %}{{ about.phone_number }}
                         {% endif %}</p>
-                    <p class="mb-1"><strong>Address: </strong>{% if about.street_address_1 %}
-                        {{ about.street_address_1 }}
-                        {% endif %}{% if about.street_address_2 %}, {{ about.street_address_2 }}{% endif %}
-                        {% if about.city_or_town %}, {{ about.city_or_town }}{% endif %}
-                        {% if about.get_country_display %},
-                        {{ about.get_country_display }}{% endif %}{% if about.postcode %}, {{ about.postcode|upper }}
-                        {% endif %}</p>
+                    <p class="mb-1"><strong>Address: </strong>
+                        {% if about.street_address_1 %}{{ about.street_address_1 }}, {% endif %}
+                        {% if about.street_address_2 %}{{ about.street_address_2 }}, {% endif %}
+                        {% if about.city_or_town %}{{ about.city_or_town }}, {% endif %}
+                        {% if about.get_country_display %}{{ about.get_country_display }}, {% endif %}
+                        {% if about.postcode %}{{ about.postcode|upper }}{% endif %}
+                    </p>
                     <p><strong>Email: </strong>{{ about.email_address }}</p>
                 </div>
 
