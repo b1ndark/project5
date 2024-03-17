@@ -443,6 +443,19 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
         ![image](assets/readme/features/navbar_footer/navbar_mobile_searchbar.webp "Search button")
 
+- #### **Notifications**
+
+  - Notifications window display messages to the User, also display products that you add to the basket.
+  - To close them you can either close it by clicking the cross or just click anywhere in the screen and the notification will close
+
+    - This is the notification window
+
+      ![image](assets/readme/features/notifications_confirmations/notification_window.webp)
+
+    - This is the code used to show the notification and to close it by clicking anywhere in the screen, the code is stored in the base.html template
+
+      ![image](assets/readme/features/notifications_confirmations/notification_code.webp)
+
 - #### **Footer**
 
   - The footer has three sections which are the following.
@@ -2012,6 +2025,7 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
 
     - Code Institute Think before I blog tutorial was a good help through out the project, from setting up the project, building it to the deployment.
     - [Font-anwsome libraries](https://cdnjs.com/libraries/font-awesome)
+    - [Customizing error views](https://docs.djangoproject.com/en/3.2/topics/http/views/#customizing-error-views)
     - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
     - Django documentation [Django](https://docs.djangoproject.com/en/5.0/)
     - [Django Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html)
@@ -2029,8 +2043,8 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
 
   - I have watched some tutorials on Youtube that have helped me understand and learn through out the project:
 
-    - [x](x)
-    - [x](x)
+    - [Codemy.com](https://www.youtube.com/playlist?list=PLCC34OHNcOtpRfBYk-8y0GMO4i1p1zn50)
+    - [FreeCodeCamp.org](https://www.youtube.com/watch?v=YZvRrldjf1Y)
     - [x](x)
     - [x](x)
 
@@ -2105,8 +2119,8 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
 
 ## **Acknowledgments**
 
-- I would like to thank my mentor [Graeme Taylor](https://github.com/G-Taylor) for helping me along the way in completing my Fifth milestone project, and through the entire course.
+- I would like to thank my mentor [Graeme Taylor](https://github.com/G-Taylor) for helping me along the way in completing my Fifth milestone project, and also through the entire course.
 - I would like to thank Code Institute Tutors for helping me when I had issues along the project and the course.
-- Also, I would like to thank family and friends for helping with testing The TopTech project and support along the way through the course
+- Also, I would like to thank family and friends for helping with testing The TopTech project and support me along the way through the course.
 
 [**Back to the top**](#toptech "back_to_the_top")

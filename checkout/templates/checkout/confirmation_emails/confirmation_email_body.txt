@@ -5,8 +5,11 @@
 *
 * Your Order will be dispatched to:
 * {{ order.full_name }}
-* {{ order.street_address1 }}
-* {{ order.town_or_city }}, {{ order.postcode }}, {{ order.county }}
+* {{ order.street_address1 }}, {% if order.street_address2 %}
+* {{ order.street_address2 }},{% endif %}
+* {{ order.town_or_city }}, {% if order.county %}
+* {{ order.county }},{% endif %}{% if order.postcode %}
+* {{ order.postcode }},{% endif %}
 * {{ order.get_country_display }}
 *
 *

@@ -4,205 +4,217 @@
 {% block head_title %}- {{ product.name }}{% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 
-    <!--          Selected product container          -->
-    <div class="container-fluid top-0">
-        <div class="row">
-            <div class="col-12 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8 mt-3 mb-0 mb-md-3">
+<!--          Selected product container          -->
+<div class="container-fluid top-0">
+    <div class="row">
+        <div class="col-12 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8 mt-3 mb-0 mb-md-3">
 
-                <!--          Title and sub title          -->
-                <hr>
-                <h1 class="logo-font text-center font-weight-bold" style="font-size: 24px;"><strong>{{ product.name }}</strong></h1>
-                <hr>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 offset-sm-1 col-sm-10 offset-md-0 col-md-6 col-lg-5 col-xl-4 offset-lg-1 offset-xl-2">
-                {% if product.image %}
-                <!--          Selected product image          -->
-                <div class="image-container mt-2 mb-5 mt-md-5">
-                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="product image of {{ product.name }}">
-                </div>
-                {% endif %}
-            </div>
-            <div class="col-12 offset-sm-1 col-sm-10 offset-md-0 col-md-6 col-lg-5 col-xl-4">
-
-                <!--          Selected product details          -->
-                <div class="product-details-container mb-5 mt-md-5">
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            {% if request.user.is_superuser %}
-                                <small class="mt-1">
-                                    <a class="btn btn-sm main-button mr-2 font-weight-bold" href="{% url 'edit_product' product.id %}">Edit</a>
-                                    <a class="btn btn-sm btn-outline-danger font-weight-bold" href="{% url 'delete_product' product.id %}">Delete</a>
-                                </small>
-                            {% endif %}
-                        </div>
-                        <div class="text-right">
-                            <p class="lead mb-0 font-weight-bold"><i class="fas fa-tag mr-1"></i> €{{ product.price }}</p>
-                            {% if product.rating %}
-                                <small class="text-muted"><i class="fas fa-star mr-1 text-warning"></i>{{ product.rating }}/5</small>
-                            {% else %}
-                                <small class="text-muted"></small>
-                            {% endif %}
-                        </div>
-                    </div>
-                    <div class="d-md-flex justify-content-between">
-                        <div>
-                            <ul class="features-list pt-5 pb-2">
-                        
-                                <!--          Selected product main features          -->
-                                {% if product.brand %}
-                                <li>
-                                    <strong>Brand: </strong>{{ product.get_brand_display }}
-                                </li>
-                                {% endif %}
-                                {% if product.operating_system %}
-                                <li>
-                                    <strong>Operating System: </strong>{{ product.get_operating_system_display }}
-                                </li>
-                                {% endif %}
-                                {% if product.memory_ram %}
-                                <li>
-                                    <strong>Memory Ram: </strong>{{ product.memory_ram|upper }}
-                                </li>
-                                {% endif %}
-                                {% if product.display %}
-                                <li>
-                                    <strong>Display: </strong>{{ product.display }}
-                                </li>
-                                {% endif %}
-                                {% if product.battery_life %}
-                                <li>
-                                    <strong>Battery: </strong>{{ product.battery_life }}
-                                </li>
-                                {% endif %}
-                                {% if product.weight %}
-                                <li>
-                                    <strong>Weight: </strong>{{ product.weight|upper }}
-                                </li>
-                                {% endif %}
-                            </ul>
-                        </div>
-                        <div>
-                            <!--          Product quantity          -->
-                            <form class="form" action="{% url 'add_to_basket' product.id %}" method="POST">
-                                {% csrf_token %}
-                                <div class="row">
-                                    <div class="offset-md-4 col-8 pt-md-4">
-                                        <p class="mt-3 text-md-right"><strong>Quantity:</strong></p>
-                                        <div class="form-group w-100">
-                                            <div class="input-group d-flex justify-content-md-end">
-                                                <div class="input-group-prepend">
-                                                    <button class="decrement-qty btn main-button rounded" aria-label="plus"
-                                                        data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}"
-                                                        style="--fa-beat-scale: 1.1;">
-                                                        <span class="icon text-white">
-                                                            <i class="fas fa-minus"></i>
-                                                        </span>
-                                                    </button>
-                                                </div>
-                                                <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="20" style="max-width: 47px;"
-                                                    data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}" aria-label="quantity">
-                                                <div class="input-group-append">
-                                                    <button class="increment-qty btn main-button rounded" aria-label="minus"
-                                                        data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}"
-                                                        style="--fa-beat-scale: 1.1;">
-                                                        <span class="icon text-white">
-                                                            <i class="fas fa-plus"></i>
-                                                        </span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                        
-                                    <div class="offset-md-4 col-8 pb-2 text-md-right">
-                                        <input type="submit" class="btn btn-add main-button rounded mt-3" value="Add to basket">
-                                    </div>
-                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <!--          Selected product description          -->
-                    <p class="mt-3">{{ product.description }}</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8 mt-5">
+            <!--          Title and sub title          -->
             <hr>
-            <h2 class="logo-font text-center" style="font-size: 20px;">Reviews</h2>
+            <h1 class="logo-font text-center font-weight-bold" style="font-size: 24px;">
+                <strong>{{ product.name }}</strong>
+            </h1>
             <hr>
         </div>
-        {% if request.user.is_authenticated %}
-        <div class="row">
-            <div class="col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6 mt-5 mb-5">
-                <form method="POST">
-                    {% csrf_token %}
-                    {{ form|crispy }}
-                    <div class="text-center">
-                        <button class="btn main-button font-weight-bold rounded">Add</button>
-                    </div>
-                </form>
+    </div>
+    <div class="row">
+        <div class="col-12 offset-sm-1 col-sm-10 offset-md-0 col-md-6 col-lg-5 col-xl-4 offset-lg-1 offset-xl-2">
+            {% if product.image %}
+            <!--          Selected product image          -->
+            <div class="image-container mt-2 mb-5 mt-md-5">
+                <img class="card-img-top img-fluid" src="{{ product.image.url }}"
+                    alt="product image of {{ product.name }}">
             </div>
+            {% endif %}
         </div>
-        {% endif %}
-        {% for review in reviews %}
-        <div class="row">
-            <div class="col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6">
-                <div class="px-0 px-sm-3 px-lg-5">
-                    <div class="d-flex justify-content-between">
-                        <p class="font-weight-bold">
-                            <!--            Review User name            -->
-                            <strong>{{ review.user }}</strong>
-                            wrote:
-                        </p>
-                        {% if user.is_superuser or request.user == review.user %}
-                        <small class="mb-3">
-                            <a class="btn btn-sm main-button mr-2 font-weight-bold" href="{% url 'edit_review' review.id %}">Edit</a>
-                            <a class="btn btn-sm btn-outline-danger font-weight-bold" href="{% url 'delete_review' review.id %}">Delete</a>
+        <div class="col-12 offset-sm-1 col-sm-10 offset-md-0 col-md-6 col-lg-5 col-xl-4">
+
+            <!--          Selected product details          -->
+            <div class="product-details-container mb-5 mt-md-5">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        {% if request.user.is_superuser %}
+                        <small class="mt-1">
+                            <a class="btn btn-sm main-button mr-2 font-weight-bold"
+                                href="{% url 'edit_product' product.id %}">Edit</a>
+                            <a class="btn btn-sm btn-outline-danger font-weight-bold"
+                                href="{% url 'delete_product' product.id %}">Delete</a>
                         </small>
                         {% endif %}
                     </div>
-                    
-        
-                  <!--            Review            -->
-                  {{ review.review | linebreaks }}
-        
-                  <span class="text-muted">
-                    <!--            Review date which was created on            -->
-                    {{ review.created }}
-                  </span>
+                    <div class="text-right">
+                        <p class="lead mb-0 font-weight-bold"><i class="fas fa-tag mr-1"></i> €{{ product.price }}</p>
+                        {% if product.rating %}
+                        <small class="text-muted"><i class="fas fa-star mr-1 text-warning"></i>
+                            {{ product.rating }}/5
+                        </small>
+                        {% else %}
+                        <small class="text-muted"></small>
+                        {% endif %}
+                    </div>
                 </div>
-                <hr>
-            </div>
-        </div>
-        {% endfor %}
-        <div class="row">
-            <div class="col-12 offset-lg-1 offset-xl-2 col-lg-10 mt-5">
-                <a href="{% url 'products' %}" class="btn my-1 main-button rounded">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left text-white fa-beat"></i>
-                    </span>
-                    <span class="font-weight-bold">Back</span>
-                </a>
+                <div class="d-md-flex justify-content-between">
+                    <div>
+                        <ul class="features-list pt-5 pb-2">
+
+                            <!--          Selected product main features          -->
+                            {% if product.brand %}
+                            <li>
+                                <strong>Brand: </strong>{{ product.get_brand_display }}
+                            </li>
+                            {% endif %}
+                            {% if product.operating_system %}
+                            <li>
+                                <strong>Operating System: </strong>{{ product.get_operating_system_display }}
+                            </li>
+                            {% endif %}
+                            {% if product.memory_ram %}
+                            <li>
+                                <strong>Memory Ram: </strong>{{ product.memory_ram|upper }}
+                            </li>
+                            {% endif %}
+                            {% if product.display %}
+                            <li>
+                                <strong>Display: </strong>{{ product.display }}
+                            </li>
+                            {% endif %}
+                            {% if product.battery_life %}
+                            <li>
+                                <strong>Battery: </strong>{{ product.battery_life }}
+                            </li>
+                            {% endif %}
+                            {% if product.weight %}
+                            <li>
+                                <strong>Weight: </strong>{{ product.weight|upper }}
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                    <div>
+                        <!--          Product quantity          -->
+                        <form class="form" action="{% url 'add_to_basket' product.id %}" method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="offset-md-4 col-8 pt-md-4">
+                                    <p class="mt-3 text-md-right"><strong>Quantity:</strong></p>
+                                    <div class="form-group w-100">
+                                        <div class="input-group d-flex justify-content-md-end">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn main-button rounded" aria-label="plus"
+                                                    data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}"
+                                                    style="--fa-beat-scale: 1.1;">
+                                                    <span class="icon text-white">
+                                                        <i class="fas fa-minus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <input class="form-control qty_input" type="number" name="quantity"
+                                                value="1" min="1" max="20" style="max-width: 47px;"
+                                                data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}"
+                                                aria-label="quantity">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn main-button rounded" aria-label="minus"
+                                                    data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}"
+                                                    style="--fa-beat-scale: 1.1;">
+                                                    <span class="icon text-white">
+                                                        <i class="fas fa-plus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="offset-md-4 col-8 pb-2 text-md-right">
+                                    <input type="submit" class="btn btn-add main-button rounded mt-3"
+                                        value="Add to basket">
+                                </div>
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!--          Selected product description          -->
+                <p class="mt-3">{{ product.description }}</p>
             </div>
         </div>
     </div>
+    <div class="col-12 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8 mt-5">
+        <hr>
+        <h2 class="logo-font text-center" style="font-size: 20px;">Reviews</h2>
+        <hr>
+    </div>
+    {% if request.user.is_authenticated %}
+    <div class="row">
+        <div class="col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6 mt-5 mb-5">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="text-center">
+                    <button class="btn main-button font-weight-bold rounded">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endif %}
+    {% for review in reviews %}
+    <div class="row">
+        <div class="col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+            <div class="px-0 px-sm-3 px-lg-5">
+                <div class="d-flex justify-content-between">
+                    <p class="font-weight-bold">
+                        <!--            Review User name            -->
+                        <strong>{{ review.user }}</strong>
+                        wrote:
+                    </p>
+                    {% if user.is_superuser or request.user == review.user %}
+                    <small class="mb-3">
+                        <a class="btn btn-sm main-button mr-2 font-weight-bold"
+                            href="{% url 'edit_review' review.id %}">Edit</a>
+                        <a class="btn btn-sm btn-outline-danger font-weight-bold"
+                            href="{% url 'delete_review' review.id %}">Delete</a>
+                    </small>
+                    {% endif %}
+                </div>
+
+
+                <!--            Review            -->
+                {{ review.review | linebreaks }}
+
+                <span class="text-muted">
+                    <!--            Review date which was created on            -->
+                    {{ review.created }}
+                </span>
+            </div>
+            <hr>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="row">
+        <div class="col-12 offset-lg-1 offset-xl-2 col-lg-10 mt-5">
+            <a href="{% url 'products' %}" class="btn my-1 main-button rounded">
+                <span class="icon">
+                    <i class="fas fa-chevron-left text-white fa-beat"></i>
+                </span>
+                <span class="font-weight-bold">Back</span>
+            </a>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <!--          JS file          -->
-    <script src="{% static 'js/products.js' %}"></script>
+{{ block.super }}
+<!--          JS file          -->
+<script src="{% static 'js/products.js' %}"></script>
 {% endblock %}

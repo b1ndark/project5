@@ -7,6 +7,7 @@ from django.contrib import messages
 from checkout.models import Order
 
 
+@login_required
 def profile(request):
     """
     To render the profile page
