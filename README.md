@@ -2,13 +2,13 @@
 
 `To open the links in this document in a new browser tab please press CTRL + Mouse Click`
 
-Welcome to TopTech, this is an e-commerce website where Customers will be able to purchase the latest tech available.
+Welcome to TopTech, this is an e-commerce website (B2C) where Customers will be able to purchase the latest tech available.
 
-Customers will get opportunity to find any the latest Tech avaivlable in the market in just one place.
+Customers will get the opportunity to find the latest Tech available in the market in just one place.
 
-The TopTech website is for all types of audience from young to eldery and they can expect a website easy to navigate.
+The TopTech website is for all types of audience and they can expect a website that is easy to navigate.
 
-The main goal is to help the customer get the latest tech so that they are updated with latest technology available on the market at the best prices.
+The main goal is to help and make sure the customers get the latest tech so that they are not outdated and are updated with latest technology available on the market at the best prices.
 
 ![image](assets/readme/amiresponsive.webp "AmIResponsive")
 
@@ -42,6 +42,7 @@ The main goal is to help the customer get the latest tech so that they are updat
     - [**Wireframes**](#wireframes)
     - [**Entity Relationship Diagram (ERD)**](#entity-relationship-diagram-erd)
     - [**Features**](#features)
+    - [**Future features**](#future-features)
   - [**Technologies, libraries, programs and tools used**](#technologies-libraries-programs-and-tools-used)
   - [**Languages**](#languages)
     - [**HTML**](#html)
@@ -52,12 +53,14 @@ The main goal is to help the customer get the latest tech so that they are updat
     - [**Wave**](#wave)
     - [**Lighthouse**](#lighthouse)
   - [**Testing**](#testing)
+  - [**Manual Tests**](#manual-tests)
   - [**Bugs**](#bugs)
-  - [**Marketing**](#marketing)
+  - [**SEO and Marketing**](#seo-search-engine-optimization-and-marketing)
   - [**Deployment**](#deployment)
     - [**Fork the repository**](#fork-the-repository)
     - [**Clone the repository**](#clone-the-repository)
     - [**ElephantSQL**](#elephantsql)
+    - [**AWS S3 bucket**](#aws-s3-bucket-setup)
     - [**Heroku deployment**](#heroku-deployment)
   - [**Credits**](#credits)
   - [**Acknowledgments**](#acknowledgments)
@@ -68,26 +71,26 @@ The main goal is to help the customer get the latest tech so that they are updat
 
 ### **Visitors**
 
-- Users will experience a website easy to navigate and full of Tech.
-- Users will find a friendly support from our staff that are ready to guide and help with any enquire
+- Users will experience a website that is easy to navigate and that it contains a variety of Tech.
+- Users will find a friendly support from our staff that are ready to guide and help with any enquires.
 - The content of the website is carefully supervised to make sure the Users get all the details of wanted products.
 
 ### **Goals**
 
-- The main goal is to offer the customers the latest Tech at the best prices possible
+- The main goal is to offer the customers the latest Tech at the best prices possible.
 - To fully satisfy the customers with their needs.
-- To get the TopTech website known so it captivates more happy customers
-- Also to feel welcomed in our store 
+- To get the TopTech website known so it captivates more happy customers.
+- Also to feel welcomed in our store.
 
 ### **TopTech**
 
-- The website is presented with a Home page that has a motherboard and its components has a background image and a button to take the customer to start shop the products, at the top of the page is the navbar with its links and at the bottom is the footer.
+- The website is presented with a Home page that has a motherboard and its components has a background image and a button to take the customer to the products to start shopping, at the top of the page is the navbar with its links and at the bottom is the footer.
 - The navbar has the following options available 
-  - **TopTech logo** - Available on large and extra large and when it pressed it takes you back to the home page
-  - **Search bar** - Available on every page and device the search bar can be used to search a especific product
+  - **TopTech logo** - Available on large and extra-large and when it pressed it takes you back to the home page
+  - **Search bar** - Available on every page and device the search bar can be used to search a specific product
   - **Home** - Available on extra small, small and medium screens and when it pressed it takes you back to the home page
-  - **About Us** - When clicked it will take you to the about page where you will find a page presented with a photo, toptech information, contact details and openning times
-  - **Contact Us** - When clicked it will take you to the conatct page where you will be able to contact the TopTech team for any matter
+  - **About Us** - When clicked it will take you to the about page where you will find a page presented with a photo, TopTech information, contact details and opening times
+  - **Contact Us** - When clicked it will take you to the contact page where you will be able to contact the TopTech team for any support or matter
   - **Account (if logged out)** - When clicked it will dropdown a menu with the following
     - **Sign Up** - When clicked it will take you to the sign up page where you can register
     - **Sign In** - When clicked it will take you to the sign in page where you can login to your account
@@ -95,12 +98,12 @@ The main goal is to help the customer get the latest tech so that they are updat
     - **Profile** - When clicked it will take you to the sign up page where you can register
     - **Purchases** - When clicked it will take you to the purchases page where you will be able to see all your purchases if you made any
     - **Logout** - When clicked it will take you to the logout page where you will be able to logout from your account
-  - **Account (if logged in and is the Admin)** - When clicked it will dropdown a menu with the following
+  - **Account (if logged as Admin)** - When clicked it will dropdown a menu with the following
     - **Admin page** - When clicked it will take you to the Admin page where you will be able to manage the website
-    - **Product management** - When clicked it will take you to the Add product page so you can add more products
-    - **About management** - When clicked it will take you to the Edit about so admin/owner can update the company details
+    - **Product management** - When clicked it will take you to the Add product page so you can add more products to the inventory
+    - **About management** - When clicked it will take you to the Edit about page so admin/owner can update the company details
     - **Profile** - When clicked it will take you to the sign up page where you can register
-    - **Purchases** - When clicked it will take you to the purchases page where you will be able to see all your purchases if you made any
+    - **Purchases** - When clicked it will take you to the purchases page where you will be able to see all your purchases, if you made any
     - **Logout** - When clicked it will take you to the logout page where you will be able to logout from your account
   - **Basket** - When clicked it will take you to the basket and see your basket if you have anything in it
 - Once in the Profile:
@@ -109,9 +112,9 @@ The main goal is to help the customer get the latest tech so that they are updat
   - Sort products by price
   - Sort products by rating
   - And sort products by name
-- If the User is checking a expecific product:
-  - You will be able to read the reviews about it
-  - You will be able to leave a review to the product
+- If the User is checking a specific product:
+  - You will be able to read the user reviews about the specific product
+  - If you are logged in you will be able to leave a review to the product
 
 [**Back to the top**](#toptech "back_to_the_top")
 
@@ -119,7 +122,7 @@ The main goal is to help the customer get the latest tech so that they are updat
 
 ## **Agile**
 
-I have develop this project using Agile methodology
+I have developed this project using Agile methodology
 
 ### **MoSCoW prioritization method**
 
@@ -130,7 +133,7 @@ I have develop this project using Agile methodology
   - Could-Have - If not implemented it will not affect the functionality, but could improve User/Customer experience.
   - Won't-Have - It is not a priority for this iteration.
   - For more info on MoSCoW method please click [here](https://monday.com/blog/project-management/moscow-prioritization-method/)
-- I have created a Kanban using Github projects, the User story template and labels were created following [Code Institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+AG101+2021_T1/courseware/a4e548ca70a3473aa890ba2ab9bf612c/db69a5829de8467eb071e63bde630a2e/?child=last) and where in each user story I have added acceptance criteria and tasks that needed to be completed in order to close them. The Kanban can be found [here](https://github.com/users/b1ndark/projects/6/views/1).
+- I have created a Kanban using Github projects, the User story template and labels were created following [Code Institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+AG101+2021_T1/courseware/a4e548ca70a3473aa890ba2ab9bf612c/db69a5829de8467eb071e63bde630a2e/?child=last) and in each user story I have added acceptance criteria and tasks that needed to be completed in order to close them. The Kanban can be found [here](https://github.com/users/b1ndark/projects/6/views/1).
 
   ![image](assets/readme/moscow_prioritization.webp "TopTech Kanban")
   [Kanban link image](https://i.gyazo.com/ad00744508e5dec7faf37c4019607266.png)
@@ -139,66 +142,66 @@ I have develop this project using Agile methodology
 
 #### **Epic 1 - Basic Setup**
 
-- As a Developer I can create a new project so that I can start developing the project
-- As a Developer I can setup the new project so that so that the project has its main structure/tools
-- As a Developer I can setup all databases so that all the data is stored and protected
-- As a Developer I can deploy before starting the project so that I can make sure that is all running before getting too deep in the development and having problems with deploying later and also to test it while developing
+- As a Developer I can create a new project so that I can start developing the project.
+- As a Developer I can setup the new project so that so that the project has its main structure/tools.
+- As a Developer I can setup all databases so that all the data is stored and protected.
+- As a Developer I can deploy before starting the project so that I can make sure that is all running before getting too deep in the development and having problems with deploying later and also to test it while developing.
 
 #### **Epic 2 - Products**
 
-- As an User I can filter the products so that only displays the selected product category
-- As an Admin I can add a new product so that Users are able to buy
-- As an User I can view a single product so that I can view more detailed information and specifications
-- As an User I can access all products section so that I can view every product from the store
-- As an Admin I can edit a product so that the product info is updated
-- As an Admin I can delete a product so that the customer does buy it if it doesn't exist
-- As an User I can search so that I can find a specific product
-- As an User I can go to the next or previous page so that I browse through an organized list of products
+- As a User I can filter the products so that only displays the selected product category.
+- As an Admin I can add a new product so that Users are able to buy.
+- As a User I can view a single product so that I can view more detailed information and specifications.
+- As a User I can access all products section so that I can view every product from the store.
+- As an Admin I can edit a product so that the product info is updated.
+- As an Admin I can delete a product so that the customer does buy it if it doesn't exist.
+- As a User I can search so that I can find a specific product.
+- As a User I can go to the next or previous page so that I browse through an organized list of products.
 
 #### **Epic 3 - User authentication/management**
 
-- As an User I can register an account so that access/view my profile/orders
-- As an User I can Login so that I can view profile, update details and view orders history
-- As an User I can logout so that my account is logged off
-- As an User I can view my profile so that I can update any info and view orders
-- As an User I can delete my account so that all my data is deleted
+- As a User I can register an account so that access/view my profile/orders.
+- As a User I can Login so that I can view profile, update details and view orders history.
+- As a User I can logout so that my account is logged off.
+- As a User I can view my profile so that I can update any info and view orders.
+- As a User I can delete my account so that all my data is deleted.
 
 #### **Epic 4 - Basket/Checkout**
 
-- As an User I can adjust the quantity of the product so that I purchase the right amount
-- As an User I can view the basket so that I can view the total and checkout
-- As an User I can remove a product form the basket that I don't need so that I don't purchase it
-- As a developer I can add stripe to the website so that the users can safely use their cards to purchase the products
-- As an User I can see a notification of my order so that I know that the payment was successful
-- As an User I can receive and email confirming of my order so that I have a confirmation of the order ---------
+- As a User I can adjust the quantity of the product so that I purchase the right amount.
+- As a User I can view the basket so that I can view the total and checkout.
+- As a User I can remove a product form the basket that I don't need so that I don't purchase it.
+- As a developer I can add stripe to the website so that the users can safely use their cards to purchase the products.
+- As a User I can see a notification of my order so that I know that the payment was successful.
+- As a User I can receive and email confirming of my order so that I have a confirmation of the order.
 
 #### **Epic 5 - Admin dashboard**
 
-- As an Admin I can access to the website dashboard so that I can manage the website
-- As an Admin I can add products from the website dashboard so that the users have more offers to buy
-- As an Admin I can update the product details so that the user sees it with correct details/info
-- As an Admin I can delete a product from the website so that the user doesn't buy it if no longer available
+- As an Admin I can access to the website dashboard so that I can manage the website.
+- As an Admin I can add products from the website dashboard so that the users have more offers to buy.
+- As an Admin I can update the product details so that the user sees it with correct details/info.
+- As an Admin I can delete a product from the website so that the user doesn't buy it if no longer available.
 
 #### **Epic 6 - Product Reviews**
 
-- As an User I can share my experience with the product so that other users know about it
-- As an User I can see other users reviews of the product that I am looking to buy so that I know about experiences that users had with the product
-- As an User I can edit my review so that the users can read the updated review
-- As an User I can delete the review that I left in the product so that the product no longer has my review
+- As a User I can share my experience with the product so that other users know about it.
+- As a User I can see other users reviews of the product that I am looking to buy so that I know about experiences that users had with the product.
+- As a User I can edit my review so that the users can read the updated review.
+- As a User I can delete the review that I left in the product so that the product no longer has my review.
 
 #### **Epic 7 - Marketing and SEO (Search Engine Optimization)**
 
-- As an User I can contact the website so that I get the right support
-- As an User I can visit the About page so that I get to know more about the company such as history or opening times
-- As an Admin I can Edit/update the about page so that the company information is always updated for the Users
-- As an User I can subscribe so that I can get the latest offers
-- As an User I can see the privacy policy so that I am aware of the website policy
-- As an Admin/Owner I can improve the website SEO so that the website gets ranked higher to attract customers
+- As a User I can contact the website so that I get the right support.
+- As a User I can visit the About page so that I get to know more about the company such as history or opening times.
+- As an Admin I can Edit/update the about page so that the company information is always updated for the Users.
+- As a User I can subscribe so that I can get the latest offers.
+- As a User I can see the privacy policy so that I am aware of the website policy.
+- As an Admin/Owner I can improve the website SEO so that the website gets ranked higher to attract customers.
 
 #### **Epic 8 - Readme Documentation**
 
-- Document all tests
-- Readme Completion
+- Document all tests.
+- Readme Completion.
 
 [**Back to the top**](#toptech "back_to_the_top")
 
@@ -217,7 +220,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 #### **Colours used**
 
-The colours choosen for this project were neutral colours, mainly white as it is focused in a friendly enviroment and to atract any customer to the website, the colours are the following:
+The colours chosen for this project were neutral colours, mainly white as it is User friendly and to attract any customer to the website, the colours are the following:
 - Black colour: #000000
 - White colour: #ffffff
 - Red colour: #AA0000
@@ -243,7 +246,7 @@ The colours choosen for this project were neutral colours, mainly white as it is
 
 ### **Wireframes**
 
-- Wireframes created for both mobiles and desktops
+- Wireframes created for both desktops and mobiles
   
   - **Home page**
 
@@ -340,17 +343,18 @@ The colours choosen for this project were neutral colours, mainly white as it is
 ### **Entity Relationship Diagram (ERD)**
 
 Entity Relationship Diagram (ERD) was used to help understand the relationships between the models.
+The tool used to help understand and create the diagram was [Lucid](https://lucid.app/)
 
-- x
-- x
-- x
-- x
-- x
-- x
+- User and UserProfile have an OneToOne relationship, one User can only have one profile and a profile can only belong to one User.
+- Product and reviews have a OneToMany relationship, one product can have none to many reviews but, a review can only belong to one product.
+- User and reviews have OneToMany relationship, a User can have none to many reviews but, a review can only belong to one User.
+- User and Orders have a OneToMany relationship, one User can have none to many orders but, an order can only belong to one User.
+- Products and categories, one product can only have one category but, a category can have none to many products.
+- Order and products have ManyToMany relationship, One Order has none to many products and many products can be in none to many orders.
 
-    ![image](x)
+    ![image](assets/readme/toptech_diagram.webp)
 
-    [Image link](x)
+    [Image link](https://i.gyazo.com/50fab83255df3ddc309775e3fd061541.png)
 
 [**Back to the top**](#toptech "back_to_the_top")
 
@@ -360,11 +364,11 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 - #### **Nav Bar**
 
-  - The website navbar is presented at the top of the page and it is fixed so, it will follow the User as it scrolls down the pages, the reson for this is so the User doesn't have to scroll back up to access other menus.
+  - The website navbar is presented at the top of the page and it is fixed so, it will follow the User as it scrolls down the pages, the reason for this is so the User doesn't have to scroll back up to access other menus.
   - Within the navbar the User will find the following buttons/links.
 
-    - **Logo**, the website **logo** which is presented on the left of the page and once pressed it will take you back to home page.
-    - **Search bar**, in the middle of the navabar you find the **search bar** which you can use to look for any particular product.
+    - **Logo**, the website **logo** available on large and extra-large screens which is presented on the left of the page and once pressed it will take you back to home page.
+    - **Search bar**, in the middle of the navbar you find the **search bar** which you can use to look for any particular product.
     - **Account**, on the right of the navbar is the **Account** menu which contains the following.
       - If the User isn't logged in
         - **Register** button which when pressed it will take you to the **Signup** page.
@@ -374,7 +378,7 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
       - If the User is logged in
         - **Profile** button which when pressed it will take you to the profile page where you will be able to edit and delete account.
-        - **Purchases** button when pressed it will take you to the purchases history page.
+        - **Purchases** button when pressed it will take you to the purchase's history page.
         - **Logout** button when pressed it will take you to the logout page.
 
           ![image](assets/readme/features/navbar_footer/navbar_user.webp "Navbar User logged in")
@@ -384,7 +388,7 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
         - **Product Management** button which when pressed it will take you to the add product page.
         - **About Management** button which when pressed it will take you to the Edit About page.
         - **Profile** button which when pressed it will take you to the profile page where you will be able to edit and delete account.
-        - **Purchases** button when pressed it will take you to the purchases history page.
+        - **Purchases** button when pressed it will take you to the purchase's history page.
         - **Logout** button when pressed it will take you to the logout page.
 
           ![image](assets/readme/features/navbar_footer/navbar_admin.webp "Navbar Admin logged in")
@@ -396,8 +400,8 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
     - **All products** which when clicked it will drop the following menu.
       - **By Price** When clicked it will display all products by the price.
       - **By Rating** When clicked it will display all products by the rating.
-      - **By Category** When clicked it will display alll products by the Category. 
-      - **All Prodcuts** When clicked it will display all products.
+      - **By Category** When clicked it will display all products by the Category. 
+      - **All Products** When clicked it will display all products.
 
         ![image](assets/readme/features/navbar_footer/all_products_menu.webp "All products menu")
 
@@ -411,7 +415,7 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
       
     - **TVs & Audio** Which when clicked it will drop the following menu.
       - **TVs** When pressed it will display all TVs available in stock.
-      - **Home cinema** When pressed it will display all Home cinemas available in stock.
+      - **Home cinema** When pressed it will display all home cinemas available in stock.
       - **Headphones** When pressed it will display all Headphones available in stock.
       - **Radios** When pressed it will display all Radios available in stock.
       - **All TVs & Audio** When pressed it will display all TVs & Audio available in stock.
@@ -435,7 +439,7 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
         ![image](assets/readme/features/navbar_footer/navbar_mobile.webp "Navbar Small screens")
 
-      - Dropdown menu button when clicked
+      - Dropdown menu button when clicked (Contains the **Home** button which will take you back to the Home page).
 
         ![image](assets/readme/features/navbar_footer/navbar_mobile_dropdown.webp "Dropdown menu")
 
@@ -446,13 +450,13 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 - #### **Notifications**
 
   - Notifications window display messages to the User, also display products that you add to the basket.
-  - To close them you can either close it by clicking the cross or just click anywhere in the screen and the notification will close
+  - To close the messages window, you can either close it by clicking the cross or just click anywhere in the screen and the notification will close.
 
     - This is the notification window
 
       ![image](assets/readme/features/notifications_confirmations/notification_window.webp)
 
-    - This is the code used to show the notification and to close it by clicking anywhere in the screen, the code is stored in the base.html template
+    - This is the code used to show the notification and to close it by clicking anywhere in the screen, the code is stored in the base.html template.
 
       ![image](assets/readme/features/notifications_confirmations/notification_code.webp)
 
@@ -467,30 +471,30 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 - #### **Home Page**
 
-  - The Users will be presented with a website that has a banner under the navbar and it displays messages running in carousel slide changing every four seconds
-  - The background image is of a ROG (Republic Of Gamers) motherboard with its components.
-  - Within the Background image there is a message and a button to take the User to the products page so it can start shopping.
+  - The Users will be presented with a website that has a banner under the navbar and it displays messages running in carousel slide changing every four seconds, the banner is on every page.
+  - The background image is of a ROG (Republic of Gamers) motherboard with its components.
+  - Within the Background image there is a message and a button to take the User to the products page to start shopping.
 
     ![image](assets/readme/features/pages/home_page.webp "Home page")
 
 - #### **Contact Page**
 
-  - The User will be presented with a contact form incase it wants to contact the support regarding any matter.
+  - The User will be presented with a contact form in case the User wants to contact the TopTech support team regarding any matter.
 
     ![image](assets/readme/features/pages/contact.webp "Contact page")
 
-  - If submited the User will be presented with a notification stating that the form has been submited.
+  - If submitted the User will be presented with a notification stating that the form has been submitted.
 
     ![image](assets/readme/features/notifications_confirmations/contact_notification.webp "Contact notification")
 
-  - The User will also get an email confirming that the request had been received by the support Team, within that email there will be a copy of the matter sent by the User.
+  - The User will also get an email confirming that the request had been received by the TopTech support Team, within that email there will be a copy of the matter sent by the User.
 
     ![image](assets/readme/features/notifications_confirmations/contact_email_confirmation.webp "Contact email confirmation")
 
 - #### **About Page**
 
   - The User is presented with a photo of the TopTech company and also info regarding the company history.
-  - Location and openning times also displayed.
+  - Location and opening times also displayed.
 
     ![image](assets/readme/features/pages/about.webp "About page")
 
@@ -500,7 +504,7 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
     ![image](assets/readme/features/pages/edit_about.webp "Edit about page")
 
-  - Also a nofication is displayed when About page is succefuly edited.
+  - Also, a notification is displayed when About page is successfully updated.
     
     ![image](assets/readme/features/notifications_confirmations/edit_about_notification.webp "Edit about notification")
 
@@ -513,24 +517,25 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 - #### **Sign Up Page**
 
   - In the Sign up page the User is presented with a signup form where User is asked for a username, email and password.
+  - If the User has already an account there is a link provided to take the user to the Signin page.
 
     ![image](assets/readme/features/pages/signup.webp "Sign up page")
 
-  - If form is submited the User will be presented with a page that asks the User to verify the registration by going to the email.
+  - If form is submitted the User will be presented with a page that asks the User to verify the registration by going to the email.
 
     ![image](assets/readme/features/pages/signup_verify.webp "Sign up verity email")
 
-  - Also the User will get a notification.
+  - Also, the User will get a notification.
 
     ![image](assets/readme/features/notifications_confirmations/signup_notification.webp "Sign up notification")
 
 - #### Sign Up Confirmation
 
-  - Within the email the User will be presented with the following email.
+  - Within the email the User will be presented with the following email, if the User clicks the link provided is redirected to the website to confirm.
     
     ![image](assets/readme/features/notifications_confirmations/signup_email_confirmation.webp "Sign up confirmation email")
   
-  - In order to confirm the registration the User will have to click the email provided, if clicked the User is redirected to the website to confirm. 
+  - In order to confirm the registration, the User will have to click **Confirm** button to confirm the email provided.
 
     ![image](assets/readme/features/pages/signup_confirm.webp "Sign up confirm page")
 
@@ -540,18 +545,18 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 - #### Sign In Page
 
-  - User is presented with a login form so User can login and add product reviews, update profile.
+  - User is presented with a login form so User can login, add product reviews and update profile.
   - If the User does not have an account there is a link that when clicked User is redirected to the Sign up page.
   
     ![image](assets/readme/features/pages/login.webp "Sign in page")
   
-  - When logged in the User is redirected to the Home page with a notification displayed letting the User know that succefuly logged in.
+  - When logged in the User is redirected to the Home page with a notification displayed letting the User know that successfully logged in.
 
     ![image](assets/readme/features/notifications_confirmations/login_notification.webp "Sign in notification")
 
 - #### Log Out Page
 
-  - Logout page the User is presented with a question whether wants to logout or not.
+  - **Logout page** the User is presented with a question whether wants to logout or not.
 
     ![image](assets/readme/features/pages/logout.webp "log out page")
 
@@ -561,8 +566,8 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 - #### Profile Page
 
-  - Profile is accessed by clicking in the **Account** dropdown menu, once clicked click in Profile.
-  - The Profile will present the Users profile that will display personal information.
+  - Within the navbar the profile is accessed by clicking in the **Account** dropdown menu, once the menu drops click Profile.
+  - The Profile page will present the Users profile that will display a photo, biography and favourite brands, personal information and danger sections that are only seen/accessed by the owner of the profile.
   - Within the Danger section of the Profile the User has the following.
     - **Edit** which will take the User to the Edit profile page.
     - **Delete** which will take the User to the Delete account page.
@@ -571,11 +576,12 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 - #### Edit Profile Page
 
-  - Edit profile presents the User a form which User can use to update the profile if desired.
+  - **Edit profile** presents the User a form which User can use to update the profile if desired.
 
     ![image](assets/readme/features/pages/edit_profile.webp "Edit profile page")
 
-  - If the User does update the profile, will be redirected to the Profile page and a notification is displayed to confirm that the Profile was succefully updated.
+  - If User decides to Cancel, the user will be taken back to the profile.
+  - If the User does update the profile, will be redirected to the Profile page and a notification is displayed to confirm that the Profile was successfully updated.
 
     ![image](assets/readme/features/notifications_confirmations/edit_profile_notification.webp "Edit profile notification")
 
@@ -585,17 +591,19 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
     ![image](assets/readme/features/pages/delete_account.webp "Delete account page")
 
-  - If the User does decide to delete the account and confirms, will be automatically redirected to the Home page and a notification will be displayed to confirm that the account was succefully deleted.
+  - If User decides to Cancel, the user will be taken back to the profile.
+  - If the User does decide to delete the account and confirms, will be automatically redirected to the Home page and a notification will be displayed confirming that the account was successfully deleted.
 
     ![image](assets/readme/features/notifications_confirmations/delete_account_notification.webp "Delete account notification")
 
 - #### Products Page
 
   - The Users once in the products page will be able to start shopping for the latest Tech.
-  - The products are presented with the brand, model, image of the product, main features, rating and price
-  - The User will be able to click on the product to see the detailed product or add it to the basket
+  - A list of products is displayed.
+  - The products are presented with the brand, model, image of the product, main features, rating, price and add to basket button.
+  - The User will be able to click on the product to see the detailed product or add it to the basket.
   - The Users will be able to sort the products by price, rating and name.
-  - The products page is paginated by 25
+  - The products page is paginated by 25.
 
     ![image](assets/readme/features/pages/products.webp "Products page")
 
@@ -635,32 +643,32 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 - #### Product Detail Page
 
   - Once the product is selected, the User is presented with the detailed product.
-  - **Edit** and **Delete** buttons are only available if User is logged in as an Admin.
+  - **Edit** and **Delete** buttons are only available if User logged in is the Admin.
   - The product is presented with the brand, model, image of the product, main features, rating, price and a detailed information about it.
-  - Also reviews are available on each product, everybody can read the reviews but **only** logged in Users can write a review.
+  - Also, reviews are available on each product, everybody can read the reviews but **only** logged in Users can write a review.
 
     ![image](assets/readme/features/pages/product_detail.webp "Products detail page")
 
 - #### Add product page
 
-  - Only Admin can add new products.
-  - Once in the Product Management which can be accessed through the **Account** menu, a add product form is displayed for the Admin to fill.
+  - **Only** Admin can add new products.
+  - Once in the **Product Management** which can be accessed through the **Account** menu, a add product form is displayed for the Admin to fill.
     
     ![image](assets/readme/features/pages/add_product.webp "Add product page")
 
-  - If submited and no product image is selected, the form will add a default one automatically.
-  - And you will also get a successfull notification.
+  - If submitted and no product image is selected, the form will add a default image automatically.
+  - And you will also get a notification confirming it.
 
     ![image](assets/readme/features/notifications_confirmations/add_product_notification.webp "Add product notification")
 
 - #### Edit Product Page
 
   - Available only as an **Admin**, once in the product detail if logged in as Admin you will have access to **Edit** button.
-  - If clicked the Admin is taken to Edit product page where will be able to update the product such as price
+  - If clicked the Admin is taken to Edit product page where the Admin will be able to update the product, like for example the price.
 
     ![image](assets/readme/features/pages/edit_product.webp "Edit product page")
 
-  - If updated and submited the Admin will have a notificaion.
+  - If updated and submitted a notification will be displayed confirming it.
 
     ![image](assets/readme/features/notifications_confirmations/edit_product_notification.webp "Edit product notification")
 
@@ -671,7 +679,7 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
     ![image](assets/readme/features/pages/delete_product.webp "Delete product page")
 
-  - If updated and submited the Admin will have a notificaion.
+  - If the product is deteted a notification will be displayed confirming it.
 
     ![image](assets/readme/features/notifications_confirmations/delete_product_notification.webp "Delete product notification")
 
@@ -679,45 +687,45 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
   - The reviews are available at the bottom of each product.
   - Everybody can read the reviews but **only** logged in Users can write a review.
-  - To write a review all you have to do is scroll down in the product detail page till you see the box thats says "Write a review...", type your review and click add.
+  - To write a review all you have to do is scroll down in the product detail page till you see the box that says "Write a review...", type your review and click add.
 
     ![image](assets/readme/features/pages/add_review.webp "Add review")
 
-  - If the review is submited, it will automatically be displayed in the product reviews and you will also get a notification confirming it.
+  - If the review is submitted, it will be displayed automatically in the product reviews and you will also get a notification confirming it.
 
     ![image](assets/readme/features/notifications_confirmations/add_review_notification.webp "Add review notification")
 
 - #### Edit Review Page
 
-  - **Edit** review button is only displayed to the owner of the review and at the the right side of the review.
-  - If pressed the User is taken to the edit review page, where will be able to update the review.
+  - **Edit** review button is displayed at the right side of the review **Only** if the logged in User is the owner of the review.
+  - If clicked the User is taken to the edit review page, where will be able to update the review.
 
     ![image](assets/readme/features/pages/edit_review.webp "Edit review page")
 
-  - If the review is updated the User is redirected back to the product where will be able to visualize the review and also a notification is displayed to confirm the that the review was updated.
+  - If the review is updated the User is redirected back to the product where will be able to visualize the review and also a notification is displayed confirming that the review was updated.
 
     ![image](assets/readme/features/notifications_confirmations/edit_review_notification.webp "Edit review notification")
 
 - #### Delete review Page
 
-  - **Delete** review button is only displayed to the owner of the review and at the the right side of the review.
+  - **Delete** review button is displayed at the right side of the review next to the **Edit** button **Only** if the logged in Use is the owner of the review.
   - If pressed the User is taken to the delete review page, where will be asked whether wants or not to delete the review.
 
     ![image](assets/readme/features/pages/delete_review.webp "Delete review page")
 
-  - If the review is deleted the User is redirected to the product page and a notification will be displayed to confirm the deletion of the review.
+  - If the review is deleted the User is redirected to the product page and a notification will be displayed confirming the deletion of the review.
 
     ![image](assets/readme/features/notifications_confirmations/delete_review_notification.webp "Delete review notification")
 
 - #### Basket Page
 
   - If the User has products added to the basket and clicks on the basket is taken to the **Basket** page.
-  - Within the basket you can visualize the product, you can update product quantities and delete the product from the basket.
+  - Within the basket you can visualize the products, you can update product quantities and delete the products from the basket.
   - The User has also two button options, "Keep Shopping" and "Checkout".
 
     ![image](assets/readme/features/pages/basket.webp "Basket page")
 
-  - If Basket is empty you will have only the "Keep Shopping" button.
+  - If Basket is empty, you will have only the "Keep Shopping" button.
 
     ![image](assets/readme/features/pages/basket_empty.webp "Basket empty")
 
@@ -729,22 +737,31 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 - #### Checkout success Page
 
-  - After the payment successfuly gone through the User is taken to the checkout success page where will be able to check the Order detail
+  - After the payment successfully gone through the User is taken to the checkout success page where will be able to check the Order detail.
 
     ![image](assets/readme/features/pages/checkout_success.webp "Checkout success page")
 
-  - The User will get a notification confirming it
+  - The User will get a notification confirming it.
 
     ![image](assets/readme/features/notifications_confirmations/order_confimation_notification.webp "Order confirmation notification")
 
-  - And also an email with the order number confirming it
+  - And also, an email with the order number confirming it.
 
     ![image](assets/readme/features/notifications_confirmations/order_email_confirmation.webp "Order email confirmation")
+
+  - Stripe is used to process the payments and when checking in the stripe dashboard webhooks and events, it shows that the orders have been created and payment succeeded.
+    - Webhooks bellow
+
+      ![image](assets/readme/features/pages/checkout_webhooks.webp)
+
+    - Webhook events bellow
+
+      ![image](assets/readme/features/pages/checkout_webhooks_events.webp)
 
 - #### Purchases Page
 
   - **Purchases** the User can access it through the **Account** menu.
-  - When Purchases page is oppened a list of the orders made is displayed.
+  - When Purchases page is opened a list of the orders made is displayed.
 
     ![image](assets/readme/features/pages/purchases.webp "Purchases page")
 
@@ -764,10 +781,21 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
     - You will be able to add, update and delete Product Categories
     - You will be able to register, update and delete Users
     - You will be able to Update User profiles
-    - You will be able add, update and delete products
+    - You will be able to add, update and delete products
     - You will be able to add, update and delete product reviews
 
       ![image](assets/readme/features/pages/admin_panel.webp "Admin page")
+
+[**Back to the top**](#toptech "back_to_the_top")
+
+---
+
+### **Future features**
+
+- Users will be able to view othe Users profiles (private information will be protected).
+- Create a TopTech forum where Users will be able to exchange experiences with certain products and builds, Get help from TopTech support team with any matter.
+- Add product stock levels feature for a more accuracy stock of the products.
+- Add quick login feature with socials.
 
 [**Back to the top**](#toptech "back_to_the_top")
 
@@ -777,14 +805,15 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5) - Used to create the templates for the website.
 - [CSS](https://en.wikipedia.org/wiki/CSS) - Used to customize the website style.
-- [Javascript](https://en.wikipedia.org/wiki/JavaScript) - Used to setup the settimeout for notifications and emailJS functionality in contact page.
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript) - Used to setup the scripts functionalities.
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Python language used in Django.
 - [Django](https://en.wikipedia.org/wiki/Django_(web_framework)) - Django which is Python-based web framework used to develop the forum.
 - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - This toolkit was used to help build the website faster.
 - [Codeanywhere](https://app.codeanywhere.com/) - Used to create the project.
+- [Gitpod](https://gitpod.io/) - Also used to create the project.
 - [Github](https://github.com/) - Where the website is stored.
 - [Spell Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik/related) - Used to check spelling.
-- [Gyazo](https://gyazo.com/) - Used to take Screenshots.
+- [Gyazo](https://gyazo.com/) - Used to take Screenshots and host images.
 - [Cloud Convert](https://cloudconvert.com/) - Used to resize and convert screenshots.
 - [W3C HTML](https://validator.w3.org/#validate_by_input) - Used to check for HTML code errors.
 - [W3C CSS](https://jigsaw.w3.org/css-validator/) - Used to check for CSS code errors.
@@ -803,6 +832,12 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 - [Lucidchart](https://lucid.app/) - Used to create the Entity Relationship Diagram (ERD)
 - [Microsoft Word](https://www.microsoft.com/en-gb/microsoft-365/p/word/cfq7ttc0hlkm?activetab=pivot:overviewtab) - Used to write some texts to apply in the project.
 - [ColorKit](https://colorkit.co/) - Used to create the colour palette.
+- [Privacy Policy Generator](https://www.privacypolicygenerator.info/) - Used to generate a privacy policy.
+- [Sitemap](https://www.xml-sitemaps.com/) - Used to create a sitemap.xml file.
+- [facebook](https://facebook.com) - Used to create the TopTech facebook page.
+- [emailJS](https://www.emailjs.com/) - Used to create email templates and functionality for contact page.
+- [Mailchimp](https://mailchimp.com/) - Used for the TopTech newsletter (marketing).
+- [Stripe](https://stripe.com/) - Used to setup the payment system.
 
 [**Back to the top**](#toptech "back_to_the_top")
 
@@ -814,7 +849,7 @@ Entity Relationship Diagram (ERD) was used to help understand the relationships 
 
 - **HTML code passes with no errors when checked on W3C Markup Validation Service**
 
-The edit pages have the same error duplicate attribute ID due to ```id="new-image"``` being added to where the ```id="id_image"``` already exists
+The edit product, edit profile, edit about pages have the same error duplicate attribute ID due to ```id="new-image"``` being added to where the ```id="id_image"``` already exists
 
   - Home page results - PASS
 
@@ -902,11 +937,15 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
   - 404 Error page results - PASS
 
-    ![image](assets/readme/validator/html/404_page_html.webp "404 Error page")
+    ![image](assets/readme/validator/html/404_error_page_html.webp "404 Error page")
+
+  - 500 Error page results - PASS
+
+    ![image](assets/readme/validator/html/500_error_page_html.webp "500 Error page")
 
   - Privacy policy page results - PASS
 
-  ![image](assets/readme/validator/html/privacy_policy_html.webp "Privacy policy page")
+    ![image](assets/readme/validator/html/privacy_policy_html.webp "Privacy policy page")
 
 ### **CSS**
 
@@ -1179,10 +1218,10 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 - I have focused on making sure that the [TopTech](https://toptech-244e7b312287.herokuapp.com/) website is accessible:
 
   - Starting with the colours that were choosen, the goal was to try to create a website with neutral/clean collours to make sure that would suit everybody's taste and that wouldn't cause problems with contrast.
-  - Made sure that the website had a semantic html
-  - The navbar is clean and it adapts perfectly to smaller screen devices with no issues
-  - Kept the same layout through the every page within the website
-  - In general the website is simple to use and navigate
+  - Made sure that the website had a semantic html.
+  - The navbar is clean and it adapts perfectly to smaller screen devices with no issues.
+  - Kept the same layout through every page within the website.
+  - In general, the website is simple and easy to use and navigate.
 
     - Home page results
 
@@ -1200,7 +1239,7 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
       ![image](assets/readme/wave/edit_about_wave.webp "edit about wave")
 
-    - Signin page results
+    - Sign in page results
 
       ![image](assets/readme/wave/login_wave.webp "signin wave")
 
@@ -1270,7 +1309,11 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
     - 404 error page results
 
-      ![image](assets/readme/wave/404_page_wave.webp "404 error wave")
+      ![image](assets/readme/wave/404_error_page_wave.webp "404 error wave")
+
+    - 500 error page results
+
+      ![image](assets/readme/wave/500_error_page_wave.webp "500 error wave")
 
     - Privacy policy page results
 
@@ -1282,7 +1325,7 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
 ### **Lighthouse**
 
-- I can confirm that Lighthouse performed really good
+- I can confirm that Lighthouse performed really good.
 
   - Home page results
 
@@ -1300,7 +1343,7 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
     ![image](assets/readme/lighthouse/edit_about_lighthouse.webp "edit about lighthouse")
 
-  - Signin page results
+  - Sign in page results
 
     ![image](assets/readme/lighthouse/login_lighthouse.webp "signin lighthouse")
 
@@ -1370,7 +1413,11 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
   - 404 error page results
 
-    ![image](assets/readme/lighthouse/404_lighthouse.webp "404 error lighthouse")
+    ![image](assets/readme/lighthouse/404_error_lighthouse.webp "404 error lighthouse")
+
+  - 500 error page results
+
+    ![image](assets/readme/lighthouse/500_error_lighthouse.webp "500 error lighthouse")
 
   - Privacy policy page results
 
@@ -1397,274 +1444,276 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
   - Iphone 12 Pro
   - Xiaomi note 8
 
-- Various tests that were carried out by myself, friends and family, using a variety of devices from desktops with different specs , lattops, tables to mobile phones.
+- Various tests that were carried out by myself, friends and family, using a variety of devices from desktops with different specs, laptops, tables to mobile phones.
 - Also tested in different operating systems such as macOS, IOS, Windows and Android.
 
 [**Back to the top**](#toptech "back_to_the_top")
 
 ---
 
+## **Manual Tests**
+
 - ### **Navbar**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| TopTech logo | When clicked it should take me back to the home page | Clicked the logo | Takes me back to the home page | pass |
-| Search bar | When looking for a specific product like 'Apple' it should display all results that contain 'Apple' within the product title or descriptions | Wrote 'Apple' and clicked on the search button | It displayed all the products from the store that contain 'Apple' | pass |
-| All Products button | It should dropdown a menu with a list ('By Price', 'By Rating', 'By Category', 'All Products') | Clicked the All products button | Dropdown menu list was displayed | pass |
-| Computing button | It Should dropdown a menu list with different categories of computers | Clicked the Computing button | Dropdown menu list was displayed | pass |
-| TVs & Audio button | It Should dropdown a menu list with different categories of TVs & Audio | Clicked the TVs & Audio button | Dropdown menu list was displayed | pass |
-| Mobile Tech button | It Should dropdown a menu list with different categories of Mobile Tech | Clicked the Mobile Tech button | Dropdown menu list was displayed | pass |
-| About Us button | When clicked it should take me to the About Us page | Clicked the About Us button | Takes me to the About Us page | pass |
-| Contact Us | When clicked it should take me to the Contact Us page | Clicked the Contact Us button | Takes me to the Contact Us page | pass |
-| Account button Logged off | It Should dropdown a menu list with ('Register' and 'Login' links) | Clicked the Account button while logged off | It has dropdown a menu list with ('Register' and 'Login' links) | pass |
-| Account button Logged in as an User | It Should dropdown a menu list with ('Profile', 'Purchases' and 'Logout' links) | Clicked the Account button while logged in as an User | It has dropdown a menu list with ('Profile', 'Purchases' and 'Logout' links) | pass |
-| Account button Logged in as an Admin | It Should dropdown a menu list with ('Admin page', 'Product management', 'About management', 'Profile', 'Purchases' and 'Logout' links) | Clicked the Account button while logged in as an Admin | It has dropdown a menu list with ('Admin page', 'Product management', 'About management', 'Profile', 'Purchases' and 'Logout' links) | pass |
-| Basket button | When clicked it should take me to the basket page | Clicked the basket button | Takes me to the Basket page | pass |
-| Basket display total | When the basket has products that I have added to the basket it should display the total of my goods | Add products to the basket | The basket displays the total of my goods | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | TopTech logo | When clicked it should take me back to the home page | Clicked the logo | Takes me back to the home page | pass |
+  | Search bar | When looking for a specific product like for example 'Apple' it should display all results that contain 'Apple' within the product title or descriptions | Wrote 'Apple' and clicked on the search button | It displayed all the products from the store that contain 'Apple' | pass |
+  | All Products button | It should dropdown a menu with a list ('By Price', 'By Rating', 'By Category', 'All Products') | Clicked the All products button | Dropdown menu list was displayed | pass |
+  | Computing button | It Should dropdown a menu list with different categories of computers | Clicked the Computing button | Dropdown menu list was displayed | pass |
+  | TVs & Audio button | It Should dropdown a menu list with different categories of TVs & Audio | Clicked the TVs & Audio button | Dropdown menu list was displayed | pass |
+  | Mobile Tech button | It Should dropdown a menu list with different categories of Mobile Tech | Clicked the Mobile Tech button | Dropdown menu list was displayed | pass |
+  | About Us button | When clicked it should take me to the About Us page | Clicked the About Us button | Takes me to the About Us page | pass |
+  | Contact Us | When clicked it should take me to the Contact Us page | Clicked the Contact Us button | Takes me to the Contact Us page | pass |
+  | Account button Logged off | It Should dropdown a menu list with ('Register' and 'Login' links) | Clicked the Account button while logged off | It has dropdown a menu list with ('Register' and 'Login' links) | pass |
+  | Account button Logged in as a User | It Should dropdown a menu list with ('Profile', 'Purchases' and 'Logout' links) | Clicked the Account button while logged in as a User | It has dropdown a menu list with ('Profile', 'Purchases' and 'Logout' links) | pass |
+  | Account button Logged in as an Admin | It Should dropdown a menu list with ('Admin page', 'Product management', 'About management', 'Profile', 'Purchases' and 'Logout' links) | Clicked the Account button while logged in as an Admin | It has dropdown a menu list with ('Admin page', 'Product management', 'About management', 'Profile', 'Purchases' and 'Logout' links) | pass |
+  | Basket button | When clicked it should take me to the basket page | Clicked the basket button | Takes me to the Basket page | pass |
+  | Basket display total | When adding products to my basket, it should display the total of my goods | Add products to the basket | The basket displays the total of my goods | pass |
 
 - ### **Footer**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Facebook icon | It should open the TopTech facebook page in a new tab | Clicked on the facebook icon | Opens the TopTech facebook page in a new tab | pass |
-| Instagram icon | It should open the instagram page in a new tab | Clicked on the instagram icon | Opens the instagram page in a new tab | pass |
-| Twitter icon | It should open the twitter page in a new tab | Clicked on the twitter icon | Opens the twitter page in a new tab | pass |
-| Youtube icon | It should open the youtube page in a new tab | Clicked on the youtube icon | Opens the youtube page in a new tab | pass |
-| Mailchimp | When enter email and click subscribe it should confirm the subscription | Wrote the email and clicked on the subscribe button | Displays a confirmation for the subscription 'Thank you for subscribing!' | pass |
-| Linkedin | It should open the linkedin page in a new tab | Clicked the linkedin icon | Opens linkedin page in a new tab | pass |
-| Github | It should open the github page in a new tab | Clicked the github icon | Opens github page in a new tab | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Facebook icon | It should open the TopTech facebook page in a new tab | Clicked on the facebook icon | Opens the TopTech facebook page in a new tab | pass |
+  | Instagram icon | It should open the instagram page in a new tab | Clicked on the instagram icon | Opens the instagram page in a new tab | pass |
+  | Twitter icon | It should open the twitter page in a new tab | Clicked on the twitter icon | Opens the twitter page in a new tab | pass |
+  | Youtube icon | It should open the youtube page in a new tab | Clicked on the youtube icon | Opens the youtube page in a new tab | pass |
+  | Mailchimp | When enter email and click subscribe it should confirm the subscription | Wrote the email and clicked on the subscribe button | Displays a confirmation for the subscription 'Thank you for subscribing!' | pass |
+  | Linkedin | It should open the linkedin page in a new tab | Clicked the linkedin icon | Opens linkedin page in a new tab | pass |
+  | Github | It should open the github page in a new tab | Clicked the github icon | Opens github page in a new tab | pass |
 
 - ### **Home page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Shop now button | It should take me to the products page to start shopping | Clicked on shop now button | takes me to the products page so I can start shop | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Shop now button | It should take me to the products page to start shopping | Clicked on shop now button | takes me to the products page so I can start shop | pass |
 
 - ### **Contact page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Empty fields highlight | When submiting a form with empty fields it should highlight the empty fields | submited the form with empty fields | It has highlighted the empty fields | pass |
-| Display a notification | If submited successfuly it should display a notification | Fill all the form fields and clicked submit | A notification was displayed | pass |
-| Auto reply email | After submiting the form I should be getting an auto reply email from TopTech with also a copy of my message | Fill the form and clicked submit | After submiting the form I did get an email from TopTech with also a copy of my message | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Empty fields highlight | When submitting a form with empty fields it should highlight the empty fields | submitted the form with empty fields | It has highlighted the empty fields | pass |
+  | Display a notification | If submitted successfully it should display a notification | Fill all the form fields and clicked submit | A notification was displayed | pass |
+  | Auto reply email | After submitting the form I should be getting an auto reply email from TopTech with also a copy of my message | Fill the form and clicked submit | After submitting the form I did get an email from TopTech with also a copy of my message | pass |
 
 - ### **About page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Display information | The about page should display information about TopTech | Opened About Us page | The about us page displayed information about TopTech | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Display information | The about page should display information about TopTech | Opened About Us page | The about us page displayed information about TopTech | pass |
 
 - ### **Edit about page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Empty fields highlight | When submiting a form with empty required fields it should highlight the empty fields | submited the form with required empty fields | It has highlighted the required empty fields | pass |
-| Current image | It should display the current image | When in the Edit about page | It displays the current image | pass |
-| Cancel button | If clicked cancel button it should take me back to the About page | Clicked the cancel button | It takes me back to the About page | pass |
-| Update About button | After updating the details if clicked it should save/update the About information | clicked the update About button | It did updated the About information | pass |
-| Redirected | It should redirect to About Us page | Submit the form | I was redirected to the About Us page | pass |
-| Display a notification | If submited successfuly it should display a notification | Fill all the form fields and clicked submit | A notification was displayed | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Empty fields highlight | When submitting a form with empty required fields it should highlight the empty fields | submitted the form with empty fields that are required | It has highlighted the empty required fields | pass |
+  | Current image | It should display the current image | When in the Edit about page | It displays the current image | pass |
+  | Cancel button | If clicked cancel button it should take me back to the About page | Clicked the cancel button | It takes me back to the About page | pass |
+  | Edit About button | After updating the details if clicked **Edit about** button it should save/update the About information | clicked the Edit About button | It did update the About information | pass |
+  | Redirected | It should redirect to About Us page | Submit the form | I was redirected to the About Us page | pass |
+  | Display a notification | If submitted successfully it should display a notification | Fill all the form fields and clicked submit | A notification was displayed | pass |
 
 - ### **Sign in page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Empty fields highlight | When submiting with empty fields it should highlight the empty fields | Clicked Sign in with empty fields | It has highlighted the empty fields | pass |
-| Valid Username | It should check whether or not the Username exists | Clicked Sign in with non existing Username | It displays the following message 'The username and/or password you specified are not correct.' | pass |
-| Valid Password | It should check whether or not the Password is correct | Clicked Sign in with wrong password | It displays the following message 'The username and/or password you specified are not correct.' | pass |
-| Redirected | If Sign in is successfuly it should redirect to the home page | Clicked Sign in with correct details | I was redirected to the home page | pass |
-| Notification | If Sign in is successfuly it should display a notification | Clicked Sign in with correct details | A notification was displayed | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Empty fields highlight | When submitting with empty fields it should highlight the empty fields | Clicked Sign in with empty fields | It has highlighted the empty fields | pass |
+  | Valid Username | It should check whether or not the Username exists | Clicked Sign in with non-existing Username | It displays the following message 'The username and/or password you specified are not correct.' | pass |
+  | Valid Password | It should check whether or not the Password is correct | Clicked Sign in with wrong password | It displays the following message 'The username and/or password you specified are not correct.' | pass |
+  | Redirected | If Sign in is successfully it should redirect to the home page | Clicked Sign in with correct details | I was redirected to the home page | pass |
+  | Notification | If Sign in is successfully it should display a notification | Clicked Sign in with correct details | A notification was displayed | pass |
 
 - ### **Sign up**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Empty fields highlight | When submiting with empty fields it should highlight the empty fields | Clicked Sign in with empty fields | It has highlighted the empty fields | pass |
-| Matching email | It should check whether or not the emails match | Submit with diferent emails | It displays the follwing message 'You must type the same email each time.' | pass |
-| Matching password | It should check whether or not the passwords match | Submit with diferent passwords | It displays the follwing message 'You must type the same password each time.' | pass |
-| Short password | It should check if the password entered is too short | Submit with a short password | It displays the following message 'This password is too short. It must contain at least 8 characters.' | pass |
-| Username | It should check if the username is already in use | Submit with an username already in use | It displays the following message 'A user with that username already exists.' | pass |
-| Email | It should check if the email is already in use | Submit with an email already in use | It displays the following message 'A user is already registered with this e-mail address.' | pass |
-| Redirect confirm-email | It should redirect you to the confirm-email page where you are told to check your email to finalize the sign up process | Entered correct details and clicked Sign up | I am redirected to confrim-email page where I am told to verify my email fo finalize the sign up process | pass |
-| Email link | When I click the link I should bew redirected back to the website to confirm | Check the email and clicked the link | I am redirected back to the TopTech website where I am asked to confirm | pass |
-| Redirected Sign in | If I do confirm I should be redirected to the Sign in page | Clicked the confirm button | I was redirected to the Sign in page | pass |
-| Notification | If I do confirm it should display a notification | Clicked the confirm button | A notification was displayed | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Empty fields highlight | When submitting with empty fields it should highlight the empty fields | Clicked Sign in with empty fields | It has highlighted the empty fields | pass |
+  | Matching email | It should check whether or not the emails match | Submit with different emails | It displays the following message 'You must type the same email each time.' | pass |
+  | Matching password | It should check whether or not the passwords match | Submit with different passwords | It displays the following message 'You must type the same password each time.' | pass |
+  | Short password | It should check if the password entered is too short | Submit with a short password | It displays the following message 'This password is too short. It must contain at least 8 characters.' | pass |
+  | Username | It should check if the username is already in use | Submit with a username already in use | It displays the following message 'A user with that username already exists.' | pass |
+  | Email | It should check if the email is already in use | Submit with an email already in use | It displays the following message 'A user is already registered with this e-mail address.' | pass |
+  | Redirect confirm-email | It should redirect you to the confirm-email page where you are told to check your email to finalize the sign up process | Entered correct details and clicked Sign up | I am redirected to confirm-email page where I am told to verify my email to finalize the sign up process | pass |
+  | Email link | When I click the link I should be redirected back to the website to confirm | Check the email and clicked the link | I am redirected back to the TopTech website where I am asked to confirm | pass |
+  | Redirect Sign in | If I do confirm I should be redirected to the Sign in page | Clicked the confirm button | I was redirected to the Sign in page | pass |
+  | Notification | If I do confirm it should display a notification | Clicked the confirm button | A notification was displayed | pass |
 
 - ### **Logout**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Logout question | It should display a question whether the User wants to logout or not | Clicked logout link in the **Account** menu | The Logout page displays the question whether I want or not to logout | pass |
-| Logout | If clicked Sign out I should be logged out | Clicked Sign Out | I am automatically logged out | pass |
-| Redirect | If I do logout I should be redirected to the Home page | Clicked Sign Out | I was redirected to the home page | pass |
-| Notification | If I do logout it should display a notification | Clicked Sign Out | A notification was displayed | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Logout question | It should display a question whether the User wants to logout or not | Clicked logout link in the **Account** menu | The Logout page displays the question whether I want or not to logout | pass |
+  | Logout | If clicked Sign out I should be logged out | Clicked Sign Out | I am automatically logged out | pass |
+  | Redirect | If I do logout I should be redirected to the Home page | Clicked Sign Out | I was redirected to the home page | pass |
+  | Notification | If I do logout it should display a notification | Clicked Sign Out | A notification was displayed | pass |
 
 - ### **Profile page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Display profile | It should diplay the User information and profile photo | Enter the profile page | When entered in the profile, it starts with a profile picture and is followed by the information | pass |
-| Danger section | Located at the end of the profile page is where the User will have the 'Edit' and 'Delete' buttons | Enter the profile page | It displays the the Danger section at the end | pass |
-| Edit button | When clicked it should take me to the edit profile page | Clicked the edit button | Takes me to the edit profile page, where I can update my profile | pass |
-| Delete button | When clicked it should take me to the delete account page | Clicked the delete button | Takes me to delete account page | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Display profile | It should display the User information and profile photo | Enter the profile page | When entered in the profile, it starts with a profile picture and is followed by the information | pass |
+  | Danger section | Located at the end of the profile page is where the User will have the 'Edit' and 'Delete' buttons | Enter the profile page | It displays the Danger section at the end | pass |
+  | Edit button | When clicked it should take me to the edit profile page | Clicked the edit button | Takes me to the edit profile page, where I can update my profile | pass |
+  | Delete button | When clicked it should take me to the delete account page | Clicked the delete button | Takes me to delete account page | pass |
 
 - ### **Edit profile page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Edit profile | it should display an edit profile form so User can Update details | Entered edit profile page | An edit profile form is displayed | pass |
-| Cancel button | If clicked cancel button it should take me back to the profile page | Clicked the cancel button | It takes me back to the profile page | pass |
-| Current image | It should display the current image | When in the Edit Profile page | It displays the current image | pass |
-| Update profile button | After updating the details if clicked it should save/update the profile details | clicked the update profile button | It did updated the profile | pass |
-| Redirected | It should redirect me to Profile page | Submit the form | I was redirected to the Profile page | pass |
-| Display a notification | If submited successfuly it should display a notification | Fill all the form fields and clicked submit | A notification was displayed | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Edit profile | it should display an edit profile form so User can Update details | Entered edit profile page | An edit profile form is displayed | pass |
+  | Cancel button | If clicked cancel button it should take me back to the profile page | Clicked the cancel button | It takes me back to the profile page | pass |
+  | Current image | It should display the current image | When in the Edit Profile page | It displays the current image | pass |
+  | Update profile button | After updating the details if clicked it should save/update the profile details | clicked the update profile button | It did update the profile | pass |
+  | Redirect | It should redirect me to Profile page | Submit the form | I was redirected to the Profile page | pass |
+  | Notification | If submitted successfully it should display a notification | Fill all the form fields and clicked submit | A notification was displayed | pass |
 
 - ### **Delete account page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Delete account | It should display a question whether you are sure or not to delete your account | Entered the delete account page | It displays the question | pass |
-| Cancel button | If clicked cancel button it should take me back to the profile page | Clicked the cancel button | It takes me back to the profile page | pass |
-| Delete account button | If click delete account it will delete it from the database | Clicked delete account | Account was deleted | pass |
-| Redirect | If click delete account button I will be redirected to the home page | Clicked delete account | I was redirected to the home page | pass |
-| Notification | If click delete account button, it will display a notification to confirm it | Clicked delete account | It displayed a notification to confirm it | pass |
-| Account deleted | When trying to logging with the deleted account it should display that the account doesn't exist | Tried to login | It displays the following message 'The username and/or password you specified are not correct.' | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Delete account | It should display a question whether you are sure or not to delete your account | Entered the delete account page | It displays the question | pass |
+  | Cancel button | If clicked cancel button it should take me back to the profile page | Clicked the cancel button | It takes me back to the profile page | pass |
+  | Delete account button | If click delete account it will delete it from the database | Clicked delete account | Account was deleted | pass |
+  | Redirect | If click delete account button I will be redirected to the home page | Clicked delete account | I was redirected to the home page | pass |
+  | Notification | If click delete account button, it will display a notification confirming it | Clicked delete account | It displayed a notification confirming it | pass |
+  | Account deleted | When trying to logging with the deleted account it should display that the account doesn't exist | Tried to login | It displays the following message 'The username and/or password you specified are not correct.' | pass |
 
 - ### **Products page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| All Products | It should display all products available in stock | Clicked all Products | It displays all products available in stock | pass |
-| Product info | It should display Main features of each product | Entered Products page | It displays main features of each product | pass |
-| Clickable product | I should be able to click the product to check the details | Clicked the desired product | Takes me to the Product detail and it displays all details of the product | pass |
-| Display the price | It should display the price on each product | Entered Products page | Each product displays the price | pass |
-| Display the category | It should display the category on each product | Entered Products page | Each product displays the category | pass |
-| Category link | On each product should be a category link that when clicked display all products from that category | Clicked the category link on a certain product | All products from that category are displayed | pass |
-| Add to basket button | It should display 'add to basket' button on each product | Entered Products page | Each product displays an 'Add to basket' button | pass |
-| By Price | It should display all products available in stock by Price | Clicked By Price | It displays all products available in stock by Price | pass |
-| By Rating | It should display all products available in stock by Rating | Clicked By Rating | It displays all products available in stock by Rating | pass |
-| By Category | It should display all products available in stock by Category | Clicked By Category | It displays all products available in stock by Category | pass |
-| Sort By | When Sorting by price, rating and name it should display in the seleted order | Tried Sort by prices, rating and name in any order | It Sorted all products by price, rating and name in any order | pass |
-| All Computers | It should display all Computers available in stock | Clicked All Computers | It displays all the Computers available in stock | pass |
-| Laptops | It should only display all Laptops available in stock | Clicked Laptops | It displays all the Laptops available in stock | pass |
-| Desktops | It should only display all Desktops available in stock | Clicked Desktops | It displays all the Desktops available in stock | pass |
-| Gaming computers | It should only display all Gaming computers available in stock | Clicked Gaming computers | It displays all the Gaming computers available in stock | pass |
-| All TVs & Audio | It should display all TVs & Audio available in stock | Clicked All TVs & Audio | It displays all the TVs & Audio available in stock | pass |
-| Radios | It should only display all Radios available in stock | Clicked Radios | It displays all the Radios available in stock | pass |
-| Headphones | It should only display all Headphones available in stock | Clicked Headphones | It displays all the Headphones available in stock | pass |
-| Home cinema | It should only display all Home cinema available in stock | Clicked Home cinema | It displays all the Home cinema available in stock | pass |
-| TVs | It should only display all TVs available in stock | Clicked TVs | It displays all the TVs available in stock | pass |
-| All Mobile Tech | It should display all Mobile Tech available in stock | Clicked All Mobile Tech | It displays all the Mobile Tech available in stock | pass |
-| Mobile phones | It should only display all Mobile phones available in stock | Clicked Mobile phones | It displays all the Mobile phones available in stock | pass |
-| Tablets | It should only display all Tablets available in stock | Clicked Tablets | It displays all the Tablets available in stock | pass |
-| Pagintation | It should display pagination if there are more then 25 products | Selected all products to display more than 25 products | Pagination appears and works | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | All Products | It should display all products available in stock | Clicked all Products | It displays all products available in stock | pass |
+  | Product info | It should display Main features of each product | Entered Products page | It displays main features of each product | pass |
+  | Clickable product | I should be able to click the product to check the details | Clicked the desired product | Takes me to the Product detail and it displays all details of the product | pass |
+  | Display the price | It should display the price on each product | Entered Products page | Each product displays the price | pass |
+  | Display the category | It should display the category on each product | Entered Products page | Each product displays the category | pass |
+  | Category link | On each product should be a category link that when clicked displays all products from that category | Clicked the category link on a certain product | All products from that category are displayed | pass |
+  | Add to basket button | It should display 'add to basket' button on each product | Entered Products page | Each product displays an 'Add to basket' button | pass |
+  | By Price | It should display all products available in stock by Price | Clicked by Price | It displays all products available in stock by Price | pass |
+  | By Rating | It should display all products available in stock by Rating | Clicked by Rating | It displays all products available in stock by Rating | pass |
+  | By Category | It should display all products available in stock by Category | Clicked by Category | It displays all products available in stock by Category | pass |
+  | Sort By | When sorting by price, rating and name it should display in the selected order | Tried Sort by price, rating and name in any order | It Sorted all products by price, rating and name in any order | pass |
+  | All Computers | It should display all computers available in stock | Clicked All Computers | It displays all the Computers available in stock | pass |
+  | Laptops | It should only display all Laptops available in stock | Clicked Laptops | It displays all the laptops available in stock | pass |
+  | Desktops | It should only display all Desktops available in stock | Clicked Desktops | It displays all the Desktops available in stock | pass |
+  | Gaming computers | It should only display all Gaming computers available in stock | Clicked Gaming computers | It displays all the Gaming computers available in stock | pass |
+  | All TVs & Audio | It should display all TVs & Audio available in stock | Clicked All TVs & Audio | It displays all the TVs & Audio available in stock | pass |
+  | Radios | It should only display all Radios available in stock | Clicked Radios | It displays all the Radios available in stock | pass |
+  | Headphones | It should only display all Headphones available in stock | Clicked Headphones | It displays all the Headphones available in stock | pass |
+  | Home cinema | It should only display all home cinema available in stock | Clicked Home cinema | It displays all the home cinema available in stock | pass |
+  | TVs | It should only display all TVs available in stock | Clicked TVs | It displays all the TVs available in stock | pass |
+  | All Mobile Tech | It should display all Mobile Tech available in stock | Clicked All Mobile Tech | It displays all the Mobile Tech available in stock | pass |
+  | Mobile phones | It should only display all Mobile phones available in stock | Clicked Mobile phones | It displays all the Mobile phones available in stock | pass |
+  | Tablets | It should only display all Tablets available in stock | Clicked Tablets | It displays all the Tablets available in stock | pass |
+  | Pagination | It should display pagination if there are more than 25 products in a page | Selected all products to display more than 25 products | Pagination appears and works | pass |
 
 - ### **Product Detail page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Product | When I enter the product I should be able to see all details | Clicked the desired product | Opens the product page where all details are displayed | pass |
-| Edit button | Only displays when logged in as an Admin | Entered the product as a Guest, User and Admin | The Edit button only displayed as an Admin | pass |
-| Delete button | Only displays when logged in as an Admin | Entered the product as a Guest, User and Admin | The Delete button only displayed as an Admin | pass |
-| Display the price | It should display the price on the product | Entered desired product page | The product displays the price | pass |
-| Quantity | I should be able to select the quantity of the product | Entered desired product page | It displays the option to select the quantity desired | pass |
-| Add to basket button | It should display 'add to basket' button on the product | Entered desired product page | The product displays an 'Add to basket' button | pass |
-| Main features | It should display Main features of the product | Entered desired product page | It displays main features of the product | pass |
-| Detailed information | It should display detailed information of the product | Entered desired product page | It displays detailed information of the product | pass |
-| Display Reviews | If there are reviews of the product it will display them at the bottom | Entered desired product pag | The reviews were displayed under the product information | pass |
-| Display Add review | Checks whether you are logged in or not | Tried as a Guest and logged in | The Add review box only displays to logged in Users | pass |
-| Review author| Checks whether you are or not the review author | Tried as a Guest and logged in as the review author | The Edit and Delete buttons only display when logged in as the author of them | pass |
-| Edit Review button | When clicked it should take me to the edit Review page | Clicked the edit button | Takes me to the edit Review page, where I can update my Review | pass |
-| Delete Review button | When clicked it should take me to the delete Review page | Clicked the delete button | Takes me to delete Review page | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Product | When I enter the product, I should be able to see all details | Clicked the desired product | Opens the product detail page where all details are displayed | pass |
+  | Edit button | Only displays when logged in as an Admin | Entered the product as a Guest, User and Admin | The Edit button only displayed as an Admin | pass |
+  | Delete button | Only displays when logged in as an Admin | Entered the product as a Guest, User and Admin | The Delete button only displayed as an Admin | pass |
+  | Display the price | It should display the price on the product | Entered desired product page | The product displays the price | pass |
+  | Quantity | I should be able to select the quantity of the product | Entered desired product page | It displays the option to select the quantity desired | pass |
+  | Add to basket button | It should display 'add to basket' button on the product | Entered desired product page | The product displays an 'Add to basket' button | pass |
+  | Main features | It should display Main features of the product | Entered desired product page | It displays main features of the product | pass |
+  | Detailed information | It should display detailed information of the product | Entered desired product page | It displays detailed information of the product | pass |
+  | Display Reviews | If there are reviews of the product it will display them at the bottom | Entered desired product page | The reviews were displayed under the product information | pass |
+  | Display Add review | Checks whether you are logged in or not | Tried as a Guest and logged in | The Add review box only displays to logged in Users | pass |
+  | Review author| Checks whether you are or not the review author | Tried as a Guest and logged in as the review author | The Edit and Delete buttons only display when logged in as the author of them | pass |
+  | Edit Review button | When clicked it should take me to the edit Review page | Clicked the edit button | Takes me to the edit Review page, where I can update my Review | pass |
+  | Delete Review button | When clicked it should take me to the delete Review page | Clicked the delete button | Takes me to delete Review page | pass |
 
 - ### **Add Product page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Products management | It should display an Add product form | Entered Products management | The Add product form is displayed | pass |
-| Cancel button | If clicked cancel button it should take me back to the products page | Clicked the cancel button | It takes me back to the products page | pass |
-| Empty fields highlight | When submiting a form with empty required fields it should highlight the empty fields | submited the form with required empty fields | It has highlighted the required empty fields | pass |
-| Add Product button | It should create a new product if succefuly submited | Fill the form and clicked add product | The new prodcut was successfuly created | pass |
-| Redirected | It should redirect me to create product page | Submit the form | I was redirected to the new product page | pass |
-| Display a notification | If submited successfuly it should display a notification | Fill all the form fields and clicked add product | A notification was displayed | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Products management | It should display an Add product form | Entered Products management | The Add product form is displayed | pass |
+  | Cancel button | If clicked cancel button it should take me back to the products page | Clicked the cancel button | It takes me back to the products page | pass |
+  | Empty fields highlight | When submitting a form with empty required fields it should highlight the empty fields | submitted the form with required empty fields | It has highlighted the required empty fields | pass |
+  | Add Product button | It should create a new product if successfully submitted | Fill the form and clicked add product | The new product was successfully created | pass |
+  | Redirected | It should redirect me to create product page | Submit the form | I was redirected to the new product page | pass |
+  | Display a notification | If submitted successfully it should display a notification | Fill all the form fields and clicked add product | A notification was displayed | pass |
 
 - ### **Edit product page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Edit product | it should display an edit product form so Admin can Update the product details | Entered edit product page | An edit product form is displayed | pass |
-| Cancel button | If clicked cancel button it should take me back to the product page | Clicked the cancel button | It takes me back to the product page | pass |
-| Current image | It should display the current image | When in the Edit product page | It displays the current image | pass |
-| Empty fields highlight | When submiting a form with empty required fields it should highlight the empty fields | submited the form with required empty fields | It has highlighted the required empty fields | pass |
-| Edit product button | After updating the details if clicked it should save/update the product details | clicked the Edit product button | It did updated the product | pass |
-| Redirected | It should redirect me to Product page | Submit the form | I was redirected to the product page | pass |
-| Display a notification | If submited successfuly it should display a notification | Fill all the form fields and clicked Edit product | A notification was displayed | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Edit product | it should display an edit product form so Admin can Update the product details | Entered edit product page | An edit product form is displayed | pass |
+  | Cancel button | If clicked cancel button it should take me back to the product page | Clicked the cancel button | It takes me back to the product page | pass |
+  | Current image | It should display the current image | When in the Edit product page | It displays the current image | pass |
+  | Empty fields highlight | When submitting a form with empty required fields it should highlight the empty fields | submitted the form with required empty fields | It has highlighted the required empty fields | pass |
+  | Edit product button | After updating the details if clicked it should save/update the product details | clicked the Edit product button | It did update the product | pass |
+  | Redirected | It should redirect me to Product page | Submit the form | I was redirected to the product page | pass |
+  | Display a notification | If submitted successfully it should display a notification | Fill all the form fields and clicked Edit product | A notification was displayed | pass |
 
 - ### **Delete product page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Delete Product | It should display a question whether you are sure or not to delete the product | Entered the delete product page | It displays the question | pass |
-| Cancel button | If clicked cancel button it should take me back to the product page | Clicked the cancel button | It takes me back to the product page | pass |
-| Delete product button | If click delete produc it will delete it from the database | Clicked delete product | Product was deleted | pass |
-| Redirect | If click delete product button I will be redirected to the products page | Clicked delete product | I was redirected to the products page | pass |
-| Notification | If click delete products button, it will display a notification to confirm it | Clicked delete product | It displayed a notification to confirm it | pass |
-| Product deleted | When trying to Search/look for the product after being deleted it didn't existed | Tried to search/look for the product | It does not exist even if you type the product ID | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Delete Product | It should display a question whether you are sure or not to delete the product | Entered the delete product page | It displays the question | pass |
+  | Cancel button | If clicked cancel button it should take me back to the product page | Clicked the cancel button | It takes me back to the product page | pass |
+  | Delete product button | If click delete product it will delete it from the database | Clicked delete product | Product was deleted | pass |
+  | Redirect | If click delete product button I will be redirected to the products page | Clicked delete product | I was redirected to the products page | pass |
+  | Notification | If click delete products button, it will display a notification confirming it | Clicked delete product | It displayed a notification confirming it | pass |
+  | Product deleted | When trying to Search/look for the product after being deleted it doesn't exist | Tried to search/look for the product | It does not exist even if you type the product ID | pass |
 
 - ### **Basket page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Entered empty basket page | It should display a message and button to carry on shopping | Entered the empthy basket | Message was displayed and a button to carry on shopping | pass |
-| Entered Basket page | If it has goods it should display them | Entered a basket with goods | Basket page display with the goods that I have selected | pass |
-| Keep Shopping button | If clicked I should be taken back to the products page | Clicked the Kepp Shopping button | I was taken back to the products page | pass |
-| Checkout button | If clicked it should take me to the checkout page | Clicked the checkout button | I was taken to the checkout page | pass |
-| Update quatity | I should be able to update the quantity of my products in the basket | I use the basket function to update the quantity of the products | I was able to update the quantity of the products | pass |
-| Remove products | If I click the bin (delete) button it should remove the product from my basket | Clicked on the bin from the selected product | The product was removed from the basket | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Entered empty basket page | It should display a message and button to carry on shopping | Entered the empty basket | Message was displayed and a button to carry on shopping | pass |
+  | Entered Basket page | If it has goods, it should display them | Entered a basket with goods | Basket page displays the goods that I have added | pass |
+  | Keep Shopping button | If clicked I should be taken back to the products page | Clicked the Keep Shopping button | I was taken back to the products page | pass |
+  | Checkout button | If clicked it should take me to the checkout page | Clicked the checkout button | I was taken to the checkout page | pass |
+  | Update quantity | I should be able to update the quantity of my products in the basket | I use the basket function to update the quantity of the products | I was able to update the quantity of the products | pass |
+  | Remove products | If I click the bin (delete) button it should remove the product from my basket | Clicked on the bin from the selected product | The product was removed from the basket | pass |
 
 - ### **Checkout page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Entered the checkout page | It Should display the list of my products and a form to fill | Entered the checkout | A list of my products and form to fill are displayed | pass |
-| Empty fields highlight | When submiting a form with empty required fields it should highlight the empty fields | submited the form with required empty fields | It has highlighted the required empty fields | pass |
-| Adjust button | If clicked it should take me back to the basket | Clicked the adjust button | I was taken back to the basket | pass |
-| Complete Order | It should checkout the order | Clicked after filling the form | The order was put in place | pass |
-| Invalid card | If I enter the details of an invalid card it should display a message | Entered invalid card details | A message was displayed 'Your card number is invalid.' | pass |
-| Redirect | If click Complete order and the purchase was successful it should redirect me to checkout success page where my order is displayed | Clicked Complte order | I was redirected to the checkout success page where my order is displayed | pass |
-| Notification | If click Complete order and the purchase was successful, it will display a notification to confirm it | Clicked Complte order | It displayed a notification to confirm it | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Entered the checkout page | It Should display the list of my products and a form to fill | Entered the checkout | A list of my products and form to fill are displayed | pass |
+  | Empty fields highlight | When submitting a form with empty required fields it should highlight the empty fields | submitted the form with required empty fields | It has highlighted the required empty fields | pass |
+  | Adjust button | If clicked it should take me back to the basket | Clicked the adjust button | I was taken back to the basket | pass |
+  | Complete Order | It should checkout the order | Clicked after filling the form | The order was put in place | pass |
+  | Invalid card | If I enter the details of an invalid card, it should display a message | Entered invalid card details | A message was displayed 'Your card number is invalid.' | pass |
+  | Redirect | If click Complete order and the purchase was successful it should redirect me to checkout success page where my order is displayed | Clicked Complete order | I was redirected to the checkout success page where my order is displayed | pass |
+  | Notification | If click Complete order and the purchase was successful, it will display a notification confirming it | Clicked Complete order | It displayed a notification confirming it | pass |
 
 - ### **Checkout Success page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Entered Checkout success | It should display the order details | Clicked Complete order | Entered the checkout success and displayed my order details | pass |
-| Shop again button | When clicked it should take me to the products | Clicked the Shop again button | I was taken to the products page | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Entered Checkout success | It should display the order details | Clicked Complete order | Entered the checkout success and displayed my order details | pass |
+  | Shop again button | When clicked it should take me to the products | Clicked the Shop again button | I was taken to the products page | pass |
 
 - ### **Purchases page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| Purchases page | If you made any orders, it should display a list of your orders | Entered the Purchases page | A list of my orders was displayed | pass |
-| Empty Purchases page | If you haven't made any orders, it should display a message and a button to keep shopping | Entered the Purchases page | A message and 'Keep Shopping' button were displayed | pass |
-| Order number | When clicked it will take you to the Order details page | Clicked the order number | I was taken to the Order details page | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | Purchases page | If you made any orders, it should display a list of your orders | Entered the Purchases page | A list of my orders was displayed | pass |
+  | Empty Purchases page | If you haven't made any orders, it should display a message and a button to keep shopping | Entered the Purchases page | A message and 'Keep Shopping' button were displayed | pass |
+  | Order number | When clicked it will take you to the Order details page | Clicked the order number | I was taken to the Order details page | pass |
 
 - ### **Admin page**
 
-| Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| ------- | ---------------- | ------- | ------ | ------------ |
-| About | As an Admin you should be able to the company details | Update the company details | The details were updated and a notification was displayed | pass |
-| Delete User | As an Admin you should be able to delete any User | Selected User and delete | The User was deleted from the database and notification was displayed | pass |
-| Update User | As an Admin you should be able to Update any User | Selected User and update | The User was updated and notification was displayed | pass |
-| Add Product | As an Admin you should be able to add a Product | add a product | Added a product and notification was displayed | pass |
-| Delete product | As an Admin you should be able to delete any product | Selected product and delete | The product was deleted from the database and notification was displayed | pass |
-| Update Product | As an Admin you should be able to Update any Product | Selected Product and update | The Product was updated and notification was displayed | pass |
-| Categories | As an Admin you should be able to add new categories | Add new categories | New categories created and a notification was displayed | pass |
-| deleted Categories | As an Admin you should be able to delete categories | Selected category and delete | The category was deleted and a notification was displayed | pass |
-| Delete Review | As an Admin you should be able to delete any Review | Selected Review and delete | The Review was deleted from the database and notification was displayed | pass |
-| Update Review | As an Admin you should be able to Update any Review | Selected Review and update | The Review was updated and notification was displayed | pass |
-| Orders | As an Admin you should be able to check the orders that were made | Go to Orders menu | Able to check what orders were made | pass |
-| Contact | As an Admin you should be able to check contact forms that were submited | Go to Contact menu | Able to check what contact forms were submited | pass |
+  | Feature | Expected Outcome | Testing | Result | Pass or Fail |
+  | ------- | ---------------- | ------- | ------ | ------------ |
+  | About | As an Admin you should be able to update the company details | Update the company details | The details were updated and a notification was displayed | pass |
+  | Delete User | As an Admin you should be able to delete any User | Selected User and delete | The User was deleted from the database and notification was displayed | pass |
+  | Update User | As an Admin you should be able to Update any User | Selected User and update | The User was updated and notification was displayed | pass |
+  | Add Product | As an Admin you should be able to add a Product | add a product | Added a product and notification was displayed | pass |
+  | Delete product | As an Admin you should be able to delete any product | Selected product and delete | The product was deleted from the database and notification was displayed | pass |
+  | Update Product | As an Admin you should be able to Update any Product | Selected Product and update | The Product was updated and notification was displayed | pass |
+  | Categories | As an Admin you should be able to add new categories | Add new categories | New categories created and a notification was displayed | pass |
+  | Delete Categories | As an Admin you should be able to delete categories | Selected category and delete | The category was deleted and a notification was displayed | pass |
+  | Delete Review | As an Admin you should be able to delete any Review | Selected Review and delete | The Review was deleted from the database and notification was displayed | pass |
+  | Update Review | As an Admin you should be able to Update any Review | Selected Review and update | The Review was updated and notification was displayed | pass |
+  | Orders | As an Admin you should be able to check the orders that were made | Go to Orders menu | Able to check what orders were made | pass |
+  | Contact | As an Admin you should be able to check contact forms that were submitted | Go to Contact menu | Able to check what contact forms were submitted | pass |
 
 [**Back to the top**](#toptech "back_to_the_top")
 
@@ -1672,32 +1721,32 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
 ## **Bugs**
 
-- I found a bug when displaing the info in the footer, If I was in the about page, the info in footer would display with no issues but not in the other pages the info would be blank.
+- I found a bug when displaying the info in the footer, If I was in the about page, the info in footer would display with no issues but not in the other pages the info would be blank.
 
-  - I had to create a contexts.py in about app, move the follow code from views.py to the contexts.py
+  - I had to create a contexts.py in the About app, move the following code from views.py to the contexts.py
 
-  ```ruby
-    from .models import About
+    ```ruby
+      from .models import About
 
-    def about_contents(request):
-        """
-        To render the about info in every page footer
-        """
+      def about_contents(request):
+          """
+          To render the about info in every page footer
+          """
 
-        about = About.objects.first()
+          about = About.objects.first()
 
-        context = {
-            'about': about,
-        }
+          context = {
+              'about': about,
+          }
 
-        return context
-  ```
+          return context
+    ```
 
-  - and also had to add the following to the list of context processors in the templates variable in settings.py in order to render the context in every page footer.
+  - And also had to add the following to the list of context processors in the templates variable within the settings.py in order to render the context in every page footer.
 
-  ```ruby
-    'about.contexts.about_contents',
-  ```
+    ```ruby
+      'about.contexts.about_contents',
+    ```
 
 - After setting up send emails, when trying to signup I was getting a server timeout error ```SMTP.starttls() got an unexpected keyword argument 'keyfile'```, to fix this I did the following
 
@@ -1706,15 +1755,15 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
 - The navbar had a bug, the issue was when clicking on one of the menus to dropdown the choices, it would only show the choices when clicked a second time.
 
-  - After researching about it I found that the issue was being caused by having a duplicate bootstrap.min.js file script as it was being called twice. So to fix it I deleted one of the scripts and now works fine.
+  - After researching about it I found that the issue was being caused by having a duplicate bootstrap.min.js file script as it was being called twice. So, to fix it I deleted one of the scripts and now works fine.
 
-- The facebook link in the footer wasn't displaying the url that was stored in the database.
+- The facebook link in the footer wasn't displaying the URL that was stored in the database.
 
   - The issue was in the footer template, the facebook url wasn't being called properly instead of having ```{{ facebook_url }}``` in the footer template, I had ```{{ facebook.url }}``` as seen on the following photos.
 
     ![image](assets/readme/bugs/footer_bug.webp "footer bug")
 
-  - This what was happening when trying to access the facebook link, It was displaying the edit about directory.
+  - This what was happening when trying to access the facebook link, it was displaying the edit about directory.
 
     ![image](assets/readme/bugs/footer_bug_1.webp "footer bug")
 
@@ -1724,7 +1773,18 @@ The edit pages have the same error duplicate attribute ID due to ```id="new-imag
 
 ---
 
-## **Marketing**
+## **SEO (Search Engine Optimization) and Marketing**
+
+### **Business Model**
+
+- The business model used is a B2C (Business to Consumer) ecommerce as it is a process of selling products directly between a business and consumers, in this case TopTech website sells products directly to its consumers.
+- The target audience for the TopTech website is mainly the Tech enthusiasts but, it has a variety of Tech that suits any audience with competitive prices.
+
+### SEO
+
+- As part of SEO in the base.html template the meta keywords were carefully selected and meta description tag is short but well descriptive.
+- sitemap.xml file was created using the [XML-sitemaps.com](https://www.xml-sitemaps.com/), once created the file was uploaded to the project root.
+- robots.txt file was created at the root of the project and tells search crawlers which URLs the crawler can access on the website.
 
 ### **Facebook**
 
@@ -1791,6 +1851,10 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
     - Type the command ```git commit -m "commit message"```
     - At last type the command ```git push```
 
+[**Back to the top**](#toptech "back_to_the_top")
+
+---
+
 ### **ElephantSQL**
 
 1. First go to **[ElephantSQL website](https://www.elephantsql.com/)**
@@ -1839,6 +1903,10 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
 14. Click "Table queries" and you will be able to see your database structure.
 15. Last make sure to commit so it's all saved.
 
+[**Back to the top**](#toptech "back_to_the_top")
+
+---
+
 ### **AWS S3 bucket setup**
 
 1. Go to **[AWS Amazon](https://aws.amazon.com/)**.
@@ -1880,7 +1948,7 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
 20. Click **Add Statement** and then click in **Generate Policy** and copy the generated policy in to the **Bucket Policy Editor**, before you save it add a "/*" on to the end of the resource key, then save
 21. Now within the **Permissions** tab go to **Access Control List** and click **Edit**
 22. Within the **Everyone (public access)** enable **List**, accept the warning box and click **Save changes**
-23. Now at the top seacrh for IAM (Identify and Access Management) and click on it
+23. Now at the top search for IAM (Identify and Access Management) and click on it
 24. Once in the IAM dashboard, on the left click on **User groups** then on the right click on **Create group**
 25. At the **User group name** give it a name for example ```manage-app-name``` and at the bottom click **Create group**
 26. Now on the left click in **Policies** and on the right click **Create policy**
@@ -1908,9 +1976,9 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
     ```
 30. Click **Review Policy**, give it a **Name** "appName-policy" and a **Description** "Access to S3 bucket for appName static files", click **Create policy**
 31. Go back to **User groups** click on your app group "manage-appName", go to **Permissions** tab, on the right click **Add permissions** and click **Attach policies**, search for the policy that you just created, select it and click **Attach Policies**
-32. On the left click on **Users** link, once is openned on your right click **Create user**, on the **User name** type a user name "appName-staticfiles-user" and click **Next**
-33. Under **Set permissions** select **Add user to group**, select the group that your are adding to "manage-app-name" and click **Next** and **Create User**
-34. Go back to Users menu and select the User you just created and on the right click on **Create access key**, Select the Option **Application running outside AWS** and click **Next**, the **Description ta value** leave it blank and click **Create access key**
+32. On the left click on **Users** link, once is opened on your right click **Create user**, on the **User name** type a user name "appName-staticfiles-user" and click **Next**
+33. Under **Set permissions** select **Add user to group**, select the group that you are adding to "manage-app-name" and click **Next** and **Create User**
+34. Go back to Users menu and select the User you just created and, on the right, click on **Create access key**, Select the Option **Application running outside AWS** and click **Next**, the **Description ta value** leave it blank and click **Create access key**
 35. Click **Download .csv file** as it contains the **Access key ID** and the **Secret access key** which you will need them to authenticate
 36. Now back in your app you need to install both Boto3 ```pip3 install boto3``` and Django-storages ```pip3 install django-storages``` and make sure to freeze afterwards ```pip3 freeze > requirements.txt```
 37. Now in setting add ```'django-storages',``` to the Installed apps, then still within the settings add the following
@@ -1954,6 +2022,10 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
 
     ```
 
+[**Back to the top**](#toptech "back_to_the_top")
+
+---
+
 ### **Stripe setup**
 
 1. Go to [Stripe](https://stripe.com/gb)
@@ -1965,7 +2037,11 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
 6. At the Endpoint URL type ```https://appName.herokuapp.com/checkout/wh```
 7. Select all events and click **Add endpoint**
 8. Get the webhook secret key and add it to your **Heroku Config Vars**
-8. Now run your app and test the transactions to check if everything is working, if it is working it will display the transactions in the webhooks tab
+8. Now run your app and test the transactions to check if everything is working, if it is working it will display the transactions in the webhooks tab.
+
+[**Back to the top**](#toptech "back_to_the_top")
+
+---
 
 ### **Heroku deployment**
 
@@ -2021,9 +2097,9 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
 
 - ### **Content**
 
-  - Various resources were used to help through out the project:
+  - Various resources were used to help throughout the project:
 
-    - Code Institute Think before I blog tutorial was a good help through out the project, from setting up the project, building it to the deployment.
+    - Code Institute Think before I blog tutorial was a good help throughout the project, from setting up the project, building it to the deployment.
     - [Font-anwsome libraries](https://cdnjs.com/libraries/font-awesome)
     - [Customizing error views](https://docs.djangoproject.com/en/3.2/topics/http/views/#customizing-error-views)
     - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
@@ -2041,12 +2117,11 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
   
   - All products details/info I have found within their respective brand websites
 
-  - I have watched some tutorials on Youtube that have helped me understand and learn through out the project:
+  - I have watched some tutorials on Youtube that have helped me understand and learn throughout the project:
 
     - [Codemy.com](https://www.youtube.com/playlist?list=PLCC34OHNcOtpRfBYk-8y0GMO4i1p1zn50)
     - [FreeCodeCamp.org](https://www.youtube.com/watch?v=YZvRrldjf1Y)
-    - [x](x)
-    - [x](x)
+    - [Tech With Tim](https://www.youtube.com/playlist?list=PLzMcBGfZo4-kQkZp-j9PNyKq7Yw5VYjq9)
 
   - I have used the Readme structure from my fourth project as a template.
 
