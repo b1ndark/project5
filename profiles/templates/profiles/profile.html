@@ -3,6 +3,10 @@
 
 {% block head_title %}- {{ profile.user.username }}'s profile{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -29,9 +33,9 @@
             <div class="row mx-0">
                 <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
                     {% if profile.image %}
-                    <div class="row justify-content-center mb-5">
-                        <div class="product-image">
-                            <img class="card-img-top img-fluid" width="325" height="325" src="{{ profile.image.url }}"
+                    <div class="row justify-content-center mt-2 mt-md-3 mb-5">
+                        <div class="profile-image-card">
+                            <img class="profile-image img-fluid" src="{{ profile.image.url }}"
                                 alt="Profile picture of {{ profile.user.username }}">
                         </div>
                     </div>

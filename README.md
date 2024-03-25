@@ -1953,8 +1953,7 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
 25. At the **User group name** give it a name for example ```manage-app-name``` and at the bottom click **Create group**
 26. Now on the left click in **Policies** and on the right click **Create policy**
 27. On the right select the json tab, then click **Actions** and then **Import policy**
-28. Search for **AmazonS3FullAccess** and import it, after that get the ARN from **Bucket Policy Editor** and past it in the "resource" within the Policy editor, show look like the one below
-29. 
+28. Search for **AmazonS3FullAccess** and import it, after that get the ARN from **Bucket Policy Editor** and paste it in the "resource" within the Policy editor, should look like the one below
     ```ruby
     {
       "Version": "2012-10-17",
@@ -1974,14 +1973,14 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
       ]
     }
     ```
-30. Click **Review Policy**, give it a **Name** "appName-policy" and a **Description** "Access to S3 bucket for appName static files", click **Create policy**
-31. Go back to **User groups** click on your app group "manage-appName", go to **Permissions** tab, on the right click **Add permissions** and click **Attach policies**, search for the policy that you just created, select it and click **Attach Policies**
-32. On the left click on **Users** link, once is opened on your right click **Create user**, on the **User name** type a user name "appName-staticfiles-user" and click **Next**
-33. Under **Set permissions** select **Add user to group**, select the group that you are adding to "manage-app-name" and click **Next** and **Create User**
-34. Go back to Users menu and select the User you just created and, on the right, click on **Create access key**, Select the Option **Application running outside AWS** and click **Next**, the **Description ta value** leave it blank and click **Create access key**
-35. Click **Download .csv file** as it contains the **Access key ID** and the **Secret access key** which you will need them to authenticate
-36. Now back in your app you need to install both Boto3 ```pip3 install boto3``` and Django-storages ```pip3 install django-storages``` and make sure to freeze afterwards ```pip3 freeze > requirements.txt```
-37. Now in setting add ```'django-storages',``` to the Installed apps, then still within the settings add the following
+29. Click **Review Policy**, give it a **Name** "appName-policy" and a **Description** "Access to S3 bucket for appName static files", click **Create policy**
+30. Go back to **User groups** click on your app group "manage-appName", go to **Permissions** tab, on the right click **Add permissions** and click **Attach policies**, search for the policy that you just created, select it and click **Attach Policies**
+31. On the left click on **Users** link, once is opened on your right click **Create user**, on the **User name** type a user name "appName-staticfiles-user" and click **Next**
+32. Under **Set permissions** select **Add user to group**, select the group that you are adding to "manage-app-name" and click **Next** and **Create User**
+33. Go back to Users menu and select the User you just created and, on the right, click on **Create access key**, Select the Option **Application running outside AWS** and click **Next**, the **Description ta value** leave it blank and click **Create access key**
+34. Click **Download .csv file** as it contains the **Access key ID** and the **Secret access key** which you will need them to authenticate
+35. Now back in your app you need to install both Boto3 ```pip3 install boto3``` and Django-storages ```pip3 install django-storages``` and make sure to freeze afterwards ```pip3 freeze > requirements.txt```
+36. Now in setting add ```'django-storages',``` to the Installed apps, then still within the settings add the following
     ```ruby
     if 'USE_AWS' in os.environ:
     # Cache control
@@ -2007,7 +2006,7 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
     ```
-38. In your app create a new file called "custom_storages.py" to tell django to use S3 to store static files when someone runs collectstatic and also to store any uploaded images, the custom_storages.py code is bellow
+37. In your app create a new file called "custom_storages.py" to tell django to use S3 to store static files when someone runs collectstatic and also to store any uploaded images, the custom_storages.py code is bellow
     ```ruby
     from django.conf import settings
     from storages.backends.s3boto3 import S3Boto3Storage

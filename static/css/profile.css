@@ -24,3 +24,19 @@
     max-height: 416px;
     overflow-y: auto;
 }
+
+.profile-image {
+    width: 325px;
+    height: 325px;
+    border-radius: 50%;
+    box-shadow: var(--product_boxshadow);
+}
+
+/* From Small screens sizes from 368px wide and down */
+
+@media (max-width: 368px) {
+    .profile-image {
+        width: 275px;
+        height: 275px;
+    }
+}

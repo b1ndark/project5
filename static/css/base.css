@@ -193,6 +193,7 @@ body {
 
 .card-img-top {
     border-radius: 20px;
+    box-shadow: var(--product_boxshadow);
 }
 
 .features-list {
