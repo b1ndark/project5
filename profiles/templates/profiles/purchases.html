@@ -19,7 +19,7 @@
 <!--          Purchases container          -->
 <div class="container">
     <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
+        <div class="col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
 
             <!--          Title and sub title          -->
             <hr>
@@ -30,7 +30,7 @@
     <div class="row">
         <div class="card col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mt-3 mb-3">
             <div class="row mx-0">
-                <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3 p-0">
+                <div class="col-12 mt-3 mb-3">
                     <h2 class="mb-3 font-weight-bold" style="font-size: 20px;">Purchases history</h2>
 
                     <!--          Loop through the orders          -->
@@ -97,12 +97,14 @@
                     </div>
                     {% else %}
                     <p class="lead mb-5 text-center">You haven't done any purchase yet</p>
-                    <a href="{% url 'products' %}" class="btn main-button rounded btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left text-white fa-beat"></i>
-                        </span>
-                        <span> Keep Shopping</span>
-                    </a>
+                    <div class="text-center">
+                        <a href="{% url 'products' %}" class="btn main-button rounded btn-lg">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left text-white fa-beat"></i>
+                            </span>
+                            <span> Keep Shopping</span>
+                        </a>
+                    </div>
                     {% endif %}
                 </div>
             </div>

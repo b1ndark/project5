@@ -16,7 +16,7 @@
 <!--          Basket container          -->
 <div class="container">
     <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 mt-3 mb-3">
+        <div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 mt-3 mb-3">
 
             <!--          Title and sub title          -->
             <hr>
@@ -25,24 +25,25 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 offset-lg-1 col-lg-10 mt-3 mb-3">
+        <div class="card col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 mt-3 mb-3 p-0">
+            <div class="row mx-0">
+                <div class="col-12 mt-3 mb-3">
 
-            <!--          Check if there are items in the basket          -->
-            {% if basket_items %}
-            <div class="card">
-                <div class="col">
+                    <!--          Check if there are items in the basket          -->
+                    {% if basket_items %}
 
                     <!--          Display the list of items in the basket          -->
                     {% for item in basket_items %}
                     <div class="row">
                         <div class="col">
                             <div class="d-flex flex-column flex-md-row">
-                                <div class="basket-image p-3">
+                                <div class="basket-image p-3 align-self-center">
                                     <img src="{{ item.product.image.url }}" alt="{{ item.product.name }} image"
                                         class="img-fluid rounded">
                                 </div>
-                                <div class="row p-3 container d-flex flex-column flex-md-row">
-                                    <div class="col">
+                                <div
+                                    class="row py-3 pl-3 pr-0 container d-flex flex-column flex-md-row justify-content-between">
+                                    <div class="col pb-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                         <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                     </div>
@@ -97,7 +98,7 @@
                                                     id="remove_{{ item.item_id }}"><i
                                                         class="fa-regular fa-trash-can"></i></a>
                                             </div>
-                                            <div class="col">
+                                            <div class="col pr-0">
 
                                                 <!--          To display the sub total of each product          -->
                                                 <p class="my-0"><strong>Sub-total</strong>
@@ -145,12 +146,14 @@
             </div>
             {% else %}
             <p class="lead mb-5">Basket is empty</p>
-            <a href="{% url 'products' %}" class="btn main-button rounded btn-lg">
-                <span class="icon">
-                    <i class="fas fa-chevron-left text-white fa-beat"></i>
-                </span>
-                <span> Keep Shopping</span>
-            </a>
+            <div class="text-center">
+                <a href="{% url 'products' %}" class="btn main-button rounded btn-lg">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left text-white fa-beat"></i>
+                    </span>
+                    <span> Keep Shopping</span>
+                </a>
+            </div>
             {% endif %}
         </div>
     </div>
