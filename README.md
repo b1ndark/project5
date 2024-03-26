@@ -645,9 +645,18 @@ The tool used to help understand and create the diagram was [Lucid](https://luci
   - Once the product is selected, the User is presented with the detailed product.
   - **Edit** and **Delete** buttons are only available if User logged in is the Admin.
   - The product is presented with the brand, model, image of the product, main features, rating, price and a detailed information about it.
+  - **Add to basket** button to add the product to the basket.
   - Also, reviews are available on each product, everybody can read the reviews but **only** logged in Users can write a review.
 
     ![image](assets/readme/features/pages/product_detail.webp "Products detail page")
+
+  - If the product is added to the basket, you will get the following notification.
+
+    ![image](assets/readme/features/notifications_confirmations/basket_add_product.webp)
+
+  - If your basket total isn't €50 or more you will get the following notification.
+
+    ![image](assets/readme/features/notifications_confirmations/basket_delivery_charge_notification.webp)
 
 - #### Add product page
 
@@ -724,6 +733,10 @@ The tool used to help understand and create the diagram was [Lucid](https://luci
   - The User has also two button options, "Keep Shopping" and "Checkout".
 
     ![image](assets/readme/features/pages/basket.webp "Basket page")
+
+  - If your basket total isn't €50 or more, you will be charged delivery, you will also have message displayed to tell you how much more you need to get the free delivery.
+
+    ![image](assets/readme/features/pages/basket_delivery_charge.webp)
 
   - If Basket is empty, you will have only the "Keep Shopping" button.
 
@@ -1590,6 +1603,9 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   | Display the category | It should display the category on each product | Entered Products page | Each product displays the category | pass |
   | Category link | On each product should be a category link that when clicked displays all products from that category | Clicked the category link on a certain product | All products from that category are displayed | pass |
   | Add to basket button | It should display 'add to basket' button on each product | Entered Products page | Each product displays an 'Add to basket' button | pass |
+  | Add product to basket | Add to basket button when clicked it should add the product to the basket | Click add to basket | The product was added to the basket | pass |
+  | Add product to basket notification | When adding a product to the basket it should display a notification | add product to basket | Notification is displayed confirming it | pass |
+  | Add product to basket notification (under €50) | When adding a product to the basket and totals are less than €50 it should warn the customer about delivery charge | add product to basket that is less than €50 | Notification is displayed showing the delivery charge | pass |
   | By Price | It should display all products available in stock by Price | Clicked by Price | It displays all products available in stock by Price | pass |
   | By Rating | It should display all products available in stock by Rating | Clicked by Rating | It displays all products available in stock by Rating | pass |
   | By Category | It should display all products available in stock by Category | Clicked by Category | It displays all products available in stock by Category | pass |
@@ -1618,6 +1634,9 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   | Display the price | It should display the price on the product | Entered desired product page | The product displays the price | pass |
   | Quantity | I should be able to select the quantity of the product | Entered desired product page | It displays the option to select the quantity desired | pass |
   | Add to basket button | It should display 'add to basket' button on the product | Entered desired product page | The product displays an 'Add to basket' button | pass |
+  | Add product to basket | Add to basket button when clicked it should add the product to the basket | Click add to basket | The product was added to the basket | pass |
+  | Add product to basket notification | When adding a product to the basket it should display a notification | add product to basket | Notification is displayed confirming it | pass |
+  | Add product to basket notification (under €50) | When adding a product to the basket and totals are less than €50 it should warn about delivery charge | add product to basket that is less than €50 | Notification is displayed showing the delivery charge | pass |
   | Main features | It should display Main features of the product | Entered desired product page | It displays main features of the product | pass |
   | Detailed information | It should display detailed information of the product | Entered desired product page | It displays detailed information of the product | pass |
   | Display Reviews | If there are reviews of the product it will display them at the bottom | Entered desired product page | The reviews were displayed under the product information | pass |
