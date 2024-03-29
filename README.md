@@ -805,8 +805,8 @@ The tool used to help understand and create the diagram was [Lucid](https://luci
 
 ### **Future features**
 
-- Users will be able to view othe Users profiles (private information will be protected).
-- Create a TopTech forum where Users will be able to exchange experiences with certain products and builds, Get help from TopTech support team with any matter.
+- Users will be able to view other Users profiles (private information will be protected).
+- Create a TopTech forum where Users will be able to exchange experiences with certain products and builds, get help from TopTech support team with any matter.
 - Add product stock levels feature for a more accuracy stock of the products.
 - Add quick login feature with socials.
 
@@ -1536,6 +1536,7 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   | ------- | ---------------- | ------- | ------ | ------------ |
   | Empty fields highlight | When submitting a form with empty fields it should highlight the empty fields | submitted the form with empty fields | It has highlighted the empty fields | pass |
   | Display a notification | If submitted successfully it should display a notification | Fill all the form fields and clicked submit | A notification was displayed | pass |
+  | Closing notification | If clicked anywhere on the screen it should close the notification | Clicked anywhere on the screen | The notification closed | pass |
   | Auto reply email | After submitting the form I should be getting an auto reply email from TopTech with also a copy of my message | Fill the form and clicked submit | After submitting the form I did get an email from TopTech with also a copy of my message | pass |
 
 - ### **About page**
@@ -1554,6 +1555,7 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   | Edit About button | After updating the details if clicked **Edit about** button it should save/update the About information | clicked the Edit About button | It did update the About information | pass |
   | Redirected | It should redirect to About Us page | Submit the form | I was redirected to the About Us page | pass |
   | Display a notification | If submitted successfully it should display a notification | Fill all the form fields and clicked submit | A notification was displayed | pass |
+  | Closing notification | If clicked anywhere on the screen it should close the notification | Clicked anywhere on the screen | The notification closed | pass |
 
 - ### **Sign in page**
 
@@ -1564,6 +1566,7 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   | Valid Password | It should check whether or not the Password is correct | Clicked Sign in with wrong password | It displays the following message 'The username and/or password you specified are not correct.' | pass |
   | Redirected | If Sign in is successfully it should redirect to the home page | Clicked Sign in with correct details | I was redirected to the home page | pass |
   | Notification | If Sign in is successfully it should display a notification | Clicked Sign in with correct details | A notification was displayed | pass |
+  | Closing notification | If clicked anywhere on the screen it should close the notification | Clicked anywhere on the screen | The notification closed | pass |
 
 - ### **Sign up**
 
@@ -1579,6 +1582,7 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   | Email link | When I click the link I should be redirected back to the website to confirm | Check the email and clicked the link | I am redirected back to the TopTech website where I am asked to confirm | pass |
   | Redirect Sign in | If I do confirm I should be redirected to the Sign in page | Clicked the confirm button | I was redirected to the Sign in page | pass |
   | Notification | If I do confirm it should display a notification | Clicked the confirm button | A notification was displayed | pass |
+  | Closing notification | If clicked anywhere on the screen it should close the notification | Clicked anywhere on the screen | The notification closed | pass |
 
 - ### **Logout**
 
@@ -1588,6 +1592,7 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   | Logout | If clicked Sign out I should be logged out | Clicked Sign Out | I am automatically logged out | pass |
   | Redirect | If I do logout I should be redirected to the Home page | Clicked Sign Out | I was redirected to the home page | pass |
   | Notification | If I do logout it should display a notification | Clicked Sign Out | A notification was displayed | pass |
+  | Closing notification | If clicked anywhere on the screen it should close the notification | Clicked anywhere on the screen | The notification closed | pass |
 
 - ### **Profile page**
 
@@ -1608,6 +1613,7 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   | Update profile button | After updating the details if clicked it should save/update the profile details | clicked the update profile button | It did update the profile | pass |
   | Redirect | It should redirect me to Profile page | Submit the form | I was redirected to the Profile page | pass |
   | Notification | If submitted successfully it should display a notification | Fill all the form fields and clicked submit | A notification was displayed | pass |
+  | Closing notification | If clicked anywhere on the screen it should close the notification | Clicked anywhere on the screen | The notification closed | pass |
 
 - ### **Delete account page**
 
@@ -1618,6 +1624,7 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   | Delete account button | If click delete account it will delete it from the database | Clicked delete account | Account was deleted | pass |
   | Redirect | If click delete account button I will be redirected to the home page | Clicked delete account | I was redirected to the home page | pass |
   | Notification | If click delete account button, it will display a notification confirming it | Clicked delete account | It displayed a notification confirming it | pass |
+  | Closing notification | If clicked anywhere on the screen it should close the notification | Clicked anywhere on the screen | The notification closed | pass |
   | Account deleted | When trying to logging with the deleted account it should display that the account doesn't exist | Tried to login | It displays the following message 'The username and/or password you specified are not correct.' | pass |
 
 - ### **Products page**
@@ -1683,6 +1690,7 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   | Add Product button | It should create a new product if successfully submitted | Fill the form and clicked add product | The new product was successfully created | pass |
   | Redirected | It should redirect me to create product page | Submit the form | I was redirected to the new product page | pass |
   | Display a notification | If submitted successfully it should display a notification | Fill all the form fields and clicked add product | A notification was displayed | pass |
+  | Closing notification | If clicked anywhere on the screen it should close the notification | Clicked anywhere on the screen | The notification closed | pass |
 
 - ### **Edit product page**
 
@@ -1695,6 +1703,7 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   | Edit product button | After updating the details if clicked it should save/update the product details | clicked the Edit product button | It did update the product | pass |
   | Redirected | It should redirect me to Product page | Submit the form | I was redirected to the product page | pass |
   | Display a notification | If submitted successfully it should display a notification | Fill all the form fields and clicked Edit product | A notification was displayed | pass |
+  | Closing notification | If clicked anywhere on the screen it should close the notification | Clicked anywhere on the screen | The notification closed | pass |
 
 - ### **Delete product page**
 
@@ -1705,6 +1714,7 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   | Delete product button | If click delete product it will delete it from the database | Clicked delete product | Product was deleted | pass |
   | Redirect | If click delete product button I will be redirected to the products page | Clicked delete product | I was redirected to the products page | pass |
   | Notification | If click delete products button, it will display a notification confirming it | Clicked delete product | It displayed a notification confirming it | pass |
+  | Closing notification | If clicked anywhere on the screen it should close the notification | Clicked anywhere on the screen | The notification closed | pass |
   | Product deleted | When trying to Search/look for the product after being deleted it doesn't exist | Tried to search/look for the product | It does not exist even if you type the product ID | pass |
 
 - ### **Basket page**
@@ -1716,7 +1726,10 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   | Keep Shopping button | If clicked I should be taken back to the products page | Clicked the Keep Shopping button | I was taken back to the products page | pass |
   | Checkout button | If clicked it should take me to the checkout page | Clicked the checkout button | I was taken to the checkout page | pass |
   | Update quantity | I should be able to update the quantity of my products in the basket | I use the basket function to update the quantity of the products | I was able to update the quantity of the products | pass |
+  | Update product quantity notification | If a product quantity is updated, it should display a notification | Update the product quantity in the basket | It displayed a notification confirming in | pass |
   | Remove products | If I click the bin (delete) button it should remove the product from my basket | Clicked on the bin from the selected product | The product was removed from the basket | pass |
+  | Removed product notification | If a product is removed from the basket, it should display a notification | Remove a product from the basket | It displayed a notification confirming in | pass |
+  | Closing notification | If clicked anywhere on the screen it should close the notification | Clicked anywhere on the screen | The notification closed | pass |
 
 - ### **Checkout page**
 
@@ -1729,6 +1742,7 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   | Invalid card | If I enter the details of an invalid card, it should display a message | Entered invalid card details | A message was displayed 'Your card number is invalid.' | pass |
   | Redirect | If click Complete order and the purchase was successful it should redirect me to checkout success page where my order is displayed | Clicked Complete order | I was redirected to the checkout success page where my order is displayed | pass |
   | Notification | If click Complete order and the purchase was successful, it will display a notification confirming it | Clicked Complete order | It displayed a notification confirming it | pass |
+  | Closing notification | If clicked anywhere on the screen it should close the notification | Clicked anywhere on the screen | The notification closed | pass |
 
 - ### **Checkout Success page**
 
