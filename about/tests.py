@@ -7,7 +7,7 @@ class TestAboutView(TestCase):
     @classmethod
     def setUpTestData(cls):
         '''
-        To Test About model
+        To create about
         '''
         cls.about = About.objects.create(
             name='adamyuri',

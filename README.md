@@ -1020,6 +1020,10 @@ The edit product, edit profile, edit about pages have the same error duplicate a
 
     ![image](assets/readme/validator/python/toptech_views.py.webp "toptech views py")
 
+  - toptech_tests.py - PASS
+
+    ![image](assets/readme/validator/python/toptech_tests.py.webp "toptech tests py")
+
   - custom_storages.py - PASS
 
     ![image](assets/readme/validator/python/custom_storages.py.webp "custom storages py")
@@ -1033,6 +1037,10 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   - about_views.py - PASS
 
     ![image](assets/readme/validator/python/about/about_views.py.webp "about views py")
+
+  - about_tests.py - PASS
+
+    ![image](assets/readme/validator/python/about/about_tests.py.webp "about tests py")
 
   - about_urls.py - PASS
 
@@ -1063,6 +1071,10 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   - basket_views.py - PASS
 
     ![image](assets/readme/validator/python/basket/basket_views.py.webp "basket views py")
+
+  - basket_tests.py - PASS
+
+    ![image](assets/readme/validator/python/basket/basket_tests.py.webp "basket tests py")
 
   - basket_urls.py - PASS
 
@@ -1124,6 +1136,10 @@ The edit product, edit profile, edit about pages have the same error duplicate a
 
     ![image](assets/readme/validator/python/contact/contact_views.py.webp "contact views py")
 
+  - contact_tests.py - PASS
+
+    ![image](assets/readme/validator/python/contact/contact_tests.py.webp "contact tests py")
+
   - contact_models.py - PASS
 
     ![image](assets/readme/validator/python/contact/contact_models.py.webp "contact models py")
@@ -1146,6 +1162,10 @@ The edit product, edit profile, edit about pages have the same error duplicate a
 
     ![image](assets/readme/validator/python/home/home_views.py.webp "home views py")
 
+  - home_tests.py - PASS
+
+    ![image](assets/readme/validator/python/home/home_tests.py.webp "home tests py")
+
 - **Python code passes with no errors when checked on CI Python Linter(Products)**
 
   - products_urls.py - PASS
@@ -1155,6 +1175,10 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   - products_views.py - PASS
 
     ![image](assets/readme/validator/python/products/products_views.py.webp "products views py")
+  
+  - products_tests.py - PASS
+
+    ![image](assets/readme/validator/python/products/products_tests.py.webp "products tests py")
 
   - products_models.py - PASS
 
@@ -1181,6 +1205,10 @@ The edit product, edit profile, edit about pages have the same error duplicate a
   - profiles_views.py - PASS
 
     ![image](assets/readme/validator/python/profiles/profiles_views.py.webp "profile views py")
+
+  - profiles_tests.py - PASS
+
+    ![image](assets/readme/validator/python/profiles/profiles_tests.py.webp "profile tests py")
 
   - profiles_models.py - PASS
 
@@ -2132,6 +2160,7 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
     - To display labels in kanban view [Github community](https://github.com/orgs/community/discussions/10788)
     - To help improving the User experience by being able to close the message box when clicked anywhere in the screen I have found the following link that have helped me understand and implement the logic [How to close the box by clicking anywhere](https://stackoverflow.com/questions/12086663/how-to-close-the-box-if-click-anywhere)
     - To create a link to the admin page from the website I found this topic on stackoverflow that have helped me setup the link [admin:index](https://stackoverflow.com/questions/1022236/linking-to-the-django-admin-site)
+    - To help understand the automated tests [A Beginners Guide To Unit Testing In Django](https://ctrlzblog.com/a-beginners-guide-to-unit-testing-in-django/)
   
   - All products details/info I have found within their respective brand websites
 
@@ -2140,6 +2169,7 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
     - [Codemy.com](https://www.youtube.com/playlist?list=PLCC34OHNcOtpRfBYk-8y0GMO4i1p1zn50)
     - [FreeCodeCamp.org](https://www.youtube.com/watch?v=YZvRrldjf1Y)
     - [Tech With Tim](https://www.youtube.com/playlist?list=PLzMcBGfZo4-kQkZp-j9PNyKq7Yw5VYjq9)
+    - [The Dumbfounds](https://www.youtube.com/watch?v=hA_VxnxCHbo)
 
   - I have used the Readme structure from my fourth project as a template.
 
