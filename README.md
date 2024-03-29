@@ -54,6 +54,7 @@ The main goal is to help and make sure the customers get the latest tech so that
     - [**Lighthouse**](#lighthouse)
   - [**Testing**](#testing)
   - [**Manual Tests**](#manual-tests)
+  - [**Automated Tests**](#automated-tests)
   - [**Bugs**](#bugs)
   - [**SEO and Marketing**](#seo-search-engine-optimization-and-marketing)
   - [**Deployment**](#deployment)
@@ -1780,6 +1781,16 @@ The edit product, edit profile, edit about pages have the same error duplicate a
 
 ---
 
+## **Automated Tests**
+
+- Automated tests have also been done to test the app views.
+- The tests are located in tests.py file within the apps.
+- The [A Beginners Guide To Unit Testing In Django](https://ctrlzblog.com/a-beginners-guide-to-unit-testing-in-django/) blog helped me understand the automated testing.
+
+[**Back to the top**](#toptech "back_to_the_top")
+
+---
+
 ## **Bugs**
 
 - I found a bug when displaying the info in the footer, If I was in the about page, the info in footer would display with no issues but not in the other pages the info would be blank.
@@ -1941,16 +1952,17 @@ Mailchimp is a marketing automation and email marketing platform and is used in 
     - then type
 
         ```ruby
-        # DATABASES = {
-        #     'default': {
-        #         'ENGINE': 'django.db.backends.sqlite3',
-        #         'NAME': BASE_DIR / 'db.sqlite3',
-        #     }
-        # }
-            
-        DATABASES = {
-            'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-        }
+        if 'DATABASE_URL' in os.environ:
+            DATABASES = {
+                'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+            }
+        else:
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.sqlite3',
+                    'NAME': BASE_DIR / 'db.sqlite3',
+                }
+            }
         ```
 
 12. Now after setting it all up, you have to run migrations so in your terminal type
