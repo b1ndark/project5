@@ -836,7 +836,7 @@ The tool used to help understand and create the diagram was [Lucid](https://luci
 - [WAVE](https://wave.webaim.org/) - Used to help improving accessibility to individuals with disabilities, by showing where there might be errors.
 - [Heroku](https://dashboard.heroku.com/apps) - Used to deploy the TopTech forum website.
 - [Code Institute Template](https://github.com/Code-Institute-Org/ci-full-template) - Used to create project template.
-- [ElephantSQL](https://www.elephantsql.com/) - PostgreSQL database used to store the data.
+- [Supabase](https://supabase.com/) - PostgreSQL database used to store the data.
 - [AWS](https://aws.amazon.com/) - Used to store image.
 - [Font Awesome](https://fontawesome.com/) - Used to display icons.
 - [Favicon](https://favicon.io/) - Used to create the website favicon.
